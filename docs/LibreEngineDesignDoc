@@ -1,0 +1,55 @@
+
+
+	Libre Engine
+
+Design-Doc Revision: 1
+Created:9/9/16
+
+
+Description: a game engine written for linux that
+can be used to create a variety of games including
+2D Platforms to 3D Shooters. 
+
+
+
+Language: C++
+
+Libraries:
+
+	#Graphics/Window Management
+	GLEW
+	SDL2
+
+	#InputHandling
+	SDL2
+
+	#Audio
+	OpenAL
+
+	#NET
+	@@Proposed Idea:
+	SDL2_NET
+
+
+
+Architecture: Entity/Component/System
+
+Also: Ability to create Client/Server connections .
+
+
+	We create base objects that can be interited
+into Components. Then we use Entities to hold a vector
+of Components (called a ComponentList, or ComponentManager). 
+While the game is running Systems will be interacting 
+with active Entities, and their Components.
+
+
+Systems:
+	Audio
+	Renderer
+	SceneManager
+	Physics	
+	Input
+
+
+
