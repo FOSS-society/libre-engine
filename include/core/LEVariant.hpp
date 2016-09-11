@@ -20,7 +20,7 @@ namespace libre{
 
 
     private:
-      union m_data{
+      union Data{
         int asInt;
         int* asIntptr;
         math::Vector2<int> asVec2Int;
@@ -218,7 +218,7 @@ namespace libre{
         math::Vector4<uint64_t*> asVec4UInt64Ptr;
         math::Vector4<uint64_t*> *asVec4UInt64Ptrptr;
         void * asVoidPtr;
-      };
+      }m_data;
 
     public:
       Variant();
@@ -246,15 +246,109 @@ namespace libre{
       Variant(uint32_t u32);
       Variant(uint32_t *u32p);
       Variant(uint64_t u64);
-      Variant(math::Vector2<int> iv2);
-      Variant(math::Vector3<int> iv3);
-      Variant(math::Vector4<int> iv4);
-      Variant(math::Vector2<short> sv2);
-      Variant(math::Vector3<short> sv3);
-      Variant(math::Vector4<short> sv4);
-      Variant(math::Vector2<long> lv2);
-      Variant(math::Vector3<long> lv3);
-      Variant(math::Vector4<long> lv4);
+
+      Variant(math::Vector2<int8_t> i8v2);
+      Variant(math::Vector3<int8_t> i8v3);
+      Variant(math::Vector4<int8_t> i8v4);
+      Variant(math::Vector2<uint8_t> ui8v2);
+      Variant(math::Vector3<uint8_t> ui8v3);
+      Variant(math::Vector4<uint8_t> ui8v4);
+      Variant(math::Vector2<int16_t> i16v2);
+      Variant(math::Vector3<int16_t> i16v3);
+      Variant(math::Vector4<int16_t> i16v4);
+      Variant(math::Vector2<uint16_t> ui16v2);
+      Variant(math::Vector3<uint16_t> ui16v3);
+      Variant(math::Vector4<uint16_t> ui16v4);
+      Variant(math::Vector2<int32_t> i32v2);
+      Variant(math::Vector3<int32_t> i32v3);
+      Variant(math::Vector4<int32_t> i32v4);
+      Variant(math::Vector2<uint32_t> ui32v2);
+      Variant(math::Vector3<uint32_t> ui32v3);
+      Variant(math::Vector4<uint32_t> ui32v4);
+      Variant(math::Vector2<int64_t> i64v2);
+      Variant(math::Vector3<int64_t> i64v3);
+      Variant(math::Vector4<int64_t> i64v4);
+      Variant(math::Vector2<uint64_t> ui64v2);
+      Variant(math::Vector3<uint64_t> ui64v3);
+      Variant(math::Vector4<uint64_t> ui64v4);
+
+
+      Variant(math::Vector2<int8_t*> i8v2);
+      Variant(math::Vector3<int8_t*> i8v3);
+      Variant(math::Vector4<int8_t*> i8v4);
+      Variant(math::Vector2<uint8_t*> ui8v2);
+      Variant(math::Vector3<uint8_t*> ui8v3);
+      Variant(math::Vector4<uint8_t*> ui8v4);
+      Variant(math::Vector2<int16_t*> i16v2);
+      Variant(math::Vector3<int16_t*> i16v3);
+      Variant(math::Vector4<int16_t*> i16v4);
+      Variant(math::Vector2<uint16_t*> ui16v2);
+      Variant(math::Vector3<uint16_t*> ui16v3);
+      Variant(math::Vector4<uint16_t*> ui16v4);
+      Variant(math::Vector2<int32_t*> i32v2);
+      Variant(math::Vector3<int32_t*> i32v3);
+      Variant(math::Vector4<int32_t*> i32v4);
+      Variant(math::Vector2<uint32_t*> ui32v2);
+      Variant(math::Vector3<uint32_t*> ui32v3);
+      Variant(math::Vector4<uint32_t*> ui32v4);
+      Variant(math::Vector2<int64_t*> i64v2);
+      Variant(math::Vector3<int64_t*> i64v3);
+      Variant(math::Vector4<int64_t*> i64v4);
+      Variant(math::Vector2<uint64_t*> ui64v2);
+      Variant(math::Vector3<uint64_t*> ui64v3);
+      Variant(math::Vector4<uint64_t*> ui64v4);
+
+
+      Variant(math::Vector2<int8_t> *i8v2);
+      Variant(math::Vector3<int8_t> *i8v3);
+      Variant(math::Vector4<int8_t> *i8v4);
+      Variant(math::Vector2<uint8_t> *ui8v2);
+      Variant(math::Vector3<uint8_t> *ui8v3);
+      Variant(math::Vector4<uint8_t> *ui8v4);
+      Variant(math::Vector2<int16_t> *i16v2);
+      Variant(math::Vector3<int16_t> *i16v3);
+      Variant(math::Vector4<int16_t> *i16v4);
+      Variant(math::Vector2<uint16_t> *ui16v2);
+      Variant(math::Vector3<uint16_t> *ui16v3);
+      Variant(math::Vector4<uint16_t> *ui16v4);
+      Variant(math::Vector2<int32_t> *i32v2);
+      Variant(math::Vector3<int32_t> *i32v3);
+      Variant(math::Vector4<int32_t> *i32v4);
+      Variant(math::Vector2<uint32_t> *ui32v2);
+      Variant(math::Vector3<uint32_t> *ui32v3);
+      Variant(math::Vector4<uint32_t> *ui32v4);
+      Variant(math::Vector2<int64_t> *i64v2);
+      Variant(math::Vector3<int64_t> *i64v3);
+      Variant(math::Vector4<int64_t> *i64v4);
+      Variant(math::Vector2<uint64_t> *ui64v2);
+      Variant(math::Vector3<uint64_t> *ui64v3);
+      Variant(math::Vector4<uint64_t> *ui64v4);
+
+      Variant(math::Vector2<int8_t*> *i8v2);
+      Variant(math::Vector3<int8_t*> *i8v3);
+      Variant(math::Vector4<int8_t*> *i8v4);
+      Variant(math::Vector2<uint8_t*> *ui8v2);
+      Variant(math::Vector3<uint8_t*> *ui8v3);
+      Variant(math::Vector4<uint8_t*> *ui8v4);
+      Variant(math::Vector2<int16_t*> *i16v2);
+      Variant(math::Vector3<int16_t*> *i16v3);
+      Variant(math::Vector4<int16_t*> *i16v4);
+      Variant(math::Vector2<uint16_t*> *ui16v2);
+      Variant(math::Vector3<uint16_t*> *ui16v3);
+      Variant(math::Vector4<uint16_t*> *ui16v4);
+      Variant(math::Vector2<int32_t*> *i32v2);
+      Variant(math::Vector3<int32_t*> *i32v3);
+      Variant(math::Vector4<int32_t*> *i32v4);
+      Variant(math::Vector2<uint32_t*> *ui32v2);
+      Variant(math::Vector3<uint32_t*> *ui32v3);
+      Variant(math::Vector4<uint32_t*> *ui32v4);
+      Variant(math::Vector2<int64_t*> *i64v2);
+      Variant(math::Vector3<int64_t*> *i64v3);
+      Variant(math::Vector4<int64_t*> *i64v4);
+      Variant(math::Vector2<uint64_t*> *ui64v2);
+      Variant(math::Vector3<uint64_t*> *ui64v3);
+      Variant(math::Vector4<uint64_t*> *ui64v4);
+
       Variant(void *ptr);
 
       //setData
