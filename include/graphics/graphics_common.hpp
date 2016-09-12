@@ -24,6 +24,7 @@ namespace libre{
     GLenum initializeGlew();
 
 
+
     void initializeSDL(uint32_t flags);
     void initializeSDLWithEverything();
 
