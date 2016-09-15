@@ -20,6 +20,7 @@ namespace libre{
     Window *m_window;
     RenderingContext *m_context;
     RendererType m_type;
+
   public:
     Renderer(Window *parent,RendererType type);
     ~Renderer(){
