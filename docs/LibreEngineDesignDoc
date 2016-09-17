@@ -1,11 +1,12 @@
 Libre Engine
 
-Design-Doc Revision: 3
+Design-Doc Revision: 4
 Created:9/9/16
 
 Rev History:
 9/11/16 -2
 9/12/16 -3
+9/17/16 -4
 
 
 
@@ -35,6 +36,9 @@ Libraries:
 	@@Proposed Idea:
 	SDL2_NET
 
+	#Scripting
+	Lua5.2
+
 
 Build-System: Cmake
 
@@ -59,68 +63,72 @@ Systems:
 
 
 Classes:
+[] = not started
+[c] = Completed basic functionality
+[i] = Incomplete functionality
+[e] = Extra functionality is needed
+[E] = Extra functionality is completed
 
-core::LEVariant - Class that can represent any type
-core::Entity - Class that represents an object in the engine
-core::Component - Class that represents data an object contains
-core::Sprite - Class that represents a 2D-image as a Component
-core::Model - Class that represents a 3D-Object as a Component
-core::SFX - Class that represents a Sound Effect as a component
-core::Collider2D - Class that represents a 2 Dimensional Collider as a component
-core::Collider3D - Class that represents a 3 Dimensional Collider as a component
-core::Behavior - Class that represents a Script as a component
+[c] core::LEVariant - Class that can represent any type
+[i] core::Entity - Class that represents an object in the engine
+[i] core::Component - Class that represents data an object contains
+[] core::Sprite - Class that represents a 2D-image as a Component
+[] core::Model - Class that represents a 3D-Object as a Component
+[] core::SFX - Class that represents a Sound Effect as a component
+[] core::Collider2D - Class that represents a 2 Dimensional Collider as a component
+[] core::Collider3D - Class that represents a 3 Dimensional Collider as a component
+[] core::Behavior - Class that represents a Script as a component
 
 
-math::Vector2 - Templated Class that represents an X and a Y variable
-math::Vector3 - Templated Class that represents an X , Y and a Z variable
-math::Vector4 - Templated Class that represents an X , Y , Z and a W  variable
-math::Matrix2 - Templated Class that represents an 2 by 2 Matrix
-math::Matrix3 - Templated Class that represents an 3 by 3 Matrix
-math::Matrix4 - Templated Class that represents an 4 by 4 Matrix
+[c] math::Vector2 - Templated Class that represents an X and a Y variable
+[c] math::Vector3 - Templated Class that represents an X , Y and a Z variable
+[c] math::Vector4 - Templated Class that represents an X , Y , Z and a W  variable
+[c] math::Matrix2 - Templated Class that represents an 2 by 2 Matrix
+[c] math::Matrix3 - Templated Class that represents an 3 by 3 Matrix
+[c] math::Matrix4 - Templated Class that represents an 4 by 4 Matrix
 
-physics::aabb - Class that represents an Axis-Aligned Bounding Box
+[i] physics::aabb - Class that represents an Axis-Aligned Bounding Box
 								AABB2D and AABB3D
-physics::rectangle - Class that represents a rectangle collider (2D)
-physics::circle - Class that represents a circle collider (2D)
-physics::Box - Class that represents a Box Collider (3D)
-physics::Sphere - Class that represents a Sphere Collider (3D)
-physics::lineSegment - Class that represents a Line Segment
-physics::line - Class that represents a Line that has one point and extends infinitely
-								Note: Use this for raycasting
+[i] physics::rectangle - Class that represents a rectangle collider (2D)
+[] physics::circle - Class that represents a circle collider (2D)
+[] physics::Box - Class that represents a Box Collider (3D)
+[] physics::Sphere - Class that represents a Sphere Collider (3D)
+[] physics::lineSegment - Class that represents a Line Segment
+[] physics::line - Class that represents a Line that has one point and extends infinitely
+	Note: Use this for raycasting
 
-graphics::Screen - Class that represents the Screen
-graphics::BaseRenderer - Class that represents the Renderer on the screen
-graphics::Renderer2D - Class that represents a 2D-Renderer, takes from BaseRenderer
-graphics::Renderer3D - Class that represents a 3D-Renderer, takes from BaseRenderer
-graphics::Image - Class that wraps SDL_image and holds image data
-
-
-audio::Sound - Class that represents a Sound File
-audio::SoundBuffer - Class that represents a buffer to handle streaming Sound Files
-audio::Mixer - Class that can play Sound Files
-audio::SoundStream - Class that represents the stream of Sound files
+[c] graphics::Screen - Class that represents the Screen
+[] graphics::BaseRenderer - Class that represents the Renderer on the screen
+[] graphics::Renderer2D - Class that represents a 2D-Renderer, takes from BaseRenderer
+[] graphics::Renderer3D - Class that represents a 3D-Renderer, takes from BaseRenderer
+[] graphics::Image - Class that wraps SDL_image and holds image data
 
 
-script::ScriptEngine - Class that represents the Scripting engine
-script::Script - Class that represents a single script which can be run within
-								 a ScriptEngine
+[] audio::Sound - Class that represents a Sound File
+[] audio::SoundBuffer - Class that represents a buffer to handle streaming Sound Files
+[] audio::Mixer - Class that can play Sound Files
+[] audio::SoundStream - Class that represents the stream of Sound files
 
-system::RenderingSystem - Class that represents the Rendering System
-													note: based on the rendering Context
 
-system::PhysicsSystem - Class that represents the Physics System
-system::ScriptingSystem - Class that represents the Scripting engine as a System
-system::AudioSystem - Class that represents the Audio System
+[c] script::ScriptEngine - Class that represents the Scripting engine
+[c] script::Script - Class that represents a single script which can be run within
+a ScriptEngine
 
-program::SinglePlayerApp - Class that represents an application based on the engine
-													 that is single player, and only relies on the base
-													 components of the engine
+[] system::RenderingSystem - Class that represents the Rendering System
+	 note: based on the rendering Context
 
-program::Client - Class that represents a client, which is an application that
-									relies on a connection to a server
+[] system::PhysicsSystem - Class that represents the Physics System
+[] system::ScriptingSystem - Class that represents the Scripting engine as a System
+[] system::AudioSystem - Class that represents the Audio System
 
-program::Server - Class that represents a server, a game can be written to run on
-									this server, as a multi-player game
+[] program::SinglePlayerApp - Class that represents an application based on the engine
+	 that is single player, and only relies on the base components of the engine
+
+[] program::Client - Class that represents a client, which is an application that
+	relies on a connection to a server
+
+[] program::Server - Class that represents a server, a game can be written to run on
+	this server, as a multi-player game
 
 
 Libre-Editor:
