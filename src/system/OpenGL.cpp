@@ -98,7 +98,7 @@ namespace libre{
 
 		void setShaderSource(unsigned shader, int count, char* source, int* length)
 		{
-			glShaderSource(shader, count, &source, length);
+			glShaderSource(shader, count, (const GLchar**)&source, length);
 		}
 
 		void getShaderParameter(unsigned shader, GLenum pname, int* params)
@@ -111,7 +111,7 @@ namespace libre{
 			glGetShaderInfoLog(shader, maxLength, length, infolog);
 		}
 
-		
+
 
 		void deleteShader(unsigned shader)
 		{
@@ -145,28 +145,28 @@ namespace libre{
 
 		void setTextureParameteri(GLenum target, GLenum pname, int param)
 		{
-			glTextureParameteri(target, pname, param);
+			glTexParameteri(target, pname, param);
 		}
 
 
 		void setTextureParameterf(GLenum target, GLenum pname, float param)
 		{
-			glTextureParameterf(target, pname, param);
+			glTexParameterf(target, pname, param);
 		}
 
 		void setTextureParameterip(GLenum target, GLenum pname, int* param)
 		{
-		glTextureParameteriv(target, pname, param);
+		glTexParameteriv(target, pname, param);
 		}
 
 		void setTextureParameterfp(GLenum target, GLenum pname, float* param)
 		{
-		glTextureParameterfv(target, pname, param);
+		glTexParameterfv(target, pname, param);
 		}
 
-		void defineTextureImage(GLenum target, int level, int internalformat, math::vec2<int> size, int border, GLenum format, GLenum type, void* data)
+		void defineTextureImage(GLenum target, int level, int internalformat, math::Vector2<int> size, int border, GLenum format, GLenum type, void* data)
 		{
-			glTexImage2D(target, level, internalformat, size.x, size.y, border, format, type, data);
+			glTexImage2D(target, level, internalformat, size.X(), size.Y(), border, format, type, data);
 		}
 
 		void deleteTexture(int amount, unsigned textures)
