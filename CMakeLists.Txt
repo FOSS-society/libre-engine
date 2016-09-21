@@ -1,0 +1,11 @@
+cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
+
+SET(engine LibreEngine)
+
+find_package(libsdl2-dev REQUIRED)
+find_package(libsdl2-image-dev REQUIRED)
+find_package(libglew-dev REQUIRED)
+find_package(liblua5.2-dev REQUIRED)
+
+add_subdirectory(src)
+

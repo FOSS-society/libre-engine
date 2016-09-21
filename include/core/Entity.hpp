@@ -4,42 +4,97 @@
 #include <iostream>
 #include <vector>
 
-#include "ComponentList.hpp"
+
 
 namespace libre{
   namespace core{
 
-      class Component;
+//foward declare
+  class Component;
 
     class Entity{
 
     private:
       std::string m_name;
-     ComponentList m_ComponentList;
-      Entity * m_parent;
+      std::vector<Component*> m_ComponentList;
+      Entity *m_parent;
       int m_id;
       bool m_active;
 
     public:
-      Entity(std::string name, Entity * parent, int id);
-      Entity(const Entity &&move);
+      Entity(std::string name, Entity * parent, int id):m_name(name), m_parent(parent), m_id(id){}
+      Entity(Entity &&m) = default;
 
-      ~Entity();
 
-      void setActive(bool a);
-      bool isActive();
-      bool Active()const;
 
-      void setID(int id);
-      int getID();
-      int ID();
 
-      template <class comp>
-      comp getComponent(std::string name){
-          return this->m_ComponentList.getComponent(name);
+      ~Entity(){
+
       }
 
-      Component getComponent(int id);
+      void setName(std::string name){
+        this->m_name = name;
+      }
+
+      std::string Name()const{
+        return this->m_name;
+      }
+
+      std::string getName(){
+        return this->m_name;
+      }
+
+      void setComponentList(std::vector<Component*> list){
+        this->m_ComponentList = list;
+      }
+      void setComponentList(std::nullptr_t np){
+        this->m_ComponentList.clear();
+      }
+
+      void addComponent(Component *c){
+        this->m_ComponentList.push_back(c);
+      }
+
+      std::vector<Component*> componentList()const{
+        return this->m_ComponentList;
+      }
+
+      std::vector<Component*> getComponentList(){
+        return this->m_ComponentList;
+      }
+
+      void setParent(Entity *e){
+        this->m_parent = e;
+        }
+
+        Entity *Parent()const{
+          return this->m_parent;
+        }
+
+        Entity *getParent(){
+          return this->m_parent;
+        }
+
+      void setActive(bool a){
+        this->m_active = a;
+      }
+      bool isActive(){
+        return this->m_active;
+      }
+      bool Active()const{
+        return this->m_active;
+      }
+
+      void setID(int id){
+        this->m_id = id;
+      }
+      int getID(){
+        return this->m_id;
+      }
+      int ID(){
+        return this->m_id;
+      }
+
 
     };
   }
