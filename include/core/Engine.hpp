@@ -10,6 +10,7 @@
 #include "Component.hpp"
 #include "../system/Time.hpp"
 
+
 namespace libre{
    namespace core{
 
@@ -23,8 +24,13 @@ namespace libre{
        std::vector<Entity*> m_EntityList;
 
        graphics::Window *m_window;
-       system::Time *m_Time;
+       graphics::Renderer *m_renderer;
+       system::Time *m_time;
 
+     public:
+       Engine(graphics::Renderer *renderer);
+
+       void update();
 
 
      };

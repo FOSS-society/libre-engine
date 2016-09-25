@@ -12,7 +12,26 @@ namespace libre{
         this->m_context->asOGL = (SDL_GLContext*)SDL_GL_CreateContext(this->m_window->SDLWIN());
         break;
       }
+}
 
-    }
+      Window *Renderer::getWindowHandle(){
+        return this->m_window;
+      }
+
+      RenderingContext *Renderer::getContext(){
+        return this->m_context;
+      }
+
+      RendererType Renderer::getType(){
+        return this->m_type;
+      }
+      RendererType Renderer::Type()const{
+        return this->m_type;
+      }
+
+
+
+
+
   }
 }

@@ -6,7 +6,9 @@
 
 namespace libre{
   namespace graphics{
+
       enum class RendererType {RT_2D, RT_3D};
+
       union RenderingContext{
         SDL_Renderer *asSDL;
         SDL_GLContext *asOGL;
@@ -27,6 +29,12 @@ namespace libre{
       delete m_context;
       delete m_window;
     }
+
+    Window *getWindowHandle();
+    RenderingContext *getContext();
+    RendererType getType();
+    RendererType Type()const;
+
 
     };
   }
