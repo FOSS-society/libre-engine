@@ -1,13 +1,13 @@
 Libre Engine
 
-Design-Doc Revision: 4
+Design-Doc Revision: 5
 Created:9/9/16
 
 Rev History:
 9/11/16 -2
 9/12/16 -3
 9/17/16 -4
-
+9/24/16 -5
 
 
 
@@ -78,7 +78,7 @@ Classes:
 [] core::Collider2D - Class that represents a 2 Dimensional Collider as a component
 [] core::Collider3D - Class that represents a 3 Dimensional Collider as a component
 [] core::Behavior - Class that represents a Script as a component
-
+[ce] core::Engine - Class that represents the whole engine
 
 [c] math::Vector2 - Templated Class that represents an X and a Y variable
 [c] math::Vector3 - Templated Class that represents an X , Y and a Z variable
@@ -98,9 +98,7 @@ Classes:
 	Note: Use this for raycasting
 
 [c] graphics::Screen - Class that represents the Screen
-[] graphics::BaseRenderer - Class that represents the Renderer on the screen
-[] graphics::Renderer2D - Class that represents a 2D-Renderer, takes from BaseRenderer
-[] graphics::Renderer3D - Class that represents a 3D-Renderer, takes from BaseRenderer
+[c] graphics::Renderer - Class that represents a renderer that works on both 2D and 3D
 [] graphics::Image - Class that wraps SDL_image and holds image data
 
 
