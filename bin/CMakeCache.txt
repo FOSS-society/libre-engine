@@ -168,95 +168,14 @@ CMAKE_USE_RELATIVE_PATHS:BOOL=OFF
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
-//The directory where GL/glew.h resides
-GLEW_INCLUDE_DIR:PATH=/usr/include
-
-//The GLEW library
-GLEW_LIBRARY:FILEPATH=/usr/lib64/libGLEW.so
-
-//Path to a file.
-LUA_INCLUDE_PREFIX:PATH=/usr
-
-//Path to a library.
-LUA_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/liblua5.2.so
-
-//Path to a library.
-LUA_MATH_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libm.so
-
-//pkg-config executable
-PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
-
-//Path to a library.
-SDL2MAIN_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libSDL2main.a
-
-//The directory containing a CMake configuration file for SDL2.
-SDL2_DIR:PATH=SDL2_DIR-NOTFOUND
-
-//Path to a file.
-SDL2_IMAGE_INCLUDE_DIR:PATH=/usr/include/SDL2
-
-//Path to a library.
-SDL2_IMAGE_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libSDL2_image.so
-
-//Path to a file.
-SDL2_INCLUDE_DIR:PATH=/usr/include/SDL2
-
-//Where the SDL2 Library can be found
-SDL2_LIBRARY:STRING=/usr/lib/x86_64-linux-gnu/libSDL2main.a;/usr/lib/x86_64-linux-gnu/libSDL2.so;-lpthread
-
 //Value Computed by CMake
-libre-engine-core_BINARY_DIR:STATIC=/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/bin/src/core
-
-//Value Computed by CMake
-libre-engine-core_SOURCE_DIR:STATIC=/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/src/core
-
-//Value Computed by CMake
-libre-engine-graphics_BINARY_DIR:STATIC=/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/bin/src/graphics
+libre-engine_BINARY_DIR:STATIC=/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/bin
 
 //Dependencies for target
-libre-engine-graphics_LIB_DEPENDS:STATIC=
+libre-engine_LIB_DEPENDS:STATIC=
 
 //Value Computed by CMake
-libre-engine-graphics_SOURCE_DIR:STATIC=/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/src/graphics
-
-//Value Computed by CMake
-libre-engine-math_BINARY_DIR:STATIC=/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/bin/src/math
-
-//Dependencies for target
-libre-engine-math_LIB_DEPENDS:STATIC=
-
-//Value Computed by CMake
-libre-engine-math_SOURCE_DIR:STATIC=/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/src/math
-
-//Value Computed by CMake
-libre-engine-physics_BINARY_DIR:STATIC=/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/bin/src/physics
-
-//Value Computed by CMake
-libre-engine-physics_SOURCE_DIR:STATIC=/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/src/physics
-
-//Value Computed by CMake
-libre-engine-scripts_BINARY_DIR:STATIC=/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/bin/src/script
-
-//Dependencies for target
-libre-engine-scripts_LIB_DEPENDS:STATIC=
-
-//Value Computed by CMake
-libre-engine-scripts_SOURCE_DIR:STATIC=/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/src/script
-
-//Value Computed by CMake
-libre-engine-system_BINARY_DIR:STATIC=/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/bin/src/system
-
-//Dependencies for target
-libre-engine-system_LIB_DEPENDS:STATIC=
-
-//Value Computed by CMake
-libre-engine-system_SOURCE_DIR:STATIC=/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/src/system
-
-//Value Computed by CMake
-libre-engine_BINARY_DIR:STATIC=/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/bin/src
-
-//Value Computed by CMake
-libre-engine_SOURCE_DIR:STATIC=/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/src
+libre-engine_SOURCE_DIR:STATIC=/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine
 
 
 ########################
@@ -325,14 +244,6 @@ CMAKE_EXPORT_COMPILE_COMMANDS-ADVANCED:INTERNAL=1
 CMAKE_GENERATOR:INTERNAL=Unix Makefiles
 //Name of generator toolset.
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
-//Have symbol pthread_create
-CMAKE_HAVE_LIBC_CREATE:INTERNAL=
-//Have library pthreads
-CMAKE_HAVE_PTHREADS_CREATE:INTERNAL=
-//Have library pthread
-CMAKE_HAVE_PTHREAD_CREATE:INTERNAL=1
-//Have include pthread.h
-CMAKE_HAVE_PTHREAD_H:INTERNAL=1
 //Start directory with the top level CMakeLists.txt file for this
 // project
 CMAKE_HOME_DIRECTORY:INTERNAL=/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine
@@ -355,7 +266,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=8
+CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -396,89 +307,4 @@ CMAKE_UNAME:INTERNAL=/bin/uname
 CMAKE_USE_RELATIVE_PATHS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
-//Details about finding PkgConfig
-FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/bin/pkg-config][v0.28()]
-//Details about finding Threads
-FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
-//ADVANCED property for variable: LUA_LIBRARY
-LUA_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: LUA_MATH_LIBRARY
-LUA_MATH_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
-PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
-SDL2IMAGE_CFLAGS:INTERNAL=-D_REENTRANT;-I/usr/include/SDL2
-SDL2IMAGE_CFLAGS_I:INTERNAL=
-SDL2IMAGE_CFLAGS_OTHER:INTERNAL=-D_REENTRANT
-SDL2IMAGE_FOUND:INTERNAL=1
-SDL2IMAGE_INCLUDEDIR:INTERNAL=/usr/include
-SDL2IMAGE_INCLUDE_DIRS:INTERNAL=/usr/include/SDL2
-SDL2IMAGE_LDFLAGS:INTERNAL=-lSDL2_image;-lSDL2
-SDL2IMAGE_LDFLAGS_OTHER:INTERNAL=
-SDL2IMAGE_LIBDIR:INTERNAL=/usr/lib/x86_64-linux-gnu
-SDL2IMAGE_LIBRARIES:INTERNAL=SDL2_image;SDL2
-SDL2IMAGE_LIBRARY_DIRS:INTERNAL=
-SDL2IMAGE_LIBS:INTERNAL=
-SDL2IMAGE_LIBS_L:INTERNAL=
-SDL2IMAGE_LIBS_OTHER:INTERNAL=
-SDL2IMAGE_LIBS_PATHS:INTERNAL=
-SDL2IMAGE_PREFIX:INTERNAL=/usr
-SDL2IMAGE_SDL2_image_INCLUDEDIR:INTERNAL=
-SDL2IMAGE_SDL2_image_LIBDIR:INTERNAL=
-SDL2IMAGE_SDL2_image_PREFIX:INTERNAL=
-SDL2IMAGE_SDL2_image_VERSION:INTERNAL=
-SDL2IMAGE_STATIC_CFLAGS:INTERNAL=-D_REENTRANT;-I/usr/include/SDL2
-SDL2IMAGE_STATIC_CFLAGS_I:INTERNAL=
-SDL2IMAGE_STATIC_CFLAGS_OTHER:INTERNAL=-D_REENTRANT
-SDL2IMAGE_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include/SDL2
-SDL2IMAGE_STATIC_LDFLAGS:INTERNAL=-lSDL2_image;-lSDL2;-lpthread;-Wl,--no-undefined;-lm;-ldl;-lasound;-lm;-ldl;-lpthread;-lpulse-simple;-lpulse;-lX11;-lXext;-lXcursor;-lXinerama;-lXi;-lXrandr;-lXss;-lXxf86vm;-lwayland-egl;-lwayland-client;-lwayland-cursor;-lxkbcommon;-lpthread;-lrt
-SDL2IMAGE_STATIC_LDFLAGS_OTHER:INTERNAL=-Wl,--no-undefined
-SDL2IMAGE_STATIC_LIBDIR:INTERNAL=
-SDL2IMAGE_STATIC_LIBRARIES:INTERNAL=SDL2_image;SDL2;pthread;m;dl;asound;m;dl;pthread;pulse-simple;pulse;X11;Xext;Xcursor;Xinerama;Xi;Xrandr;Xss;Xxf86vm;wayland-egl;wayland-client;wayland-cursor;xkbcommon;pthread;rt
-SDL2IMAGE_STATIC_LIBRARY_DIRS:INTERNAL=
-SDL2IMAGE_STATIC_LIBS:INTERNAL=
-SDL2IMAGE_STATIC_LIBS_L:INTERNAL=
-SDL2IMAGE_STATIC_LIBS_OTHER:INTERNAL=
-SDL2IMAGE_STATIC_LIBS_PATHS:INTERNAL=
-SDL2IMAGE_VERSION:INTERNAL=2.0.0
-SDL2_CFLAGS:INTERNAL=-D_REENTRANT;-I/usr/include/SDL2
-SDL2_CFLAGS_I:INTERNAL=
-SDL2_CFLAGS_OTHER:INTERNAL=-D_REENTRANT
-SDL2_FOUND:INTERNAL=1
-//ADVANCED property for variable: SDL2_IMAGE_INCLUDE_DIR
-SDL2_IMAGE_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: SDL2_IMAGE_LIBRARY
-SDL2_IMAGE_LIBRARY-ADVANCED:INTERNAL=1
-SDL2_INCLUDEDIR:INTERNAL=/usr/include
-SDL2_INCLUDE_DIRS:INTERNAL=/usr/include/SDL2
-SDL2_LDFLAGS:INTERNAL=-lSDL2
-SDL2_LDFLAGS_OTHER:INTERNAL=
-SDL2_LIBDIR:INTERNAL=/usr/lib/x86_64-linux-gnu
-SDL2_LIBRARIES:INTERNAL=SDL2
-SDL2_LIBRARY_DIRS:INTERNAL=
-SDL2_LIBRARY_TEMP:INTERNAL=/usr/lib/x86_64-linux-gnu/libSDL2main.a;/usr/lib/x86_64-linux-gnu/libSDL2main.a;/usr/lib/x86_64-linux-gnu/libSDL2main.a;/usr/lib/x86_64-linux-gnu/libSDL2.so;-lpthread;-lpthread;-lpthread
-SDL2_LIBS:INTERNAL=
-SDL2_LIBS_L:INTERNAL=
-SDL2_LIBS_OTHER:INTERNAL=
-SDL2_LIBS_PATHS:INTERNAL=
-SDL2_PREFIX:INTERNAL=/usr
-SDL2_STATIC_CFLAGS:INTERNAL=-D_REENTRANT;-I/usr/include/SDL2
-SDL2_STATIC_CFLAGS_I:INTERNAL=
-SDL2_STATIC_CFLAGS_OTHER:INTERNAL=-D_REENTRANT
-SDL2_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include/SDL2
-SDL2_STATIC_LDFLAGS:INTERNAL=-lSDL2;-lpthread;-Wl,--no-undefined;-lm;-ldl;-lasound;-lm;-ldl;-lpthread;-lpulse-simple;-lpulse;-lX11;-lXext;-lXcursor;-lXinerama;-lXi;-lXrandr;-lXss;-lXxf86vm;-lwayland-egl;-lwayland-client;-lwayland-cursor;-lxkbcommon;-lpthread;-lrt
-SDL2_STATIC_LDFLAGS_OTHER:INTERNAL=-Wl,--no-undefined
-SDL2_STATIC_LIBDIR:INTERNAL=
-SDL2_STATIC_LIBRARIES:INTERNAL=SDL2;pthread;m;dl;asound;m;dl;pthread;pulse-simple;pulse;X11;Xext;Xcursor;Xinerama;Xi;Xrandr;Xss;Xxf86vm;wayland-egl;wayland-client;wayland-cursor;xkbcommon;pthread;rt
-SDL2_STATIC_LIBRARY_DIRS:INTERNAL=
-SDL2_STATIC_LIBS:INTERNAL=
-SDL2_STATIC_LIBS_L:INTERNAL=
-SDL2_STATIC_LIBS_OTHER:INTERNAL=
-SDL2_STATIC_LIBS_PATHS:INTERNAL=
-SDL2_VERSION:INTERNAL=2.0.2
-SDL2_sdl2_INCLUDEDIR:INTERNAL=
-SDL2_sdl2_LIBDIR:INTERNAL=
-SDL2_sdl2_PREFIX:INTERNAL=
-SDL2_sdl2_VERSION:INTERNAL=
-__pkg_config_checked_SDL2:INTERNAL=1
-__pkg_config_checked_SDL2IMAGE:INTERNAL=1
 

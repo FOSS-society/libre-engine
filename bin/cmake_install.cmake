@@ -32,10 +32,19 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
   set(CMAKE_INSTALL_SO_NO_EXE "1")
 endif()
 
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for each subdirectory.
-  include("/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/bin/src/cmake_install.cmake")
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/bin/liblibre-engine.a")
+endif()
 
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/libre-engine" TYPE DIRECTORY FILES
+    "/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/include/core"
+    "/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/include/graphics"
+    "/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/include/math"
+    "/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/include/physics"
+    "/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/include/script"
+    "/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/include/system"
+    )
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)

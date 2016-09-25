@@ -1,2 +1,0 @@
-/usr/bin/ar cr liblibre-engine-math.a  CMakeFiles/libre-engine-math.dir/libremath.cpp.o
-/usr/bin/ranlib liblibre-engine-math.a

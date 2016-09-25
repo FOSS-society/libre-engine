@@ -1,2 +1,0 @@
-/usr/bin/ar cr liblibre-engine-system.a  CMakeFiles/libre-engine-system.dir/VertexArray.cpp.o CMakeFiles/libre-engine-system.dir/OpenGL.cpp.o CMakeFiles/libre-engine-system.dir/Buffer.cpp.o
-/usr/bin/ranlib liblibre-engine-system.a

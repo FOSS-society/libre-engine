@@ -1,4 +1,1 @@
-/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/bin/src/graphics/CMakeFiles/libre-engine-graphics.dir
-/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/bin/src/math/CMakeFiles/libre-engine-math.dir
-/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/bin/src/script/CMakeFiles/libre-engine-scripts.dir
-/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/bin/src/system/CMakeFiles/libre-engine-system.dir
+/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/bin/CMakeFiles/libre-engine.dir

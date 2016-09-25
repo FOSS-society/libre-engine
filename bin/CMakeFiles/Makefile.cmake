@@ -11,13 +11,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.0.2/CMakeCCompiler.cmake"
   "CMakeFiles/3.0.2/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.0.2/CMakeSystem.cmake"
-  "../src/CMakeLists.txt"
-  "../src/core/CMakeLists.txt"
-  "../src/graphics/CMakeLists.txt"
-  "../src/math/CMakeLists.txt"
-  "../src/physics/CMakeLists.txt"
-  "../src/script/CMakeLists.txt"
-  "../src/system/CMakeLists.txt"
   "/usr/share/cmake-3.0/Modules/CMakeCInformation.cmake"
   "/usr/share/cmake-3.0/Modules/CMakeCXXInformation.cmake"
   "/usr/share/cmake-3.0/Modules/CMakeCommonLanguageInclude.cmake"
@@ -42,19 +35,9 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
-  "src/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "src/core/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "src/graphics/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "src/math/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "src/physics/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "src/script/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "src/system/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "src/graphics/CMakeFiles/libre-engine-graphics.dir/DependInfo.cmake"
-  "src/math/CMakeFiles/libre-engine-math.dir/DependInfo.cmake"
-  "src/script/CMakeFiles/libre-engine-scripts.dir/DependInfo.cmake"
-  "src/system/CMakeFiles/libre-engine-system.dir/DependInfo.cmake"
+  "CMakeFiles/libre-engine.dir/DependInfo.cmake"
   )

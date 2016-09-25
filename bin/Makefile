@@ -61,6 +61,47 @@ edit_cache:
 edit_cache/fast: edit_cache
 .PHONY : edit_cache/fast
 
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: install/local
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: install/strip
+.PHONY : install/strip/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+.PHONY : list_install_components/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -103,56 +144,281 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named libre-engine-graphics
+# Target rules for targets named libre-engine
 
 # Build rule for target.
-libre-engine-graphics: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 libre-engine-graphics
-.PHONY : libre-engine-graphics
+libre-engine: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 libre-engine
+.PHONY : libre-engine
 
 # fast build rule for target.
-libre-engine-graphics/fast:
-	$(MAKE) -f src/graphics/CMakeFiles/libre-engine-graphics.dir/build.make src/graphics/CMakeFiles/libre-engine-graphics.dir/build
-.PHONY : libre-engine-graphics/fast
+libre-engine/fast:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/build
+.PHONY : libre-engine/fast
 
-#=============================================================================
-# Target rules for targets named libre-engine-math
+src/core/Engine.o: src/core/Engine.cpp.o
+.PHONY : src/core/Engine.o
 
-# Build rule for target.
-libre-engine-math: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 libre-engine-math
-.PHONY : libre-engine-math
+# target to build an object file
+src/core/Engine.cpp.o:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/core/Engine.cpp.o
+.PHONY : src/core/Engine.cpp.o
 
-# fast build rule for target.
-libre-engine-math/fast:
-	$(MAKE) -f src/math/CMakeFiles/libre-engine-math.dir/build.make src/math/CMakeFiles/libre-engine-math.dir/build
-.PHONY : libre-engine-math/fast
+src/core/Engine.i: src/core/Engine.cpp.i
+.PHONY : src/core/Engine.i
 
-#=============================================================================
-# Target rules for targets named libre-engine-scripts
+# target to preprocess a source file
+src/core/Engine.cpp.i:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/core/Engine.cpp.i
+.PHONY : src/core/Engine.cpp.i
 
-# Build rule for target.
-libre-engine-scripts: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 libre-engine-scripts
-.PHONY : libre-engine-scripts
+src/core/Engine.s: src/core/Engine.cpp.s
+.PHONY : src/core/Engine.s
 
-# fast build rule for target.
-libre-engine-scripts/fast:
-	$(MAKE) -f src/script/CMakeFiles/libre-engine-scripts.dir/build.make src/script/CMakeFiles/libre-engine-scripts.dir/build
-.PHONY : libre-engine-scripts/fast
+# target to generate assembly for a file
+src/core/Engine.cpp.s:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/core/Engine.cpp.s
+.PHONY : src/core/Engine.cpp.s
 
-#=============================================================================
-# Target rules for targets named libre-engine-system
+src/graphics/Renderer.o: src/graphics/Renderer.cpp.o
+.PHONY : src/graphics/Renderer.o
 
-# Build rule for target.
-libre-engine-system: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 libre-engine-system
-.PHONY : libre-engine-system
+# target to build an object file
+src/graphics/Renderer.cpp.o:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/graphics/Renderer.cpp.o
+.PHONY : src/graphics/Renderer.cpp.o
 
-# fast build rule for target.
-libre-engine-system/fast:
-	$(MAKE) -f src/system/CMakeFiles/libre-engine-system.dir/build.make src/system/CMakeFiles/libre-engine-system.dir/build
-.PHONY : libre-engine-system/fast
+src/graphics/Renderer.i: src/graphics/Renderer.cpp.i
+.PHONY : src/graphics/Renderer.i
+
+# target to preprocess a source file
+src/graphics/Renderer.cpp.i:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/graphics/Renderer.cpp.i
+.PHONY : src/graphics/Renderer.cpp.i
+
+src/graphics/Renderer.s: src/graphics/Renderer.cpp.s
+.PHONY : src/graphics/Renderer.s
+
+# target to generate assembly for a file
+src/graphics/Renderer.cpp.s:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/graphics/Renderer.cpp.s
+.PHONY : src/graphics/Renderer.cpp.s
+
+src/graphics/Window.o: src/graphics/Window.cpp.o
+.PHONY : src/graphics/Window.o
+
+# target to build an object file
+src/graphics/Window.cpp.o:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/graphics/Window.cpp.o
+.PHONY : src/graphics/Window.cpp.o
+
+src/graphics/Window.i: src/graphics/Window.cpp.i
+.PHONY : src/graphics/Window.i
+
+# target to preprocess a source file
+src/graphics/Window.cpp.i:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/graphics/Window.cpp.i
+.PHONY : src/graphics/Window.cpp.i
+
+src/graphics/Window.s: src/graphics/Window.cpp.s
+.PHONY : src/graphics/Window.s
+
+# target to generate assembly for a file
+src/graphics/Window.cpp.s:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/graphics/Window.cpp.s
+.PHONY : src/graphics/Window.cpp.s
+
+src/graphics/graphics_common.o: src/graphics/graphics_common.cpp.o
+.PHONY : src/graphics/graphics_common.o
+
+# target to build an object file
+src/graphics/graphics_common.cpp.o:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/graphics/graphics_common.cpp.o
+.PHONY : src/graphics/graphics_common.cpp.o
+
+src/graphics/graphics_common.i: src/graphics/graphics_common.cpp.i
+.PHONY : src/graphics/graphics_common.i
+
+# target to preprocess a source file
+src/graphics/graphics_common.cpp.i:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/graphics/graphics_common.cpp.i
+.PHONY : src/graphics/graphics_common.cpp.i
+
+src/graphics/graphics_common.s: src/graphics/graphics_common.cpp.s
+.PHONY : src/graphics/graphics_common.s
+
+# target to generate assembly for a file
+src/graphics/graphics_common.cpp.s:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/graphics/graphics_common.cpp.s
+.PHONY : src/graphics/graphics_common.cpp.s
+
+src/math/libremath.o: src/math/libremath.cpp.o
+.PHONY : src/math/libremath.o
+
+# target to build an object file
+src/math/libremath.cpp.o:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/math/libremath.cpp.o
+.PHONY : src/math/libremath.cpp.o
+
+src/math/libremath.i: src/math/libremath.cpp.i
+.PHONY : src/math/libremath.i
+
+# target to preprocess a source file
+src/math/libremath.cpp.i:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/math/libremath.cpp.i
+.PHONY : src/math/libremath.cpp.i
+
+src/math/libremath.s: src/math/libremath.cpp.s
+.PHONY : src/math/libremath.s
+
+# target to generate assembly for a file
+src/math/libremath.cpp.s:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/math/libremath.cpp.s
+.PHONY : src/math/libremath.cpp.s
+
+src/script/Script.o: src/script/Script.cpp.o
+.PHONY : src/script/Script.o
+
+# target to build an object file
+src/script/Script.cpp.o:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/script/Script.cpp.o
+.PHONY : src/script/Script.cpp.o
+
+src/script/Script.i: src/script/Script.cpp.i
+.PHONY : src/script/Script.i
+
+# target to preprocess a source file
+src/script/Script.cpp.i:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/script/Script.cpp.i
+.PHONY : src/script/Script.cpp.i
+
+src/script/Script.s: src/script/Script.cpp.s
+.PHONY : src/script/Script.s
+
+# target to generate assembly for a file
+src/script/Script.cpp.s:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/script/Script.cpp.s
+.PHONY : src/script/Script.cpp.s
+
+src/script/ScriptEngine.o: src/script/ScriptEngine.cpp.o
+.PHONY : src/script/ScriptEngine.o
+
+# target to build an object file
+src/script/ScriptEngine.cpp.o:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/script/ScriptEngine.cpp.o
+.PHONY : src/script/ScriptEngine.cpp.o
+
+src/script/ScriptEngine.i: src/script/ScriptEngine.cpp.i
+.PHONY : src/script/ScriptEngine.i
+
+# target to preprocess a source file
+src/script/ScriptEngine.cpp.i:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/script/ScriptEngine.cpp.i
+.PHONY : src/script/ScriptEngine.cpp.i
+
+src/script/ScriptEngine.s: src/script/ScriptEngine.cpp.s
+.PHONY : src/script/ScriptEngine.s
+
+# target to generate assembly for a file
+src/script/ScriptEngine.cpp.s:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/script/ScriptEngine.cpp.s
+.PHONY : src/script/ScriptEngine.cpp.s
+
+src/system/Buffer.o: src/system/Buffer.cpp.o
+.PHONY : src/system/Buffer.o
+
+# target to build an object file
+src/system/Buffer.cpp.o:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/system/Buffer.cpp.o
+.PHONY : src/system/Buffer.cpp.o
+
+src/system/Buffer.i: src/system/Buffer.cpp.i
+.PHONY : src/system/Buffer.i
+
+# target to preprocess a source file
+src/system/Buffer.cpp.i:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/system/Buffer.cpp.i
+.PHONY : src/system/Buffer.cpp.i
+
+src/system/Buffer.s: src/system/Buffer.cpp.s
+.PHONY : src/system/Buffer.s
+
+# target to generate assembly for a file
+src/system/Buffer.cpp.s:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/system/Buffer.cpp.s
+.PHONY : src/system/Buffer.cpp.s
+
+src/system/OpenGL.o: src/system/OpenGL.cpp.o
+.PHONY : src/system/OpenGL.o
+
+# target to build an object file
+src/system/OpenGL.cpp.o:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/system/OpenGL.cpp.o
+.PHONY : src/system/OpenGL.cpp.o
+
+src/system/OpenGL.i: src/system/OpenGL.cpp.i
+.PHONY : src/system/OpenGL.i
+
+# target to preprocess a source file
+src/system/OpenGL.cpp.i:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/system/OpenGL.cpp.i
+.PHONY : src/system/OpenGL.cpp.i
+
+src/system/OpenGL.s: src/system/OpenGL.cpp.s
+.PHONY : src/system/OpenGL.s
+
+# target to generate assembly for a file
+src/system/OpenGL.cpp.s:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/system/OpenGL.cpp.s
+.PHONY : src/system/OpenGL.cpp.s
+
+src/system/Time.o: src/system/Time.cpp.o
+.PHONY : src/system/Time.o
+
+# target to build an object file
+src/system/Time.cpp.o:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/system/Time.cpp.o
+.PHONY : src/system/Time.cpp.o
+
+src/system/Time.i: src/system/Time.cpp.i
+.PHONY : src/system/Time.i
+
+# target to preprocess a source file
+src/system/Time.cpp.i:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/system/Time.cpp.i
+.PHONY : src/system/Time.cpp.i
+
+src/system/Time.s: src/system/Time.cpp.s
+.PHONY : src/system/Time.s
+
+# target to generate assembly for a file
+src/system/Time.cpp.s:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/system/Time.cpp.s
+.PHONY : src/system/Time.cpp.s
+
+src/system/VertexArray.o: src/system/VertexArray.cpp.o
+.PHONY : src/system/VertexArray.o
+
+# target to build an object file
+src/system/VertexArray.cpp.o:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/system/VertexArray.cpp.o
+.PHONY : src/system/VertexArray.cpp.o
+
+src/system/VertexArray.i: src/system/VertexArray.cpp.i
+.PHONY : src/system/VertexArray.i
+
+# target to preprocess a source file
+src/system/VertexArray.cpp.i:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/system/VertexArray.cpp.i
+.PHONY : src/system/VertexArray.cpp.i
+
+src/system/VertexArray.s: src/system/VertexArray.cpp.s
+.PHONY : src/system/VertexArray.s
+
+# target to generate assembly for a file
+src/system/VertexArray.cpp.s:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/system/VertexArray.cpp.s
+.PHONY : src/system/VertexArray.cpp.s
 
 # Help Target
 help:
@@ -161,11 +427,45 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... install"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... libre-engine"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... libre-engine-graphics"
-	@echo "... libre-engine-math"
-	@echo "... libre-engine-scripts"
-	@echo "... libre-engine-system"
+	@echo "... src/core/Engine.o"
+	@echo "... src/core/Engine.i"
+	@echo "... src/core/Engine.s"
+	@echo "... src/graphics/Renderer.o"
+	@echo "... src/graphics/Renderer.i"
+	@echo "... src/graphics/Renderer.s"
+	@echo "... src/graphics/Window.o"
+	@echo "... src/graphics/Window.i"
+	@echo "... src/graphics/Window.s"
+	@echo "... src/graphics/graphics_common.o"
+	@echo "... src/graphics/graphics_common.i"
+	@echo "... src/graphics/graphics_common.s"
+	@echo "... src/math/libremath.o"
+	@echo "... src/math/libremath.i"
+	@echo "... src/math/libremath.s"
+	@echo "... src/script/Script.o"
+	@echo "... src/script/Script.i"
+	@echo "... src/script/Script.s"
+	@echo "... src/script/ScriptEngine.o"
+	@echo "... src/script/ScriptEngine.i"
+	@echo "... src/script/ScriptEngine.s"
+	@echo "... src/system/Buffer.o"
+	@echo "... src/system/Buffer.i"
+	@echo "... src/system/Buffer.s"
+	@echo "... src/system/OpenGL.o"
+	@echo "... src/system/OpenGL.i"
+	@echo "... src/system/OpenGL.s"
+	@echo "... src/system/Time.o"
+	@echo "... src/system/Time.i"
+	@echo "... src/system/Time.s"
+	@echo "... src/system/VertexArray.o"
+	@echo "... src/system/VertexArray.i"
+	@echo "... src/system/VertexArray.s"
 .PHONY : help
 
 

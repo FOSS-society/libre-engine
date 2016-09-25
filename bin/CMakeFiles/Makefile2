@@ -53,263 +53,38 @@ CMAKE_SOURCE_DIR = "/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine"
 CMAKE_BINARY_DIR = "/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/bin"
 
 #=============================================================================
-# Directory level rules for directory src
-
-# Convenience name for "all" pass in the directory.
-src/all: src/core/all
-src/all: src/graphics/all
-src/all: src/math/all
-src/all: src/physics/all
-src/all: src/script/all
-src/all: src/system/all
-.PHONY : src/all
-
-# Convenience name for "clean" pass in the directory.
-src/clean: src/core/clean
-src/clean: src/graphics/clean
-src/clean: src/math/clean
-src/clean: src/physics/clean
-src/clean: src/script/clean
-src/clean: src/system/clean
-.PHONY : src/clean
-
-# Convenience name for "preinstall" pass in the directory.
-src/preinstall: src/core/preinstall
-src/preinstall: src/graphics/preinstall
-src/preinstall: src/math/preinstall
-src/preinstall: src/physics/preinstall
-src/preinstall: src/script/preinstall
-src/preinstall: src/system/preinstall
-.PHONY : src/preinstall
-
-#=============================================================================
-# Directory level rules for directory src/core
-
-# Convenience name for "all" pass in the directory.
-src/core/all:
-.PHONY : src/core/all
-
-# Convenience name for "clean" pass in the directory.
-src/core/clean:
-.PHONY : src/core/clean
-
-# Convenience name for "preinstall" pass in the directory.
-src/core/preinstall:
-.PHONY : src/core/preinstall
-
-#=============================================================================
-# Directory level rules for directory src/graphics
-
-# Convenience name for "all" pass in the directory.
-src/graphics/all: src/graphics/CMakeFiles/libre-engine-graphics.dir/all
-.PHONY : src/graphics/all
-
-# Convenience name for "clean" pass in the directory.
-src/graphics/clean: src/graphics/CMakeFiles/libre-engine-graphics.dir/clean
-.PHONY : src/graphics/clean
-
-# Convenience name for "preinstall" pass in the directory.
-src/graphics/preinstall:
-.PHONY : src/graphics/preinstall
-
-#=============================================================================
-# Target rules for target src/graphics/CMakeFiles/libre-engine-graphics.dir
+# Target rules for target CMakeFiles/libre-engine.dir
 
 # All Build rule for target.
-src/graphics/CMakeFiles/libre-engine-graphics.dir/all:
-	$(MAKE) -f src/graphics/CMakeFiles/libre-engine-graphics.dir/build.make src/graphics/CMakeFiles/libre-engine-graphics.dir/depend
-	$(MAKE) -f src/graphics/CMakeFiles/libre-engine-graphics.dir/build.make src/graphics/CMakeFiles/libre-engine-graphics.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report "/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/bin/CMakeFiles"  1 2 3
-	@echo "Built target libre-engine-graphics"
-.PHONY : src/graphics/CMakeFiles/libre-engine-graphics.dir/all
+CMakeFiles/libre-engine.dir/all:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/depend
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report "/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/bin/CMakeFiles"  1 2 3 4 5 6 7 8 9 10 11
+	@echo "Built target libre-engine"
+.PHONY : CMakeFiles/libre-engine.dir/all
 
 # Include target in all.
-all: src/graphics/CMakeFiles/libre-engine-graphics.dir/all
+all: CMakeFiles/libre-engine.dir/all
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-src/graphics/CMakeFiles/libre-engine-graphics.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/bin/CMakeFiles" 3
-	$(MAKE) -f CMakeFiles/Makefile2 src/graphics/CMakeFiles/libre-engine-graphics.dir/all
+CMakeFiles/libre-engine.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/bin/CMakeFiles" 11
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/libre-engine.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/bin/CMakeFiles" 0
-.PHONY : src/graphics/CMakeFiles/libre-engine-graphics.dir/rule
+.PHONY : CMakeFiles/libre-engine.dir/rule
 
 # Convenience name for target.
-libre-engine-graphics: src/graphics/CMakeFiles/libre-engine-graphics.dir/rule
-.PHONY : libre-engine-graphics
+libre-engine: CMakeFiles/libre-engine.dir/rule
+.PHONY : libre-engine
 
 # clean rule for target.
-src/graphics/CMakeFiles/libre-engine-graphics.dir/clean:
-	$(MAKE) -f src/graphics/CMakeFiles/libre-engine-graphics.dir/build.make src/graphics/CMakeFiles/libre-engine-graphics.dir/clean
-.PHONY : src/graphics/CMakeFiles/libre-engine-graphics.dir/clean
+CMakeFiles/libre-engine.dir/clean:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/clean
+.PHONY : CMakeFiles/libre-engine.dir/clean
 
 # clean rule for target.
-clean: src/graphics/CMakeFiles/libre-engine-graphics.dir/clean
-.PHONY : clean
-
-#=============================================================================
-# Directory level rules for directory src/math
-
-# Convenience name for "all" pass in the directory.
-src/math/all: src/math/CMakeFiles/libre-engine-math.dir/all
-.PHONY : src/math/all
-
-# Convenience name for "clean" pass in the directory.
-src/math/clean: src/math/CMakeFiles/libre-engine-math.dir/clean
-.PHONY : src/math/clean
-
-# Convenience name for "preinstall" pass in the directory.
-src/math/preinstall:
-.PHONY : src/math/preinstall
-
-#=============================================================================
-# Target rules for target src/math/CMakeFiles/libre-engine-math.dir
-
-# All Build rule for target.
-src/math/CMakeFiles/libre-engine-math.dir/all:
-	$(MAKE) -f src/math/CMakeFiles/libre-engine-math.dir/build.make src/math/CMakeFiles/libre-engine-math.dir/depend
-	$(MAKE) -f src/math/CMakeFiles/libre-engine-math.dir/build.make src/math/CMakeFiles/libre-engine-math.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report "/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/bin/CMakeFiles"  4
-	@echo "Built target libre-engine-math"
-.PHONY : src/math/CMakeFiles/libre-engine-math.dir/all
-
-# Include target in all.
-all: src/math/CMakeFiles/libre-engine-math.dir/all
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-src/math/CMakeFiles/libre-engine-math.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/bin/CMakeFiles" 1
-	$(MAKE) -f CMakeFiles/Makefile2 src/math/CMakeFiles/libre-engine-math.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/bin/CMakeFiles" 0
-.PHONY : src/math/CMakeFiles/libre-engine-math.dir/rule
-
-# Convenience name for target.
-libre-engine-math: src/math/CMakeFiles/libre-engine-math.dir/rule
-.PHONY : libre-engine-math
-
-# clean rule for target.
-src/math/CMakeFiles/libre-engine-math.dir/clean:
-	$(MAKE) -f src/math/CMakeFiles/libre-engine-math.dir/build.make src/math/CMakeFiles/libre-engine-math.dir/clean
-.PHONY : src/math/CMakeFiles/libre-engine-math.dir/clean
-
-# clean rule for target.
-clean: src/math/CMakeFiles/libre-engine-math.dir/clean
-.PHONY : clean
-
-#=============================================================================
-# Directory level rules for directory src/physics
-
-# Convenience name for "all" pass in the directory.
-src/physics/all:
-.PHONY : src/physics/all
-
-# Convenience name for "clean" pass in the directory.
-src/physics/clean:
-.PHONY : src/physics/clean
-
-# Convenience name for "preinstall" pass in the directory.
-src/physics/preinstall:
-.PHONY : src/physics/preinstall
-
-#=============================================================================
-# Directory level rules for directory src/script
-
-# Convenience name for "all" pass in the directory.
-src/script/all: src/script/CMakeFiles/libre-engine-scripts.dir/all
-.PHONY : src/script/all
-
-# Convenience name for "clean" pass in the directory.
-src/script/clean: src/script/CMakeFiles/libre-engine-scripts.dir/clean
-.PHONY : src/script/clean
-
-# Convenience name for "preinstall" pass in the directory.
-src/script/preinstall:
-.PHONY : src/script/preinstall
-
-#=============================================================================
-# Target rules for target src/script/CMakeFiles/libre-engine-scripts.dir
-
-# All Build rule for target.
-src/script/CMakeFiles/libre-engine-scripts.dir/all:
-	$(MAKE) -f src/script/CMakeFiles/libre-engine-scripts.dir/build.make src/script/CMakeFiles/libre-engine-scripts.dir/depend
-	$(MAKE) -f src/script/CMakeFiles/libre-engine-scripts.dir/build.make src/script/CMakeFiles/libre-engine-scripts.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report "/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/bin/CMakeFiles"  5 6
-	@echo "Built target libre-engine-scripts"
-.PHONY : src/script/CMakeFiles/libre-engine-scripts.dir/all
-
-# Include target in all.
-all: src/script/CMakeFiles/libre-engine-scripts.dir/all
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-src/script/CMakeFiles/libre-engine-scripts.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/bin/CMakeFiles" 2
-	$(MAKE) -f CMakeFiles/Makefile2 src/script/CMakeFiles/libre-engine-scripts.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/bin/CMakeFiles" 0
-.PHONY : src/script/CMakeFiles/libre-engine-scripts.dir/rule
-
-# Convenience name for target.
-libre-engine-scripts: src/script/CMakeFiles/libre-engine-scripts.dir/rule
-.PHONY : libre-engine-scripts
-
-# clean rule for target.
-src/script/CMakeFiles/libre-engine-scripts.dir/clean:
-	$(MAKE) -f src/script/CMakeFiles/libre-engine-scripts.dir/build.make src/script/CMakeFiles/libre-engine-scripts.dir/clean
-.PHONY : src/script/CMakeFiles/libre-engine-scripts.dir/clean
-
-# clean rule for target.
-clean: src/script/CMakeFiles/libre-engine-scripts.dir/clean
-.PHONY : clean
-
-#=============================================================================
-# Directory level rules for directory src/system
-
-# Convenience name for "all" pass in the directory.
-src/system/all: src/system/CMakeFiles/libre-engine-system.dir/all
-.PHONY : src/system/all
-
-# Convenience name for "clean" pass in the directory.
-src/system/clean: src/system/CMakeFiles/libre-engine-system.dir/clean
-.PHONY : src/system/clean
-
-# Convenience name for "preinstall" pass in the directory.
-src/system/preinstall:
-.PHONY : src/system/preinstall
-
-#=============================================================================
-# Target rules for target src/system/CMakeFiles/libre-engine-system.dir
-
-# All Build rule for target.
-src/system/CMakeFiles/libre-engine-system.dir/all:
-	$(MAKE) -f src/system/CMakeFiles/libre-engine-system.dir/build.make src/system/CMakeFiles/libre-engine-system.dir/depend
-	$(MAKE) -f src/system/CMakeFiles/libre-engine-system.dir/build.make src/system/CMakeFiles/libre-engine-system.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report "/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/bin/CMakeFiles"  7 8 9
-	@echo "Built target libre-engine-system"
-.PHONY : src/system/CMakeFiles/libre-engine-system.dir/all
-
-# Include target in all.
-all: src/system/CMakeFiles/libre-engine-system.dir/all
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-src/system/CMakeFiles/libre-engine-system.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/bin/CMakeFiles" 3
-	$(MAKE) -f CMakeFiles/Makefile2 src/system/CMakeFiles/libre-engine-system.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/bin/CMakeFiles" 0
-.PHONY : src/system/CMakeFiles/libre-engine-system.dir/rule
-
-# Convenience name for target.
-libre-engine-system: src/system/CMakeFiles/libre-engine-system.dir/rule
-.PHONY : libre-engine-system
-
-# clean rule for target.
-src/system/CMakeFiles/libre-engine-system.dir/clean:
-	$(MAKE) -f src/system/CMakeFiles/libre-engine-system.dir/build.make src/system/CMakeFiles/libre-engine-system.dir/clean
-.PHONY : src/system/CMakeFiles/libre-engine-system.dir/clean
-
-# clean rule for target.
-clean: src/system/CMakeFiles/libre-engine-system.dir/clean
+clean: CMakeFiles/libre-engine.dir/clean
 .PHONY : clean
 
 #=============================================================================
