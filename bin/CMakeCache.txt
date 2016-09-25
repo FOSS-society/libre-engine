@@ -189,6 +189,9 @@ PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
 //Path to a library.
 SDL2MAIN_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libSDL2main.a
 
+//The directory containing a CMake configuration file for SDL2.
+SDL2_DIR:PATH=SDL2_DIR-NOTFOUND
+
 //Path to a file.
 SDL2_IMAGE_INCLUDE_DIR:PATH=/usr/include/SDL2
 
@@ -201,14 +204,8 @@ SDL2_INCLUDE_DIR:PATH=/usr/include/SDL2
 //Where the SDL2 Library can be found
 SDL2_LIBRARY:STRING=/usr/lib/x86_64-linux-gnu/libSDL2main.a;/usr/lib/x86_64-linux-gnu/libSDL2.so;-lpthread
 
-//The directory containing a CMake configuration file for glew.
-glew_DIR:PATH=glew_DIR-NOTFOUND
-
 //Value Computed by CMake
 libre-engine-core_BINARY_DIR:STATIC=/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/bin/src/core
-
-//Dependencies for target
-libre-engine-core_LIB_DEPENDS:STATIC=
 
 //Value Computed by CMake
 libre-engine-core_SOURCE_DIR:STATIC=/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/src/core
@@ -234,17 +231,23 @@ libre-engine-math_SOURCE_DIR:STATIC=/home/clim/Desktop/Clim's Files/Programming/
 //Value Computed by CMake
 libre-engine-physics_BINARY_DIR:STATIC=/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/bin/src/physics
 
-//Dependencies for target
-libre-engine-physics_LIB_DEPENDS:STATIC=
-
 //Value Computed by CMake
 libre-engine-physics_SOURCE_DIR:STATIC=/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/src/physics
 
 //Value Computed by CMake
+libre-engine-scripts_BINARY_DIR:STATIC=/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/bin/src/script
+
+//Dependencies for target
+libre-engine-scripts_LIB_DEPENDS:STATIC=
+
+//Value Computed by CMake
+libre-engine-scripts_SOURCE_DIR:STATIC=/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/src/script
+
+//Value Computed by CMake
 libre-engine-system_BINARY_DIR:STATIC=/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/bin/src/system
 
-//Dependencies for the target
-libre-engine-system_LIB_DEPENDS:STATIC=general;SDL2;general;SDL2_image;general;SDL2;
+//Dependencies for target
+libre-engine-system_LIB_DEPENDS:STATIC=
 
 //Value Computed by CMake
 libre-engine-system_SOURCE_DIR:STATIC=/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/src/system
@@ -254,12 +257,6 @@ libre-engine_BINARY_DIR:STATIC=/home/clim/Desktop/Clim's Files/Programming/cpp/l
 
 //Value Computed by CMake
 libre-engine_SOURCE_DIR:STATIC=/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/src
-
-//The directory containing a CMake configuration file for libsdl2-dev.
-libsdl2-dev_DIR:PATH=libsdl2-dev_DIR-NOTFOUND
-
-//The directory containing a CMake configuration file for sdl2.
-sdl2_DIR:PATH=sdl2_DIR-NOTFOUND
 
 
 ########################
@@ -358,7 +355,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=7
+CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=8
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -401,10 +398,6 @@ CMAKE_USE_RELATIVE_PATHS-ADVANCED:INTERNAL=1
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding PkgConfig
 FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/bin/pkg-config][v0.28()]
-//Details about finding SDL2
-FIND_PACKAGE_MESSAGE_DETAILS_SDL2:INTERNAL=
-//Details about finding SDL2_image
-FIND_PACKAGE_MESSAGE_DETAILS_SDL2_image:INTERNAL=
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //ADVANCED property for variable: LUA_LIBRARY
@@ -462,7 +455,7 @@ SDL2_LDFLAGS_OTHER:INTERNAL=
 SDL2_LIBDIR:INTERNAL=/usr/lib/x86_64-linux-gnu
 SDL2_LIBRARIES:INTERNAL=SDL2
 SDL2_LIBRARY_DIRS:INTERNAL=
-SDL2_LIBRARY_TEMP:INTERNAL=/usr/lib/x86_64-linux-gnu/libSDL2main.a;/usr/lib/x86_64-linux-gnu/libSDL2main.a;/usr/lib/x86_64-linux-gnu/libSDL2main.a;/usr/lib/x86_64-linux-gnu/libSDL2main.a;/usr/lib/x86_64-linux-gnu/libSDL2main.a;/usr/lib/x86_64-linux-gnu/libSDL2main.a;/usr/lib/x86_64-linux-gnu/libSDL2main.a;/usr/lib/x86_64-linux-gnu/libSDL2.so;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread
+SDL2_LIBRARY_TEMP:INTERNAL=/usr/lib/x86_64-linux-gnu/libSDL2main.a;/usr/lib/x86_64-linux-gnu/libSDL2main.a;/usr/lib/x86_64-linux-gnu/libSDL2main.a;/usr/lib/x86_64-linux-gnu/libSDL2.so;-lpthread;-lpthread;-lpthread
 SDL2_LIBS:INTERNAL=
 SDL2_LIBS_L:INTERNAL=
 SDL2_LIBS_OTHER:INTERNAL=

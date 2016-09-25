@@ -1,0 +1,2 @@
+/usr/bin/ar cr liblibre-engine-scripts.a  CMakeFiles/libre-engine-scripts.dir/ScriptEngine.cpp.o CMakeFiles/libre-engine-scripts.dir/Script.cpp.o
+/usr/bin/ranlib liblibre-engine-scripts.a

@@ -1,0 +1,2 @@
+/usr/bin/ar cr liblibre-engine-graphics.a  CMakeFiles/libre-engine-graphics.dir/Window.cpp.o CMakeFiles/libre-engine-graphics.dir/Renderer.cpp.o CMakeFiles/libre-engine-graphics.dir/graphics_common.cpp.o
+/usr/bin/ranlib liblibre-engine-graphics.a
