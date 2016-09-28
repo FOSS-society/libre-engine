@@ -20,6 +20,12 @@ namespace libre{
       this->m_time->Update();
     }
 
+    void Engine::addSystem(System *system){
+      this->m_SystemList.push_back(system);
+   }
+    void Engine::addEntity(Entity *entity){
+      this->m_EntityList.push_back(entity);
+    }
 
   }
 

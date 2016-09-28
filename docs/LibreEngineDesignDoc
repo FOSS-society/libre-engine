@@ -1,6 +1,6 @@
 Libre Engine
 
-Design-Doc Revision: 5
+Design-Doc Revision: 6
 Created:9/9/16
 
 Rev History:
@@ -8,6 +8,7 @@ Rev History:
 9/12/16 -3
 9/17/16 -4
 9/24/16 -5
+9/28/16 -6
 
 
 
@@ -74,11 +75,19 @@ Classes:
 [i] core::Component - Class that represents data an object contains
 [] core::Sprite - Class that represents a 2D-image as a Component
 [] core::Model - Class that represents a 3D-Object as a Component
+[] core::BGMusic - Class that represents a Sound file that loops in the background
+[] core::Voice - Class that represents an audio clip used for voice-overs
 [] core::SFX - Class that represents a Sound Effect as a component
-[] core::Collider2D - Class that represents a 2 Dimensional Collider as a component
-[] core::Collider3D - Class that represents a 3 Dimensional Collider as a component
+[] core::BoxCollider2D - Class that represents a 2 Dimensional Box Collider as a component
+[] core::BoxCollider3D - Class that represents a 3 Dimensional Box Collider as a component
+[] core::CircleCollider - Class that represents a circle collider
+[] core::SphereCollider - class that represents a sphere collider
 [] core::Behavior - Class that represents a Script as a component
 [ce] core::Engine - Class that represents the whole engine
+[] core::StateComponent - Class that represents the state of the program.
+
+
+
 
 [c] math::Vector2 - Templated Class that represents an X and a Y variable
 [c] math::Vector3 - Templated Class that represents an X , Y and a Z variable
@@ -118,6 +127,7 @@ a ScriptEngine
 [] system::PhysicsSystem - Class that represents the Physics System
 [] system::ScriptingSystem - Class that represents the Scripting engine as a System
 [] system::AudioSystem - Class that represents the Audio System
+[] system::GameplaySystem - Class that represents the system that handles the state of the program
 
 [] program::SinglePlayerApp - Class that represents an application based on the engine
 	 that is single player, and only relies on the base components of the engine

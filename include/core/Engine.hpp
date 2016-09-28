@@ -31,6 +31,8 @@ namespace libre{
        Engine(graphics::Renderer *renderer);
 
        void update();
+       void addSystem(System *system);
+       void addEntity(Entity *entity);
 
 
      };
