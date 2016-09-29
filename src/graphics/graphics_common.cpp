@@ -31,6 +31,7 @@ namespace libre{
         else{
 
           SDL_Init(flags);
+          std::cout << "Image Initialization return code: "<< IMG_Init(IMG_INIT_JPG|IMG_INIT_PNG|IMG_INIT_TIF);
           s_sdlIsInitialized = true;
           }
     }

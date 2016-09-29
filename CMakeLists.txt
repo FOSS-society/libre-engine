@@ -10,8 +10,9 @@ file(GLOB MATH "src/math/*.cpp")
 file(GLOB PHYSICS "src/physics/*.cpp")
 file(GLOB SCRIPT "src/script/*.cpp")
 file(GLOB SYSTEM "src/system/*.cpp")
-add_library(libre-engine ${CORE} ${GRAPHICS} ${MATH} ${PHYSICS} ${SCRIPT} ${SYSTEM} )
+file(GLOB ASSET "src/asset/*.cpp")
+add_library(libre-engine ${CORE} ${GRAPHICS} ${MATH} ${PHYSICS} ${SCRIPT} ${SYSTEM} ${ASSET})
 
 
 install (TARGETS libre-engine DESTINATION lib)
-install (DIRECTORY include/core include/graphics include/math include/physics include/script include/system DESTINATION include/libre-engine)
+install (DIRECTORY include/core include/graphics include/math include/physics include/script include/system include/asset DESTINATION include/libre-engine)
