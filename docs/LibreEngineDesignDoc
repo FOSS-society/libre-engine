@@ -1,6 +1,6 @@
 Libre Engine
 
-Design-Doc Revision: 6
+Design-Doc Revision: 7
 Created:9/9/16
 
 Rev History:
@@ -9,7 +9,7 @@ Rev History:
 9/17/16 -4
 9/24/16 -5
 9/28/16 -6
-
+9/29/16 -7
 
 
 Description: a game engine written for linux that
@@ -106,9 +106,12 @@ Classes:
 [] physics::line - Class that represents a Line that has one point and extends infinitely
 	Note: Use this for raycasting
 
-[c] graphics::Screen - Class that represents the Screen
+[c] graphics::Window - Class that represents the Window
 [c] graphics::Renderer - Class that represents a renderer that works on both 2D and 3D
 [] graphics::Image - Class that wraps SDL_image and holds image data
+[i] graphics::Shader - Class that represents a shader file (not to be confused with ShaderProgram)
+[] graphics::ShaderVariable - Class that represents uniforms or attributes in a specific ShaderProgram
+[] graphics::ShaderProgram - Class that represents the program that is outputted by the graphic pipeline
 
 
 [] audio::Sound - Class that represents a Sound File
@@ -116,27 +119,52 @@ Classes:
 [] audio::Mixer - Class that can play Sound Files
 [] audio::SoundStream - Class that represents the stream of Sound files
 
-
 [c] script::ScriptEngine - Class that represents the Scripting engine
 [c] script::Script - Class that represents a single script which can be run within
 a ScriptEngine
 
 [] system::RenderingSystem - Class that represents the Rendering System
 	 note: based on the rendering Context
-
 [] system::PhysicsSystem - Class that represents the Physics System
 [] system::ScriptingSystem - Class that represents the Scripting engine as a System
 [] system::AudioSystem - Class that represents the Audio System
 [] system::GameplaySystem - Class that represents the system that handles the state of the program
+[i] system::Buffer - Class that represents a buffer for OpenGL
+[ce?] system::OpenGL - Namespace which holds openGL functions for usage
+[c] system::Time - Class which represents time for the Engine
+[ce?] system::VertexArray - Class which represents a VertexArray for OpenGL
+
+
+
+[c] asset::Base_Asset - Base class for any asset being loaded into the Engine
+[ce] asset::Image - Class that represents an image asset
+[] asset::Audio - Class that represents an Audio asset
+[] asset::Model - Class that represents a Model asset
+[] asset::ScriptAsset - Class that represents a script asset
 
 [] program::SinglePlayerApp - Class that represents an application based on the engine
-	 that is single player, and only relies on the base components of the engine
+	 that is single player, and only relies on the base components of the engine.
+	 This is just a base class, you will have to create a sub-class to initialize
+	 all your user information.
+
 
 [] program::Client - Class that represents a client, which is an application that
 	relies on a connection to a server
 
 [] program::Server - Class that represents a server, a game can be written to run on
 	this server, as a multi-player game
+
+Event Notes:
+	A class Event should be created, which handles the whole event system. SDL2
+will be used to grab input from such devices (keyboard, mouse, touch, etc) that
+will be redirected to its device's class interface.  This will be used at the user-end
+of the engine. The Event system will be placed inside the engine's system's manager
+by default.(It will be at m_SystemList[0]). The user can then create rules in the
+component (based on what was done), that controls interaction of the game. I will write
+this similar, but not identical to http://www.sdltutorials.com/sdl-events . The user can
+then create a subclass of the Input component, to handle the events differently then
+the default settings.
+
 
 
 Libre-Editor:

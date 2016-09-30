@@ -44,6 +44,7 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
     "/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/include/physics"
     "/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/include/script"
     "/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/include/system"
+    "/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/include/asset"
     )
 endif()
 

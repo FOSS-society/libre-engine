@@ -20,11 +20,17 @@ namespace libre{
     }
 
     void Image::load(SDL_Renderer *renderer){
-      if(!this->m_isLoaded){
-        this->m_surface = IMG_Load(this->m_filepath.c_str());
-        this->m_texture = SDL_CreateTextureFromSurface(renderer,m_surface);
+      if(graphics::s_sdlIsInitialized){
+        if(!this->m_isLoaded){
+          this->m_surface = IMG_Load(this->m_filepath.c_str());
+          this->m_texture = SDL_CreateTextureFromSurface(renderer,m_surface);
+          this->m_isLoaded = true;
+          }
+        }else{
+            std::cout << "Error, SDL is not initialized!";
+        }
       }
-    }
+
 
   }
 }

@@ -6,6 +6,16 @@
 
 #IncludeRegexTransform: 
 
+/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/include/asset/Base_Asset.hpp
+iostream
+-
+
+/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/include/asset/Image.hpp
+../graphics/graphics_common.hpp
+/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/include/graphics/graphics_common.hpp
+Base_Asset.hpp
+/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/include/asset/Base_Asset.hpp
+
 /home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/include/core/Component.hpp
 iostream
 -
@@ -124,6 +134,10 @@ vector
 Buffer.hpp
 /home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/include/system/Buffer.hpp
 
+/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/src/asset/Image.cpp
+../../include/asset/Image.hpp
+/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/include/asset/Image.hpp
+
 /home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/src/core/Engine.cpp
 ../../include/core/Engine.hpp
 /home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/include/core/Engine.hpp
@@ -141,10 +155,6 @@ Buffer.hpp
 /home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/include/graphics/graphics_common.hpp
 iostream
 -
-
-/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/src/math/libremath.cpp
-../../include/math/libremath.hpp
-/home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/include/math/libremath.hpp
 
 /home/clim/Desktop/Clim's Files/Programming/cpp/libreEngine/src/script/Script.cpp
 ../../include/script/Script.hpp

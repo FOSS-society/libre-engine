@@ -10,6 +10,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/libre-engine.dir/src/system/OpenGL.cpp.o"
   "CMakeFiles/libre-engine.dir/src/system/Buffer.cpp.o"
   "CMakeFiles/libre-engine.dir/src/system/Time.cpp.o"
+  "CMakeFiles/libre-engine.dir/src/asset/Image.cpp.o"
   "liblibre-engine.pdb"
   "liblibre-engine.a"
 )

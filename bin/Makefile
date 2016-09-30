@@ -156,6 +156,30 @@ libre-engine/fast:
 	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/build
 .PHONY : libre-engine/fast
 
+src/asset/Image.o: src/asset/Image.cpp.o
+.PHONY : src/asset/Image.o
+
+# target to build an object file
+src/asset/Image.cpp.o:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/asset/Image.cpp.o
+.PHONY : src/asset/Image.cpp.o
+
+src/asset/Image.i: src/asset/Image.cpp.i
+.PHONY : src/asset/Image.i
+
+# target to preprocess a source file
+src/asset/Image.cpp.i:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/asset/Image.cpp.i
+.PHONY : src/asset/Image.cpp.i
+
+src/asset/Image.s: src/asset/Image.cpp.s
+.PHONY : src/asset/Image.s
+
+# target to generate assembly for a file
+src/asset/Image.cpp.s:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/asset/Image.cpp.s
+.PHONY : src/asset/Image.cpp.s
+
 src/core/Engine.o: src/core/Engine.cpp.o
 .PHONY : src/core/Engine.o
 
@@ -433,6 +457,9 @@ help:
 	@echo "... libre-engine"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... src/asset/Image.o"
+	@echo "... src/asset/Image.i"
+	@echo "... src/asset/Image.s"
 	@echo "... src/core/Engine.o"
 	@echo "... src/core/Engine.i"
 	@echo "... src/core/Engine.s"
