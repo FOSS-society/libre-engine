@@ -1,7 +1,9 @@
 #ifndef TIME_HPP_
 #define TIME_HPP_
 
-#include <ctime>
+#include <iostream>
+#include <time.h>
+#include <string>
 
 namespace libre {
   namespace system{
@@ -21,6 +23,15 @@ namespace libre {
 
       char * startCString();
       char * currentCString();
+
+      static inline const std::string getCurrentTime() {
+        time_t now = time(NULL);
+        struct tm *times;
+        char buffer[64];
+        times = localtime(&now);
+        strftime(buffer,sizeof(buffer), "%Y-%m-%d.%X", times);
+        return buffer;
+      }
 
     };
   }

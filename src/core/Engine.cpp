@@ -1,11 +1,14 @@
 #include "../../include/core/Engine.hpp"
-
+#include "../../include/system/Logger.hpp"
 
 namespace libre{
 
   namespace core{
 
     Engine::Engine(graphics::Renderer *renderer){
+
+      system::Logger::LogInstance()->Log("Initializing Engine");
+
       this->m_SystemList = std::vector<System*>();
       this->m_EntityList = std::vector<Entity*>();
       this->m_renderer = renderer;
@@ -17,7 +20,15 @@ namespace libre{
     }
 
     void Engine::update(){
+      //Handle Events
+
+      // Update logic
+
+      //Render to screen
+
+      //update the time
       this->m_time->Update();
+
     }
 
     void Engine::addSystem(System *system){
