@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/clim/Desktop/Programming/cpp/libre-engine/include/asset/Base_Asset.hpp
+iostream
+-
+
+/home/clim/Desktop/Programming/cpp/libre-engine/include/asset/Image.hpp
+../graphics/graphics_common.hpp
+/home/clim/Desktop/Programming/cpp/libre-engine/include/graphics/graphics_common.hpp
+Base_Asset.hpp
+/home/clim/Desktop/Programming/cpp/libre-engine/include/asset/Base_Asset.hpp
+
+/home/clim/Desktop/Programming/cpp/libre-engine/include/graphics/graphics_common.hpp
+SDL2/SDL.h
+-
+SDL2/SDL_image.h
+-
+SDL2/SDL_rect.h
+-
+GL/glew.h
+-
+stdint.h
+-
+../math/vector2.hpp
+/home/clim/Desktop/Programming/cpp/libre-engine/include/math/vector2.hpp
+../math/vector3.hpp
+/home/clim/Desktop/Programming/cpp/libre-engine/include/math/vector3.hpp
+../math/vector4.hpp
+/home/clim/Desktop/Programming/cpp/libre-engine/include/math/vector4.hpp
+
+/home/clim/Desktop/Programming/cpp/libre-engine/include/math/vector2.hpp
+
+/home/clim/Desktop/Programming/cpp/libre-engine/include/math/vector3.hpp
+
+/home/clim/Desktop/Programming/cpp/libre-engine/include/math/vector4.hpp
+
+/home/clim/Desktop/Programming/cpp/libre-engine/src/asset/Image.cpp
+../../include/asset/Image.hpp
+/home/clim/Desktop/Programming/cpp/libre-engine/include/asset/Image.hpp
+
