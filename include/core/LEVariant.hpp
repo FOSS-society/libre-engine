@@ -3,6 +3,8 @@
 
 
 #include <iostream>
+#include "../math/vector2.hpp"
+
 
 namespace libre{
     namespace core{
@@ -23,6 +25,7 @@ namespace libre{
         long asLong;
         long *asLongPtr;
 
+
         VariantData():asInt(0){} // defaults to int
         VariantData(int i):asInt(i){}
         VariantData(int *ip):asIntPtr(ip){}
@@ -37,12 +40,13 @@ namespace libre{
         VariantData(long l):asLong(l){}
         VariantData(long *lp):asLongPtr(lp){}
         ~VariantData(){}
+
         };
 
     enum class DataType{
         INT,INTPTR,CHAR,CHARPTR,
         SHORT,SHORTPTR,FLOAT,FLOATPTR,
-        DOUBLE,DOUBLEPTR,LONG,LONGPTR
+        DOUBLE,DOUBLEPTR,LONG,LONGPTR,VEC2INT,VEC2INTPTR,VEC2FLOAT,VEC2FLOATPTR
         };
 
     class Variant{
@@ -66,6 +70,12 @@ namespace libre{
         Variant(long l):m_type(DataType::LONG),m_data(VariantData(l)){}
         Variant(long *lp):m_type(DataType::LONGPTR),m_data(VariantData(lp)){}
 
+        ~Variant()= default;
+
+        void operator=(const Variant &v){
+            this->m_data = v.Data();
+            this->m_type = v.Type();
+        }
 
         void setData(DataType t, VariantData d){
         this->m_type = t;

@@ -4,7 +4,7 @@
 #include <string>
 #include <vector>
 #include "graphics_common.hpp"
-#include "../core/LEVariant.hpp"
+#include "../graphics/ShaderVariable.hpp"
 
 namespace libre{
 

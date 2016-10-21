@@ -31,6 +31,14 @@ CMakeFiles/libre-engine.dir/src/graphics/Renderer.cpp.o: ../../../include/math/v
 CMakeFiles/libre-engine.dir/src/graphics/Renderer.cpp.o: ../../../include/math/vector4.hpp
 CMakeFiles/libre-engine.dir/src/graphics/Renderer.cpp.o: ../../../src/graphics/Renderer.cpp
 
+CMakeFiles/libre-engine.dir/src/graphics/ShaderVariable.cpp.o: ../../../include/core/LEVariant.hpp
+CMakeFiles/libre-engine.dir/src/graphics/ShaderVariable.cpp.o: ../../../include/graphics/ShaderVariable.hpp
+CMakeFiles/libre-engine.dir/src/graphics/ShaderVariable.cpp.o: ../../../include/graphics/graphics_common.hpp
+CMakeFiles/libre-engine.dir/src/graphics/ShaderVariable.cpp.o: ../../../include/math/vector2.hpp
+CMakeFiles/libre-engine.dir/src/graphics/ShaderVariable.cpp.o: ../../../include/math/vector3.hpp
+CMakeFiles/libre-engine.dir/src/graphics/ShaderVariable.cpp.o: ../../../include/math/vector4.hpp
+CMakeFiles/libre-engine.dir/src/graphics/ShaderVariable.cpp.o: ../../../src/graphics/ShaderVariable.cpp
+
 CMakeFiles/libre-engine.dir/src/graphics/Window.cpp.o: ../../../include/graphics/Window.hpp
 CMakeFiles/libre-engine.dir/src/graphics/Window.cpp.o: ../../../include/graphics/graphics_common.hpp
 CMakeFiles/libre-engine.dir/src/graphics/Window.cpp.o: ../../../include/math/vector2.hpp

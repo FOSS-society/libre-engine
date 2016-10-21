@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/libre-engine.dir/src/core/Engine.cpp.o"
+  "CMakeFiles/libre-engine.dir/src/graphics/ShaderVariable.cpp.o"
   "CMakeFiles/libre-engine.dir/src/graphics/Window.cpp.o"
   "CMakeFiles/libre-engine.dir/src/graphics/Renderer.cpp.o"
   "CMakeFiles/libre-engine.dir/src/graphics/graphics_common.cpp.o"

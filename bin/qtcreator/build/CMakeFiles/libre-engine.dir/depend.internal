@@ -31,6 +31,14 @@ CMakeFiles/libre-engine.dir/src/graphics/Renderer.cpp.o
  /home/clim/Desktop/Programming/cpp/libre-engine/include/math/vector3.hpp
  /home/clim/Desktop/Programming/cpp/libre-engine/include/math/vector4.hpp
  /home/clim/Desktop/Programming/cpp/libre-engine/src/graphics/Renderer.cpp
+CMakeFiles/libre-engine.dir/src/graphics/ShaderVariable.cpp.o
+ /home/clim/Desktop/Programming/cpp/libre-engine/include/core/LEVariant.hpp
+ /home/clim/Desktop/Programming/cpp/libre-engine/include/graphics/ShaderVariable.hpp
+ /home/clim/Desktop/Programming/cpp/libre-engine/include/graphics/graphics_common.hpp
+ /home/clim/Desktop/Programming/cpp/libre-engine/include/math/vector2.hpp
+ /home/clim/Desktop/Programming/cpp/libre-engine/include/math/vector3.hpp
+ /home/clim/Desktop/Programming/cpp/libre-engine/include/math/vector4.hpp
+ /home/clim/Desktop/Programming/cpp/libre-engine/src/graphics/ShaderVariable.cpp
 CMakeFiles/libre-engine.dir/src/graphics/Window.cpp.o
  /home/clim/Desktop/Programming/cpp/libre-engine/include/graphics/Window.hpp
  /home/clim/Desktop/Programming/cpp/libre-engine/include/graphics/graphics_common.hpp

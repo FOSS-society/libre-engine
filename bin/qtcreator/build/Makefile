@@ -228,6 +228,30 @@ src/graphics/Renderer.cpp.s:
 	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/graphics/Renderer.cpp.s
 .PHONY : src/graphics/Renderer.cpp.s
 
+src/graphics/ShaderVariable.o: src/graphics/ShaderVariable.cpp.o
+.PHONY : src/graphics/ShaderVariable.o
+
+# target to build an object file
+src/graphics/ShaderVariable.cpp.o:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/graphics/ShaderVariable.cpp.o
+.PHONY : src/graphics/ShaderVariable.cpp.o
+
+src/graphics/ShaderVariable.i: src/graphics/ShaderVariable.cpp.i
+.PHONY : src/graphics/ShaderVariable.i
+
+# target to preprocess a source file
+src/graphics/ShaderVariable.cpp.i:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/graphics/ShaderVariable.cpp.i
+.PHONY : src/graphics/ShaderVariable.cpp.i
+
+src/graphics/ShaderVariable.s: src/graphics/ShaderVariable.cpp.s
+.PHONY : src/graphics/ShaderVariable.s
+
+# target to generate assembly for a file
+src/graphics/ShaderVariable.cpp.s:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/graphics/ShaderVariable.cpp.s
+.PHONY : src/graphics/ShaderVariable.cpp.s
+
 src/graphics/Window.o: src/graphics/Window.cpp.o
 .PHONY : src/graphics/Window.o
 
@@ -490,6 +514,9 @@ help:
 	@echo "... src/graphics/Renderer.o"
 	@echo "... src/graphics/Renderer.i"
 	@echo "... src/graphics/Renderer.s"
+	@echo "... src/graphics/ShaderVariable.o"
+	@echo "... src/graphics/ShaderVariable.i"
+	@echo "... src/graphics/ShaderVariable.s"
 	@echo "... src/graphics/Window.o"
 	@echo "... src/graphics/Window.i"
 	@echo "... src/graphics/Window.s"

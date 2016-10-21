@@ -6,15 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/home/clim/Desktop/Programming/cpp/libre-engine/include/asset/Base_Asset.hpp
+/home/clim/Desktop/Programming/cpp/libre-engine/include/core/LEVariant.hpp
 iostream
 -
+../math/vector2.hpp
+/home/clim/Desktop/Programming/cpp/libre-engine/include/math/vector2.hpp
 
-/home/clim/Desktop/Programming/cpp/libre-engine/include/asset/Image.hpp
-../graphics/graphics_common.hpp
+/home/clim/Desktop/Programming/cpp/libre-engine/include/graphics/ShaderVariable.hpp
+graphics_common.hpp
 /home/clim/Desktop/Programming/cpp/libre-engine/include/graphics/graphics_common.hpp
-Base_Asset.hpp
-/home/clim/Desktop/Programming/cpp/libre-engine/include/asset/Base_Asset.hpp
+../core/LEVariant.hpp
+/home/clim/Desktop/Programming/cpp/libre-engine/include/core/LEVariant.hpp
 
 /home/clim/Desktop/Programming/cpp/libre-engine/include/graphics/graphics_common.hpp
 SDL2/SDL.h
@@ -40,7 +42,7 @@ stdint.h
 
 /home/clim/Desktop/Programming/cpp/libre-engine/include/math/vector4.hpp
 
-/home/clim/Desktop/Programming/cpp/libre-engine/src/asset/Image.cpp
-../../include/asset/Image.hpp
-/home/clim/Desktop/Programming/cpp/libre-engine/include/asset/Image.hpp
+/home/clim/Desktop/Programming/cpp/libre-engine/src/graphics/ShaderVariable.cpp
+../../include/graphics/ShaderVariable.hpp
+/home/clim/Desktop/Programming/cpp/libre-engine/include/graphics/ShaderVariable.hpp
 

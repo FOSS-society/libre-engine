@@ -7,6 +7,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/clim/Desktop/Programming/cpp/libre-engine/src/asset/Image.cpp" "/home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles/libre-engine.dir/src/asset/Image.cpp.o"
   "/home/clim/Desktop/Programming/cpp/libre-engine/src/core/Engine.cpp" "/home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles/libre-engine.dir/src/core/Engine.cpp.o"
   "/home/clim/Desktop/Programming/cpp/libre-engine/src/graphics/Renderer.cpp" "/home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles/libre-engine.dir/src/graphics/Renderer.cpp.o"
+  "/home/clim/Desktop/Programming/cpp/libre-engine/src/graphics/ShaderVariable.cpp" "/home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles/libre-engine.dir/src/graphics/ShaderVariable.cpp.o"
   "/home/clim/Desktop/Programming/cpp/libre-engine/src/graphics/Window.cpp" "/home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles/libre-engine.dir/src/graphics/Window.cpp.o"
   "/home/clim/Desktop/Programming/cpp/libre-engine/src/graphics/graphics_common.cpp" "/home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles/libre-engine.dir/src/graphics/graphics_common.cpp.o"
   "/home/clim/Desktop/Programming/cpp/libre-engine/src/math/libremath.cpp" "/home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles/libre-engine.dir/src/math/libremath.cpp.o"
