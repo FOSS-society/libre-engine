@@ -1,6 +1,9 @@
 #ifndef Vector3_HPP_
 #define Vector3_HPP_
 
+#include <iostream>
+#include <string>
+
 namespace libre{
 
 	namespace math{
@@ -14,6 +17,7 @@ namespace libre{
 		t m_z;
 
 		public:
+        Vector3(){}
 		Vector3(const t& x,const t& y,const t& z);
 		Vector3(const Vector3& copy);
 
@@ -157,11 +161,16 @@ namespace libre{
 		}
 
 
-		template <typename t>
-		const char * Vector3<t>::toString(){
+        template <typename t>
+        const char * Vector3<t>::toString(){
 
-			return "X: " + this->m_x +"\nY: " + this->m_y + "\nZ: " + this->m_z;
-		}
+            std::string vec3String("X: " + this->m_x);
+            vec3String.append(",Y: "+this->m_y);
+            vec3String.append(",Z: "+this->m_z);
+
+            return vec3String.c_str();
+        }
+
 
 
 

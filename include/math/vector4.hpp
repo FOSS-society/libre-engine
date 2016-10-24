@@ -1,6 +1,7 @@
 #ifndef Vector4_HPP_
 #define Vector4_HPP_
 
+
 namespace libre{
 
 	namespace math{
@@ -15,6 +16,7 @@ namespace libre{
 		t m_w;
 
 		public:
+        Vector4(){}
 		Vector4(const t& x,const t& y,const t& z,const t&w);
 		Vector4(const Vector4& copy);
 
@@ -177,11 +179,15 @@ namespace libre{
 				}
 
 
-				template <typename t>
-				const char * Vector4<t>::toString(){
+                template <typename t>
+                const char * Vector4<t>::toString(){
 
-					return "X: " + this->m_x +"\nY: " + this->m_y + "\nZ: " + this->m_z + "\nW: " +this->m_w;
-				}
+                    std::string vec4String("X: " + this->m_x);
+                    vec4String.append(",Y: "+this->m_y);
+                    vec4String.append(",Z: "+this->m_z);
+                    vec4String.append(",W: "+this->m_w);
+                    return vec4String.c_str();
+                }
 
 
 

@@ -14,7 +14,7 @@ namespace libre{
         SDL_GLContext *asOGL;
       };
 
-      RenderingContext createRenderingContext(RendererType type);
+
 
   class Renderer{
 
@@ -31,12 +31,16 @@ namespace libre{
     }
 
     Window *getWindowHandle();
+    Window *WindowHandle()const;
     RenderingContext *getContext();
+    RenderingContext *Context()const;
     RendererType getType();
     RendererType Type()const;
 
 
     };
+
+    RenderingContext createRenderingContext(RendererType type, Renderer *renderer);
   }
 }
 #endif //Base Renderer

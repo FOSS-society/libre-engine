@@ -5,10 +5,16 @@
 #include <iostream>
 #include "../math/vector2.hpp"
 
+/**
+ *Variant Notes:
+ * cant use templated classes where the data is a pointer
+ * such as: libre::math::Vector2<int*> or else toString throws a bitchfit
+ * so i am not allowing it.
+ */
+
 
 namespace libre{
     namespace core{
-
 
 
     union VariantData{
@@ -24,9 +30,16 @@ namespace libre{
         double *asDoublePtr;
         long asLong;
         long *asLongPtr;
+        math::Vector2<int> asVec2Int;
+        math::Vector2<float> asVec2Float;
+
 
 
         VariantData():asInt(0){} // defaults to int
+        VariantData(const VariantData &copy){
+
+        }
+
         VariantData(int i):asInt(i){}
         VariantData(int *ip):asIntPtr(ip){}
         VariantData(char c):asChar(c){}
@@ -39,14 +52,34 @@ namespace libre{
         VariantData(double *dp):asDoublePtr(dp){}
         VariantData(long l):asLong(l){}
         VariantData(long *lp):asLongPtr(lp){}
-        ~VariantData(){}
+        VariantData(math::Vector2<int> v2i):asVec2Int(v2i){}
+        VariantData(math::Vector2<float> v2f):asVec2Float(v2f){}
 
+
+        ~VariantData(){}
+        VariantData& operator=(const VariantData &copy){
+            asInt= copy.asInt;
+            asIntPtr = copy.asIntPtr;
+            asChar = copy.asChar;
+            asCharPtr = copy.asCharPtr;
+            asShort = copy.asShort;
+            asShortPtr = copy.asShortPtr;
+            asFloat = copy.asFloat;
+            asFloatPtr = copy.asFloatPtr;
+            asDouble = copy.asDouble;
+            asDoublePtr = copy.asDoublePtr;
+            asLong = copy.asLong;
+            asLongPtr = copy.asLongPtr;
+            asVec2Int = copy.asVec2Int;
+            asVec2Float = copy.asVec2Float;
+
+        }
         };
 
     enum class DataType{
         INT,INTPTR,CHAR,CHARPTR,
         SHORT,SHORTPTR,FLOAT,FLOATPTR,
-        DOUBLE,DOUBLEPTR,LONG,LONGPTR,VEC2INT,VEC2INTPTR,VEC2FLOAT,VEC2FLOATPTR
+        DOUBLE,DOUBLEPTR,LONG,LONGPTR,VEC2INT,VEC2FLOAT
         };
 
     class Variant{
@@ -69,6 +102,11 @@ namespace libre{
         Variant(double *dp):m_type(DataType::DOUBLEPTR),m_data(VariantData(dp)){}
         Variant(long l):m_type(DataType::LONG),m_data(VariantData(l)){}
         Variant(long *lp):m_type(DataType::LONGPTR),m_data(VariantData(lp)){}
+        Variant(math::Vector2<int> v2i):m_type(DataType::VEC2INT),m_data(VariantData(v2i)){}
+        Variant(math::Vector2<float> v2f):m_type(DataType::VEC2FLOAT),m_data(VariantData(v2f)){}
+
+
+
 
         ~Variant()= default;
 
@@ -137,6 +175,16 @@ namespace libre{
                case DataType::LONGPTR:
                    os << "Type: Long Pointer\nData: " << v.Data().asLongPtr;
                    break;
+
+               case DataType::VEC2INT:
+                   os << "Type: Vector 2 Int\nData: " << v.Data().asVec2Int.toString();
+                   break;
+
+
+               case DataType::VEC2FLOAT:
+                   os << "Type: Vector 2 Float\nData: " << v.Data().asVec2Float.toString();
+                   break;
+
         }
                os << std::endl;
                return os;

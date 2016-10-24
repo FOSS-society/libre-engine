@@ -1,9 +1,13 @@
 #ifndef VECTOR2_HPP_
 #define VECTOR2_HPP_
 
+#include <iostream>
+#include <string>
+
 namespace libre{
 
 	namespace math{
+
 
 		template <typename t>
 		class Vector2{
@@ -13,6 +17,7 @@ namespace libre{
 		t m_y;
 
 		public:
+        Vector2(){}
 		Vector2(const t& x,const t& y);
 		Vector2(const Vector2& copy);
 
@@ -41,7 +46,7 @@ namespace libre{
 
 
 		const char *toString();
-
+        const char * toStringFromPtr();
 
 		};
 
@@ -139,10 +144,23 @@ namespace libre{
 		template <typename t>
 		const char * Vector2<t>::toString(){
 
-			return "X: " + this->m_x +"\nY: " + this->m_y;
+            std::string vec2String("X: " + std::to_string(this->m_x));
+            vec2String.append(",Y: "+std::to_string(this->m_y));
+
+            return vec2String.c_str();
 		}
 
+        template <typename t>
+        const char * Vector2<t>::toStringFromPtr()
+            {
+                t x = this->m_x;
+                t y = this->m_y;
 
+                std::string vec2String("X: " + to_string(x));
+                vec2String.append(",Y: "+ std::string(y));
+
+                return vec2String.c_str();
+            }
 
 
 
