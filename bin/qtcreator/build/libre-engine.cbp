@@ -146,7 +146,11 @@
       </Unit>
       <Unit filename="/home/clim/Desktop/Programming/cpp/libre-engine/src/system/Buffer.cpp">
       </Unit>
+      <Unit filename="/home/clim/Desktop/Programming/cpp/libre-engine/src/system/Keyboard.cpp">
+      </Unit>
       <Unit filename="/home/clim/Desktop/Programming/cpp/libre-engine/src/system/Logger.cpp">
+      </Unit>
+      <Unit filename="/home/clim/Desktop/Programming/cpp/libre-engine/src/system/Mouse.cpp">
       </Unit>
       <Unit filename="/home/clim/Desktop/Programming/cpp/libre-engine/src/system/OpenGL.cpp">
       </Unit>
@@ -202,7 +206,11 @@
       </Unit>
       <Unit filename="/home/clim/Desktop/Programming/cpp/libre-engine/include/system/Buffer.hpp">
       </Unit>
+      <Unit filename="/home/clim/Desktop/Programming/cpp/libre-engine/include/system/Keyboard.hpp">
+      </Unit>
       <Unit filename="/home/clim/Desktop/Programming/cpp/libre-engine/include/system/Logger.hpp">
+      </Unit>
+      <Unit filename="/home/clim/Desktop/Programming/cpp/libre-engine/include/system/Mouse.hpp">
       </Unit>
       <Unit filename="/home/clim/Desktop/Programming/cpp/libre-engine/include/system/OpenGL.hpp">
       </Unit>

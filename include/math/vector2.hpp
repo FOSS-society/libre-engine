@@ -46,7 +46,6 @@ namespace libre{
 
 
 		const char *toString();
-        const char * toStringFromPtr();
 
 		};
 
@@ -150,17 +149,6 @@ namespace libre{
             return vec2String.c_str();
 		}
 
-        template <typename t>
-        const char * Vector2<t>::toStringFromPtr()
-            {
-                t x = this->m_x;
-                t y = this->m_y;
-
-                std::string vec2String("X: " + to_string(x));
-                vec2String.append(",Y: "+ std::string(y));
-
-                return vec2String.c_str();
-            }
 
 
 

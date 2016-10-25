@@ -79,9 +79,16 @@ CMakeFiles/libre-engine.dir/src/system/Buffer.cpp.o: ../../../include/system/Buf
 CMakeFiles/libre-engine.dir/src/system/Buffer.cpp.o: ../../../include/system/OpenGL.hpp
 CMakeFiles/libre-engine.dir/src/system/Buffer.cpp.o: ../../../src/system/Buffer.cpp
 
+CMakeFiles/libre-engine.dir/src/system/Keyboard.cpp.o: ../../../include/system/Keyboard.hpp
+CMakeFiles/libre-engine.dir/src/system/Keyboard.cpp.o: ../../../src/system/Keyboard.cpp
+
 CMakeFiles/libre-engine.dir/src/system/Logger.cpp.o: ../../../include/system/Logger.hpp
 CMakeFiles/libre-engine.dir/src/system/Logger.cpp.o: ../../../include/system/Time.hpp
 CMakeFiles/libre-engine.dir/src/system/Logger.cpp.o: ../../../src/system/Logger.cpp
+
+CMakeFiles/libre-engine.dir/src/system/Mouse.cpp.o: ../../../include/math/vector2.hpp
+CMakeFiles/libre-engine.dir/src/system/Mouse.cpp.o: ../../../include/system/Mouse.hpp
+CMakeFiles/libre-engine.dir/src/system/Mouse.cpp.o: ../../../src/system/Mouse.cpp
 
 CMakeFiles/libre-engine.dir/src/system/OpenGL.cpp.o: ../../../include/math/libremath.hpp
 CMakeFiles/libre-engine.dir/src/system/OpenGL.cpp.o: ../../../include/math/matrix2.hpp

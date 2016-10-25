@@ -5,6 +5,7 @@
 #include <iostream>
 #include "../math/vector2.hpp"
 
+
 /**
  *Variant Notes:
  * cant use templated classes where the data is a pointer
@@ -15,7 +16,6 @@
 
 namespace libre{
     namespace core{
-
 
     union VariantData{
         int asInt;
@@ -32,6 +32,7 @@ namespace libre{
         long *asLongPtr;
         math::Vector2<int> asVec2Int;
         math::Vector2<float> asVec2Float;
+
 
 
 
@@ -56,6 +57,7 @@ namespace libre{
         VariantData(math::Vector2<float> v2f):asVec2Float(v2f){}
 
 
+
         ~VariantData(){}
         VariantData& operator=(const VariantData &copy){
             asInt= copy.asInt;
@@ -73,13 +75,15 @@ namespace libre{
             asVec2Int = copy.asVec2Int;
             asVec2Float = copy.asVec2Float;
 
+
         }
         };
 
     enum class DataType{
         INT,INTPTR,CHAR,CHARPTR,
         SHORT,SHORTPTR,FLOAT,FLOATPTR,
-        DOUBLE,DOUBLEPTR,LONG,LONGPTR,VEC2INT,VEC2FLOAT
+        DOUBLE,DOUBLEPTR,LONG,LONGPTR,
+        VEC2INT,VEC2FLOAT
         };
 
     class Variant{
@@ -184,6 +188,7 @@ namespace libre{
                case DataType::VEC2FLOAT:
                    os << "Type: Vector 2 Float\nData: " << v.Data().asVec2Float.toString();
                    break;
+
 
         }
                os << std::endl;

@@ -396,6 +396,30 @@ src/system/Buffer.cpp.s:
 	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/system/Buffer.cpp.s
 .PHONY : src/system/Buffer.cpp.s
 
+src/system/Keyboard.o: src/system/Keyboard.cpp.o
+.PHONY : src/system/Keyboard.o
+
+# target to build an object file
+src/system/Keyboard.cpp.o:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/system/Keyboard.cpp.o
+.PHONY : src/system/Keyboard.cpp.o
+
+src/system/Keyboard.i: src/system/Keyboard.cpp.i
+.PHONY : src/system/Keyboard.i
+
+# target to preprocess a source file
+src/system/Keyboard.cpp.i:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/system/Keyboard.cpp.i
+.PHONY : src/system/Keyboard.cpp.i
+
+src/system/Keyboard.s: src/system/Keyboard.cpp.s
+.PHONY : src/system/Keyboard.s
+
+# target to generate assembly for a file
+src/system/Keyboard.cpp.s:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/system/Keyboard.cpp.s
+.PHONY : src/system/Keyboard.cpp.s
+
 src/system/Logger.o: src/system/Logger.cpp.o
 .PHONY : src/system/Logger.o
 
@@ -419,6 +443,30 @@ src/system/Logger.s: src/system/Logger.cpp.s
 src/system/Logger.cpp.s:
 	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/system/Logger.cpp.s
 .PHONY : src/system/Logger.cpp.s
+
+src/system/Mouse.o: src/system/Mouse.cpp.o
+.PHONY : src/system/Mouse.o
+
+# target to build an object file
+src/system/Mouse.cpp.o:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/system/Mouse.cpp.o
+.PHONY : src/system/Mouse.cpp.o
+
+src/system/Mouse.i: src/system/Mouse.cpp.i
+.PHONY : src/system/Mouse.i
+
+# target to preprocess a source file
+src/system/Mouse.cpp.i:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/system/Mouse.cpp.i
+.PHONY : src/system/Mouse.cpp.i
+
+src/system/Mouse.s: src/system/Mouse.cpp.s
+.PHONY : src/system/Mouse.s
+
+# target to generate assembly for a file
+src/system/Mouse.cpp.s:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/system/Mouse.cpp.s
+.PHONY : src/system/Mouse.cpp.s
 
 src/system/OpenGL.o: src/system/OpenGL.cpp.o
 .PHONY : src/system/OpenGL.o
@@ -535,9 +583,15 @@ help:
 	@echo "... src/system/Buffer.o"
 	@echo "... src/system/Buffer.i"
 	@echo "... src/system/Buffer.s"
+	@echo "... src/system/Keyboard.o"
+	@echo "... src/system/Keyboard.i"
+	@echo "... src/system/Keyboard.s"
 	@echo "... src/system/Logger.o"
 	@echo "... src/system/Logger.i"
 	@echo "... src/system/Logger.s"
+	@echo "... src/system/Mouse.o"
+	@echo "... src/system/Mouse.i"
+	@echo "... src/system/Mouse.s"
 	@echo "... src/system/OpenGL.o"
 	@echo "... src/system/OpenGL.i"
 	@echo "... src/system/OpenGL.s"
