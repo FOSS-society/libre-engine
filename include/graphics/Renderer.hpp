@@ -12,6 +12,10 @@ namespace libre{
       union RenderingContext{
         SDL_Renderer *asSDL;
         SDL_GLContext *asOGL;
+
+        RenderingContext(){}
+        RenderingContext(SDL_Renderer *sdl);
+        RenderingContext(SDL_GLContext *opengl);
       };
 
 
