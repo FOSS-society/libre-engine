@@ -39,7 +39,7 @@ namespace libre{
           return this->m_type;
       }
 
-      RenderingContext createRenderingContext(RendererType type, Renderer *renderer)
+      void createRenderingContext(RendererType type, Renderer *renderer)
       {
           switch(type){
             case RendererType::RT_2D:

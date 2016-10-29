@@ -16,6 +16,11 @@ namespace libre{
         RenderingContext(){}
         RenderingContext(SDL_Renderer *sdl);
         RenderingContext(SDL_GLContext *opengl);
+
+        ~RenderingContext(){
+            SDL_DestroyRenderer(this->asSDL);
+            SDL_GL_DeleteContext(this->asOGL);
+        }
       };
 
 
@@ -44,7 +49,7 @@ namespace libre{
 
     };
 
-    RenderingContext createRenderingContext(RendererType type, Renderer *renderer);
+    void createRenderingContext(RendererType type, Renderer *renderer);
   }
 }
 #endif //Base Renderer
