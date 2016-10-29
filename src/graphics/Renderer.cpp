@@ -1,17 +1,23 @@
 #include "../../include/graphics/Renderer.hpp"
-
+#include <assert.h>
 namespace libre{
   namespace graphics{
 
     Renderer::Renderer(Window *parent,RendererType type): m_window(parent),m_type(type){
-      switch(type){
+      switch(m_type){
         case RendererType::RT_2D:
-        this->m_context->asSDL = SDL_CreateRenderer(this->m_window->SDLWIN(),-1,SDL_RENDERER_ACCELERATED);
+        this->m_context = new RenderingContext(SDL_CreateRenderer(this->m_window->SDLWIN(),-1,SDL_RENDERER_ACCELERATED));
         break;
         case RendererType::RT_3D:
-        this->m_context->asOGL = (SDL_GLContext*)SDL_GL_CreateContext(this->m_window->SDLWIN());
+        this->m_context = new RenderingContext((SDL_GLContext*)SDL_GL_CreateContext(this->m_window->SDLWIN()));
         break;
+      default:
+          std::cout <<" Invalid Renderer type" << std::endl;
+          assert(type == RendererType::RT_2D || type == RendererType::RT_3D );
+          break;
       }
+
+
 }
 
       Window *Renderer::getWindowHandle(){

@@ -16,7 +16,8 @@ namespace libre{
       }
       GLenum error = glewInit();
       if(error != GLEW_OK){
-        std::cerr << "Error: " <<  glewGetErrorString(error);
+        std::cerr << "GLEW Error: " <<  glewGetErrorString(error) << std::endl;
+        std::cerr << "File: " << __FILE__ << std::endl << "Line: "  << __LINE__ << std::endl;
       }else{
         std::cout << "Status: Using GLEW " << glewGetString(GLEW_VERSION);
         s_glewIsInitialized = true;

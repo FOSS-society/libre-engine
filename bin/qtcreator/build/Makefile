@@ -53,8 +53,8 @@ CMAKE_BINARY_DIR = /home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/cmake-gui -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -492,6 +492,30 @@ src/system/OpenGL.cpp.s:
 	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/system/OpenGL.cpp.s
 .PHONY : src/system/OpenGL.cpp.s
 
+src/system/Task.o: src/system/Task.cpp.o
+.PHONY : src/system/Task.o
+
+# target to build an object file
+src/system/Task.cpp.o:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/system/Task.cpp.o
+.PHONY : src/system/Task.cpp.o
+
+src/system/Task.i: src/system/Task.cpp.i
+.PHONY : src/system/Task.i
+
+# target to preprocess a source file
+src/system/Task.cpp.i:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/system/Task.cpp.i
+.PHONY : src/system/Task.cpp.i
+
+src/system/Task.s: src/system/Task.cpp.s
+.PHONY : src/system/Task.s
+
+# target to generate assembly for a file
+src/system/Task.cpp.s:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/system/Task.cpp.s
+.PHONY : src/system/Task.cpp.s
+
 src/system/Time.o: src/system/Time.cpp.o
 .PHONY : src/system/Time.o
 
@@ -595,6 +619,9 @@ help:
 	@echo "... src/system/OpenGL.o"
 	@echo "... src/system/OpenGL.i"
 	@echo "... src/system/OpenGL.s"
+	@echo "... src/system/Task.o"
+	@echo "... src/system/Task.i"
+	@echo "... src/system/Task.s"
 	@echo "... src/system/Time.o"
 	@echo "... src/system/Time.i"
 	@echo "... src/system/Time.s"

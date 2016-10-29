@@ -18,6 +18,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/clim/Desktop/Programming/cpp/libre-engine/src/system/Logger.cpp" "/home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles/libre-engine.dir/src/system/Logger.cpp.o"
   "/home/clim/Desktop/Programming/cpp/libre-engine/src/system/Mouse.cpp" "/home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles/libre-engine.dir/src/system/Mouse.cpp.o"
   "/home/clim/Desktop/Programming/cpp/libre-engine/src/system/OpenGL.cpp" "/home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles/libre-engine.dir/src/system/OpenGL.cpp.o"
+  "/home/clim/Desktop/Programming/cpp/libre-engine/src/system/Task.cpp" "/home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles/libre-engine.dir/src/system/Task.cpp.o"
   "/home/clim/Desktop/Programming/cpp/libre-engine/src/system/Time.cpp" "/home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles/libre-engine.dir/src/system/Time.cpp.o"
   "/home/clim/Desktop/Programming/cpp/libre-engine/src/system/VertexArray.cpp" "/home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles/libre-engine.dir/src/system/VertexArray.cpp.o"
   )

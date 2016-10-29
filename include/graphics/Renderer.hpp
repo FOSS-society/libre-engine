@@ -14,8 +14,13 @@ namespace libre{
         SDL_GLContext *asOGL;
 
         RenderingContext(){}
-        RenderingContext(SDL_Renderer *sdl);
-        RenderingContext(SDL_GLContext *opengl);
+        RenderingContext(SDL_Renderer *sdl){
+            asSDL = sdl;
+        }
+
+        RenderingContext(SDL_GLContext *opengl){
+            asOGL = opengl;
+        }
 
         ~RenderingContext(){
             SDL_DestroyRenderer(this->asSDL);
@@ -29,8 +34,8 @@ namespace libre{
 
   private:
     Window *m_window;
-    RenderingContext *m_context;
     RendererType m_type;
+    RenderingContext *m_context;
 
   public:
     Renderer(Window *parent,RendererType type);

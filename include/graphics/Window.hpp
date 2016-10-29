@@ -9,13 +9,13 @@ namespace libre{
         class Window{
 
         private:
-          char * m_title;
+          const char * m_title;
           SDL_Window *m_window;
           math::Vector2<unsigned int> m_size;
 
         public:
-          Window(char * t,const unsigned int width,const unsigned int height);
-          Window(char * t,math::Vector2<unsigned int> size);
+          Window(const char * t,const unsigned int width,const unsigned int height);
+          Window(const char * t,math::Vector2<unsigned int> size);
 
           const char * Title();
           SDL_Window * SDLWIN();

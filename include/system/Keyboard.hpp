@@ -10,12 +10,17 @@ namespace libre{
 
     private:
     SDL_Event *m_event;
-    bool keys[323];
+    bool m_keys[323];
+    bool m_keysHeld[323];
 
 
     public:
     Keyboard();
     Keyboard(SDL_Event *event);
+
+    const Keyboard *KeyboardCallback();
+
+
     };
 
 

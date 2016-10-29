@@ -325,9 +325,32 @@ CMakeFiles/libre-engine.dir/src/system/VertexArray.cpp.o.provides: CMakeFiles/li
 
 CMakeFiles/libre-engine.dir/src/system/VertexArray.cpp.o.provides.build: CMakeFiles/libre-engine.dir/src/system/VertexArray.cpp.o
 
+CMakeFiles/libre-engine.dir/src/system/Task.cpp.o: CMakeFiles/libre-engine.dir/flags.make
+CMakeFiles/libre-engine.dir/src/system/Task.cpp.o: ../../../src/system/Task.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles $(CMAKE_PROGRESS_13)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/libre-engine.dir/src/system/Task.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/libre-engine.dir/src/system/Task.cpp.o -c /home/clim/Desktop/Programming/cpp/libre-engine/src/system/Task.cpp
+
+CMakeFiles/libre-engine.dir/src/system/Task.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/libre-engine.dir/src/system/Task.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/clim/Desktop/Programming/cpp/libre-engine/src/system/Task.cpp > CMakeFiles/libre-engine.dir/src/system/Task.cpp.i
+
+CMakeFiles/libre-engine.dir/src/system/Task.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/libre-engine.dir/src/system/Task.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/clim/Desktop/Programming/cpp/libre-engine/src/system/Task.cpp -o CMakeFiles/libre-engine.dir/src/system/Task.cpp.s
+
+CMakeFiles/libre-engine.dir/src/system/Task.cpp.o.requires:
+.PHONY : CMakeFiles/libre-engine.dir/src/system/Task.cpp.o.requires
+
+CMakeFiles/libre-engine.dir/src/system/Task.cpp.o.provides: CMakeFiles/libre-engine.dir/src/system/Task.cpp.o.requires
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/system/Task.cpp.o.provides.build
+.PHONY : CMakeFiles/libre-engine.dir/src/system/Task.cpp.o.provides
+
+CMakeFiles/libre-engine.dir/src/system/Task.cpp.o.provides.build: CMakeFiles/libre-engine.dir/src/system/Task.cpp.o
+
 CMakeFiles/libre-engine.dir/src/system/Time.cpp.o: CMakeFiles/libre-engine.dir/flags.make
 CMakeFiles/libre-engine.dir/src/system/Time.cpp.o: ../../../src/system/Time.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles $(CMAKE_PROGRESS_13)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles $(CMAKE_PROGRESS_14)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/libre-engine.dir/src/system/Time.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/libre-engine.dir/src/system/Time.cpp.o -c /home/clim/Desktop/Programming/cpp/libre-engine/src/system/Time.cpp
 
@@ -350,7 +373,7 @@ CMakeFiles/libre-engine.dir/src/system/Time.cpp.o.provides.build: CMakeFiles/lib
 
 CMakeFiles/libre-engine.dir/src/system/Logger.cpp.o: CMakeFiles/libre-engine.dir/flags.make
 CMakeFiles/libre-engine.dir/src/system/Logger.cpp.o: ../../../src/system/Logger.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles $(CMAKE_PROGRESS_14)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles $(CMAKE_PROGRESS_15)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/libre-engine.dir/src/system/Logger.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/libre-engine.dir/src/system/Logger.cpp.o -c /home/clim/Desktop/Programming/cpp/libre-engine/src/system/Logger.cpp
 
@@ -373,7 +396,7 @@ CMakeFiles/libre-engine.dir/src/system/Logger.cpp.o.provides.build: CMakeFiles/l
 
 CMakeFiles/libre-engine.dir/src/system/Mouse.cpp.o: CMakeFiles/libre-engine.dir/flags.make
 CMakeFiles/libre-engine.dir/src/system/Mouse.cpp.o: ../../../src/system/Mouse.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles $(CMAKE_PROGRESS_15)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles $(CMAKE_PROGRESS_16)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/libre-engine.dir/src/system/Mouse.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/libre-engine.dir/src/system/Mouse.cpp.o -c /home/clim/Desktop/Programming/cpp/libre-engine/src/system/Mouse.cpp
 
@@ -396,7 +419,7 @@ CMakeFiles/libre-engine.dir/src/system/Mouse.cpp.o.provides.build: CMakeFiles/li
 
 CMakeFiles/libre-engine.dir/src/asset/Image.cpp.o: CMakeFiles/libre-engine.dir/flags.make
 CMakeFiles/libre-engine.dir/src/asset/Image.cpp.o: ../../../src/asset/Image.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles $(CMAKE_PROGRESS_16)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles $(CMAKE_PROGRESS_17)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/libre-engine.dir/src/asset/Image.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/libre-engine.dir/src/asset/Image.cpp.o -c /home/clim/Desktop/Programming/cpp/libre-engine/src/asset/Image.cpp
 
@@ -431,6 +454,7 @@ libre__engine_OBJECTS = \
 "CMakeFiles/libre-engine.dir/src/system/Keyboard.cpp.o" \
 "CMakeFiles/libre-engine.dir/src/system/Buffer.cpp.o" \
 "CMakeFiles/libre-engine.dir/src/system/VertexArray.cpp.o" \
+"CMakeFiles/libre-engine.dir/src/system/Task.cpp.o" \
 "CMakeFiles/libre-engine.dir/src/system/Time.cpp.o" \
 "CMakeFiles/libre-engine.dir/src/system/Logger.cpp.o" \
 "CMakeFiles/libre-engine.dir/src/system/Mouse.cpp.o" \
@@ -451,6 +475,7 @@ liblibre-engine.a: CMakeFiles/libre-engine.dir/src/system/OpenGL.cpp.o
 liblibre-engine.a: CMakeFiles/libre-engine.dir/src/system/Keyboard.cpp.o
 liblibre-engine.a: CMakeFiles/libre-engine.dir/src/system/Buffer.cpp.o
 liblibre-engine.a: CMakeFiles/libre-engine.dir/src/system/VertexArray.cpp.o
+liblibre-engine.a: CMakeFiles/libre-engine.dir/src/system/Task.cpp.o
 liblibre-engine.a: CMakeFiles/libre-engine.dir/src/system/Time.cpp.o
 liblibre-engine.a: CMakeFiles/libre-engine.dir/src/system/Logger.cpp.o
 liblibre-engine.a: CMakeFiles/libre-engine.dir/src/system/Mouse.cpp.o
@@ -477,6 +502,7 @@ CMakeFiles/libre-engine.dir/requires: CMakeFiles/libre-engine.dir/src/system/Ope
 CMakeFiles/libre-engine.dir/requires: CMakeFiles/libre-engine.dir/src/system/Keyboard.cpp.o.requires
 CMakeFiles/libre-engine.dir/requires: CMakeFiles/libre-engine.dir/src/system/Buffer.cpp.o.requires
 CMakeFiles/libre-engine.dir/requires: CMakeFiles/libre-engine.dir/src/system/VertexArray.cpp.o.requires
+CMakeFiles/libre-engine.dir/requires: CMakeFiles/libre-engine.dir/src/system/Task.cpp.o.requires
 CMakeFiles/libre-engine.dir/requires: CMakeFiles/libre-engine.dir/src/system/Time.cpp.o.requires
 CMakeFiles/libre-engine.dir/requires: CMakeFiles/libre-engine.dir/src/system/Logger.cpp.o.requires
 CMakeFiles/libre-engine.dir/requires: CMakeFiles/libre-engine.dir/src/system/Mouse.cpp.o.requires

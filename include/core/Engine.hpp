@@ -19,7 +19,8 @@ namespace libre{
      class Engine{
 
      private:
-       bool m_initialized;
+       bool m_Initialized;
+       bool m_Running;
        std::vector<System*> m_SystemList;
        std::vector<Entity*> m_EntityList;
 
@@ -34,6 +35,13 @@ namespace libre{
        void addSystem(System *system);
        void addEntity(Entity *entity);
 
+       bool isInitialized(){
+           return this->m_Initialized;
+       }
+
+       bool isRunning(){
+           return this->m_Running;
+       }
 
      };
 
