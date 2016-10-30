@@ -17,7 +17,7 @@ Mouse::Mouse(SDL_Event *event)
     m_event = event;
 }
 
-const Mouse *Mouse::MousePositionCallback()
+void Mouse::MousePositionCallback()
 {
     if(SDL_PollEvent(this->m_event)){
     switch(this->m_event->type){
@@ -52,8 +52,6 @@ const Mouse *Mouse::MousePositionCallback()
 
     }
  }
-
-        return this;
 
 }
 

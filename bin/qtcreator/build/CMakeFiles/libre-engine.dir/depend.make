@@ -19,7 +19,9 @@ CMakeFiles/libre-engine.dir/src/core/Engine.cpp.o: ../../../include/graphics/gra
 CMakeFiles/libre-engine.dir/src/core/Engine.cpp.o: ../../../include/math/vector2.hpp
 CMakeFiles/libre-engine.dir/src/core/Engine.cpp.o: ../../../include/math/vector3.hpp
 CMakeFiles/libre-engine.dir/src/core/Engine.cpp.o: ../../../include/math/vector4.hpp
+CMakeFiles/libre-engine.dir/src/core/Engine.cpp.o: ../../../include/system/Keyboard.hpp
 CMakeFiles/libre-engine.dir/src/core/Engine.cpp.o: ../../../include/system/Logger.hpp
+CMakeFiles/libre-engine.dir/src/core/Engine.cpp.o: ../../../include/system/Mouse.hpp
 CMakeFiles/libre-engine.dir/src/core/Engine.cpp.o: ../../../include/system/Time.hpp
 CMakeFiles/libre-engine.dir/src/core/Engine.cpp.o: ../../../src/core/Engine.cpp
 

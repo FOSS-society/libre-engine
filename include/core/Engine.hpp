@@ -9,10 +9,18 @@
 #include "System.hpp"
 #include "Component.hpp"
 #include "../system/Time.hpp"
-
+#include<memory>
 
 namespace libre{
-   namespace core{
+
+    //foward declare input classes
+
+    namespace system{
+    class Keyboard;
+    class Mouse;
+    }
+
+namespace core{
 
 
 
@@ -23,10 +31,13 @@ namespace libre{
        bool m_Running;
        std::vector<System*> m_SystemList;
        std::vector<Entity*> m_EntityList;
-
        graphics::Window *m_window;
        graphics::Renderer *m_renderer;
        system::Time *m_time;
+       system::Keyboard *m_keyboard;
+       system::Mouse *m_mouse;
+       std::shared_ptr<SDL_Event> m_event;
+
 
      public:
        Engine(graphics::Renderer *renderer);

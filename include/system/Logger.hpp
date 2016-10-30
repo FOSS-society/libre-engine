@@ -12,8 +12,8 @@ namespace libre{
     class Logger{
     private:
       Logger();
-      Logger(const Logger&){};
-      Logger &operator=(const Logger&){return *this;};
+      Logger(const Logger&){}
+      Logger &operator=(const Logger&){return *this;}
       static const std::string sFilePath;
       static Logger *sThis;
       static std::ofstream sLogFile;

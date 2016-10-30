@@ -19,7 +19,7 @@ namespace libre{
         }
     }
 
-    const Keyboard *Keyboard::KeyboardCallback()
+    void Keyboard::KeyboardCallback()
 {
     if(SDL_PollEvent(this->m_event)){
     switch(this->m_event->type){
@@ -39,7 +39,6 @@ namespace libre{
      }
     }
 
-    return const_cast<Keyboard*>(this);
 
 
     }

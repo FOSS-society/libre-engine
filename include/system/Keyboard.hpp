@@ -9,7 +9,7 @@ namespace libre{
     class Keyboard{
 
     private:
-    SDL_Event *m_event;
+    SDL_Event *m_event;   //pointer to the event which is polled for input
     bool m_keys[323];
     bool m_keysHeld[323];
 
@@ -18,7 +18,7 @@ namespace libre{
     Keyboard();
     Keyboard(SDL_Event *event);
 
-    const Keyboard *KeyboardCallback();
+    void KeyboardCallback();
 
 
     };
