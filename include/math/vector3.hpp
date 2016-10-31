@@ -8,6 +8,23 @@ namespace libre{
 
 	namespace math{
 
+
+
+    /**
+    *@brief Vector3 Class
+    *
+    * A generic class to hold a Vector of 3 of the same type of data;
+    *
+    * DataType: x
+    * DataType: y
+    * DataType: z
+    *
+    * Notes : As a rule of Templates, All functionality is written in this header
+    *         Const Compatible
+    *
+    *
+    */
+
 		template <typename t>
 		class Vector3{
 

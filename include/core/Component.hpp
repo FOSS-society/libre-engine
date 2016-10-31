@@ -6,9 +6,32 @@
 namespace libre{
   namespace core{
 
-class Entity;
+
+  //foward declaration
+  class Entity;
+
+
+  /**
+   * @brief The Component class
+   *
+   * The base class for Components inside the engine
+   * such as: SpriteComponent, TransformComponent,PhysicsComponent,
+   * etc
+   *
+   * Entity: Parent
+   * String: Name
+   *
+   * Notes: Completely written in this header file
+   *        Supports const objects.
+   *
+   *
+   */
+
 
   class Component {
+
+
+
 
   private:
     Entity *m_parent;

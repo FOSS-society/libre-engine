@@ -6,6 +6,22 @@
 namespace libre{
   namespace asset{
 
+
+  /**
+       * @brief The Base_Asset class
+       *
+       * A Base class to represent Assets such as
+       * Images, Audio FX, Sprites,SpriteSheets, etc
+       *
+       * String: Name
+       * String: FilePath
+       * Boolean: isLoaded
+       *
+       * All getters and setters are inlined
+       *
+       */
+
+
       class Base_Asset{
       private:
           std::string m_name;

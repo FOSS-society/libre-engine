@@ -7,7 +7,20 @@ namespace libre{
 	namespace math{
 
 		//* Note: OpenGL Uses Column-Major (0,3,6),(1,4,7),(2,5,8)
-
+    /**
+    *@brief Matrix3 class
+    *
+    * a generic class which can act as a 2D container holding 3 columns and 3 rows
+    *
+    * DataType[9]: data
+    * formed: [0,1,2]
+    *         [3,4,5]
+    *         [6,7,8]
+    *
+    * Notes: By the rule of Templates , all functionality is written in this header
+    *         Const Compatible
+    *
+    */
 
 		template <typename t>
 		class Matrix3{

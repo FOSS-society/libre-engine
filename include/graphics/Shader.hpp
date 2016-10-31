@@ -13,6 +13,21 @@ namespace libre{
 
     enum class ShaderType{ VERTEX , TESSALATION1,TESSALATION2,GEOMETRY, FRAGMENT};
 
+
+    /**
+     * @brief The Shader class
+     * This class will be fed into a ShaderProgram class, in order for it to be rendered
+     *
+     * String: Name
+     * (Enum)ShaderType: Type
+     * Vector<ShaderVariable> *attributes;
+     * Vector<ShaderVariable> *uniforms;
+     *
+     * Notes: Needs to be worked on
+     *        All possible OpenGL Functions are wrapped in the OpenGL namespace
+     *              This is found under system/Opengl.hpp
+     */
+
     class Shader{
     private:
       std::string m_name;

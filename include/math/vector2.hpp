@@ -9,6 +9,18 @@ namespace libre{
 	namespace math{
 
 
+         /**
+         *@brief Vector2 Class
+         *
+         * A generic class to hold a Vector of 2 of the same type of data;
+         *
+         * DataType: x
+         * DataType: y
+         *
+         * Notes : As a rule of Templates, All functionality is written in this header
+         *        Const Compatible
+         */
+
 		template <typename t>
 		class Vector2{
 

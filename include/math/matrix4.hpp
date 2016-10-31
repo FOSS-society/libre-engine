@@ -9,6 +9,24 @@ namespace libre{
 						   (2,6,10,14),(3,7,11,15)
 
 		**/
+
+
+
+    /**
+    *@brief Matrix4 class
+    *
+    * a generic class which can act as a 2D container holding 3 columns and 3 rows
+    *
+    * DataType[16]: data
+    * formed: [ 0, 1, 2, 3]
+    *         [ 4, 5, 6, 7]
+    *         [ 8, 9,10,11]
+    *         [12,13,14,15]
+    *
+    * Notes: By the rule of Templates , all functionality is written in this header
+    *         Const Compatible
+    */
+
 		template <typename t>
 		class Matrix4{
 

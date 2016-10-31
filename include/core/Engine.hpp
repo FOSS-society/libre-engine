@@ -22,6 +22,38 @@ namespace libre{
 
 namespace core{
 
+/**
+      * @brief The Engine class
+      *
+      * The engine class is self explanatory, it contains these variables so far:
+      *
+      * Boolean: IsRunning
+      * Boolean: IsInitialized
+      * Vector<System*> SystemList
+      * Vector<Entity*> EntityList
+      * Window: Window
+      * Renderer: Renderer
+      * Keyboard: Keyboard
+      * Mouse:Mouse
+      * sharedPointer<SDL_Event> eventHandle
+      *
+      *
+      * Engines Update function goes through the application loop. depending on the systems , it will check
+      * calculations (such as physics) and determine if things can happen
+      *
+      * TODO: Add getters to this class
+      *       Extend to more then just bools
+      *
+      * Notes: No setters, just vector's push back wrapping
+      *
+      *
+      * TODO: ADD MORE TO THIS CLASS
+      *
+      *
+
+*/
+
+
 
 
      class Engine{

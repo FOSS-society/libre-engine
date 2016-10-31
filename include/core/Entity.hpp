@@ -12,6 +12,22 @@ namespace libre{
 //foward declare
   class Component;
 
+
+  /**
+     * @brief The Entity class
+     *
+     * A Class that represents an Entity in the Engine
+     *
+     * String: Name
+     * Vector<Component*> ComponentList
+     * Entity*: parent
+     * int: id
+     * bool: Active
+     *
+     * Notes this class is all contained within this header file
+     *
+     */
+
     class Entity{
 
     private:

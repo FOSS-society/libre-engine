@@ -6,6 +6,21 @@ namespace libre{
 
 	namespace math{
 
+
+
+    /**
+    *@brief Vector4 Class
+    *
+    * A generic class to hold a Vector of 4 of the same type of data;
+    *
+    * DataType: x
+    * DataType: y
+    * DataType: z
+    * DataType: w
+    *
+    * Notes : As a rule of Templates, All functionality is written in this header
+    *         Const Compatible
+    */
 		template <typename t>
 		class Vector4{
 

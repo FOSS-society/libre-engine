@@ -7,6 +7,20 @@ namespace libre{
 		//* Note: OpenGL Uses Column-Major (0,2),(1,3)
 
 
+         /**
+         *@brief Matrix2 class
+         *
+         * a generic class which can act as a 2D container holding 2 columns and 2 rows
+         *
+         * DataType[4]: data
+         * formed: [0,1]
+         *         [2,3]
+         *
+         * Notes: By the rule of Templates , all functionality is written in this header
+         *        Const Compatible
+         *
+         */
+
 		template <typename t>
 		class Matrix2{
 

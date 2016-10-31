@@ -8,6 +8,19 @@ namespace libre{
 
   namespace graphics{
 
+  /**
+     * @brief The ShaderVariable class
+     *
+     * A Class to represent variables within GLSL code
+     *
+     * String: Name
+     * Variant: Data
+     *
+     * Notes: Can hold a series of types, i may have to work on more types in the Variant
+     * but until then, this will suffice.
+     *
+     */
+
     class ShaderVariable{
     private:
       std::string m_name;

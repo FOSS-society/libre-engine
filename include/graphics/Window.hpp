@@ -6,6 +6,19 @@
 namespace libre{
     namespace graphics{
 
+
+    /**
+         * @brief The Window class
+         *
+         * A Class that represents the window of the program
+         *
+         * Const Char*: Title
+         * SDL_Window*: WindowHandle
+         * Vector2<unsigned int>: size_t
+         *
+         * This encapsulates an SDL Window object to allow creation of more moduler windows
+         * upon creation.
+         */
         class Window{
 
         private:
