@@ -1,6 +1,6 @@
 Libre Engine
 
-Design-Doc Revision: 7
+Design-Doc Revision: 8
 Created:9/9/16
 
 Rev History:
@@ -10,6 +10,7 @@ Rev History:
 9/24/16 -5
 9/28/16 -6
 9/29/16 -7
+10/30/16 -8
 
 
 Description: a game engine written for linux that
@@ -39,6 +40,9 @@ Libraries:
 
 	#Scripting
 	Lua5.2
+
+	#Serialization
+	Cereal : https://github.com/USCiLab/cereal
 
 
 Build-System: Cmake
@@ -119,9 +123,24 @@ Classes:
 [] audio::Mixer - Class that can play Sound Files
 [] audio::SoundStream - Class that represents the stream of Sound files
 
+
 [c] script::ScriptEngine - Class that represents the Scripting engine
+			   At the moment it wraps a Lua Interpreter
 [c] script::Script - Class that represents a single script which can be run within
 a ScriptEngine
+
+######
+Future
+######
+[] script::ScriptEngine - Class that acts as a base for a Scripting Interpreter
+[] script::LuaScriptEngine - Class that represents a Lua Interpreter
+[] script::PythonScriptEngine - Class that represents a Python Interpreter
+[] script::RubyScriptEngine - Class that represents a Ruby Interpreter
+
+######
+######
+######
+
 
 [] system::RenderingSystem - Class that represents the Rendering System
 	 note: based on the rendering Context
@@ -133,6 +152,11 @@ a ScriptEngine
 [ce?] system::OpenGL - Namespace which holds openGL functions for usage
 [c] system::Time - Class which represents time for the Engine
 [ce?] system::VertexArray - Class which represents a VertexArray for OpenGL
+[c] system::Keyboard - Class which represents input from the keyboard
+[c] system::Mouse - Class which represents input from the mouse
+[c] system::Logger - Class which represents a logging system
+[c] system::Task - Class which represents a single thread running a specific class
+
 
 
 
