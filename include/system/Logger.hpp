@@ -9,6 +9,14 @@
 namespace libre{
   namespace system{
 
+  /**
+     * @brief The Logger class
+     *
+     *
+     * A Class that represents a logger.
+     *
+     * This is a singleton class
+     */
     class Logger{
     private:
       Logger();

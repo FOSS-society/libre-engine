@@ -8,6 +8,21 @@
 namespace libre {
   namespace system{
 
+
+  /**
+     * @brief The Time class
+     *
+     * A Class that represents a Time Object
+     *
+     * time_t: start
+     * time_t: current
+     *
+     * Notes: This is used in The engine class to keep track of time
+     *
+     *
+     *
+     */
+
     class Time{
 
     private:

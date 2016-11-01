@@ -8,10 +8,12 @@
 namespace libre{
     namespace system{
     struct Argument{
-        int m_char;
+        int m_arg;
         char *m_argv[];
 
-        Argument(int arg, char *argv[]);
+        Argument(int arg, char *argv[]):m_arg(arg),m_argv(argv)
+        {    
+        }
     };
 
     enum class ThreadState{
