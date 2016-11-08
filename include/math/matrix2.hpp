@@ -36,16 +36,28 @@ namespace libre{
 			t getValue(int index);
 			t data(int index)const;
 
-			void setValue(int index, t data);
+            void setValue(int index,const t& data);
 
-			void addElement(int index, t data);
+            void addElement(int index, const t& data);
 			void add(Matrix2 b);
-			void subElement(int index, t data);
+            void subElement(int index,const t& data);
 			void sub(Matrix2 b);
-			void multElement(int index, t data);
+            void multElement(int index, const t& data);
 			void mult(Matrix2 b);
-			void divElement(int index, t data);
+            void divElement(int index,const t& data);
 			void div(Matrix2 b);
+
+
+            Matrix2<t> &operator+(const Matrix2<t> &other);
+            Matrix2<t> &operator+(const t &other);
+            Matrix2<t> &operator-(const Matrix2<t> &other);
+            Matrix2<t> &operator-(const t& other);
+            Matrix2<t> &operator*(const Matrix2<t> &other);
+            Matrix2<t> &operator*(const t & other);
+            Matrix2<t> &operator/(const Matrix2<t> &other);
+            Matrix2<t> &operator/(const t &other);
+
+
 
 			const char *toString();
 
@@ -60,10 +72,10 @@ namespace libre{
 		}
 		template<typename t>
 		Matrix2<t>::Matrix2(const Matrix2<t>& copy){
-			this->_data[0] = copy.getValue(0);
-			this->_data[1] = copy.getValue(1);
-			this->_data[2] = copy.getValue(2);
-			this->_data[3] = copy.getValue(3);
+            this->_data[0] = copy.data(0);
+            this->_data[1] = copy.data(1);
+            this->_data[2] = copy.data(2);
+            this->_data[3] = copy.data(3);
 		}
 		template<typename t>
 		Matrix2<t> &Matrix2<t>::operator=(const Matrix2<t>& copy){
@@ -80,11 +92,11 @@ namespace libre{
 		}
 
 		template<typename t>
-		void Matrix2<t>::setValue(int index, t data){
+        void Matrix2<t>::setValue(int index, const t & data){
 			_data[index] = data;
 		}
 		template<typename t>
-		void Matrix2<t>::addElement(int index, t data){
+        void Matrix2<t>::addElement(int index, const t & data){
 			this->_data[index] += data;
 		}
 
@@ -97,7 +109,7 @@ namespace libre{
 		}
 
 		template<typename t>
-		void Matrix2<t>::subElement(int index, t data){
+        void Matrix2<t>::subElement(int index, const t & data){
 			this->_data[index] -= data;
 		}
 
@@ -110,7 +122,7 @@ namespace libre{
 		}
 
 		template<typename t>
-		void Matrix2<t>::multElement(int index, t data){
+        void Matrix2<t>::multElement(int index, const t & data){
 			this->_data[index] *= data;
 		}
 
@@ -123,7 +135,7 @@ namespace libre{
 		}
 
 		template<typename t>
-		void Matrix2<t>::divElement(int index, t data){
+        void Matrix2<t>::divElement(int index,const t& data){
 			this->_data[index] /= data;
 		}
 
@@ -132,8 +144,76 @@ namespace libre{
 			this->_data[0] /= b.getValue(0);
 			this->_data[1] /= b.getValue(1);
 			this->_data[2] /= b.getValue(2);
-			this->_data[3] /= b.getValue(3);
-		}
+            this->_data[3] /= b.getValue(3);
+        }
+
+        template<typename t>
+        Matrix2<t> &Matrix2<t>::operator+(const Matrix2<t> &other)
+        {
+            this->add(other);
+            return *this;
+        }
+
+       template<typename t>
+        Matrix2<t> & Matrix2<t>::operator+(const t & other){
+            this->addElement(0,other);
+            this->addElement(1,other);
+            this->addElement(2,other);
+            this->addElement(3,other);
+            return *this;
+        }
+
+        template<typename t>
+        Matrix2<t> &Matrix2<t>::operator-(const Matrix2<t> &other)
+        {
+            this->sub(other);
+            return *this;
+        }
+
+       template<typename t>
+        Matrix2<t> & Matrix2<t>::operator-(const t & other){
+            this->subElement(0,other);
+            this->subElement(1,other);
+            this->subElement(2,other);
+            this->subElement(3,other);
+            return *this;
+        }
+
+        template<typename t>
+        Matrix2<t> &Matrix2<t>::operator*(const Matrix2<t> &other)
+        {
+            this->mult(other);
+            return *this;
+        }
+
+       template<typename t>
+        Matrix2<t> & Matrix2<t>::operator*(const t & other){
+            this->multElement(0,other);
+            this->multElement(1,other);
+            this->multElement(2,other);
+            this->multElement(3,other);
+            return *this;
+        }
+
+        template<typename t>
+        Matrix2<t> &Matrix2<t>::operator/(const Matrix2<t> &other)
+        {
+            this->div(other);
+            return *this;
+        }
+
+       template<typename t>
+        Matrix2<t> & Matrix2<t>::operator/(const t & other){
+            this->divElement(0,other);
+            this->divElement(1,other);
+            this->divElement(2,other);
+            this->divElement(3,other);
+            return *this;
+        }
+
+
+
+
 		template<typename t>
 		const char *Matrix2<t>::toString(){
 			return "{ " + this->_data[0] + " , " + this->_data[1] + "}\n" +

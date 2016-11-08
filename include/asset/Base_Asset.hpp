@@ -46,6 +46,7 @@ namespace libre{
 
         inline bool isLoaded(){ return m_isLoaded;}
         inline bool Loaded()const { return m_isLoaded;}
+
       };
   }
 }

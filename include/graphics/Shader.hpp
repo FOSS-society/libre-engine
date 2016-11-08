@@ -35,6 +35,7 @@ namespace libre{
       std::string m_sourceFile;
       std::vector<ShaderVariable> *m_attributes;
       std::vector<ShaderVariable> *m_uniforms;
+      GLuint m_shaderHandle;
 
     public:
       Shader(std::string name, std::string source, ShaderType type);
@@ -44,6 +45,10 @@ namespace libre{
 
       void addUniform(std::string name, core::Variant data);
       void addAttribute(std::string name, core::Variant data);
+
+      GLuint getShaderHandle();
+      GLuint ShaderHandle()const;
+
 
       core::Variant getUniform(std::string variableName);
       core::Variant getAttribute(std::string variableName);

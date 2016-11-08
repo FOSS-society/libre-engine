@@ -36,6 +36,7 @@ namespace libre{
       this->m_keyboard->KeyboardCallback();
 #ifdef DEBUG
        std::cout << "Mouse Position: " << m_mouse->getMousePosition().toString() << std::endl;
+       std::cout << "Time: "<< m_time->timeElapsed() << std::endl;
 
 #endif // debug
 
@@ -49,6 +50,7 @@ namespace libre{
             break;
             case graphics::RendererType::RT_3D:
                 //treat as OpenGL.... figure out how to do that..
+
             break;
 
        }

@@ -4,6 +4,9 @@
 
 #include <iostream>
 #include "../math/vector2.hpp"
+#include <lua5.2/lua.hpp>
+
+
 
 
 /**
@@ -32,6 +35,7 @@ namespace libre{
         long *asLongPtr;
         math::Vector2<int> asVec2Int;
         math::Vector2<float> asVec2Float;
+
 
 
 

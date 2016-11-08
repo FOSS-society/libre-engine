@@ -9,9 +9,9 @@ namespace libre{
     namespace system{
     struct Argument{
         int m_arg;
-        char *m_argv[];
+        char **m_argv;
 
-        Argument(int arg, char *argv[]):m_arg(arg),m_argv(argv)
+        Argument(int arg, char **argv):m_arg(arg),m_argv(argv)
         {    
         }
     };

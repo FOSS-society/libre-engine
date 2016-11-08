@@ -44,6 +44,7 @@ namespace libre{
       std::cerr<< "SEEN FROM: graphics_common.c line 24: initializeSDLWithEverything" << std::endl;
       }else{
         SDL_Init(SDL_INIT_EVERYTHING);
+        //std::cerr << "Image Initialization return code: " << IMG_Init(IMG_INIT_JPG\| IMG_INIT_PNG |IMG_INIT_TIF);
         s_sdlIsInitialized = true;
       }
     }
@@ -54,9 +55,25 @@ namespace libre{
     return color32;
   }
 
+
+
 void logSDLError(const char * message){
 
-  std::cerr << message << " error: " << SDL_GetError() << std::endl;
+    std::cerr << message << " error: " << SDL_GetError() << std::endl;
+}
+
+Color4 UIntToColor(uint32_t color)
+{
+    Color4 temp;
+    uint8_t varray[4];
+    memcpy(varray,&color,sizeof(varray));
+    temp.setX(varray[0]);
+    temp.setY(varray[1]);
+    temp.setZ(varray[2]);
+    temp.setW(varray[3]);
+
+    return temp;
+
 }
 
 

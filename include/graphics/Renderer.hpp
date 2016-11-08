@@ -28,8 +28,20 @@ namespace libre{
         }
       };
 
-
-
+   /**
+   * @brief The Renderer class
+   * 
+   * Allows for rendering onto a context.
+   * 
+   * Window* : windowhandle
+   * (Enum) RendererType: Type 
+   * (union) RendererContext: Context
+   * 
+   * Notes: This class is const compatible
+   *        Use this class to encapsulate a RenderingComponent
+   * 
+   * 
+   */
   class Renderer{
 
   private:

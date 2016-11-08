@@ -14,6 +14,8 @@ namespace libre{
       default:
           std::cout <<" Invalid Renderer type" << std::endl;
           assert(type == RendererType::RT_2D || type == RendererType::RT_3D );
+
+
           break;
       }
 

@@ -23,7 +23,8 @@ namespace libre{
 		buffer->bind();
 
 		OpenGL::enableVertexArrays(index);
-		glVertexAttribPointer(index, buffer->getComponentCount(), GL_FLOAT, GL_FALSE, 0, 0);
+
+        OpenGL::VertexAttributePointer(index, buffer->getComponentCount(), GL_FLOAT, GL_FALSE, 0, 0);
 
 		buffer->unbind();
 		unbind();
@@ -31,12 +32,12 @@ namespace libre{
 
 	void VertexArray::bind() const
 	{
-		glBindVertexArray(m_ID);
+        OpenGL::BindVertexArray(m_ID);
 	}
 
 	void VertexArray::unbind() const
 	{
-		glBindVertexArray(0);
+        OpenGL::BindVertexArray(0);
 	}
 
   }

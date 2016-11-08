@@ -9,6 +9,7 @@
 /usr/local/include/libre-engine/graphics/ShaderVariable.hpp
 /usr/local/include/libre-engine/graphics/Window.hpp
 /usr/local/include/libre-engine/graphics/Renderer.hpp
+/usr/local/include/libre-engine/graphics/ShaderProgram.h
 /usr/local/include/libre-engine/graphics/graphics_common.hpp
 /usr/local/include/libre-engine/math/vector2.hpp
 /usr/local/include/libre-engine/math/matrix3.hpp
@@ -29,6 +30,7 @@
 /usr/local/include/libre-engine/system/Time.hpp
 /usr/local/include/libre-engine/system/Logger.hpp
 /usr/local/include/libre-engine/system/Utility.hpp
+/usr/local/include/libre-engine/system/VertexFormat.h
 /usr/local/include/libre-engine/system/Task.hpp
 /usr/local/include/libre-engine/asset/Base_Asset.hpp
 /usr/local/include/libre-engine/asset/Image.hpp

@@ -44,6 +44,7 @@ namespace libre{
 		Vector2<t> add(const Vector2<t> &other);
 		Vector2<t> sub(const Vector2<t> &other);
 		Vector2<t> multiply(const Vector2<t> &other);
+        Vector2<t> multiply(const t &scalar);
 		Vector2<t> divide(const Vector2<t> &other);
 
 		Vector2<t> operator=(Vector2 right);
@@ -114,6 +115,11 @@ namespace libre{
 			Vector2<t> vec(this->m_x * other.X(), this->m_y * other.Y());
 			return vec;
 		}
+        template <typename t>
+        Vector2<t> Vector2<t>::multiply(const t &scalar){
+            Vector2<t> vec(this->m_x * scalar, this->m_y * scalar);
+            return vec;
+        }
 		template <typename t>
 		Vector2<t> Vector2<t>::divide(const Vector2<t> &other){
 			Vector2<t> vec(this->m_x / other.X(), this->m_y / other.Y());

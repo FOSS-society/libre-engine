@@ -13,7 +13,6 @@ int main(int argc, char *argv[]){
     libre::graphics::initializeSDLWithEverything();
     libre::graphics::initializeGlew();
 
-
     graphics::Window *window = new graphics::Window("Libre-Engine Sandbox",640,480);
     std::cout << " Window created" <<std::endl;
     graphics::Renderer *renderer = new graphics::Renderer(window,graphics::RendererType::RT_2D);

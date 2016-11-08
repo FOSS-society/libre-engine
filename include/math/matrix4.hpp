@@ -34,8 +34,9 @@ namespace libre{
 			t _data[16];
 
 		public:
-			Matrix4(t *data);
+            Matrix4(t data);
 			Matrix4(const Matrix4<t>& copy);
+
 
 			Matrix4<t> &operator=(const Matrix4& copy);
 
@@ -58,16 +59,16 @@ namespace libre{
 		};
 
 		template<typename t>
-		Matrix4<t>::Matrix4(t* data){
-			this->m_data[0] = data;
-			this->m_data[5] = data;
-			this->m_data[10] = data;
-			this->m_data[15] = data;
+        Matrix4<t>::Matrix4(t data){
+            this->_data[0] = data;
+            this->_data[5] = data;
+            this->_data[10] = data;
+            this->_data[15] = data;
 		}
 		template<typename t>
 		Matrix4<t>::Matrix4(const Matrix4<t>& copy){
 			for(int i =0; i<16;i++){
-				this->m_data[i] = copy.getValue(i);
+                this->_data[i] = copy.data(i);
 			}
 		}
 
@@ -97,7 +98,7 @@ namespace libre{
 		template<typename t>
 		void Matrix4<t>::add(Matrix4 b){
 			for(int i =0; i<16;i++){
-				this->m_data[i] += b.getValue(i);
+                this->_data[i] += b.getValue(i);
 			}
 		}
 
@@ -109,7 +110,7 @@ namespace libre{
 		template<typename t>
 		void Matrix4<t>::sub(Matrix4 b){
 			for(int i =0; i<16;i++){
-				this->m_data[i] -= b.getValue(i);
+                this->_data[i] -= b.getValue(i);
 			}
 		}
 
@@ -122,7 +123,7 @@ namespace libre{
 		template<typename t>
 		void Matrix4<t>::mult(Matrix4 b){
 			for(int i =0; i<16;i++){
-				this->m_data[i] *= b.getValue(i);
+                this->_data[i] *= b.getValue(i);
 			}
 		}
 
@@ -135,7 +136,7 @@ namespace libre{
 		template<typename t>
 		void Matrix4<t>::div(Matrix4 b){
 			for(int i =0; i<16;i++){
-				this->m_data[i] /= b.getValue(i);
+                this->_data[i] /= b.getValue(i);
 			}
 		}
 
