@@ -109,8 +109,8 @@ namespace libre{
     Matrix2<float> InverseMat2(const Matrix2<float> &mat){
        /**
          Solution:
-         [a,b]   1/ ad-cb   swap positions of a and d, then put negatives on b and c
-         [c,d]              then divide each by ad-bc
+         [a,b)  1/ ad-cb   swap positions of a and d, then put negatives on b and c
+         [c,d)             then divide each by ad-bc
       `**/
 
         Matrix2<float> temp(mat.data(4),mat.data(1)*-1,mat.data(2)*-1,mat.data(0));
@@ -173,13 +173,141 @@ namespace libre{
 
         return mminor * (1/determinant);
 
-
-
     }
 
 
-  }
+    Matrix4<float> InvertMat4(const Matrix4<float> &matt){
+        float temp[16];
+
+        Matrix4<float> mat = Matrix4<float>(matt);
+
+        temp[0]= mat.data(5)* mat.data(10)* mat.data(15)-
+                        mat.data(5)* mat.data(11)* mat.data(14)-
+                        mat.data(9)* mat.data(6)* mat.data(15)+
+                        mat.data(9)* mat.data(7)* mat.data(14)+
+                        mat.data(13)* mat.data(6)* mat.data(11)-
+                        mat.data(13)* mat.data(7)* mat.data(10);
+
+                    temp[4]= -mat.data(4)* mat.data(10)* mat.data(15)+
+                        mat.data(4)* mat.data(11)* mat.data(14)+
+                        mat.data(8)* mat.data(6)* mat.data(15)-
+                        mat.data(8)* mat.data(7)* mat.data(14)-
+                        mat.data(12)* mat.data(6)* mat.data(11)+
+                        mat.data(12)* mat.data(7)* mat.data(10);
+
+                    temp[8]= mat.data(4)* mat.data(9)* mat.data(15)-
+                        mat.data(4)* mat.data(11)* mat.data(13)-
+                        mat.data(8)* mat.data(5)* mat.data(15)+
+                        mat.data(8)* mat.data(7)* mat.data(13)+
+                        mat.data(12)* mat.data(5)* mat.data(11)-
+                        mat.data(12)* mat.data(7)* mat.data(9);
+
+                    temp[12]= -mat.data(4)* mat.data(9)* mat.data(14)+
+                        mat.data(4)* mat.data(10)* mat.data(13)+
+                        mat.data(8)* mat.data(5)* mat.data(14)-
+                        mat.data(8)* mat.data(6)* mat.data(13)-
+                        mat.data(12)* mat.data(5)* mat.data(10)+
+                        mat.data(12)* mat.data(6)* mat.data(9);
+
+                    temp[1]= -mat.data(1)* mat.data(10)* mat.data(15)+
+                        mat.data(1)* mat.data(11)* mat.data(14)+
+                        mat.data(9)* mat.data(2)* mat.data(15)-
+                        mat.data(9)* mat.data(3)* mat.data(14)-
+                        mat.data(13)* mat.data(2)* mat.data(11)+
+                        mat.data(13)* mat.data(3)* mat.data(10);
+
+                    temp[5]= mat.data(0)* mat.data(10)* mat.data(15)-
+                        mat.data(0)* mat.data(11)* mat.data(14)-
+                        mat.data(8)* mat.data(2)* mat.data(15)+
+                        mat.data(8)* mat.data(3)* mat.data(14)+
+                        mat.data(12)* mat.data(2)* mat.data(11)-
+                        mat.data(12)* mat.data(3)* mat.data(10);
+
+                    temp[9]= -mat.data(0)* mat.data(9)* mat.data(15)+
+                        mat.data(0)* mat.data(11)* mat.data(13)+
+                        mat.data(8)* mat.data(1)* mat.data(15)-
+                        mat.data(8)* mat.data(3)* mat.data(13)-
+                        mat.data(12)* mat.data(1)* mat.data(11)+
+                        mat.data(12)* mat.data(3)* mat.data(9);
+
+                    temp[13]= mat.data(0)* mat.data(9)* mat.data(14)-
+                        mat.data(0)* mat.data(10)* mat.data(13)-
+                        mat.data(8)* mat.data(1)* mat.data(14)+
+                        mat.data(8)* mat.data(2)* mat.data(13)+
+                        mat.data(12)* mat.data(1)* mat.data(10)-
+                        mat.data(12)* mat.data(2)* mat.data(9);
+
+                    temp[2]= mat.data(1)* mat.data(6)* mat.data(15)-
+                        mat.data(1)* mat.data(7)* mat.data(14)-
+                        mat.data(5)* mat.data(2)* mat.data(15)+
+                        mat.data(5)* mat.data(3)* mat.data(14)+
+                        mat.data(13)* mat.data(2)* mat.data(7)-
+                        mat.data(13)* mat.data(3)* mat.data(6);
+
+                    temp[6]= -mat.data(0)* mat.data(6)* mat.data(15)+
+                        mat.data(0)* mat.data(7)* mat.data(14)+
+                        mat.data(4)* mat.data(2)* mat.data(15)-
+                        mat.data(4)* mat.data(3)* mat.data(14)-
+                        mat.data(12)* mat.data(2)* mat.data(7)+
+                        mat.data(12)* mat.data(3)* mat.data(6);
+
+                    temp[10]= mat.data(0)* mat.data(5)* mat.data(15)-
+                        mat.data(0)* mat.data(7)* mat.data(13)-
+                        mat.data(4)* mat.data(1)* mat.data(15)+
+                        mat.data(4)* mat.data(3)* mat.data(13)+
+                        mat.data(12)* mat.data(1)* mat.data(7)-
+                        mat.data(12)* mat.data(3)* mat.data(5);
+
+                    temp[14]= -mat.data(0)* mat.data(5)* mat.data(14)+
+                        mat.data(0)* mat.data(6)* mat.data(13)+
+                        mat.data(4)* mat.data(1)* mat.data(14)-
+                        mat.data(4)* mat.data(2)* mat.data(13)-
+                        mat.data(12)* mat.data(1)* mat.data(6)+
+                        mat.data(12)* mat.data(2)* mat.data(5);
+
+                    temp[3]= -mat.data(1)* mat.data(6)* mat.data(11)+
+                        mat.data(1)* mat.data(7)* mat.data(10)+
+                        mat.data(5)* mat.data(2)* mat.data(11)-
+                        mat.data(5)* mat.data(3)* mat.data(10)-
+                        mat.data(9)* mat.data(2)* mat.data(7)+
+                        mat.data(9)* mat.data(3)* mat.data(6);
+
+                    temp[7]= mat.data(0)* mat.data(6)* mat.data(11)-
+                        mat.data(0)* mat.data(7)* mat.data(10)-
+                        mat.data(4)* mat.data(2)* mat.data(11)+
+                        mat.data(4)* mat.data(3)* mat.data(10)+
+                        mat.data(8)* mat.data(2)* mat.data(7)-
+                        mat.data(8)* mat.data(3)* mat.data(6);
+
+                    temp[11]= -mat.data(0)* mat.data(5)* mat.data(11)+
+                        mat.data(0)* mat.data(7)* mat.data(9)+
+                        mat.data(4)* mat.data(1)* mat.data(11)-
+                        mat.data(4)* mat.data(3)* mat.data(9)-
+                        mat.data(8)* mat.data(1)* mat.data(7)+
+                        mat.data(8)* mat.data(3)* mat.data(5);
+
+                    temp[15]= mat.data(0)* mat.data(5)* mat.data(10)-
+                        mat.data(0)* mat.data(6)* mat.data(9)-
+                        mat.data(4)* mat.data(1)* mat.data(10)+
+                        mat.data(4)* mat.data(2)* mat.data(9)+
+                        mat.data(8)* mat.data(1)* mat.data(6)-
+                        mat.data(8)* mat.data(2)* mat.data(5);
+
+                    double determinant = mat.data(0)* temp[0]+ mat.data(1)* temp[4]+ mat.data(2)* temp[8]+ mat.data(3)* temp[12];
+                    determinant = 1.0 / determinant;
+
+                    for (int i = 0; i < 4 * 4; i++)
+                        mat.setValue(i,temp[i] * determinant);
+
+
+                    return mat;
+                }
+    }
+
+
 
 }
+
+
 
 #endif //libremath.h

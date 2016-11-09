@@ -43,16 +43,26 @@ namespace libre{
 			t getValue(int index);
 			t data(int index)const;
 
-			void setValue(int index, t data);
+            void setValue(int index, const t &data);
 
-			void addElement(int index, t data);
-			void add(Matrix4 b);
-			void subElement(int index, t data);
+            void addElement(int index,const t &data);
+            void add(Matrix4 b);
+            void subElement(int index,const t &data);
 			void sub(Matrix4 b);
-			void multElement(int index, t data);
-			void mult(Matrix4 b);
-			void divElement(int index, t data);
+            void multElement(int index,const t &data);
+            void mult(Matrix4 b);
+            void divElement(int index,const t &data);
 			void div(Matrix4 b);
+
+            Matrix4<t> &operator+(const Matrix4<t> &other);
+            Matrix4<t> &operator+(const t & other);
+            Matrix4<t> &operator-(const Matrix4<t> &other);
+            Matrix4<t> &operator-(const t & other);
+            Matrix4<t> &operator*(const Matrix4<t> &other);
+            Matrix4<t> &operator*(const t & other);
+            Matrix4<t> &operator/(const Matrix4<t> &other);
+            Matrix4<t> &operator/(const t & other);
+
 
 			const char *toString();
 
@@ -87,11 +97,11 @@ namespace libre{
 		}
 
 		template<typename t>
-		void Matrix4<t>::setValue(int index, t data){
+        void Matrix4<t>::setValue(int index, const t &data){
 			_data[index] = data;
 		}
 		template<typename t>
-		void Matrix4<t>::addElement(int index, t data){
+        void Matrix4<t>::addElement(int index,const t & data ){
 			this->_data[index] += data;
 		}
 
@@ -103,7 +113,7 @@ namespace libre{
 		}
 
 		template<typename t>
-		void Matrix4<t>::subElement(int index, t data){
+        void Matrix4<t>::subElement(int index, const t &data){
 			this->_data[index] -= data;
 		}
 
@@ -116,12 +126,12 @@ namespace libre{
 
 
 		template<typename t>
-		void Matrix4<t>::multElement(int index, t data){
+        void Matrix4<t>::multElement(int index, const t &data){
 			this->_data[index] *= data;
 		}
 
 		template<typename t>
-		void Matrix4<t>::mult(Matrix4 b){
+        void Matrix4<t>::mult(Matrix4<t> b){
 			for(int i =0; i<16;i++){
                 this->_data[i] *= b.getValue(i);
 			}
@@ -129,7 +139,7 @@ namespace libre{
 
 
 		template<typename t>
-		void Matrix4<t>::divElement(int index, t data){
+        void Matrix4<t>::divElement(int index, const t &data){
 			this->_data[index] /= data;
 		}
 
@@ -139,6 +149,68 @@ namespace libre{
                 this->_data[i] /= b.getValue(i);
 			}
 		}
+
+
+        template<typename t>
+        Matrix4<t> &Matrix4<t>::operator+(const Matrix4<t> &other){
+            this->add(other);
+
+            return *this;
+        }
+        template<typename t>
+        Matrix4<t> &Matrix4<t>::operator+(const t &other){
+           for(int i = 0;i < 16;i++){
+           this->addElement(i,other);
+           }
+            return *this;
+        }
+
+        template<typename t>
+        Matrix4<t> &Matrix4<t>::operator-(const Matrix4<t> &other){
+            this->sub(other);
+
+            return *this;
+        }
+        template<typename t>
+        Matrix4<t> &Matrix4<t>::operator-(const t &other){
+           for(int i = 0;i < 16;i++){
+           this->subElement(i,other);
+           }
+            return *this;
+        }
+
+
+        template<typename t>
+        Matrix4<t> &Matrix4<t>::operator*(const Matrix4<t> &other){
+            this->mult(other);
+
+            return *this;
+        }
+        template<typename t>
+        Matrix4<t> &Matrix4<t>::operator*(const t &other){
+           for(int i = 0;i < 16;i++){
+           this->multElement(i,other);
+           }
+            return *this;
+        }
+
+        template<typename t>
+        Matrix4<t> &Matrix4<t>::operator/(const Matrix4<t> &other){
+            this->div(other);
+
+            return *this;
+        }
+        template<typename t>
+        Matrix4<t> &Matrix4<t>::operator/(const t &other){
+           for(int i = 0;i < 16;i++){
+           this->divElement(i,other);
+           }
+            return *this;
+        }
+
+
+
+
 
 		template<typename t>
 		const char *Matrix4<t>::toString(){
