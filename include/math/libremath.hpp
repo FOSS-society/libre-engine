@@ -181,119 +181,119 @@ namespace libre{
 
         Matrix4<float> mat = Matrix4<float>(matt);
 
-        temp[0]= mat.data(5)* mat.data(10)* mat.data(15)-
-                        mat.data(5)* mat.data(11)* mat.data(14)-
-                        mat.data(9)* mat.data(6)* mat.data(15)+
-                        mat.data(9)* mat.data(7)* mat.data(14)+
-                        mat.data(13)* mat.data(6)* mat.data(11)-
-                        mat.data(13)* mat.data(7)* mat.data(10);
+        temp[0]= mat.getValue(5)* mat.getValue(10)* mat.getValue(15)-
+                        mat.getValue(5)* mat.getValue(11)* mat.getValue(14)-
+                        mat.getValue(9)* mat.getValue(6)* mat.getValue(15)+
+                        mat.getValue(9)* mat.getValue(7)* mat.getValue(14)+
+                        mat.getValue(13)* mat.getValue(6)* mat.getValue(11)-
+                        mat.getValue(13)* mat.getValue(7)* mat.getValue(10);
 
-                    temp[4]= -mat.data(4)* mat.data(10)* mat.data(15)+
-                        mat.data(4)* mat.data(11)* mat.data(14)+
-                        mat.data(8)* mat.data(6)* mat.data(15)-
-                        mat.data(8)* mat.data(7)* mat.data(14)-
-                        mat.data(12)* mat.data(6)* mat.data(11)+
-                        mat.data(12)* mat.data(7)* mat.data(10);
+                    temp[4]= -mat.getValue(4)* mat.getValue(10)* mat.getValue(15)+
+                        mat.getValue(4)* mat.getValue(11)* mat.getValue(14)+
+                        mat.getValue(8)* mat.getValue(6)* mat.getValue(15)-
+                        mat.getValue(8)* mat.getValue(7)* mat.getValue(14)-
+                        mat.getValue(12)* mat.getValue(6)* mat.getValue(11)+
+                        mat.getValue(12)* mat.getValue(7)* mat.getValue(10);
 
-                    temp[8]= mat.data(4)* mat.data(9)* mat.data(15)-
-                        mat.data(4)* mat.data(11)* mat.data(13)-
-                        mat.data(8)* mat.data(5)* mat.data(15)+
-                        mat.data(8)* mat.data(7)* mat.data(13)+
-                        mat.data(12)* mat.data(5)* mat.data(11)-
-                        mat.data(12)* mat.data(7)* mat.data(9);
+                    temp[8]= mat.getValue(4)* mat.getValue(9)* mat.getValue(15)-
+                        mat.getValue(4)* mat.getValue(11)* mat.getValue(13)-
+                        mat.getValue(8)* mat.getValue(5)* mat.getValue(15)+
+                        mat.getValue(8)* mat.getValue(7)* mat.getValue(13)+
+                        mat.getValue(12)* mat.getValue(5)* mat.getValue(11)-
+                        mat.getValue(12)* mat.getValue(7)* mat.getValue(9);
 
-                    temp[12]= -mat.data(4)* mat.data(9)* mat.data(14)+
-                        mat.data(4)* mat.data(10)* mat.data(13)+
-                        mat.data(8)* mat.data(5)* mat.data(14)-
-                        mat.data(8)* mat.data(6)* mat.data(13)-
-                        mat.data(12)* mat.data(5)* mat.data(10)+
-                        mat.data(12)* mat.data(6)* mat.data(9);
+                    temp[12]= -mat.getValue(4)* mat.getValue(9)* mat.getValue(14)+
+                        mat.getValue(4)* mat.getValue(10)* mat.getValue(13)+
+                        mat.getValue(8)* mat.getValue(5)* mat.getValue(14)-
+                        mat.getValue(8)* mat.getValue(6)* mat.getValue(13)-
+                        mat.getValue(12)* mat.getValue(5)* mat.getValue(10)+
+                        mat.getValue(12)* mat.getValue(6)* mat.getValue(9);
 
-                    temp[1]= -mat.data(1)* mat.data(10)* mat.data(15)+
-                        mat.data(1)* mat.data(11)* mat.data(14)+
-                        mat.data(9)* mat.data(2)* mat.data(15)-
-                        mat.data(9)* mat.data(3)* mat.data(14)-
-                        mat.data(13)* mat.data(2)* mat.data(11)+
-                        mat.data(13)* mat.data(3)* mat.data(10);
+                    temp[1]= -mat.getValue(1)* mat.getValue(10)* mat.getValue(15)+
+                        mat.getValue(1)* mat.getValue(11)* mat.getValue(14)+
+                        mat.getValue(9)* mat.getValue(2)* mat.getValue(15)-
+                        mat.getValue(9)* mat.getValue(3)* mat.getValue(14)-
+                        mat.getValue(13)* mat.getValue(2)* mat.getValue(11)+
+                        mat.getValue(13)* mat.getValue(3)* mat.getValue(10);
 
-                    temp[5]= mat.data(0)* mat.data(10)* mat.data(15)-
-                        mat.data(0)* mat.data(11)* mat.data(14)-
-                        mat.data(8)* mat.data(2)* mat.data(15)+
-                        mat.data(8)* mat.data(3)* mat.data(14)+
-                        mat.data(12)* mat.data(2)* mat.data(11)-
-                        mat.data(12)* mat.data(3)* mat.data(10);
+                    temp[5]= mat.getValue(0)* mat.getValue(10)* mat.getValue(15)-
+                        mat.getValue(0)* mat.getValue(11)* mat.getValue(14)-
+                        mat.getValue(8)* mat.getValue(2)* mat.getValue(15)+
+                        mat.getValue(8)* mat.getValue(3)* mat.getValue(14)+
+                        mat.getValue(12)* mat.getValue(2)* mat.getValue(11)-
+                        mat.getValue(12)* mat.getValue(3)* mat.getValue(10);
 
-                    temp[9]= -mat.data(0)* mat.data(9)* mat.data(15)+
-                        mat.data(0)* mat.data(11)* mat.data(13)+
-                        mat.data(8)* mat.data(1)* mat.data(15)-
-                        mat.data(8)* mat.data(3)* mat.data(13)-
-                        mat.data(12)* mat.data(1)* mat.data(11)+
-                        mat.data(12)* mat.data(3)* mat.data(9);
+                    temp[9]= -mat.getValue(0)* mat.getValue(9)* mat.getValue(15)+
+                        mat.getValue(0)* mat.getValue(11)* mat.getValue(13)+
+                        mat.getValue(8)* mat.getValue(1)* mat.getValue(15)-
+                        mat.getValue(8)* mat.getValue(3)* mat.getValue(13)-
+                        mat.getValue(12)* mat.getValue(1)* mat.getValue(11)+
+                        mat.getValue(12)* mat.getValue(3)* mat.getValue(9);
 
-                    temp[13]= mat.data(0)* mat.data(9)* mat.data(14)-
-                        mat.data(0)* mat.data(10)* mat.data(13)-
-                        mat.data(8)* mat.data(1)* mat.data(14)+
-                        mat.data(8)* mat.data(2)* mat.data(13)+
-                        mat.data(12)* mat.data(1)* mat.data(10)-
-                        mat.data(12)* mat.data(2)* mat.data(9);
+                    temp[13]= mat.getValue(0)* mat.getValue(9)* mat.getValue(14)-
+                        mat.getValue(0)* mat.getValue(10)* mat.getValue(13)-
+                        mat.getValue(8)* mat.getValue(1)* mat.getValue(14)+
+                        mat.getValue(8)* mat.getValue(2)* mat.getValue(13)+
+                        mat.getValue(12)* mat.getValue(1)* mat.getValue(10)-
+                        mat.getValue(12)* mat.getValue(2)* mat.getValue(9);
 
-                    temp[2]= mat.data(1)* mat.data(6)* mat.data(15)-
-                        mat.data(1)* mat.data(7)* mat.data(14)-
-                        mat.data(5)* mat.data(2)* mat.data(15)+
-                        mat.data(5)* mat.data(3)* mat.data(14)+
-                        mat.data(13)* mat.data(2)* mat.data(7)-
-                        mat.data(13)* mat.data(3)* mat.data(6);
+                    temp[2]= mat.getValue(1)* mat.getValue(6)* mat.getValue(15)-
+                        mat.getValue(1)* mat.getValue(7)* mat.getValue(14)-
+                        mat.getValue(5)* mat.getValue(2)* mat.getValue(15)+
+                        mat.getValue(5)* mat.getValue(3)* mat.getValue(14)+
+                        mat.getValue(13)* mat.getValue(2)* mat.getValue(7)-
+                        mat.getValue(13)* mat.getValue(3)* mat.getValue(6);
 
-                    temp[6]= -mat.data(0)* mat.data(6)* mat.data(15)+
-                        mat.data(0)* mat.data(7)* mat.data(14)+
-                        mat.data(4)* mat.data(2)* mat.data(15)-
-                        mat.data(4)* mat.data(3)* mat.data(14)-
-                        mat.data(12)* mat.data(2)* mat.data(7)+
-                        mat.data(12)* mat.data(3)* mat.data(6);
+                    temp[6]= -mat.getValue(0)* mat.getValue(6)* mat.getValue(15)+
+                        mat.getValue(0)* mat.getValue(7)* mat.getValue(14)+
+                        mat.getValue(4)* mat.getValue(2)* mat.getValue(15)-
+                        mat.getValue(4)* mat.getValue(3)* mat.getValue(14)-
+                        mat.getValue(12)* mat.getValue(2)* mat.getValue(7)+
+                        mat.getValue(12)* mat.getValue(3)* mat.getValue(6);
 
-                    temp[10]= mat.data(0)* mat.data(5)* mat.data(15)-
-                        mat.data(0)* mat.data(7)* mat.data(13)-
-                        mat.data(4)* mat.data(1)* mat.data(15)+
-                        mat.data(4)* mat.data(3)* mat.data(13)+
-                        mat.data(12)* mat.data(1)* mat.data(7)-
-                        mat.data(12)* mat.data(3)* mat.data(5);
+                    temp[10]= mat.getValue(0)* mat.getValue(5)* mat.getValue(15)-
+                        mat.getValue(0)* mat.getValue(7)* mat.getValue(13)-
+                        mat.getValue(4)* mat.getValue(1)* mat.getValue(15)+
+                        mat.getValue(4)* mat.getValue(3)* mat.getValue(13)+
+                        mat.getValue(12)* mat.getValue(1)* mat.getValue(7)-
+                        mat.getValue(12)* mat.getValue(3)* mat.getValue(5);
 
-                    temp[14]= -mat.data(0)* mat.data(5)* mat.data(14)+
-                        mat.data(0)* mat.data(6)* mat.data(13)+
-                        mat.data(4)* mat.data(1)* mat.data(14)-
-                        mat.data(4)* mat.data(2)* mat.data(13)-
-                        mat.data(12)* mat.data(1)* mat.data(6)+
-                        mat.data(12)* mat.data(2)* mat.data(5);
+                    temp[14]= -mat.getValue(0)* mat.getValue(5)* mat.getValue(14)+
+                        mat.getValue(0)* mat.getValue(6)* mat.getValue(13)+
+                        mat.getValue(4)* mat.getValue(1)* mat.getValue(14)-
+                        mat.getValue(4)* mat.getValue(2)* mat.getValue(13)-
+                        mat.getValue(12)* mat.getValue(1)* mat.getValue(6)+
+                        mat.getValue(12)* mat.getValue(2)* mat.getValue(5);
 
-                    temp[3]= -mat.data(1)* mat.data(6)* mat.data(11)+
-                        mat.data(1)* mat.data(7)* mat.data(10)+
-                        mat.data(5)* mat.data(2)* mat.data(11)-
-                        mat.data(5)* mat.data(3)* mat.data(10)-
-                        mat.data(9)* mat.data(2)* mat.data(7)+
-                        mat.data(9)* mat.data(3)* mat.data(6);
+                    temp[3]= -mat.getValue(1)* mat.getValue(6)* mat.getValue(11)+
+                        mat.getValue(1)* mat.getValue(7)* mat.getValue(10)+
+                        mat.getValue(5)* mat.getValue(2)* mat.getValue(11)-
+                        mat.getValue(5)* mat.getValue(3)* mat.getValue(10)-
+                        mat.getValue(9)* mat.getValue(2)* mat.getValue(7)+
+                        mat.getValue(9)* mat.getValue(3)* mat.getValue(6);
 
-                    temp[7]= mat.data(0)* mat.data(6)* mat.data(11)-
-                        mat.data(0)* mat.data(7)* mat.data(10)-
-                        mat.data(4)* mat.data(2)* mat.data(11)+
-                        mat.data(4)* mat.data(3)* mat.data(10)+
-                        mat.data(8)* mat.data(2)* mat.data(7)-
-                        mat.data(8)* mat.data(3)* mat.data(6);
+                    temp[7]= mat.getValue(0)* mat.getValue(6)* mat.getValue(11)-
+                        mat.getValue(0)* mat.getValue(7)* mat.getValue(10)-
+                        mat.getValue(4)* mat.getValue(2)* mat.getValue(11)+
+                        mat.getValue(4)* mat.getValue(3)* mat.getValue(10)+
+                        mat.getValue(8)* mat.getValue(2)* mat.getValue(7)-
+                        mat.getValue(8)* mat.getValue(3)* mat.getValue(6);
 
-                    temp[11]= -mat.data(0)* mat.data(5)* mat.data(11)+
-                        mat.data(0)* mat.data(7)* mat.data(9)+
-                        mat.data(4)* mat.data(1)* mat.data(11)-
-                        mat.data(4)* mat.data(3)* mat.data(9)-
-                        mat.data(8)* mat.data(1)* mat.data(7)+
-                        mat.data(8)* mat.data(3)* mat.data(5);
+                    temp[11]= -mat.getValue(0)* mat.getValue(5)* mat.getValue(11)+
+                        mat.getValue(0)* mat.getValue(7)* mat.getValue(9)+
+                        mat.getValue(4)* mat.getValue(1)* mat.getValue(11)-
+                        mat.getValue(4)* mat.getValue(3)* mat.getValue(9)-
+                        mat.getValue(8)* mat.getValue(1)* mat.getValue(7)+
+                        mat.getValue(8)* mat.getValue(3)* mat.getValue(5);
 
-                    temp[15]= mat.data(0)* mat.data(5)* mat.data(10)-
-                        mat.data(0)* mat.data(6)* mat.data(9)-
-                        mat.data(4)* mat.data(1)* mat.data(10)+
-                        mat.data(4)* mat.data(2)* mat.data(9)+
-                        mat.data(8)* mat.data(1)* mat.data(6)-
-                        mat.data(8)* mat.data(2)* mat.data(5);
+                    temp[15]= mat.getValue(0)* mat.getValue(5)* mat.getValue(10)-
+                        mat.getValue(0)* mat.getValue(6)* mat.getValue(9)-
+                        mat.getValue(4)* mat.getValue(1)* mat.getValue(10)+
+                        mat.getValue(4)* mat.getValue(2)* mat.getValue(9)+
+                        mat.getValue(8)* mat.getValue(1)* mat.getValue(6)-
+                        mat.getValue(8)* mat.getValue(2)* mat.getValue(5);
 
-                    double determinant = mat.data(0)* temp[0]+ mat.data(1)* temp[4]+ mat.data(2)* temp[8]+ mat.data(3)* temp[12];
+                    double determinant = mat.getValue(0)* temp[0]+ mat.getValue(1)* temp[4]+ mat.getValue(2)* temp[8]+ mat.getValue(3)* temp[12];
                     determinant = 1.0 / determinant;
 
                     for (int i = 0; i < 4 * 4; i++)
