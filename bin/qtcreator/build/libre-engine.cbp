@@ -132,6 +132,8 @@
       </Unit>
       <Unit filename="/home/clim/Desktop/Programming/cpp/libre-engine/src/graphics/Renderer.cpp">
       </Unit>
+      <Unit filename="/home/clim/Desktop/Programming/cpp/libre-engine/src/graphics/Shader.cpp">
+      </Unit>
       <Unit filename="/home/clim/Desktop/Programming/cpp/libre-engine/src/graphics/ShaderVariable.cpp">
       </Unit>
       <Unit filename="/home/clim/Desktop/Programming/cpp/libre-engine/src/graphics/Window.cpp">
@@ -145,6 +147,8 @@
       <Unit filename="/home/clim/Desktop/Programming/cpp/libre-engine/src/script/ScriptEngine.cpp">
       </Unit>
       <Unit filename="/home/clim/Desktop/Programming/cpp/libre-engine/src/system/Buffer.cpp">
+      </Unit>
+      <Unit filename="/home/clim/Desktop/Programming/cpp/libre-engine/src/system/IndexBuffer.cpp">
       </Unit>
       <Unit filename="/home/clim/Desktop/Programming/cpp/libre-engine/src/system/Keyboard.cpp">
       </Unit>
@@ -207,6 +211,8 @@
       <Unit filename="/home/clim/Desktop/Programming/cpp/libre-engine/include/script/ScriptEngine.hpp">
       </Unit>
       <Unit filename="/home/clim/Desktop/Programming/cpp/libre-engine/include/system/Buffer.hpp">
+      </Unit>
+      <Unit filename="/home/clim/Desktop/Programming/cpp/libre-engine/include/system/IndexBuffer.hpp">
       </Unit>
       <Unit filename="/home/clim/Desktop/Programming/cpp/libre-engine/include/system/Keyboard.hpp">
       </Unit>

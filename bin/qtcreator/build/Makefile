@@ -228,6 +228,30 @@ src/graphics/Renderer.cpp.s:
 	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/graphics/Renderer.cpp.s
 .PHONY : src/graphics/Renderer.cpp.s
 
+src/graphics/Shader.o: src/graphics/Shader.cpp.o
+.PHONY : src/graphics/Shader.o
+
+# target to build an object file
+src/graphics/Shader.cpp.o:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/graphics/Shader.cpp.o
+.PHONY : src/graphics/Shader.cpp.o
+
+src/graphics/Shader.i: src/graphics/Shader.cpp.i
+.PHONY : src/graphics/Shader.i
+
+# target to preprocess a source file
+src/graphics/Shader.cpp.i:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/graphics/Shader.cpp.i
+.PHONY : src/graphics/Shader.cpp.i
+
+src/graphics/Shader.s: src/graphics/Shader.cpp.s
+.PHONY : src/graphics/Shader.s
+
+# target to generate assembly for a file
+src/graphics/Shader.cpp.s:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/graphics/Shader.cpp.s
+.PHONY : src/graphics/Shader.cpp.s
+
 src/graphics/ShaderVariable.o: src/graphics/ShaderVariable.cpp.o
 .PHONY : src/graphics/ShaderVariable.o
 
@@ -395,6 +419,30 @@ src/system/Buffer.s: src/system/Buffer.cpp.s
 src/system/Buffer.cpp.s:
 	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/system/Buffer.cpp.s
 .PHONY : src/system/Buffer.cpp.s
+
+src/system/IndexBuffer.o: src/system/IndexBuffer.cpp.o
+.PHONY : src/system/IndexBuffer.o
+
+# target to build an object file
+src/system/IndexBuffer.cpp.o:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/system/IndexBuffer.cpp.o
+.PHONY : src/system/IndexBuffer.cpp.o
+
+src/system/IndexBuffer.i: src/system/IndexBuffer.cpp.i
+.PHONY : src/system/IndexBuffer.i
+
+# target to preprocess a source file
+src/system/IndexBuffer.cpp.i:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/system/IndexBuffer.cpp.i
+.PHONY : src/system/IndexBuffer.cpp.i
+
+src/system/IndexBuffer.s: src/system/IndexBuffer.cpp.s
+.PHONY : src/system/IndexBuffer.s
+
+# target to generate assembly for a file
+src/system/IndexBuffer.cpp.s:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/system/IndexBuffer.cpp.s
+.PHONY : src/system/IndexBuffer.cpp.s
 
 src/system/Keyboard.o: src/system/Keyboard.cpp.o
 .PHONY : src/system/Keyboard.o
@@ -586,6 +634,9 @@ help:
 	@echo "... src/graphics/Renderer.o"
 	@echo "... src/graphics/Renderer.i"
 	@echo "... src/graphics/Renderer.s"
+	@echo "... src/graphics/Shader.o"
+	@echo "... src/graphics/Shader.i"
+	@echo "... src/graphics/Shader.s"
 	@echo "... src/graphics/ShaderVariable.o"
 	@echo "... src/graphics/ShaderVariable.i"
 	@echo "... src/graphics/ShaderVariable.s"
@@ -607,6 +658,9 @@ help:
 	@echo "... src/system/Buffer.o"
 	@echo "... src/system/Buffer.i"
 	@echo "... src/system/Buffer.s"
+	@echo "... src/system/IndexBuffer.o"
+	@echo "... src/system/IndexBuffer.i"
+	@echo "... src/system/IndexBuffer.s"
 	@echo "... src/system/Keyboard.o"
 	@echo "... src/system/Keyboard.i"
 	@echo "... src/system/Keyboard.s"

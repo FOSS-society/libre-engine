@@ -2,6 +2,8 @@
 #define UTILITY_HPP_
 
 #include <iostream>
+#include <fstream>
+#include <sstream>
 #include "../graphics/graphics_common.hpp"
 #include "../math/vector4.hpp"
 
@@ -25,6 +27,18 @@ namespace libre{
                           (color & 0x00ff0000) >> 16,
                           (color & 0xff000000) >> 24);
     }
+
+    std::string readFile(const char * filePath){
+        std::ifstream ifFP;
+        ifFP.open(filePath);
+
+        std::stringstream strStream;
+        strStream << ifFP.rdbuf();
+        std::string str = strStream.str();
+
+        return str;
+    }
+
 
   }
 }

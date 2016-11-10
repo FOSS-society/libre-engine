@@ -32,27 +32,24 @@ namespace libre{
     private:
       std::string m_name;
       ShaderType m_type;
-      std::string m_sourceFile;
-      std::vector<ShaderVariable> *m_attributes;
-      std::vector<ShaderVariable> *m_uniforms;
-      GLuint m_shaderHandle;
+      std::string m_filePath;
+      std::string m_Source;
+
 
     public:
-      Shader(std::string name, std::string source, ShaderType type);
+      Shader(std::string name, std::string filepath, ShaderType type);
 
-      void setUniform(std::string name, core::Variant data);
-      void setAttribute(std::string name, core::Variant data);
+       ShaderType getType();
+       ShaderType Type()const;
 
-      void addUniform(std::string name, core::Variant data);
-      void addAttribute(std::string name, core::Variant data);
+       std::string getFilePath();
+       std::string FilePath()const;
 
-      GLuint getShaderHandle();
-      GLuint ShaderHandle()const;
+       std::string getSource();
+       std::string Source()const;
 
-
-      core::Variant getUniform(std::string variableName);
-      core::Variant getAttribute(std::string variableName);
-
+       std::string getName();
+       std::string Name()const;
 
 
 

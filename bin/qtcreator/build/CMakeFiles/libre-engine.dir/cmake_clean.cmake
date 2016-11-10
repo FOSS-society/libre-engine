@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/libre-engine.dir/src/core/Engine.cpp.o"
   "CMakeFiles/libre-engine.dir/src/graphics/ShaderVariable.cpp.o"
+  "CMakeFiles/libre-engine.dir/src/graphics/Shader.cpp.o"
   "CMakeFiles/libre-engine.dir/src/graphics/Window.cpp.o"
   "CMakeFiles/libre-engine.dir/src/graphics/Renderer.cpp.o"
   "CMakeFiles/libre-engine.dir/src/graphics/graphics_common.cpp.o"
@@ -8,6 +9,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/libre-engine.dir/src/script/ScriptEngine.cpp.o"
   "CMakeFiles/libre-engine.dir/src/script/Script.cpp.o"
   "CMakeFiles/libre-engine.dir/src/system/OpenGL.cpp.o"
+  "CMakeFiles/libre-engine.dir/src/system/IndexBuffer.cpp.o"
   "CMakeFiles/libre-engine.dir/src/system/Keyboard.cpp.o"
   "CMakeFiles/libre-engine.dir/src/system/Buffer.cpp.o"
   "CMakeFiles/libre-engine.dir/src/system/VertexArray.cpp.o"

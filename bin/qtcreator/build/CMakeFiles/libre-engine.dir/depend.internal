@@ -33,6 +33,16 @@ CMakeFiles/libre-engine.dir/src/graphics/Renderer.cpp.o
  /home/clim/Desktop/Programming/cpp/libre-engine/include/math/vector3.hpp
  /home/clim/Desktop/Programming/cpp/libre-engine/include/math/vector4.hpp
  /home/clim/Desktop/Programming/cpp/libre-engine/src/graphics/Renderer.cpp
+CMakeFiles/libre-engine.dir/src/graphics/Shader.cpp.o
+ /home/clim/Desktop/Programming/cpp/libre-engine/include/core/LEVariant.hpp
+ /home/clim/Desktop/Programming/cpp/libre-engine/include/graphics/Shader.hpp
+ /home/clim/Desktop/Programming/cpp/libre-engine/include/graphics/ShaderVariable.hpp
+ /home/clim/Desktop/Programming/cpp/libre-engine/include/graphics/graphics_common.hpp
+ /home/clim/Desktop/Programming/cpp/libre-engine/include/math/vector2.hpp
+ /home/clim/Desktop/Programming/cpp/libre-engine/include/math/vector3.hpp
+ /home/clim/Desktop/Programming/cpp/libre-engine/include/math/vector4.hpp
+ /home/clim/Desktop/Programming/cpp/libre-engine/include/system/Utility.hpp
+ /home/clim/Desktop/Programming/cpp/libre-engine/src/graphics/Shader.cpp
 CMakeFiles/libre-engine.dir/src/graphics/ShaderVariable.cpp.o
  /home/clim/Desktop/Programming/cpp/libre-engine/include/core/LEVariant.hpp
  /home/clim/Desktop/Programming/cpp/libre-engine/include/graphics/ShaderVariable.hpp
@@ -81,6 +91,17 @@ CMakeFiles/libre-engine.dir/src/system/Buffer.cpp.o
  /home/clim/Desktop/Programming/cpp/libre-engine/include/system/Buffer.hpp
  /home/clim/Desktop/Programming/cpp/libre-engine/include/system/OpenGL.hpp
  /home/clim/Desktop/Programming/cpp/libre-engine/src/system/Buffer.cpp
+CMakeFiles/libre-engine.dir/src/system/IndexBuffer.cpp.o
+ /home/clim/Desktop/Programming/cpp/libre-engine/include/math/libremath.hpp
+ /home/clim/Desktop/Programming/cpp/libre-engine/include/math/matrix2.hpp
+ /home/clim/Desktop/Programming/cpp/libre-engine/include/math/matrix3.hpp
+ /home/clim/Desktop/Programming/cpp/libre-engine/include/math/matrix4.hpp
+ /home/clim/Desktop/Programming/cpp/libre-engine/include/math/vector2.hpp
+ /home/clim/Desktop/Programming/cpp/libre-engine/include/math/vector3.hpp
+ /home/clim/Desktop/Programming/cpp/libre-engine/include/math/vector4.hpp
+ /home/clim/Desktop/Programming/cpp/libre-engine/include/system/IndexBuffer.hpp
+ /home/clim/Desktop/Programming/cpp/libre-engine/include/system/OpenGL.hpp
+ /home/clim/Desktop/Programming/cpp/libre-engine/src/system/IndexBuffer.cpp
 CMakeFiles/libre-engine.dir/src/system/Keyboard.cpp.o
  /home/clim/Desktop/Programming/cpp/libre-engine/include/system/Keyboard.hpp
  /home/clim/Desktop/Programming/cpp/libre-engine/src/system/Keyboard.cpp

@@ -65,7 +65,6 @@ namespace libre{
                 return temp;
     }
 
-
     Matrix4<float> perspective(float fov, float aspectRatio, float near, float far){
         Matrix4<float> result(1.0f);
 
@@ -83,7 +82,6 @@ namespace libre{
 
         return result;
     }
-
 
     Matrix4<float>Orthographic(float left, float right, float bottom, float top, float near, float far){
 
@@ -119,6 +117,18 @@ namespace libre{
         assert(det!=0);
 
         return temp * (1/det);
+    }
+
+    Matrix2<float> Identity2(){
+        return Matrix2<float>(1.0f,0.0f,0.0f,1.0f);
+    }
+
+    Matrix3<float> Identity3(){
+        return Matrix3<float>(1.0f);
+    }
+
+    Matrix4<float> Identity4(){
+        return Matrix4<float>(1.0f);
     }
 
     Matrix3<float> InverseMat3(const Matrix3<float> &mat){
@@ -174,7 +184,6 @@ namespace libre{
         return mminor * (1/determinant);
 
     }
-
 
     Matrix4<float> InvertMat4(const Matrix4<float> &matt){
         float temp[16];
@@ -302,9 +311,61 @@ namespace libre{
 
                     return mat;
                 }
+
+    Matrix4<float> Translate4(const Vector3<float> &vec){
+
+    Matrix4<float> result(1.0f);
+
+    result.setValue(3,vec.X());
+    result.setValue(7,vec.Y());
+    result.setValue(11,vec.Z());
+
+    return result;
+}
+
+    Matrix4<float> Rotate(float angle, const Vector3<float> axis){
+
+        Matrix4<float> result(1.0f);
+
+        float r = toRadians(angle);
+        float c = cos(r);
+        float s = sin(r);
+        float omc = 1.0f - c;
+
+        float x = axis.X();
+        float y = axis.Y();
+        float z = axis.Z();
+
+
+        result.setValue(0,x*omc+c);
+        result.setValue(4,y*x*omc+z*s);
+        result.setValue(8,x*z*omc-y*s);
+
+        result.setValue(1,x*y*omc-z*s);
+        result.setValue(5,y*omc+c);
+        result.setValue(9,y*z*omc+x*s);
+
+        result.setValue(2,x*z*omc+y*s);
+        result.setValue(6,y*z*omc-x*s);
+        result.setValue(10,z*omc+c);
+
+        return result;
+    }
+
+    Matrix4<float> Scale(const Vector3<float> &scale){
+
+        Matrix4<float> result(1.0f);
+
+        result.setValue(0,scale.X());
+        result.setValue(5,scale.Y());
+        result.setValue(10,scale.Z());
+
+        return result;
+
     }
 
 
+    }
 
 }
 
