@@ -6,30 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/clim/Desktop/Programming/cpp/libre-engine/include/core/LEVariant.hpp
-iostream
--
-../math/vector2.hpp
-/home/clim/Desktop/Programming/cpp/libre-engine/include/math/vector2.hpp
-lua5.2/lua.hpp
--
-
-/home/clim/Desktop/Programming/cpp/libre-engine/include/graphics/Shader.hpp
-string
--
-vector
--
-graphics_common.hpp
-/home/clim/Desktop/Programming/cpp/libre-engine/include/graphics/graphics_common.hpp
-../graphics/ShaderVariable.hpp
-/home/clim/Desktop/Programming/cpp/libre-engine/include/graphics/ShaderVariable.hpp
-
-/home/clim/Desktop/Programming/cpp/libre-engine/include/graphics/ShaderVariable.hpp
-graphics_common.hpp
-/home/clim/Desktop/Programming/cpp/libre-engine/include/graphics/graphics_common.hpp
-../core/LEVariant.hpp
-/home/clim/Desktop/Programming/cpp/libre-engine/include/core/LEVariant.hpp
-
 /home/clim/Desktop/Programming/cpp/libre-engine/include/graphics/graphics_common.hpp
 SDL2/SDL.h
 -
@@ -48,6 +24,30 @@ stdint.h
 ../math/vector4.hpp
 /home/clim/Desktop/Programming/cpp/libre-engine/include/math/vector4.hpp
 
+/home/clim/Desktop/Programming/cpp/libre-engine/include/math/libremath.hpp
+cassert
+-
+vector2.hpp
+/home/clim/Desktop/Programming/cpp/libre-engine/include/math/vector2.hpp
+vector3.hpp
+/home/clim/Desktop/Programming/cpp/libre-engine/include/math/vector3.hpp
+vector4.hpp
+/home/clim/Desktop/Programming/cpp/libre-engine/include/math/vector4.hpp
+matrix2.hpp
+/home/clim/Desktop/Programming/cpp/libre-engine/include/math/matrix2.hpp
+matrix3.hpp
+/home/clim/Desktop/Programming/cpp/libre-engine/include/math/matrix3.hpp
+matrix4.hpp
+/home/clim/Desktop/Programming/cpp/libre-engine/include/math/matrix4.hpp
+math.h
+-
+
+/home/clim/Desktop/Programming/cpp/libre-engine/include/math/matrix2.hpp
+
+/home/clim/Desktop/Programming/cpp/libre-engine/include/math/matrix3.hpp
+
+/home/clim/Desktop/Programming/cpp/libre-engine/include/math/matrix4.hpp
+
 /home/clim/Desktop/Programming/cpp/libre-engine/include/math/vector2.hpp
 iostream
 -
@@ -62,21 +62,31 @@ string
 
 /home/clim/Desktop/Programming/cpp/libre-engine/include/math/vector4.hpp
 
-/home/clim/Desktop/Programming/cpp/libre-engine/include/system/Utility.hpp
+/home/clim/Desktop/Programming/cpp/libre-engine/include/system/BufferElement.hpp
+../graphics/graphics_common.hpp
+/home/clim/Desktop/Programming/cpp/libre-engine/include/graphics/graphics_common.hpp
+
+/home/clim/Desktop/Programming/cpp/libre-engine/include/system/BufferLayout.hpp
+vector
+-
+../math/libremath.hpp
+/home/clim/Desktop/Programming/cpp/libre-engine/include/math/libremath.hpp
+BufferElement.hpp
+/home/clim/Desktop/Programming/cpp/libre-engine/include/system/BufferElement.hpp
+../system/Logger.hpp
+/home/clim/Desktop/Programming/cpp/libre-engine/include/system/Logger.hpp
+
+/home/clim/Desktop/Programming/cpp/libre-engine/include/system/Logger.hpp
 iostream
 -
 fstream
 -
-sstream
+cstdarg
 -
-../graphics/graphics_common.hpp
-/home/clim/Desktop/Programming/cpp/libre-engine/include/graphics/graphics_common.hpp
-../math/vector4.hpp
-/home/clim/Desktop/Programming/cpp/libre-engine/include/math/vector4.hpp
+string
+-
 
-/home/clim/Desktop/Programming/cpp/libre-engine/src/graphics/Shader.cpp
-../../include/graphics/Shader.hpp
-/home/clim/Desktop/Programming/cpp/libre-engine/include/graphics/Shader.hpp
-../../include/system/Utility.hpp
-/home/clim/Desktop/Programming/cpp/libre-engine/include/system/Utility.hpp
+/home/clim/Desktop/Programming/cpp/libre-engine/src/system/BufferLayout.cpp
+../../include/system/BufferLayout.hpp
+/home/clim/Desktop/Programming/cpp/libre-engine/include/system/BufferLayout.hpp
 

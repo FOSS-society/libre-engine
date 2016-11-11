@@ -81,6 +81,7 @@ CMakeFiles/libre-engine.dir/src/script/ScriptEngine.cpp.o
  /home/clim/Desktop/Programming/cpp/libre-engine/include/script/ScriptEngine.hpp
  /home/clim/Desktop/Programming/cpp/libre-engine/src/script/ScriptEngine.cpp
 CMakeFiles/libre-engine.dir/src/system/Buffer.cpp.o
+ /home/clim/Desktop/Programming/cpp/libre-engine/include/graphics/graphics_common.hpp
  /home/clim/Desktop/Programming/cpp/libre-engine/include/math/libremath.hpp
  /home/clim/Desktop/Programming/cpp/libre-engine/include/math/matrix2.hpp
  /home/clim/Desktop/Programming/cpp/libre-engine/include/math/matrix3.hpp
@@ -91,6 +92,19 @@ CMakeFiles/libre-engine.dir/src/system/Buffer.cpp.o
  /home/clim/Desktop/Programming/cpp/libre-engine/include/system/Buffer.hpp
  /home/clim/Desktop/Programming/cpp/libre-engine/include/system/OpenGL.hpp
  /home/clim/Desktop/Programming/cpp/libre-engine/src/system/Buffer.cpp
+CMakeFiles/libre-engine.dir/src/system/BufferLayout.cpp.o
+ /home/clim/Desktop/Programming/cpp/libre-engine/include/graphics/graphics_common.hpp
+ /home/clim/Desktop/Programming/cpp/libre-engine/include/math/libremath.hpp
+ /home/clim/Desktop/Programming/cpp/libre-engine/include/math/matrix2.hpp
+ /home/clim/Desktop/Programming/cpp/libre-engine/include/math/matrix3.hpp
+ /home/clim/Desktop/Programming/cpp/libre-engine/include/math/matrix4.hpp
+ /home/clim/Desktop/Programming/cpp/libre-engine/include/math/vector2.hpp
+ /home/clim/Desktop/Programming/cpp/libre-engine/include/math/vector3.hpp
+ /home/clim/Desktop/Programming/cpp/libre-engine/include/math/vector4.hpp
+ /home/clim/Desktop/Programming/cpp/libre-engine/include/system/BufferElement.hpp
+ /home/clim/Desktop/Programming/cpp/libre-engine/include/system/BufferLayout.hpp
+ /home/clim/Desktop/Programming/cpp/libre-engine/include/system/Logger.hpp
+ /home/clim/Desktop/Programming/cpp/libre-engine/src/system/BufferLayout.cpp
 CMakeFiles/libre-engine.dir/src/system/IndexBuffer.cpp.o
  /home/clim/Desktop/Programming/cpp/libre-engine/include/math/libremath.hpp
  /home/clim/Desktop/Programming/cpp/libre-engine/include/math/matrix2.hpp
@@ -130,6 +144,7 @@ CMakeFiles/libre-engine.dir/src/system/Time.cpp.o
  /home/clim/Desktop/Programming/cpp/libre-engine/include/system/Time.hpp
  /home/clim/Desktop/Programming/cpp/libre-engine/src/system/Time.cpp
 CMakeFiles/libre-engine.dir/src/system/VertexArray.cpp.o
+ /home/clim/Desktop/Programming/cpp/libre-engine/include/graphics/graphics_common.hpp
  /home/clim/Desktop/Programming/cpp/libre-engine/include/math/libremath.hpp
  /home/clim/Desktop/Programming/cpp/libre-engine/include/math/matrix2.hpp
  /home/clim/Desktop/Programming/cpp/libre-engine/include/math/matrix3.hpp

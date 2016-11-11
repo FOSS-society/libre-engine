@@ -30,6 +30,9 @@ namespace libre{
      void deleteVertexArrays(int size, unsigned int *arrays);
      void enableVertexArrays(unsigned int index);
      void BindVertexArray(unsigned int id);
+     void * MapBuffer(GLenum target,GLenum access);
+     GLboolean UnmapBuffer(GLenum target);
+
 
      ////////////////////////////
      //Shader Functions

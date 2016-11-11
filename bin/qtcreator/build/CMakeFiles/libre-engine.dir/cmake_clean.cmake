@@ -13,6 +13,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/libre-engine.dir/src/system/Keyboard.cpp.o"
   "CMakeFiles/libre-engine.dir/src/system/Buffer.cpp.o"
   "CMakeFiles/libre-engine.dir/src/system/VertexArray.cpp.o"
+  "CMakeFiles/libre-engine.dir/src/system/BufferLayout.cpp.o"
   "CMakeFiles/libre-engine.dir/src/system/Task.cpp.o"
   "CMakeFiles/libre-engine.dir/src/system/Time.cpp.o"
   "CMakeFiles/libre-engine.dir/src/system/Logger.cpp.o"

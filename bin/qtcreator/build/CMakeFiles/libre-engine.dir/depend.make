@@ -80,6 +80,7 @@ CMakeFiles/libre-engine.dir/src/script/ScriptEngine.cpp.o: ../../../include/scri
 CMakeFiles/libre-engine.dir/src/script/ScriptEngine.cpp.o: ../../../include/script/ScriptEngine.hpp
 CMakeFiles/libre-engine.dir/src/script/ScriptEngine.cpp.o: ../../../src/script/ScriptEngine.cpp
 
+CMakeFiles/libre-engine.dir/src/system/Buffer.cpp.o: ../../../include/graphics/graphics_common.hpp
 CMakeFiles/libre-engine.dir/src/system/Buffer.cpp.o: ../../../include/math/libremath.hpp
 CMakeFiles/libre-engine.dir/src/system/Buffer.cpp.o: ../../../include/math/matrix2.hpp
 CMakeFiles/libre-engine.dir/src/system/Buffer.cpp.o: ../../../include/math/matrix3.hpp
@@ -90,6 +91,19 @@ CMakeFiles/libre-engine.dir/src/system/Buffer.cpp.o: ../../../include/math/vecto
 CMakeFiles/libre-engine.dir/src/system/Buffer.cpp.o: ../../../include/system/Buffer.hpp
 CMakeFiles/libre-engine.dir/src/system/Buffer.cpp.o: ../../../include/system/OpenGL.hpp
 CMakeFiles/libre-engine.dir/src/system/Buffer.cpp.o: ../../../src/system/Buffer.cpp
+
+CMakeFiles/libre-engine.dir/src/system/BufferLayout.cpp.o: ../../../include/graphics/graphics_common.hpp
+CMakeFiles/libre-engine.dir/src/system/BufferLayout.cpp.o: ../../../include/math/libremath.hpp
+CMakeFiles/libre-engine.dir/src/system/BufferLayout.cpp.o: ../../../include/math/matrix2.hpp
+CMakeFiles/libre-engine.dir/src/system/BufferLayout.cpp.o: ../../../include/math/matrix3.hpp
+CMakeFiles/libre-engine.dir/src/system/BufferLayout.cpp.o: ../../../include/math/matrix4.hpp
+CMakeFiles/libre-engine.dir/src/system/BufferLayout.cpp.o: ../../../include/math/vector2.hpp
+CMakeFiles/libre-engine.dir/src/system/BufferLayout.cpp.o: ../../../include/math/vector3.hpp
+CMakeFiles/libre-engine.dir/src/system/BufferLayout.cpp.o: ../../../include/math/vector4.hpp
+CMakeFiles/libre-engine.dir/src/system/BufferLayout.cpp.o: ../../../include/system/BufferElement.hpp
+CMakeFiles/libre-engine.dir/src/system/BufferLayout.cpp.o: ../../../include/system/BufferLayout.hpp
+CMakeFiles/libre-engine.dir/src/system/BufferLayout.cpp.o: ../../../include/system/Logger.hpp
+CMakeFiles/libre-engine.dir/src/system/BufferLayout.cpp.o: ../../../src/system/BufferLayout.cpp
 
 CMakeFiles/libre-engine.dir/src/system/IndexBuffer.cpp.o: ../../../include/math/libremath.hpp
 CMakeFiles/libre-engine.dir/src/system/IndexBuffer.cpp.o: ../../../include/math/matrix2.hpp
@@ -129,6 +143,7 @@ CMakeFiles/libre-engine.dir/src/system/Task.cpp.o: ../../../src/system/Task.cpp
 CMakeFiles/libre-engine.dir/src/system/Time.cpp.o: ../../../include/system/Time.hpp
 CMakeFiles/libre-engine.dir/src/system/Time.cpp.o: ../../../src/system/Time.cpp
 
+CMakeFiles/libre-engine.dir/src/system/VertexArray.cpp.o: ../../../include/graphics/graphics_common.hpp
 CMakeFiles/libre-engine.dir/src/system/VertexArray.cpp.o: ../../../include/math/libremath.hpp
 CMakeFiles/libre-engine.dir/src/system/VertexArray.cpp.o: ../../../include/math/matrix2.hpp
 CMakeFiles/libre-engine.dir/src/system/VertexArray.cpp.o: ../../../include/math/matrix3.hpp

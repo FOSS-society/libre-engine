@@ -186,8 +186,20 @@ namespace libre{
 
 		void createBufferData(GLenum target, GLsizeiptr size, const void* data, GLenum usage)
 		{
-			glBufferData(target, size, data, usage);
-		}
+            glBufferData(target, size, data, usage);
+        }
+
+        void *MapBuffer(GLenum target, GLenum access)
+        {
+            glMapBuffer(target,access);
+        }
+
+        GLboolean UnmapBuffer(GLenum target)
+        {
+            glUnmapBuffer(target);
+        }
+
+
 
   }
 }

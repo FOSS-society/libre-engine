@@ -420,6 +420,30 @@ src/system/Buffer.cpp.s:
 	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/system/Buffer.cpp.s
 .PHONY : src/system/Buffer.cpp.s
 
+src/system/BufferLayout.o: src/system/BufferLayout.cpp.o
+.PHONY : src/system/BufferLayout.o
+
+# target to build an object file
+src/system/BufferLayout.cpp.o:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/system/BufferLayout.cpp.o
+.PHONY : src/system/BufferLayout.cpp.o
+
+src/system/BufferLayout.i: src/system/BufferLayout.cpp.i
+.PHONY : src/system/BufferLayout.i
+
+# target to preprocess a source file
+src/system/BufferLayout.cpp.i:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/system/BufferLayout.cpp.i
+.PHONY : src/system/BufferLayout.cpp.i
+
+src/system/BufferLayout.s: src/system/BufferLayout.cpp.s
+.PHONY : src/system/BufferLayout.s
+
+# target to generate assembly for a file
+src/system/BufferLayout.cpp.s:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/system/BufferLayout.cpp.s
+.PHONY : src/system/BufferLayout.cpp.s
+
 src/system/IndexBuffer.o: src/system/IndexBuffer.cpp.o
 .PHONY : src/system/IndexBuffer.o
 
@@ -658,6 +682,9 @@ help:
 	@echo "... src/system/Buffer.o"
 	@echo "... src/system/Buffer.i"
 	@echo "... src/system/Buffer.s"
+	@echo "... src/system/BufferLayout.o"
+	@echo "... src/system/BufferLayout.i"
+	@echo "... src/system/BufferLayout.s"
 	@echo "... src/system/IndexBuffer.o"
 	@echo "... src/system/IndexBuffer.i"
 	@echo "... src/system/IndexBuffer.s"
