@@ -199,6 +199,51 @@ namespace libre{
             glUnmapBuffer(target);
         }
 
+        void getIntegerVariable(GLenum name, GLint *data)
+        {
+            glGetIntegerv(name,data);
+        }
+
+        void getBooleanVariable(GLenum name, GLboolean *data)
+        {
+            glGetBooleanv(name,data);
+        }
+
+        void getDoubleVariable(GLenum name, GLdouble *data)
+        {
+            glGetDoublev(name,data);
+        }
+
+        void getFloatVariable(GLenum name, GLfloat *data)
+        {
+            glGetFloatv(name,data);
+        }
+        void getInteger64Variable(GLenum name, GLint64 *data)
+        {
+            glGetInteger64v(name,data);
+        }
+        void getIndexedBooleanVariable(GLenum name, GLuint index, GLboolean *data){
+            glGetBooleani_v(name,index,data);
+        }
+
+        void getIndexedIntegerVariable(GLenum name, GLuint index, GLint *data){
+            glGetIntegeri_v(name,index,data);
+        }
+
+        void getIndexedDoubleVariable(GLenum name, GLuint index, GLdouble *data){
+            glGetDoublei_v(name,index,data);
+        }
+
+        void getIndexedFloatVariable(GLenum name, GLuint index, GLfloat *data){
+            glGetFloati_v(name,index,data);
+        }
+
+        void getIndexedInteger64Variable(GLenum name, GLuint index, GLint64 *data){
+            glGetInteger64i_v(name,index,data);
+        }
+
+
+
 
 
   }

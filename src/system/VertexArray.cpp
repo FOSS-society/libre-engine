@@ -6,39 +6,30 @@ namespace libre{
 
     VertexArray::VertexArray()
 	{
-		OpenGL::genVertexArrays(1, &m_ID);
 	}
 
 	VertexArray::~VertexArray()
 	{
-		for (unsigned int i = 0; i < m_Buffers.size(); i++)
-			delete m_Buffers[i];
-
-		OpenGL::deleteVertexArrays(1, &m_ID);
 	}
 
-	void VertexArray::addBuffer(Buffer* buffer, GLuint index)
+    void VertexArray::addBuffer(Buffer* buffer)
 	{
-		bind();
-		buffer->bind();
-
-		OpenGL::enableVertexArrays(index);
-
-        OpenGL::VertexAttributePointer(index, buffer->getComponentCount(), GL_FLOAT, GL_FALSE, 0, 0);
-
-		buffer->unbind();
-		unbind();
+        this->m_Buffers.push_back(buffer);
 	}
 
 	void VertexArray::bind() const
 	{
-        OpenGL::BindVertexArray(m_ID);
+        m_Buffers.front()->bind();
 	}
 
 	void VertexArray::unbind() const
 	{
-        OpenGL::BindVertexArray(0);
-	}
+        m_Buffers.front()->unbind();
+    }
+
+    void VertexArray::draw(unsigned int count){
+        OpenGL::drawElements(GL_TRIANGLES,count,GL_UNSIGNED_INT,NULL);
+    }
 
   }
 }

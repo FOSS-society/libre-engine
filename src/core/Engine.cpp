@@ -50,7 +50,7 @@ namespace libre{
             break;
             case graphics::RendererType::RT_3D:
                 //treat as OpenGL.... figure out how to do that..
-
+                SDL_GL_SwapWindow(this->m_window->SDLWIN());
             break;
 
        }

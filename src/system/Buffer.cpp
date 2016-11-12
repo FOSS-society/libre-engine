@@ -5,14 +5,10 @@
 
 namespace libre{
   namespace system{
-    Buffer::Buffer(float * data, unsigned int count, unsigned int componentCount): m_componentCount(componentCount)
-		{
-            OpenGL::genBuffers(1, &m_bufferID);
-            OpenGL::bindBuffers(GL_ARRAY_BUFFER, m_bufferID);
-            OpenGL::createBufferData(GL_ARRAY_BUFFER, count * sizeof(float), data, GL_STATIC_DRAW);
-            OpenGL::bindBuffers(GL_ARRAY_BUFFER, 0);
+  Buffer::Buffer(GLBufferUsage usage):m_usage(usage){
 
-    }
+  }
+
     void *Buffer::InternalPointer()
     {
         return OpenGL::MapBuffer(GL_ARRAY_BUFFER,GL_WRITE_ONLY);
@@ -26,27 +22,27 @@ namespace libre{
     {
         m_size = size;
 
-        OpenGL::bindBuffers(GL_ARRAY_BUFFER, m_Handle);
+        OpenGL::bindBuffers(GL_ARRAY_BUFFER, m_bufferID);
         OpenGL::createBufferData(GL_ARRAY_BUFFER, size, NULL, system::UsageToGLEnum(m_usage));
 
     }
 
-    void Buffer::setLayout(const BufferLayout &layout)
+    void Buffer::setLayout(const BufferLayout &blayout)
     {
-        m_Layout = bufferLayout;
-                const std::vector<BufferElement>& layout = bufferLayout.GetLayout();
+        m_layout = blayout;
+                const std::vector<BufferElement>& layout = blayout.Layout();
                 for (uint i = 0; i < layout.size(); i++)
                 {
                     const BufferElement& element = layout[i];
-                    OpenGL::enableVertexAttribArray(i);
-                    OpenGL::VertexAttributePointer(i, element.count, element.type, element.normalized, bufferLayout.GetStride(), (const void*)element.offset);
+                    OpenGL::enableVertexArrays(i);
+                    OpenGL::VertexAttributePointer(i, element.Count(), element.Type(), element.Normalized(), m_layout.getStride(), (const void*)element.Offset());
                 }
     }
 
     void Buffer::setData(unsigned int size, const void *data)
     {
-        OpenGL::bindBuffers(GL_ARRAY_BUFFER, m_Handle);
-        OpenGL::createBufferData(GL_ARRAY_BUFFER, size, NULL, system::UsageToGLEnum(m_usage));
+        OpenGL::bindBuffers(GL_ARRAY_BUFFER, m_bufferID);
+        OpenGL::createBufferData(GL_ARRAY_BUFFER, size, data, system::UsageToGLEnum(m_usage));
     }
     void Buffer::bind()const{
       OpenGL::bindBuffers(GL_ARRAY_BUFFER,m_bufferID);

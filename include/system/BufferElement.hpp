@@ -43,7 +43,7 @@ namespace libre{
         inline std::string Name()const{ return m_name;}
 
         inline unsigned int getType(){ return m_type;}
-        inline unsigned int Type(){ return m_type; }
+        inline unsigned int Type()const{ return m_type; }
 
         inline unsigned int getSize(){return m_size;}
         inline unsigned int Size()const{return m_size;}

@@ -444,6 +444,30 @@ src/system/BufferLayout.cpp.s:
 	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/system/BufferLayout.cpp.s
 .PHONY : src/system/BufferLayout.cpp.s
 
+src/system/ComputerDetails.o: src/system/ComputerDetails.cpp.o
+.PHONY : src/system/ComputerDetails.o
+
+# target to build an object file
+src/system/ComputerDetails.cpp.o:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/system/ComputerDetails.cpp.o
+.PHONY : src/system/ComputerDetails.cpp.o
+
+src/system/ComputerDetails.i: src/system/ComputerDetails.cpp.i
+.PHONY : src/system/ComputerDetails.i
+
+# target to preprocess a source file
+src/system/ComputerDetails.cpp.i:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/system/ComputerDetails.cpp.i
+.PHONY : src/system/ComputerDetails.cpp.i
+
+src/system/ComputerDetails.s: src/system/ComputerDetails.cpp.s
+.PHONY : src/system/ComputerDetails.s
+
+# target to generate assembly for a file
+src/system/ComputerDetails.cpp.s:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/system/ComputerDetails.cpp.s
+.PHONY : src/system/ComputerDetails.cpp.s
+
 src/system/IndexBuffer.o: src/system/IndexBuffer.cpp.o
 .PHONY : src/system/IndexBuffer.o
 
@@ -685,6 +709,9 @@ help:
 	@echo "... src/system/BufferLayout.o"
 	@echo "... src/system/BufferLayout.i"
 	@echo "... src/system/BufferLayout.s"
+	@echo "... src/system/ComputerDetails.o"
+	@echo "... src/system/ComputerDetails.i"
+	@echo "... src/system/ComputerDetails.s"
 	@echo "... src/system/IndexBuffer.o"
 	@echo "... src/system/IndexBuffer.i"
 	@echo "... src/system/IndexBuffer.s"

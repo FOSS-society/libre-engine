@@ -12,6 +12,22 @@ namespace libre{
      GLenum GLError();
      bool GLLogCall(const char * function,const char * file, int32_t line);
 
+
+     ///////////////////////////////
+     // glGet function wrappers
+     ///////////////////////////////
+
+     void getIntegerVariable(GLenum name, GLint *data);
+     void getBooleanVariable(GLenum name, GLboolean *data);
+     void getDoubleVariable(GLenum name, GLdouble *data);
+     void getFloatVariable(GLenum name, GLfloat *data);
+     void getInteger64Variable(GLenum name, GLint64 *data);
+     void getIndexedIntegerVariable(GLenum name, GLuint index, GLint *data);
+     void getIndexedBooleanVariable(GLenum name, GLuint index, GLboolean *data);
+     void getIndexedDoubleVariable(GLenum name, GLuint index, GLdouble *data);
+     void getIndexedFloatVariable(GLenum name, GLuint index, GLfloat *data);
+     void getIndexedInteger64Variable(GLenum name, GLuint index, GLint64 *data);
+
      ///////////////////////////////
      // Buffer Functions
      ///////////////////////////////

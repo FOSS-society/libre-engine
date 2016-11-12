@@ -25,6 +25,10 @@ namespace libre{
           const char * m_title;
           SDL_Window *m_window;
           math::Vector2<unsigned int> m_size;
+          bool setOpenGLAttributes();
+          bool setOpenGLAttributes(const uint8_t maj, const uint8_t min);
+          bool setOpenGLAttributes(const math::Vector2<uint8_t> &version);
+
 
         public:
           Window(const char * t,const unsigned int width,const unsigned int height);

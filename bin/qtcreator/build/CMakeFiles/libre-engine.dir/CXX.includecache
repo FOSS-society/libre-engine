@@ -62,31 +62,45 @@ string
 
 /home/clim/Desktop/Programming/cpp/libre-engine/include/math/vector4.hpp
 
-/home/clim/Desktop/Programming/cpp/libre-engine/include/system/BufferElement.hpp
-../graphics/graphics_common.hpp
-/home/clim/Desktop/Programming/cpp/libre-engine/include/graphics/graphics_common.hpp
-
-/home/clim/Desktop/Programming/cpp/libre-engine/include/system/BufferLayout.hpp
-vector
+/home/clim/Desktop/Programming/cpp/libre-engine/include/system/ComputerDetails.hpp
+sys/utsname.h
 -
 ../math/libremath.hpp
 /home/clim/Desktop/Programming/cpp/libre-engine/include/math/libremath.hpp
-BufferElement.hpp
-/home/clim/Desktop/Programming/cpp/libre-engine/include/system/BufferElement.hpp
-../system/Logger.hpp
-/home/clim/Desktop/Programming/cpp/libre-engine/include/system/Logger.hpp
 
-/home/clim/Desktop/Programming/cpp/libre-engine/include/system/Logger.hpp
+/home/clim/Desktop/Programming/cpp/libre-engine/include/system/OpenGL.hpp
+GL/glew.h
+-
+stdint.h
+-
+../math/libremath.hpp
+/home/clim/Desktop/Programming/cpp/libre-engine/include/math/libremath.hpp
+
+/home/clim/Desktop/Programming/cpp/libre-engine/include/system/Utility.hpp
+cstring
+-
+ctime
+-
 iostream
 -
 fstream
 -
-cstdarg
+sstream
 -
-string
+vector
 -
+../graphics/graphics_common.hpp
+/home/clim/Desktop/Programming/cpp/libre-engine/include/graphics/graphics_common.hpp
+OpenGL.hpp
+/home/clim/Desktop/Programming/cpp/libre-engine/include/system/OpenGL.hpp
+../math/vector4.hpp
+/home/clim/Desktop/Programming/cpp/libre-engine/include/math/vector4.hpp
 
-/home/clim/Desktop/Programming/cpp/libre-engine/src/system/BufferLayout.cpp
-../../include/system/BufferLayout.hpp
-/home/clim/Desktop/Programming/cpp/libre-engine/include/system/BufferLayout.hpp
+/home/clim/Desktop/Programming/cpp/libre-engine/src/system/ComputerDetails.cpp
+../../include/system/ComputerDetails.hpp
+/home/clim/Desktop/Programming/cpp/libre-engine/include/system/ComputerDetails.hpp
+../../include/system/Utility.hpp
+/home/clim/Desktop/Programming/cpp/libre-engine/include/system/Utility.hpp
+iostream
+-
 

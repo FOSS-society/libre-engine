@@ -16,9 +16,14 @@ namespace libre{
       VertexArray();
       ~VertexArray();
 
-      void addBuffer(Buffer * buff, unsigned int index);
+      void addBuffer(Buffer * buff);
+
+      inline Buffer* getBuffer(unsigned int index) { return m_Buffers[index];}
+
       void bind()const;
       void unbind()const;
+
+      void draw(unsigned int count);
 
     };
 
