@@ -242,6 +242,11 @@ namespace libre{
             glGetInteger64i_v(name,index,data);
         }
 
+        void getString(GLenum name, const GLubyte *out)
+        {
+            out = glGetString(name);
+        }
+
 
 
 

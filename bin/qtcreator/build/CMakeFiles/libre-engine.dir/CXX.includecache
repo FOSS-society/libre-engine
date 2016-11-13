@@ -65,6 +65,10 @@ string
 /home/clim/Desktop/Programming/cpp/libre-engine/include/system/ComputerDetails.hpp
 sys/utsname.h
 -
+OpenGL.hpp
+/home/clim/Desktop/Programming/cpp/libre-engine/include/system/OpenGL.hpp
+Utility.hpp
+/home/clim/Desktop/Programming/cpp/libre-engine/include/system/Utility.hpp
 ../math/libremath.hpp
 /home/clim/Desktop/Programming/cpp/libre-engine/include/math/libremath.hpp
 

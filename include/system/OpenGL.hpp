@@ -17,6 +17,9 @@ namespace libre{
      // glGet function wrappers
      ///////////////////////////////
 
+     void getString(GLenum name, const GLubyte * out); //instead of returning a value,
+                                                       //just set the out parameter to the
+                                                       //glGetString function.
      void getIntegerVariable(GLenum name, GLint *data);
      void getBooleanVariable(GLenum name, GLboolean *data);
      void getDoubleVariable(GLenum name, GLdouble *data);
