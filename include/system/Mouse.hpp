@@ -19,14 +19,13 @@ namespace libre{
         ButtonPress m_ButtonPress;
 
 
-        SDL_Event *m_event;  //pointer to the event which is polled for input
 
     public:
         Mouse();
-        Mouse(SDL_Event *event);
 
-        void MousePositionCallback();
 
+        void setMousePosition(int x, int y);
+        void setButtonPress(ButtonPress press);
         inline math::Vector2<int32_t> getMousePosition(){ return this->mousePosition;}
         inline ButtonPress getButtonPress(){return this->m_ButtonPress;}
 

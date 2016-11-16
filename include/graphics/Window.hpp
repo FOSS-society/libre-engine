@@ -3,8 +3,18 @@
 
 #include "graphics_common.hpp"
 
+#include <stdexcept>
+
 namespace libre{
     namespace graphics{
+
+
+    class WindowException: public std::runtime_error{
+    public:
+        WindowException(const std::string& error):std::runtime_error(error){}
+    };
+
+
 
 
     /**
@@ -28,11 +38,12 @@ namespace libre{
           bool setOpenGLAttributes();
           bool setOpenGLAttributes(const uint8_t maj, const uint8_t min);
           bool setOpenGLAttributes(const math::Vector2<uint8_t> &version);
-
+          bool setFlags(uint8_t flags);
 
         public:
-          Window(const char * t,const unsigned int width,const unsigned int height);
-          Window(const char * t,math::Vector2<unsigned int> size);
+          Window(const char * t,const unsigned int width,const unsigned int height,bool OpenGL);
+          Window(const char * t,math::Vector2<unsigned int> size, bool OpenGL);
+          ~Window();
 
           const char * Title();
           SDL_Window * SDLWIN();

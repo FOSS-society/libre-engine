@@ -76,6 +76,26 @@ Color4 UIntToColor(uint32_t color)
 
 }
 
+int s_initializeSDL(uint32_t flags)
+{
+    if(s_sdlIsInitialized){
+      std::cerr<< "Warning, SDL is already initialized" << std::endl;
+      std::cerr<< "SEEN FROM: graphics_common.c line 83: s_initializeSDL" << std::endl;
+      }else{
+        s_sdlIsInitialized = true;
+        return   SDL_Init(flags);
+      }
+}
+int s_initializeSDLWithEverything()
+{
+    if(s_sdlIsInitialized){
+      std::cerr<< "Warning, SDL is already initialized" << std::endl;
+      std::cerr<< "SEEN FROM: graphics_common.c line 83: s_initializeSDL" << std::endl;
+      }else{
+        s_sdlIsInitialized = true;
+        return   SDL_Init(SDL_INIT_EVERYTHING);
+      }
+}
 
 
   }

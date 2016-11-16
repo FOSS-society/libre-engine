@@ -23,7 +23,7 @@ namespace libre{
       this->m_time = new system::Time();
 
       //Handle input creation
-      this->m_mouse = new system::Mouse(this->m_event.get());
+      this->m_mouse = new system::Mouse();
       this->m_keyboard = new system::Keyboard(this->m_event.get());
 
       this->m_Initialized = true;
@@ -31,9 +31,7 @@ namespace libre{
     }
 
     void Engine::update(){
-      //Handle Events
-      this->m_mouse->MousePositionCallback();
-      this->m_keyboard->KeyboardCallback();
+
 #ifdef DEBUG
        std::cout << "Mouse Position: " << m_mouse->getMousePosition().toString() << std::endl;
        std::cout << "Time: "<< m_time->timeElapsed() << std::endl;

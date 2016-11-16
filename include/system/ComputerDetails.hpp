@@ -3,9 +3,10 @@
 
 #include <sys/utsname.h>
 #include "OpenGL.hpp"
-#include "Utility.hpp"
+#include "../math/vector3.hpp"
 
-#include "../math/libremath.hpp"
+
+
 
 namespace libre{
 
@@ -17,12 +18,7 @@ namespace libre{
         GLubyte * renderer;
         GLubyte * shader_version;
 
-        OpenGLInformation(){
-          version = Utility::getOpenGLVersionCompat();
-          OpenGL::getString(GL_VENDOR,vendor);
-          OpenGL::getString(GL_RENDERER,renderer);
-          OpenGL::getString(GL_SHADING_LANGUAGE_VERSION,shader_version);
-        }
+        OpenGLInformation();
 
     };
 

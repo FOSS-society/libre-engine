@@ -34,6 +34,8 @@ namespace libre{
     void initializeSDL(uint32_t flags);
     void initializeSDLWithEverything();
 
+    int s_initializeSDL(uint32_t flags);
+    int s_initializeSDLWithEverything();
 
     typedef math::Vector4<uint8_t> Color4;
 

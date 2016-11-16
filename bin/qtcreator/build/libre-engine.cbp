@@ -126,6 +126,8 @@
          </MakeCommands>
       </Target>
       </Build>
+      <Unit filename="/home/clim/Desktop/Programming/cpp/libre-engine/src/Application.cpp">
+      </Unit>
       <Unit filename="/home/clim/Desktop/Programming/cpp/libre-engine/src/asset/Image.cpp">
       </Unit>
       <Unit filename="/home/clim/Desktop/Programming/cpp/libre-engine/src/core/Engine.cpp">
@@ -166,7 +168,11 @@
       </Unit>
       <Unit filename="/home/clim/Desktop/Programming/cpp/libre-engine/src/system/Time.cpp">
       </Unit>
+      <Unit filename="/home/clim/Desktop/Programming/cpp/libre-engine/src/system/Utility.cpp">
+      </Unit>
       <Unit filename="/home/clim/Desktop/Programming/cpp/libre-engine/src/system/VertexArray.cpp">
+      </Unit>
+      <Unit filename="/home/clim/Desktop/Programming/cpp/libre-engine/include/Application.hpp">
       </Unit>
       <Unit filename="/home/clim/Desktop/Programming/cpp/libre-engine/include/asset/Base_Asset.hpp">
       </Unit>

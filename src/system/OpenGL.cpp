@@ -247,6 +247,22 @@ namespace libre{
             out = glGetString(name);
         }
 
+        void ClearColor(GLclampf r, GLclampf g, GLclampf b, GLclampf a)
+        {
+            glClearColor(r,g,b,a);
+        }
+
+        void ClearColor(const math::Vector4<GLclampf> color)
+        {
+            glClearColor(color.X(),color.Y(),color.Z(),color.W());
+        }
+
+        void ClearFlags(GLbitfield mask)
+        {
+            glClear(mask);
+        }
+
+
 
 
 

@@ -7,6 +7,14 @@
 namespace libre{
   namespace graphics{
 
+
+
+  class RendererException: public std::runtime_error{
+  public:
+      RendererException(const std::string& error):std::runtime_error(error){}
+  };
+
+
       enum class RendererType {RT_2D, RT_3D};
 
       union RenderingContext{
@@ -52,9 +60,19 @@ namespace libre{
   public:
     Renderer(Window *parent,RendererType type);
     ~Renderer(){
-      delete m_context;
+      switch(m_type){
+        case RendererType::RT_2D:
+          SDL_DestroyRenderer(this->m_context->asSDL);
+          break;
+      case RendererType::RT_3D:
+          SDL_GL_DeleteContext(this->m_context->asOGL);
+          break;
+      }
+
       delete m_window;
     }
+
+    void Update();
 
     Window *getWindowHandle();
     Window *WindowHandle()const;

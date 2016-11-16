@@ -156,6 +156,30 @@ libre-engine/fast:
 	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/build
 .PHONY : libre-engine/fast
 
+src/Application.o: src/Application.cpp.o
+.PHONY : src/Application.o
+
+# target to build an object file
+src/Application.cpp.o:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/Application.cpp.o
+.PHONY : src/Application.cpp.o
+
+src/Application.i: src/Application.cpp.i
+.PHONY : src/Application.i
+
+# target to preprocess a source file
+src/Application.cpp.i:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/Application.cpp.i
+.PHONY : src/Application.cpp.i
+
+src/Application.s: src/Application.cpp.s
+.PHONY : src/Application.s
+
+# target to generate assembly for a file
+src/Application.cpp.s:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/Application.cpp.s
+.PHONY : src/Application.cpp.s
+
 src/asset/Image.o: src/asset/Image.cpp.o
 .PHONY : src/asset/Image.o
 
@@ -636,6 +660,30 @@ src/system/Time.cpp.s:
 	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/system/Time.cpp.s
 .PHONY : src/system/Time.cpp.s
 
+src/system/Utility.o: src/system/Utility.cpp.o
+.PHONY : src/system/Utility.o
+
+# target to build an object file
+src/system/Utility.cpp.o:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/system/Utility.cpp.o
+.PHONY : src/system/Utility.cpp.o
+
+src/system/Utility.i: src/system/Utility.cpp.i
+.PHONY : src/system/Utility.i
+
+# target to preprocess a source file
+src/system/Utility.cpp.i:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/system/Utility.cpp.i
+.PHONY : src/system/Utility.cpp.i
+
+src/system/Utility.s: src/system/Utility.cpp.s
+.PHONY : src/system/Utility.s
+
+# target to generate assembly for a file
+src/system/Utility.cpp.s:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/system/Utility.cpp.s
+.PHONY : src/system/Utility.cpp.s
+
 src/system/VertexArray.o: src/system/VertexArray.cpp.o
 .PHONY : src/system/VertexArray.o
 
@@ -673,6 +721,9 @@ help:
 	@echo "... libre-engine"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... src/Application.o"
+	@echo "... src/Application.i"
+	@echo "... src/Application.s"
 	@echo "... src/asset/Image.o"
 	@echo "... src/asset/Image.i"
 	@echo "... src/asset/Image.s"
@@ -733,6 +784,9 @@ help:
 	@echo "... src/system/Time.o"
 	@echo "... src/system/Time.i"
 	@echo "... src/system/Time.s"
+	@echo "... src/system/Utility.o"
+	@echo "... src/system/Utility.i"
+	@echo "... src/system/Utility.s"
 	@echo "... src/system/VertexArray.o"
 	@echo "... src/system/VertexArray.i"
 	@echo "... src/system/VertexArray.s"

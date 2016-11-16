@@ -27,8 +27,15 @@ void ComputerDetails::printLinuxVersion()
     std::cout << "Release: " << m_LinuxVersion.release << std::endl;
 }
 
+OpenGLInformation::OpenGLInformation(){
+    version = math::Vector2<uint8_t>(Utility::getOpenGLVersionCompat());
+    OpenGL::getString(GL_VENDOR,vendor);
+    OpenGL::getString(GL_RENDERER,renderer);
+    OpenGL::getString(GL_SHADING_LANGUAGE_VERSION,shader_version);
+}
 
 
 
-    }
+
+}
 }

@@ -4,13 +4,22 @@
 #include <GL/glew.h>
 #include <stdint.h>
 
-#include "../math/libremath.hpp"
+#include "../math/vector2.hpp"
+#include "../math/vector3.hpp"
+#include "../math/vector4.hpp"
 
 namespace libre{
   namespace OpenGL{
 
      GLenum GLError();
      bool GLLogCall(const char * function,const char * file, int32_t line);
+
+     /////////////////////////////////
+     //Rendering Functions
+     /////////////////////////////////
+     void ClearColor(GLclampf r,GLclampf g,GLclampf b,GLclampf a);
+     void ClearColor(const math::Vector4<GLclampf> color);
+     void ClearFlags(GLbitfield mask);
 
 
      ///////////////////////////////

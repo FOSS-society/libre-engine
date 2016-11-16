@@ -33,6 +33,7 @@ namespace libre{
     sLogFile << Time::getCurrentTime() << ":\t";
     sLogFile << sMessage << "\n";
     va_end(args);
+    sLogFile.flush();
 
     delete [] sMessage;
 }
@@ -41,12 +42,14 @@ void Logger::Log(const std::string& sMessage)
 {
     sLogFile <<  Time::getCurrentTime() << ":\t";
     sLogFile << sMessage << "\n";
+    sLogFile.flush();
 }
 
 Logger& Logger::operator<<(const std::string& sMessage)
 {
     sLogFile << "\n" << Time::getCurrentTime()<< ":\t";
     sLogFile << sMessage << "\n";
+    sLogFile.flush();
     return *this;
 }
 

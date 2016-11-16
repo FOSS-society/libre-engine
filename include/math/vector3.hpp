@@ -188,9 +188,9 @@ namespace libre{
         template <typename t>
         const char * Vector3<t>::toString(){
 
-            std::string vec3String("X: " + this->m_x);
-            vec3String.append(",Y: "+this->m_y);
-            vec3String.append(",Z: "+this->m_z);
+            std::string vec3String("X: " + std::to_string(this->m_x).c_str());
+            vec3String.append(",Y: "+ std::to_string(this->m_y).c_str());
+            vec3String.append(",Z: "+ std::to_string(this->m_z).c_str());
 
             return vec3String.c_str();
         }

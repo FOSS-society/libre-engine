@@ -61,16 +61,45 @@ namespace libre{
 
 
 
-  Window::Window(const char * t,const unsigned int width,const unsigned int height)
+
+  Window::Window(const char * t,const unsigned int width,const unsigned int height,bool OpenGL)
      : m_title(t),m_size(math::Vector2<unsigned int>(width,height)){
 
+        if(OpenGL){
+            this->m_window = (SDL_Window*)SDL_CreateWindow(t,SDL_WINDOWPOS_UNDEFINED,
+                                          SDL_WINDOWPOS_UNDEFINED, width,height,SDL_WINDOW_SHOWN | SDL_WINDOW_OPENGL);
+        }else{
 
         this->m_window = (SDL_Window*)SDL_CreateWindow(t,SDL_WINDOWPOS_UNDEFINED,
                                       SDL_WINDOWPOS_UNDEFINED, width,height,SDL_WINDOW_SHOWN);
+}
+        if(this->m_window == nullptr){
+            throw WindowException(SDL_GetError());
+            }
+           setOpenGLAttributes();
+
      }
-    Window::Window(const char * t,math::Vector2<unsigned int> size) : m_title(t), m_size(size){
+    Window::Window(const char * t,math::Vector2<unsigned int> size,bool OpenGL) : m_title(t), m_size(size){
+
+         if(OpenGL){
+
       this->m_window = (SDL_Window*)SDL_CreateWindow(t,SDL_WINDOWPOS_UNDEFINED,
-                                    SDL_WINDOWPOS_UNDEFINED, size.X(),size.Y(),SDL_WINDOW_SHOWN);
+                                    SDL_WINDOWPOS_UNDEFINED, size.X(),size.Y(),SDL_WINDOW_SHOWN | SDL_WINDOW_OPENGL);
+}else{
+             this->m_window = (SDL_Window*)SDL_CreateWindow(t,SDL_WINDOWPOS_UNDEFINED,
+                                           SDL_WINDOWPOS_UNDEFINED, size.X(),size.Y(),SDL_WINDOW_SHOWN);
+
+         }
+        if(this->m_window == nullptr){
+            throw WindowException(SDL_GetError());
+            }
+
+        setOpenGLAttributes();
+    }
+
+    Window::~Window()
+    {
+        SDL_DestroyWindow(this->SDLWIN());
     }
 
     const char * Window::Title(){
@@ -80,7 +109,7 @@ namespace libre{
       return this->m_window;
     }
     math::Vector2<unsigned int> Window::Size(){
-      return this->m_size;
+        return this->m_size;
     }
 
 

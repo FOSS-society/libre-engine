@@ -9,6 +9,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/libre-engine.dir/src/script/ScriptEngine.cpp.o"
   "CMakeFiles/libre-engine.dir/src/script/Script.cpp.o"
   "CMakeFiles/libre-engine.dir/src/system/OpenGL.cpp.o"
+  "CMakeFiles/libre-engine.dir/src/system/Utility.cpp.o"
   "CMakeFiles/libre-engine.dir/src/system/IndexBuffer.cpp.o"
   "CMakeFiles/libre-engine.dir/src/system/Keyboard.cpp.o"
   "CMakeFiles/libre-engine.dir/src/system/Buffer.cpp.o"
@@ -20,6 +21,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/libre-engine.dir/src/system/Logger.cpp.o"
   "CMakeFiles/libre-engine.dir/src/system/Mouse.cpp.o"
   "CMakeFiles/libre-engine.dir/src/asset/Image.cpp.o"
+  "CMakeFiles/libre-engine.dir/src/Application.cpp.o"
   "liblibre-engine.pdb"
   "liblibre-engine.a"
 )

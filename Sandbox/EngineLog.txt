@@ -1,0 +1,6 @@
+2016-11-15.18:58:33:	Initializing Engin
+2016-11-15.18:58:33:	Renderer Exception Caught
+2016-11-15.18:58:33:	The specified window isn't an OpenGL windo
+2016-11-15.19:06:29:	Initializing Engin
+2016-11-15.19:31:54:	Initializing Engin
+2016-11-15.19:33:08:	Initializing Engin
