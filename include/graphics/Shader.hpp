@@ -11,7 +11,7 @@ namespace libre{
 
   namespace graphics{
 
-    enum class ShaderType{ VERTEX , TESSALATION1,TESSALATION2,GEOMETRY, FRAGMENT};
+    enum class ShaderType{ VERTEX , TESSALATION1,TESSALATION2,GEOMETRY, FRAGMENT,COMPUTE};
 
 
     /**

@@ -141,9 +141,32 @@ CMakeFiles/libre-engine.dir/src/graphics/Window.cpp.o.provides: CMakeFiles/libre
 
 CMakeFiles/libre-engine.dir/src/graphics/Window.cpp.o.provides.build: CMakeFiles/libre-engine.dir/src/graphics/Window.cpp.o
 
+CMakeFiles/libre-engine.dir/src/graphics/ShaderProgram.cpp.o: CMakeFiles/libre-engine.dir/flags.make
+CMakeFiles/libre-engine.dir/src/graphics/ShaderProgram.cpp.o: ../../../src/graphics/ShaderProgram.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/libre-engine.dir/src/graphics/ShaderProgram.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/libre-engine.dir/src/graphics/ShaderProgram.cpp.o -c /home/clim/Desktop/Programming/cpp/libre-engine/src/graphics/ShaderProgram.cpp
+
+CMakeFiles/libre-engine.dir/src/graphics/ShaderProgram.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/libre-engine.dir/src/graphics/ShaderProgram.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/clim/Desktop/Programming/cpp/libre-engine/src/graphics/ShaderProgram.cpp > CMakeFiles/libre-engine.dir/src/graphics/ShaderProgram.cpp.i
+
+CMakeFiles/libre-engine.dir/src/graphics/ShaderProgram.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/libre-engine.dir/src/graphics/ShaderProgram.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/clim/Desktop/Programming/cpp/libre-engine/src/graphics/ShaderProgram.cpp -o CMakeFiles/libre-engine.dir/src/graphics/ShaderProgram.cpp.s
+
+CMakeFiles/libre-engine.dir/src/graphics/ShaderProgram.cpp.o.requires:
+.PHONY : CMakeFiles/libre-engine.dir/src/graphics/ShaderProgram.cpp.o.requires
+
+CMakeFiles/libre-engine.dir/src/graphics/ShaderProgram.cpp.o.provides: CMakeFiles/libre-engine.dir/src/graphics/ShaderProgram.cpp.o.requires
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/graphics/ShaderProgram.cpp.o.provides.build
+.PHONY : CMakeFiles/libre-engine.dir/src/graphics/ShaderProgram.cpp.o.provides
+
+CMakeFiles/libre-engine.dir/src/graphics/ShaderProgram.cpp.o.provides.build: CMakeFiles/libre-engine.dir/src/graphics/ShaderProgram.cpp.o
+
 CMakeFiles/libre-engine.dir/src/graphics/Renderer.cpp.o: CMakeFiles/libre-engine.dir/flags.make
 CMakeFiles/libre-engine.dir/src/graphics/Renderer.cpp.o: ../../../src/graphics/Renderer.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/libre-engine.dir/src/graphics/Renderer.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/libre-engine.dir/src/graphics/Renderer.cpp.o -c /home/clim/Desktop/Programming/cpp/libre-engine/src/graphics/Renderer.cpp
 
@@ -166,7 +189,7 @@ CMakeFiles/libre-engine.dir/src/graphics/Renderer.cpp.o.provides.build: CMakeFil
 
 CMakeFiles/libre-engine.dir/src/graphics/graphics_common.cpp.o: CMakeFiles/libre-engine.dir/flags.make
 CMakeFiles/libre-engine.dir/src/graphics/graphics_common.cpp.o: ../../../src/graphics/graphics_common.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles $(CMAKE_PROGRESS_6)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles $(CMAKE_PROGRESS_7)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/libre-engine.dir/src/graphics/graphics_common.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/libre-engine.dir/src/graphics/graphics_common.cpp.o -c /home/clim/Desktop/Programming/cpp/libre-engine/src/graphics/graphics_common.cpp
 
@@ -187,9 +210,32 @@ CMakeFiles/libre-engine.dir/src/graphics/graphics_common.cpp.o.provides: CMakeFi
 
 CMakeFiles/libre-engine.dir/src/graphics/graphics_common.cpp.o.provides.build: CMakeFiles/libre-engine.dir/src/graphics/graphics_common.cpp.o
 
+CMakeFiles/libre-engine.dir/src/math/SIMDArray.cpp.o: CMakeFiles/libre-engine.dir/flags.make
+CMakeFiles/libre-engine.dir/src/math/SIMDArray.cpp.o: ../../../src/math/SIMDArray.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles $(CMAKE_PROGRESS_8)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/libre-engine.dir/src/math/SIMDArray.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/libre-engine.dir/src/math/SIMDArray.cpp.o -c /home/clim/Desktop/Programming/cpp/libre-engine/src/math/SIMDArray.cpp
+
+CMakeFiles/libre-engine.dir/src/math/SIMDArray.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/libre-engine.dir/src/math/SIMDArray.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/clim/Desktop/Programming/cpp/libre-engine/src/math/SIMDArray.cpp > CMakeFiles/libre-engine.dir/src/math/SIMDArray.cpp.i
+
+CMakeFiles/libre-engine.dir/src/math/SIMDArray.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/libre-engine.dir/src/math/SIMDArray.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/clim/Desktop/Programming/cpp/libre-engine/src/math/SIMDArray.cpp -o CMakeFiles/libre-engine.dir/src/math/SIMDArray.cpp.s
+
+CMakeFiles/libre-engine.dir/src/math/SIMDArray.cpp.o.requires:
+.PHONY : CMakeFiles/libre-engine.dir/src/math/SIMDArray.cpp.o.requires
+
+CMakeFiles/libre-engine.dir/src/math/SIMDArray.cpp.o.provides: CMakeFiles/libre-engine.dir/src/math/SIMDArray.cpp.o.requires
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/math/SIMDArray.cpp.o.provides.build
+.PHONY : CMakeFiles/libre-engine.dir/src/math/SIMDArray.cpp.o.provides
+
+CMakeFiles/libre-engine.dir/src/math/SIMDArray.cpp.o.provides.build: CMakeFiles/libre-engine.dir/src/math/SIMDArray.cpp.o
+
 CMakeFiles/libre-engine.dir/src/math/libremath.cpp.o: CMakeFiles/libre-engine.dir/flags.make
 CMakeFiles/libre-engine.dir/src/math/libremath.cpp.o: ../../../src/math/libremath.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles $(CMAKE_PROGRESS_7)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles $(CMAKE_PROGRESS_9)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/libre-engine.dir/src/math/libremath.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/libre-engine.dir/src/math/libremath.cpp.o -c /home/clim/Desktop/Programming/cpp/libre-engine/src/math/libremath.cpp
 
@@ -212,7 +258,7 @@ CMakeFiles/libre-engine.dir/src/math/libremath.cpp.o.provides.build: CMakeFiles/
 
 CMakeFiles/libre-engine.dir/src/script/ScriptEngine.cpp.o: CMakeFiles/libre-engine.dir/flags.make
 CMakeFiles/libre-engine.dir/src/script/ScriptEngine.cpp.o: ../../../src/script/ScriptEngine.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles $(CMAKE_PROGRESS_8)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles $(CMAKE_PROGRESS_10)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/libre-engine.dir/src/script/ScriptEngine.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/libre-engine.dir/src/script/ScriptEngine.cpp.o -c /home/clim/Desktop/Programming/cpp/libre-engine/src/script/ScriptEngine.cpp
 
@@ -235,7 +281,7 @@ CMakeFiles/libre-engine.dir/src/script/ScriptEngine.cpp.o.provides.build: CMakeF
 
 CMakeFiles/libre-engine.dir/src/script/Script.cpp.o: CMakeFiles/libre-engine.dir/flags.make
 CMakeFiles/libre-engine.dir/src/script/Script.cpp.o: ../../../src/script/Script.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles $(CMAKE_PROGRESS_9)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles $(CMAKE_PROGRESS_11)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/libre-engine.dir/src/script/Script.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/libre-engine.dir/src/script/Script.cpp.o -c /home/clim/Desktop/Programming/cpp/libre-engine/src/script/Script.cpp
 
@@ -258,7 +304,7 @@ CMakeFiles/libre-engine.dir/src/script/Script.cpp.o.provides.build: CMakeFiles/l
 
 CMakeFiles/libre-engine.dir/src/system/OpenGL.cpp.o: CMakeFiles/libre-engine.dir/flags.make
 CMakeFiles/libre-engine.dir/src/system/OpenGL.cpp.o: ../../../src/system/OpenGL.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles $(CMAKE_PROGRESS_10)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles $(CMAKE_PROGRESS_12)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/libre-engine.dir/src/system/OpenGL.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/libre-engine.dir/src/system/OpenGL.cpp.o -c /home/clim/Desktop/Programming/cpp/libre-engine/src/system/OpenGL.cpp
 
@@ -281,7 +327,7 @@ CMakeFiles/libre-engine.dir/src/system/OpenGL.cpp.o.provides.build: CMakeFiles/l
 
 CMakeFiles/libre-engine.dir/src/system/Utility.cpp.o: CMakeFiles/libre-engine.dir/flags.make
 CMakeFiles/libre-engine.dir/src/system/Utility.cpp.o: ../../../src/system/Utility.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles $(CMAKE_PROGRESS_11)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles $(CMAKE_PROGRESS_13)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/libre-engine.dir/src/system/Utility.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/libre-engine.dir/src/system/Utility.cpp.o -c /home/clim/Desktop/Programming/cpp/libre-engine/src/system/Utility.cpp
 
@@ -304,7 +350,7 @@ CMakeFiles/libre-engine.dir/src/system/Utility.cpp.o.provides.build: CMakeFiles/
 
 CMakeFiles/libre-engine.dir/src/system/IndexBuffer.cpp.o: CMakeFiles/libre-engine.dir/flags.make
 CMakeFiles/libre-engine.dir/src/system/IndexBuffer.cpp.o: ../../../src/system/IndexBuffer.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles $(CMAKE_PROGRESS_12)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles $(CMAKE_PROGRESS_14)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/libre-engine.dir/src/system/IndexBuffer.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/libre-engine.dir/src/system/IndexBuffer.cpp.o -c /home/clim/Desktop/Programming/cpp/libre-engine/src/system/IndexBuffer.cpp
 
@@ -327,7 +373,7 @@ CMakeFiles/libre-engine.dir/src/system/IndexBuffer.cpp.o.provides.build: CMakeFi
 
 CMakeFiles/libre-engine.dir/src/system/Keyboard.cpp.o: CMakeFiles/libre-engine.dir/flags.make
 CMakeFiles/libre-engine.dir/src/system/Keyboard.cpp.o: ../../../src/system/Keyboard.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles $(CMAKE_PROGRESS_13)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles $(CMAKE_PROGRESS_15)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/libre-engine.dir/src/system/Keyboard.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/libre-engine.dir/src/system/Keyboard.cpp.o -c /home/clim/Desktop/Programming/cpp/libre-engine/src/system/Keyboard.cpp
 
@@ -350,7 +396,7 @@ CMakeFiles/libre-engine.dir/src/system/Keyboard.cpp.o.provides.build: CMakeFiles
 
 CMakeFiles/libre-engine.dir/src/system/Buffer.cpp.o: CMakeFiles/libre-engine.dir/flags.make
 CMakeFiles/libre-engine.dir/src/system/Buffer.cpp.o: ../../../src/system/Buffer.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles $(CMAKE_PROGRESS_14)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles $(CMAKE_PROGRESS_16)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/libre-engine.dir/src/system/Buffer.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/libre-engine.dir/src/system/Buffer.cpp.o -c /home/clim/Desktop/Programming/cpp/libre-engine/src/system/Buffer.cpp
 
@@ -373,7 +419,7 @@ CMakeFiles/libre-engine.dir/src/system/Buffer.cpp.o.provides.build: CMakeFiles/l
 
 CMakeFiles/libre-engine.dir/src/system/VertexArray.cpp.o: CMakeFiles/libre-engine.dir/flags.make
 CMakeFiles/libre-engine.dir/src/system/VertexArray.cpp.o: ../../../src/system/VertexArray.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles $(CMAKE_PROGRESS_15)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles $(CMAKE_PROGRESS_17)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/libre-engine.dir/src/system/VertexArray.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/libre-engine.dir/src/system/VertexArray.cpp.o -c /home/clim/Desktop/Programming/cpp/libre-engine/src/system/VertexArray.cpp
 
@@ -396,7 +442,7 @@ CMakeFiles/libre-engine.dir/src/system/VertexArray.cpp.o.provides.build: CMakeFi
 
 CMakeFiles/libre-engine.dir/src/system/BufferLayout.cpp.o: CMakeFiles/libre-engine.dir/flags.make
 CMakeFiles/libre-engine.dir/src/system/BufferLayout.cpp.o: ../../../src/system/BufferLayout.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles $(CMAKE_PROGRESS_16)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles $(CMAKE_PROGRESS_18)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/libre-engine.dir/src/system/BufferLayout.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/libre-engine.dir/src/system/BufferLayout.cpp.o -c /home/clim/Desktop/Programming/cpp/libre-engine/src/system/BufferLayout.cpp
 
@@ -419,7 +465,7 @@ CMakeFiles/libre-engine.dir/src/system/BufferLayout.cpp.o.provides.build: CMakeF
 
 CMakeFiles/libre-engine.dir/src/system/ComputerDetails.cpp.o: CMakeFiles/libre-engine.dir/flags.make
 CMakeFiles/libre-engine.dir/src/system/ComputerDetails.cpp.o: ../../../src/system/ComputerDetails.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles $(CMAKE_PROGRESS_17)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles $(CMAKE_PROGRESS_19)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/libre-engine.dir/src/system/ComputerDetails.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/libre-engine.dir/src/system/ComputerDetails.cpp.o -c /home/clim/Desktop/Programming/cpp/libre-engine/src/system/ComputerDetails.cpp
 
@@ -442,7 +488,7 @@ CMakeFiles/libre-engine.dir/src/system/ComputerDetails.cpp.o.provides.build: CMa
 
 CMakeFiles/libre-engine.dir/src/system/Task.cpp.o: CMakeFiles/libre-engine.dir/flags.make
 CMakeFiles/libre-engine.dir/src/system/Task.cpp.o: ../../../src/system/Task.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles $(CMAKE_PROGRESS_18)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles $(CMAKE_PROGRESS_20)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/libre-engine.dir/src/system/Task.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/libre-engine.dir/src/system/Task.cpp.o -c /home/clim/Desktop/Programming/cpp/libre-engine/src/system/Task.cpp
 
@@ -465,7 +511,7 @@ CMakeFiles/libre-engine.dir/src/system/Task.cpp.o.provides.build: CMakeFiles/lib
 
 CMakeFiles/libre-engine.dir/src/system/Time.cpp.o: CMakeFiles/libre-engine.dir/flags.make
 CMakeFiles/libre-engine.dir/src/system/Time.cpp.o: ../../../src/system/Time.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles $(CMAKE_PROGRESS_19)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles $(CMAKE_PROGRESS_21)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/libre-engine.dir/src/system/Time.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/libre-engine.dir/src/system/Time.cpp.o -c /home/clim/Desktop/Programming/cpp/libre-engine/src/system/Time.cpp
 
@@ -488,7 +534,7 @@ CMakeFiles/libre-engine.dir/src/system/Time.cpp.o.provides.build: CMakeFiles/lib
 
 CMakeFiles/libre-engine.dir/src/system/Logger.cpp.o: CMakeFiles/libre-engine.dir/flags.make
 CMakeFiles/libre-engine.dir/src/system/Logger.cpp.o: ../../../src/system/Logger.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles $(CMAKE_PROGRESS_20)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles $(CMAKE_PROGRESS_22)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/libre-engine.dir/src/system/Logger.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/libre-engine.dir/src/system/Logger.cpp.o -c /home/clim/Desktop/Programming/cpp/libre-engine/src/system/Logger.cpp
 
@@ -511,7 +557,7 @@ CMakeFiles/libre-engine.dir/src/system/Logger.cpp.o.provides.build: CMakeFiles/l
 
 CMakeFiles/libre-engine.dir/src/system/Mouse.cpp.o: CMakeFiles/libre-engine.dir/flags.make
 CMakeFiles/libre-engine.dir/src/system/Mouse.cpp.o: ../../../src/system/Mouse.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles $(CMAKE_PROGRESS_21)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles $(CMAKE_PROGRESS_23)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/libre-engine.dir/src/system/Mouse.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/libre-engine.dir/src/system/Mouse.cpp.o -c /home/clim/Desktop/Programming/cpp/libre-engine/src/system/Mouse.cpp
 
@@ -534,7 +580,7 @@ CMakeFiles/libre-engine.dir/src/system/Mouse.cpp.o.provides.build: CMakeFiles/li
 
 CMakeFiles/libre-engine.dir/src/asset/Image.cpp.o: CMakeFiles/libre-engine.dir/flags.make
 CMakeFiles/libre-engine.dir/src/asset/Image.cpp.o: ../../../src/asset/Image.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles $(CMAKE_PROGRESS_22)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles $(CMAKE_PROGRESS_24)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/libre-engine.dir/src/asset/Image.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/libre-engine.dir/src/asset/Image.cpp.o -c /home/clim/Desktop/Programming/cpp/libre-engine/src/asset/Image.cpp
 
@@ -557,7 +603,7 @@ CMakeFiles/libre-engine.dir/src/asset/Image.cpp.o.provides.build: CMakeFiles/lib
 
 CMakeFiles/libre-engine.dir/src/Application.cpp.o: CMakeFiles/libre-engine.dir/flags.make
 CMakeFiles/libre-engine.dir/src/Application.cpp.o: ../../../src/Application.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles $(CMAKE_PROGRESS_23)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles $(CMAKE_PROGRESS_25)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/libre-engine.dir/src/Application.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/libre-engine.dir/src/Application.cpp.o -c /home/clim/Desktop/Programming/cpp/libre-engine/src/Application.cpp
 
@@ -584,8 +630,10 @@ libre__engine_OBJECTS = \
 "CMakeFiles/libre-engine.dir/src/graphics/ShaderVariable.cpp.o" \
 "CMakeFiles/libre-engine.dir/src/graphics/Shader.cpp.o" \
 "CMakeFiles/libre-engine.dir/src/graphics/Window.cpp.o" \
+"CMakeFiles/libre-engine.dir/src/graphics/ShaderProgram.cpp.o" \
 "CMakeFiles/libre-engine.dir/src/graphics/Renderer.cpp.o" \
 "CMakeFiles/libre-engine.dir/src/graphics/graphics_common.cpp.o" \
+"CMakeFiles/libre-engine.dir/src/math/SIMDArray.cpp.o" \
 "CMakeFiles/libre-engine.dir/src/math/libremath.cpp.o" \
 "CMakeFiles/libre-engine.dir/src/script/ScriptEngine.cpp.o" \
 "CMakeFiles/libre-engine.dir/src/script/Script.cpp.o" \
@@ -611,8 +659,10 @@ liblibre-engine.a: CMakeFiles/libre-engine.dir/src/core/Engine.cpp.o
 liblibre-engine.a: CMakeFiles/libre-engine.dir/src/graphics/ShaderVariable.cpp.o
 liblibre-engine.a: CMakeFiles/libre-engine.dir/src/graphics/Shader.cpp.o
 liblibre-engine.a: CMakeFiles/libre-engine.dir/src/graphics/Window.cpp.o
+liblibre-engine.a: CMakeFiles/libre-engine.dir/src/graphics/ShaderProgram.cpp.o
 liblibre-engine.a: CMakeFiles/libre-engine.dir/src/graphics/Renderer.cpp.o
 liblibre-engine.a: CMakeFiles/libre-engine.dir/src/graphics/graphics_common.cpp.o
+liblibre-engine.a: CMakeFiles/libre-engine.dir/src/math/SIMDArray.cpp.o
 liblibre-engine.a: CMakeFiles/libre-engine.dir/src/math/libremath.cpp.o
 liblibre-engine.a: CMakeFiles/libre-engine.dir/src/script/ScriptEngine.cpp.o
 liblibre-engine.a: CMakeFiles/libre-engine.dir/src/script/Script.cpp.o
@@ -644,8 +694,10 @@ CMakeFiles/libre-engine.dir/requires: CMakeFiles/libre-engine.dir/src/core/Engin
 CMakeFiles/libre-engine.dir/requires: CMakeFiles/libre-engine.dir/src/graphics/ShaderVariable.cpp.o.requires
 CMakeFiles/libre-engine.dir/requires: CMakeFiles/libre-engine.dir/src/graphics/Shader.cpp.o.requires
 CMakeFiles/libre-engine.dir/requires: CMakeFiles/libre-engine.dir/src/graphics/Window.cpp.o.requires
+CMakeFiles/libre-engine.dir/requires: CMakeFiles/libre-engine.dir/src/graphics/ShaderProgram.cpp.o.requires
 CMakeFiles/libre-engine.dir/requires: CMakeFiles/libre-engine.dir/src/graphics/Renderer.cpp.o.requires
 CMakeFiles/libre-engine.dir/requires: CMakeFiles/libre-engine.dir/src/graphics/graphics_common.cpp.o.requires
+CMakeFiles/libre-engine.dir/requires: CMakeFiles/libre-engine.dir/src/math/SIMDArray.cpp.o.requires
 CMakeFiles/libre-engine.dir/requires: CMakeFiles/libre-engine.dir/src/math/libremath.cpp.o.requires
 CMakeFiles/libre-engine.dir/requires: CMakeFiles/libre-engine.dir/src/script/ScriptEngine.cpp.o.requires
 CMakeFiles/libre-engine.dir/requires: CMakeFiles/libre-engine.dir/src/script/Script.cpp.o.requires

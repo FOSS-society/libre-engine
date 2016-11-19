@@ -2,6 +2,7 @@
 /usr/local/include/libre-engine/core/Entity.hpp
 /usr/local/include/libre-engine/core/Engine.hpp
 /usr/local/include/libre-engine/core/Transform.h
+/usr/local/include/libre-engine/core/GameState.h
 /usr/local/include/libre-engine/core/LEVariant.hpp
 /usr/local/include/libre-engine/core/System.hpp
 /usr/local/include/libre-engine/core/Component.hpp
@@ -13,11 +14,13 @@
 /usr/local/include/libre-engine/graphics/graphics_common.hpp
 /usr/local/include/libre-engine/graphics/ShaderProgram.hpp
 /usr/local/include/libre-engine/math/vector2.hpp
+/usr/local/include/libre-engine/math/coordinate2D.hpp
 /usr/local/include/libre-engine/math/matrix3.hpp
 /usr/local/include/libre-engine/math/libremath.hpp
 /usr/local/include/libre-engine/math/vector3.hpp
 /usr/local/include/libre-engine/math/vector4.hpp
 /usr/local/include/libre-engine/math/matrix2.hpp
+/usr/local/include/libre-engine/math/coordinate2D.h
 /usr/local/include/libre-engine/math/matrix4.hpp
 /usr/local/include/libre-engine/physics/aabb.hpp
 /usr/local/include/libre-engine/physics/rectangle.hpp
@@ -52,11 +55,13 @@
 /usr/local/include/libre-engine/system/Utility.hpp
 /usr/local/include/libre-engine/system/Task.hpp
 /usr/local/include/libre-engine/math/vector2.hpp
+/usr/local/include/libre-engine/math/coordinate2D.hpp
 /usr/local/include/libre-engine/math/matrix3.hpp
 /usr/local/include/libre-engine/math/libremath.hpp
 /usr/local/include/libre-engine/math/vector3.hpp
 /usr/local/include/libre-engine/math/vector4.hpp
 /usr/local/include/libre-engine/math/matrix2.hpp
+/usr/local/include/libre-engine/math/coordinate2D.h
 /usr/local/include/libre-engine/math/matrix4.hpp
 /usr/local/include/libre-engine/physics/aabb.hpp
 /usr/local/include/libre-engine/physics/rectangle.hpp
@@ -71,6 +76,7 @@
 /usr/local/include/libre-engine/core/Entity.hpp
 /usr/local/include/libre-engine/core/Engine.hpp
 /usr/local/include/libre-engine/core/Transform.h
+/usr/local/include/libre-engine/core/GameState.h
 /usr/local/include/libre-engine/core/LEVariant.hpp
 /usr/local/include/libre-engine/core/System.hpp
 /usr/local/include/libre-engine/core/Component.hpp

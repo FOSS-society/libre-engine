@@ -136,11 +136,15 @@
       </Unit>
       <Unit filename="/home/clim/Desktop/Programming/cpp/libre-engine/src/graphics/Shader.cpp">
       </Unit>
+      <Unit filename="/home/clim/Desktop/Programming/cpp/libre-engine/src/graphics/ShaderProgram.cpp">
+      </Unit>
       <Unit filename="/home/clim/Desktop/Programming/cpp/libre-engine/src/graphics/ShaderVariable.cpp">
       </Unit>
       <Unit filename="/home/clim/Desktop/Programming/cpp/libre-engine/src/graphics/Window.cpp">
       </Unit>
       <Unit filename="/home/clim/Desktop/Programming/cpp/libre-engine/src/graphics/graphics_common.cpp">
+      </Unit>
+      <Unit filename="/home/clim/Desktop/Programming/cpp/libre-engine/src/math/SIMDArray.cpp">
       </Unit>
       <Unit filename="/home/clim/Desktop/Programming/cpp/libre-engine/src/math/libremath.cpp">
       </Unit>
@@ -199,6 +203,10 @@
       <Unit filename="/home/clim/Desktop/Programming/cpp/libre-engine/include/graphics/Window.hpp">
       </Unit>
       <Unit filename="/home/clim/Desktop/Programming/cpp/libre-engine/include/graphics/graphics_common.hpp">
+      </Unit>
+      <Unit filename="/home/clim/Desktop/Programming/cpp/libre-engine/include/math/SIMDArray.hpp">
+      </Unit>
+      <Unit filename="/home/clim/Desktop/Programming/cpp/libre-engine/include/math/coordinate2D.hpp">
       </Unit>
       <Unit filename="/home/clim/Desktop/Programming/cpp/libre-engine/include/math/libremath.hpp">
       </Unit>

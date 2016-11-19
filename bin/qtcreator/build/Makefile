@@ -276,6 +276,30 @@ src/graphics/Shader.cpp.s:
 	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/graphics/Shader.cpp.s
 .PHONY : src/graphics/Shader.cpp.s
 
+src/graphics/ShaderProgram.o: src/graphics/ShaderProgram.cpp.o
+.PHONY : src/graphics/ShaderProgram.o
+
+# target to build an object file
+src/graphics/ShaderProgram.cpp.o:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/graphics/ShaderProgram.cpp.o
+.PHONY : src/graphics/ShaderProgram.cpp.o
+
+src/graphics/ShaderProgram.i: src/graphics/ShaderProgram.cpp.i
+.PHONY : src/graphics/ShaderProgram.i
+
+# target to preprocess a source file
+src/graphics/ShaderProgram.cpp.i:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/graphics/ShaderProgram.cpp.i
+.PHONY : src/graphics/ShaderProgram.cpp.i
+
+src/graphics/ShaderProgram.s: src/graphics/ShaderProgram.cpp.s
+.PHONY : src/graphics/ShaderProgram.s
+
+# target to generate assembly for a file
+src/graphics/ShaderProgram.cpp.s:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/graphics/ShaderProgram.cpp.s
+.PHONY : src/graphics/ShaderProgram.cpp.s
+
 src/graphics/ShaderVariable.o: src/graphics/ShaderVariable.cpp.o
 .PHONY : src/graphics/ShaderVariable.o
 
@@ -347,6 +371,30 @@ src/graphics/graphics_common.s: src/graphics/graphics_common.cpp.s
 src/graphics/graphics_common.cpp.s:
 	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/graphics/graphics_common.cpp.s
 .PHONY : src/graphics/graphics_common.cpp.s
+
+src/math/SIMDArray.o: src/math/SIMDArray.cpp.o
+.PHONY : src/math/SIMDArray.o
+
+# target to build an object file
+src/math/SIMDArray.cpp.o:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/math/SIMDArray.cpp.o
+.PHONY : src/math/SIMDArray.cpp.o
+
+src/math/SIMDArray.i: src/math/SIMDArray.cpp.i
+.PHONY : src/math/SIMDArray.i
+
+# target to preprocess a source file
+src/math/SIMDArray.cpp.i:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/math/SIMDArray.cpp.i
+.PHONY : src/math/SIMDArray.cpp.i
+
+src/math/SIMDArray.s: src/math/SIMDArray.cpp.s
+.PHONY : src/math/SIMDArray.s
+
+# target to generate assembly for a file
+src/math/SIMDArray.cpp.s:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/math/SIMDArray.cpp.s
+.PHONY : src/math/SIMDArray.cpp.s
 
 src/math/libremath.o: src/math/libremath.cpp.o
 .PHONY : src/math/libremath.o
@@ -736,6 +784,9 @@ help:
 	@echo "... src/graphics/Shader.o"
 	@echo "... src/graphics/Shader.i"
 	@echo "... src/graphics/Shader.s"
+	@echo "... src/graphics/ShaderProgram.o"
+	@echo "... src/graphics/ShaderProgram.i"
+	@echo "... src/graphics/ShaderProgram.s"
 	@echo "... src/graphics/ShaderVariable.o"
 	@echo "... src/graphics/ShaderVariable.i"
 	@echo "... src/graphics/ShaderVariable.s"
@@ -745,6 +796,9 @@ help:
 	@echo "... src/graphics/graphics_common.o"
 	@echo "... src/graphics/graphics_common.i"
 	@echo "... src/graphics/graphics_common.s"
+	@echo "... src/math/SIMDArray.o"
+	@echo "... src/math/SIMDArray.i"
+	@echo "... src/math/SIMDArray.s"
 	@echo "... src/math/libremath.o"
 	@echo "... src/math/libremath.i"
 	@echo "... src/math/libremath.s"

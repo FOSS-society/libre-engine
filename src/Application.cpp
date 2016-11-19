@@ -2,6 +2,10 @@
 #include "../include/system/Logger.hpp"
 #include "../include/graphics/graphics_common.hpp"
 #include "../include/system/OpenGL.hpp"
+#include "../include/system/Utility.hpp"
+#include "system/ComputerDetails.hpp"
+
+
 #include <SDL2/SDL_events.h>
 
 namespace libre{
@@ -9,7 +13,7 @@ namespace libre{
 Application * Application::m_instance = nullptr;
 
 Application::Application(const char *t, int width, int height,graphics::RendererType rt){
-    system::Logger::LogInstance()->Log("Initializing Engine");
+    system::Logger::LogInstance()->Log("Initializing Application ");
     try{
         if(graphics::s_initializeSDLWithEverything() != 0){
             throw ApplicationException(SDL_GetError());
@@ -24,6 +28,19 @@ Application::Application(const char *t, int width, int height,graphics::Renderer
 
             this->m_Renderer  = new graphics::Renderer(this->m_Window,rt);
             this->m_Mouse = new system::Mouse();
+
+
+
+          try{
+                GLenum glew = graphics::initializeGlew();
+                if(glew != GLEW_OK){
+                    throw ApplicationException(std::string((char *)glewGetErrorString(glew)));
+                }
+            }catch(ApplicationException &apex){
+                system::Logger::LogInstance()->Log("Glew Initialization Exception Caught:");
+                system::Logger::LogInstance()->Log(apex.what());
+                std::cout << "Glew Initialization Exception caught: " << apex.what() << std::endl ;
+          }
 
         }
     }catch(ApplicationException &appex){

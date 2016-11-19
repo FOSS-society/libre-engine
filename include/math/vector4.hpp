@@ -1,7 +1,7 @@
 #ifndef Vector4_HPP_
 #define Vector4_HPP_
 
-
+#include <iostream>
 namespace libre{
 
 	namespace math{

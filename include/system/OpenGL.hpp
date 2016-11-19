@@ -70,6 +70,11 @@ namespace libre{
      void compileShader(unsigned int shader);
      void setShaderSource(unsigned int shader, int count, char* source, int *length);
      void getShaderParameter(unsigned int shader, GLenum pname, int *params);
+     void getProgramParameter(unsigned int program ,GLenum pname, int *params);
+     void getActiveAttribute(unsigned int program,unsigned int index,int bufferSize, int *length, int *size,
+                             GLenum *type,char *name);
+     void GetActiveUniform(unsigned int program,unsigned int index,int bufferSize,int *length,int  *size,
+                            GLenum *type,char *name);
      void getShaderInfoLog(unsigned int shader, int maxLength, int *length, char *infolog);
      void deleteShader(unsigned int shader);
      void attachShader(unsigned int program, unsigned int shader);

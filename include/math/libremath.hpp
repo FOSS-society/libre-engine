@@ -17,6 +17,14 @@ namespace libre{
 
   namespace math{
 
+
+  enum class CoordinateSystem{
+      CS2_CARTESIAN,CS2_POLAR,
+      CS3_CARTESIAN, CS3_POLAR,
+      CS3_BIPOLAR,CS3_CYLINDRICAL
+  };
+
+
   inline float toRadians(const float degrees){
       return (float)degrees * (LE_PI/180.0f);
   }

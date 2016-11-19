@@ -262,6 +262,16 @@ namespace libre{
             glClear(mask);
         }
 
+        void getProgramParameter(unsigned int program, GLenum pname, int *params)
+        {
+            glGetProgramiv(program,pname,params);
+        }
+
+        void GetActiveUniform(unsigned int program, unsigned int index, int bufferSize, int *length, int *size, GLenum *type, char *name)
+        {
+            glGetActiveUniform(program,index,bufferSize,length,size,type,name);
+        }
+
 
 
 
