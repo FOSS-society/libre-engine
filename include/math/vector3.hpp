@@ -59,12 +59,13 @@ namespace libre{
 		Vector3<t> operator+(Vector3 right);
 		Vector3<t> operator-(Vector3 right);
 		Vector3<t> operator*(Vector3 right);
+        Vector3<t> operator*(t right);
 		Vector3<t> operator/(Vector3 right);
 
 		bool operator==(Vector3<t> right);
 		bool operator!=(Vector3<t> right);
 
-
+        t dot(const Vector3<t> vec);
 
 		const char * toString();
 
@@ -166,9 +167,13 @@ namespace libre{
 			return this->sub(right);
 		}
 		template <typename t>
-		Vector3<t> Vector3<t>::operator*(Vector3 right){
+        Vector3<t> Vector3<t>::operator*(Vector3<t> right){
 			return this->multiply(right);
 		}
+        template <typename t>
+        Vector3<t> Vector3<t>::operator*(t right){
+            return this->multiply(right);
+        }
 		template <typename t>
 		Vector3<t> Vector3<t>::operator/(Vector3 right){
 			return this->divide(right);
@@ -181,8 +186,15 @@ namespace libre{
 		}
 		template <typename t>
 		bool Vector3<t>::operator!=(Vector3<t> right){
-						return (this->m_x != right->X()) || (this->m_y != right->Y())|| (this->m_z != right->Z());
-		}
+            return (this->m_x != right->X()) || (this->m_y != right->Y())|| (this->m_z != right->Z());
+        }
+
+        template <typename t>
+        t Vector3<t>::dot(const Vector3<t> vec)
+        {
+            return this->m_x * vec.X() + this->m_y * vec.Y() + this->m_z * vec.Z();
+        }
+
 
 
         template <typename t>

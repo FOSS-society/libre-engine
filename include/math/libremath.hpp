@@ -33,6 +33,17 @@ namespace libre{
       return (float) radians * (180.0f/LE_PI);
   }
 
+  template<typename t>
+  inline t clamp(t &ref,t min, t max){
+  if(ref < min)
+      return min;
+  else if(ref > max)
+      return max;
+  else
+      return ref;
+  }
+
+
 
    template<typename t>
     t length(const Vector3<t> &vec){
@@ -71,6 +82,32 @@ namespace libre{
         temp.setY((a.Z()*b.X()) - (a.X() * b.Z()));
         temp.setZ((a.X()*b.Y()) - (a.Y()* b.X()));
                 return temp;
+    }
+
+    Vector3<float> normalize(const Vector3<float> &vec){
+        Vector3<float> temp = vec;
+        float sqr =vec.X()*vec.X()+vec.Y()*vec.Y()+vec.Z()*vec.Z();
+        return temp.multiply(1.0f/sqrt(sqr));
+
+    }
+
+    Vector3<float> lerp(Vector3<float> &start,Vector3<float> &end,float percent){
+        Vector3<float> temp1 = end - start;
+        Vector3<float> temp2 = temp1.multiply(percent);
+        return start + temp2;
+
+    }
+
+   inline Vector3<float> slerp(Vector3<float> &start,Vector3<float> &end,float percent){
+
+        float d = start.dot(end);
+        float val = clamp<float>(d,-1.0f,1.0f);
+        float theta = acos(d)*percent;
+        Vector3<float> RelativeVec = end - start*d;
+        Vector3<float> temp = normalize(RelativeVec);
+
+        return (start*cos(theta)+ temp *sin(theta));
+
     }
 
     Matrix4<float> perspective(float fov, float aspectRatio, float near, float far){

@@ -91,6 +91,7 @@ CMakeFiles/libre-engine.dir/src/graphics/graphics_common.cpp.o
  /home/clim/Desktop/Programming/cpp/libre-engine/src/graphics/graphics_common.cpp
 CMakeFiles/libre-engine.dir/src/math/SIMDArray.cpp.o
  /home/clim/Desktop/Programming/cpp/libre-engine/include/math/SIMDArray.hpp
+ /home/clim/Desktop/Programming/cpp/libre-engine/include/math/vector2.hpp
  /home/clim/Desktop/Programming/cpp/libre-engine/include/math/vector4.hpp
  /home/clim/Desktop/Programming/cpp/libre-engine/src/math/SIMDArray.cpp
 CMakeFiles/libre-engine.dir/src/math/libremath.cpp.o

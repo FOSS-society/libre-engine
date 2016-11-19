@@ -3,6 +3,7 @@
 
 #include <emmintrin.h>
 #include "vector4.hpp"
+#include "vector2.hpp"
 
 namespace libre{
 
@@ -55,7 +56,7 @@ namespace libre{
 
          simdD();
          simdD(const __m128d &data);
-         simdD(const math::Vector4<double> &data);
+         simdD(const math::Vector2<double> &data);
 
          void setData(const __m128d &data);
 

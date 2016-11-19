@@ -96,36 +96,36 @@ simdD::simdD(const __m128d &data)
     this->m_data = data;
 }
 
-simdD::simdD(const math::Vector4<double> &data)
+simdD::simdD(const math::Vector2<double> &data)
 {
-    this->m_data = _mm_set_pd(data.Z(),data.Y(),data.X(),data.W());
+    this->m_data = _mm_set_pd(data.X(),data.Y());
 
 }
 
 void simdD::setData(const __m128d &data)
 {
-    this->m_data = data
+    this->m_data = data;
 }
 
 simdD simdD::add(const simdD &right)
 {
-    return _mm_add_pd(this->m_data,right);
+    return _mm_add_pd(this->m_data,right.data());
 }
 
 simdD simdD::sub(const simdD &right)
 {
-    return _mm_sub_pd(this->m_data,right);
+    return _mm_sub_pd(this->m_data,right.data());
 }
 
 simdD simdD::multiply(const simdD &right)
 {
-    return _mm_mul_pd(this->m_data,right);
+    return _mm_mul_pd(this->m_data,right.data());
 
 }
 
 simdD simdD::divide(const simdD &right)
 {
-    return _mm_div_pd(this->m_data,right);
+    return _mm_div_pd(this->m_data,right.data());
 
 }
 
@@ -193,7 +193,7 @@ simdI simdI::sub(const simdI &right)
 }
 
 simdI simdI::multiply(const simdI &right){
-    return simdI(_mm_mul_epi32(this->m_data,right.data()));
+    return simdI(_mm_mul_epu32(this->m_data,right.data()));
 
 }
 
