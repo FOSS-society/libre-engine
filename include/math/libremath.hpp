@@ -110,6 +110,10 @@ namespace libre{
 
     }
 
+   inline Vector3<float> nlerp(Vector3<float> &start,Vector3<float> &end,float percent){
+    return normalize(lerp(start,end,percent));
+   }
+
     Matrix4<float> perspective(float fov, float aspectRatio, float near, float far){
         Matrix4<float> result(1.0f);
 
