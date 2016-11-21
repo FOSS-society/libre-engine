@@ -24,7 +24,7 @@ namespace libre{
 
       //Handle input creation
       this->m_mouse = new system::Mouse();
-      this->m_keyboard = new system::Keyboard(this->m_event.get());
+      this->m_keyboard = new system::Keyboard();
 
       this->m_Initialized = true;
       this->m_Running = true;

@@ -9,18 +9,22 @@ namespace libre{
     class Keyboard{
 
     private:
-    SDL_Event *m_event;   //pointer to the event which is polled for input
+
     bool m_keys[323];
     bool m_keysHeld[323];
 
 
     public:
     Keyboard();
-    Keyboard(SDL_Event *event);
+    ~Keyboard();
 
-    void KeyboardCallback();
+    void setKeyDown(int index);
+    void setKeyUp(int index);
+    void setKeyHeldDown(int index);
+    void setKeyHeldUp(int index);
 
-
+    bool keyDown(int index);
+    bool keyHeld(int index);
     };
 
 

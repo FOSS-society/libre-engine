@@ -3,7 +3,7 @@
 
 #include "graphics/Renderer.hpp"
 #include "system/Mouse.hpp"
-
+#include "system/Keyboard.hpp"
 /////////////////////////////////
 ///
 /// Current Notes, I will depreciating the
@@ -28,6 +28,7 @@ namespace libre{
         graphics::Window *m_Window;
         graphics::Renderer *m_Renderer;
         system::Mouse *m_Mouse;
+        system::Keyboard *m_Keyboard;
 
 
 

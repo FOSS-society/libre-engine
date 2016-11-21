@@ -3,7 +3,7 @@
 namespace libre{
     namespace system{
 
-    Keyboard::Keyboard():m_event(new SDL_Event)
+    Keyboard::Keyboard()
     {
         for(int i = 0;i< 323;i++){
             m_keys[i] = false;
@@ -11,37 +11,31 @@ namespace libre{
         }
     }
 
-    Keyboard::Keyboard(SDL_Event *event):m_event(event)
+    bool Keyboard::keyDown(int index)
     {
-        for(int i = 0;i< 323;i++){
-            m_keys[i] = false;
-            m_keysHeld[i] = false;
-        }
+        return m_keys[index];
     }
 
-    void Keyboard::KeyboardCallback()
-{
-    if(SDL_PollEvent(this->m_event)){
-    switch(this->m_event->type){
-    case SDL_KEYDOWN:
-       if(m_keys[m_event->key.keysym.sym]){
-        m_keysHeld[m_event->key.keysym.sym] = true;
-        }else
-        m_keys[m_event->key.keysym.sym] = true;
-        break;
-    case SDL_KEYUP:
-     if(m_keys[m_event->key.keysym.sym]){
-     m_keysHeld[m_event->key.keysym.sym] = false;
-     m_keys[m_event->key.keysym.sym] = false;
-     }else
-     m_keys[m_event->key.keysym.sym] = false;
-     break;
-     }
+   bool Keyboard::keyHeld(int index){
+       return m_keysHeld[index];
+   }
+
+   void Keyboard::setKeyDown(int index){
+        this->m_keys[index] = true;
+   }
+   void Keyboard::setKeyUp(int index){
+        this->m_keys[index] = false;
+   }
+
+   void Keyboard::setKeyHeldDown(int index){
+        this->m_keysHeld[index] = true;
+   }
+
+   void Keyboard::setKeyHeldUp(int index){
+       this->m_keysHeld[index] = false;
     }
 
 
-
-    }
 
    }
 

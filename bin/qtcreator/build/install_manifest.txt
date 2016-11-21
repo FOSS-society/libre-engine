@@ -20,8 +20,8 @@
 /usr/local/include/libre-engine/math/vector3.hpp
 /usr/local/include/libre-engine/math/vector4.hpp
 /usr/local/include/libre-engine/math/matrix2.hpp
-/usr/local/include/libre-engine/math/coordinate2D.h
 /usr/local/include/libre-engine/math/matrix4.hpp
+/usr/local/include/libre-engine/math/SIMDArray.hpp
 /usr/local/include/libre-engine/physics/aabb.hpp
 /usr/local/include/libre-engine/physics/rectangle.hpp
 /usr/local/include/libre-engine/script/ScriptEngine.hpp
@@ -61,8 +61,8 @@
 /usr/local/include/libre-engine/math/vector3.hpp
 /usr/local/include/libre-engine/math/vector4.hpp
 /usr/local/include/libre-engine/math/matrix2.hpp
-/usr/local/include/libre-engine/math/coordinate2D.h
 /usr/local/include/libre-engine/math/matrix4.hpp
+/usr/local/include/libre-engine/math/SIMDArray.hpp
 /usr/local/include/libre-engine/physics/aabb.hpp
 /usr/local/include/libre-engine/physics/rectangle.hpp
 /usr/local/include/libre-engine/Application.h

@@ -28,6 +28,7 @@ Application::Application(const char *t, int width, int height,graphics::Renderer
 
             this->m_Renderer  = new graphics::Renderer(this->m_Window,rt);
             this->m_Mouse = new system::Mouse();
+            this->m_Keyboard = new system::Keyboard();
 
 
 
@@ -102,15 +103,32 @@ bool Application::Run()
                    this->m_Mouse->setButtonPress(system::ButtonPress::NONE);
                    break;
               }
-        OpenGL::ClearColor(0,0,0,1);
+           case SDL_KEYDOWN:
+
+               if(this->m_Keyboard->keyDown(ev.key.keysym.sym)){
+                   m_Keyboard->setKeyHeldDown(ev.key.keysym.sym);
+               }else
+                   m_Keyboard->setKeyDown(ev.key.keysym.sym);
+
+                   break;
+
+            case SDL_KEYUP:
+
+               if(this->m_Keyboard->keyDown(ev.key.keysym.sym)){
+                   m_Keyboard->setKeyHeldUp(ev.key.keysym.sym);
+               }else
+                   m_Keyboard->setKeyUp(ev.key.keysym.sym);
+
+               break;
+
+             }
+
+        OpenGL::ClearColor(1,0,0,1);
         OpenGL::ClearFlags(GL_COLOR_BUFFER_BIT);
         this->m_Renderer->Update();
 
            }
        }
-    }
-
-
     return this->m_active;
 }
 
