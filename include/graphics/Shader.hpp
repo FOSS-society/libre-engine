@@ -11,7 +11,10 @@ namespace libre{
 
   namespace graphics{
 
+  //Let Tessalation1 be Tessalation Control and Tessalation2 be Tessalation Evaluation
+
     enum class ShaderType{ VERTEX , TESSALATION1,TESSALATION2,GEOMETRY, FRAGMENT,COMPUTE};
+
 
 
     /**
@@ -30,11 +33,16 @@ namespace libre{
 
     class Shader{
     private:
+
       std::string m_name;
       ShaderType m_type;
       std::string m_filePath;
       std::string m_Source;
-
+      std::vector<ShaderVariable> *m_attributes;
+      std::vector<ShaderVariable> *m_uniforms;
+      bool m_compiled;
+      bool m_linked;
+      GLuint m_handle;
 
     public:
       Shader(std::string name, std::string filepath, ShaderType type);
@@ -52,7 +60,13 @@ namespace libre{
        std::string Name()const;
 
 
+       //Compile the shader
+       bool compile();
 
+
+
+       bool linked() const;
+       void setLinked(bool linked);
     };
 
   }

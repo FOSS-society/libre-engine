@@ -31,7 +31,7 @@ namespace libre{
 			Matrix2(const t &e0,const t &e1,const t &e2,const t &e3);
 			Matrix2(const Matrix2<t>& copy);
 
-			Matrix2<t> &operator=(const Matrix2<t>& copy);
+            Matrix2<t> operator=(const Matrix2<t>& copy);
 
 			t getValue(int index);
 			t data(int index)const;
@@ -78,7 +78,7 @@ namespace libre{
             this->_data[3] = copy.data(3);
 		}
 		template<typename t>
-		Matrix2<t> &Matrix2<t>::operator=(const Matrix2<t>& copy){
+        Matrix2<t> Matrix2<t>::operator=(const Matrix2<t>& copy){
 			return Matrix2<t>(copy);
 }
 

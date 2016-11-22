@@ -33,6 +33,8 @@ system/Mouse.hpp
 /home/clim/Desktop/Programming/cpp/libre-engine/include/system/Mouse.hpp
 system/Keyboard.hpp
 /home/clim/Desktop/Programming/cpp/libre-engine/include/system/Keyboard.hpp
+system/ComputerDetails.hpp
+/home/clim/Desktop/Programming/cpp/libre-engine/include/system/ComputerDetails.hpp
 
 /home/clim/Desktop/Programming/cpp/libre-engine/include/graphics/Renderer.hpp
 graphics_common.hpp
@@ -79,6 +81,14 @@ string
 /home/clim/Desktop/Programming/cpp/libre-engine/include/math/vector4.hpp
 iostream
 -
+
+/home/clim/Desktop/Programming/cpp/libre-engine/include/system/ComputerDetails.hpp
+sys/utsname.h
+-
+OpenGL.hpp
+/home/clim/Desktop/Programming/cpp/libre-engine/include/system/OpenGL.hpp
+../math/vector3.hpp
+/home/clim/Desktop/Programming/cpp/libre-engine/include/math/vector3.hpp
 
 /home/clim/Desktop/Programming/cpp/libre-engine/include/system/Keyboard.hpp
 SDL2/SDL.h
@@ -146,5 +156,13 @@ vector
 system/ComputerDetails.hpp
 /home/clim/Desktop/Programming/cpp/libre-engine/src/system/ComputerDetails.hpp
 SDL2/SDL_events.h
+-
+
+/home/clim/Desktop/Programming/cpp/libre-engine/src/system/ComputerDetails.cpp
+../../include/system/ComputerDetails.hpp
+/home/clim/Desktop/Programming/cpp/libre-engine/include/system/ComputerDetails.hpp
+../../include/system/Utility.hpp
+/home/clim/Desktop/Programming/cpp/libre-engine/include/system/Utility.hpp
+iostream
 -
 

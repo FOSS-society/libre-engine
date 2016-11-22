@@ -9,3 +9,5 @@
 2016-11-15.23:12:02:	Initializing Application
 2016-11-15.23:12:37:	Initializing Application
 2016-11-20.14:00:29:	Initializing Application
+2016-11-21.20:03:51:	Initializing Application
+2016-11-21.20:06:00:	Initializing Application /

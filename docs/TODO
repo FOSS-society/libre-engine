@@ -1,0 +1,11 @@
+11/20:
+	Create an Abstract Syntax tree:
+		start simple, enums of types of data that can be passed in.
+		Enum astLex: AST_FUNC, AST_DATATYPE , AST_VARIABLENAME, AST_VARIABLEDATA,
+			     AST_OP, AST_IF, AST_IFCONDITION, AST_WHILE, AST_WHILECONDITION,
+			     AST_ENDIF, AST_ENDWHILE, AST_DO, AST_DOCONDITION,AST_ENDDO,
+			     
+                add more if needed
+	Create a GLSL Parser from AST and using utility::tokenize();
+
+		

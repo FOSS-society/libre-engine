@@ -30,9 +30,6 @@ namespace libre{
         //link the shaders
         bool link();
 
-        //compile shaders
-        bool compile();
-
     };
 
 

@@ -4,6 +4,8 @@
 #include "graphics/Renderer.hpp"
 #include "system/Mouse.hpp"
 #include "system/Keyboard.hpp"
+
+#include "system/ComputerDetails.hpp"
 /////////////////////////////////
 ///
 /// Current Notes, I will depreciating the
@@ -29,7 +31,7 @@ namespace libre{
         graphics::Renderer *m_Renderer;
         system::Mouse *m_Mouse;
         system::Keyboard *m_Keyboard;
-
+        system::ComputerDetails * m_HostInfo;
 
 
     public:

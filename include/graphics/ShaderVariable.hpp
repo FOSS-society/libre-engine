@@ -27,6 +27,7 @@ namespace libre{
       core::Variant m_data;
 
     public:
+      ShaderVariable():m_name(std::string()),m_data(core::Variant()){}
       ShaderVariable(std::string name, core::Variant variant);
 
       std::string &getName();

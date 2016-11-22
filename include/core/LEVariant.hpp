@@ -4,6 +4,11 @@
 
 #include <iostream>
 #include "../math/vector2.hpp"
+#include "../math/matrix2.hpp"
+#include "../math/vector3.hpp"
+#include "../math/matrix3.hpp"
+#include "../math/vector4.hpp"
+#include "../math/matrix4.hpp"
 #include <lua5.2/lua.hpp>
 
 
@@ -35,8 +40,11 @@ namespace libre{
         long *asLongPtr;
         math::Vector2<int> asVec2Int;
         math::Vector2<float> asVec2Float;
-
-
+        math::Vector3<float> asVec3Float;
+        math::Vector4<float> asVec4Float;
+        math::Matrix2<float> asMat2Float;
+        math::Matrix3<float> asMat3Float;
+        math::Matrix4<float> asMat4Float;
 
 
 
@@ -59,7 +67,11 @@ namespace libre{
         VariantData(long *lp):asLongPtr(lp){}
         VariantData(math::Vector2<int> v2i):asVec2Int(v2i){}
         VariantData(math::Vector2<float> v2f):asVec2Float(v2f){}
-
+        VariantData(math::Vector3<float> v3f):asVec3Float(v3f){}
+        VariantData(math::Vector4<float> v4f):asVec4Float(v4f){}
+        VariantData(math::Matrix2<float> m2f):asMat2Float(m2f){}
+        VariantData(math::Matrix3<float> m3f):asMat3Float(m3f){}
+        VariantData(math::Matrix4<float> m4f):asMat4Float(m4f){}
 
 
         ~VariantData(){}
@@ -78,8 +90,11 @@ namespace libre{
             asLongPtr = copy.asLongPtr;
             asVec2Int = copy.asVec2Int;
             asVec2Float = copy.asVec2Float;
-
-
+            asVec3Float = copy.asVec3Float;
+            asVec4Float = copy.asVec4Float;
+            asMat2Float = copy.asMat2Float;
+            asMat3Float = copy.asMat3Float;
+            asMat4Float = copy.asMat4Float;
         }
         };
 
@@ -87,7 +102,8 @@ namespace libre{
         INT,INTPTR,CHAR,CHARPTR,
         SHORT,SHORTPTR,FLOAT,FLOATPTR,
         DOUBLE,DOUBLEPTR,LONG,LONGPTR,
-        VEC2INT,VEC2FLOAT
+        VEC2INT,VEC2FLOAT,VEC3FLOAT,VEC4FLOAT,
+        MAT2FLOAT,MAT3FLOAT,MAT4FLOAT
         };
 
     class Variant{
@@ -97,6 +113,8 @@ namespace libre{
         VariantData m_data;
 
         public:
+
+        Variant(DataType type):m_type(type),m_data(VariantData()){ setType(type);}
         Variant():m_type(DataType::INT),m_data(VariantData()){}
         Variant(int i):m_type(DataType::INT),m_data(VariantData(i)){}
         Variant(int *ip):m_type(DataType::INTPTR),m_data(VariantData(ip)){}
@@ -112,9 +130,11 @@ namespace libre{
         Variant(long *lp):m_type(DataType::LONGPTR),m_data(VariantData(lp)){}
         Variant(math::Vector2<int> v2i):m_type(DataType::VEC2INT),m_data(VariantData(v2i)){}
         Variant(math::Vector2<float> v2f):m_type(DataType::VEC2FLOAT),m_data(VariantData(v2f)){}
-
-
-
+        Variant(math::Vector3<float> v3f):m_type(DataType::VEC3FLOAT),m_data(VariantData(v3f)){}
+        Variant(math::Vector4<float> v4f):m_type(DataType::VEC4FLOAT),m_data(VariantData(v4f)){}
+        Variant(math::Matrix2<float> m2f):m_type(DataType::MAT2FLOAT),m_data(VariantData(m2f)){}
+        Variant(math::Matrix3<float> m3f):m_type(DataType::MAT3FLOAT),m_data(VariantData(m3f)){}
+        Variant(math::Matrix4<float> m4f):m_type(DataType::MAT4FLOAT),m_data(VariantData(m4f)){}
 
         ~Variant()= default;
 
@@ -123,9 +143,12 @@ namespace libre{
             this->m_type = v.Type();
         }
 
-        void setData(DataType t, VariantData d){
-        this->m_type = t;
+        void setData(VariantData d){
         this->m_data = d;
+        }
+
+        void setType(DataType t){
+            this->m_type = t;
         }
 
         DataType getType(){return m_type;}

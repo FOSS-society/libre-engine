@@ -13,7 +13,7 @@ namespace libre{
 Application * Application::m_instance = nullptr;
 
 Application::Application(const char *t, int width, int height,graphics::RendererType rt){
-    system::Logger::LogInstance()->Log("Initializing Application ");
+    system::Logger::LogInstance()->Log("Initializing Application /n");
     try{
         if(graphics::s_initializeSDLWithEverything() != 0){
             throw ApplicationException(SDL_GetError());
@@ -29,6 +29,7 @@ Application::Application(const char *t, int width, int height,graphics::Renderer
             this->m_Renderer  = new graphics::Renderer(this->m_Window,rt);
             this->m_Mouse = new system::Mouse();
             this->m_Keyboard = new system::Keyboard();
+            this->m_HostInfo = new system::ComputerDetails();
 
 
 
