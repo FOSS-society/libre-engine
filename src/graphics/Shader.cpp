@@ -39,7 +39,7 @@ Shader::Shader(std::string name, std::string filepath, ShaderType type):
             m_handle = OpenGL::createShader(GL_COMPUTE_SHADER);
             break;
         case ShaderType::FRAGMENT:
-            m_handle = OpenGL::createShader(GL_TESS_CONTROL_SHADER);
+            m_handle = OpenGL::createShader(GL_FRAGMENT_SHADER);
             break;
         }
 
