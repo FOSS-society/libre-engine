@@ -180,6 +180,30 @@ src/Application.cpp.s:
 	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/Application.cpp.s
 .PHONY : src/Application.cpp.s
 
+src/DefaultState.o: src/DefaultState.cpp.o
+.PHONY : src/DefaultState.o
+
+# target to build an object file
+src/DefaultState.cpp.o:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/DefaultState.cpp.o
+.PHONY : src/DefaultState.cpp.o
+
+src/DefaultState.i: src/DefaultState.cpp.i
+.PHONY : src/DefaultState.i
+
+# target to preprocess a source file
+src/DefaultState.cpp.i:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/DefaultState.cpp.i
+.PHONY : src/DefaultState.cpp.i
+
+src/DefaultState.s: src/DefaultState.cpp.s
+.PHONY : src/DefaultState.s
+
+# target to generate assembly for a file
+src/DefaultState.cpp.s:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/DefaultState.cpp.s
+.PHONY : src/DefaultState.cpp.s
+
 src/asset/Image.o: src/asset/Image.cpp.o
 .PHONY : src/asset/Image.o
 
@@ -772,6 +796,9 @@ help:
 	@echo "... src/Application.o"
 	@echo "... src/Application.i"
 	@echo "... src/Application.s"
+	@echo "... src/DefaultState.o"
+	@echo "... src/DefaultState.i"
+	@echo "... src/DefaultState.s"
 	@echo "... src/asset/Image.o"
 	@echo "... src/asset/Image.i"
 	@echo "... src/asset/Image.s"

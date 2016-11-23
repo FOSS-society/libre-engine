@@ -3,8 +3,28 @@
 
 namespace libre{
   namespace asset{
-    Image::Image(std::string name, std::string filepath,unsigned int width, unsigned int height):
-    Base_Asset(name,filepath), m_dimensions(width,height)
+  
+  SDL_Texture *Image::texture() const
+  {
+      return m_texture;
+  }
+  
+  void Image::setTexture(SDL_Texture *texture)
+  {
+      m_texture = texture;
+  }
+  
+  SDL_Surface *Image::surface() const
+  {
+      return m_surface;
+  }
+  
+  void Image::setSurface(SDL_Surface *surface)
+  {
+      m_surface = surface;
+  }
+  Image::Image(std::string name, std::string filepath,unsigned int width, unsigned int height):
+      Base_Asset(name,filepath), m_dimensions(width,height)
     {
       m_texture = NULL;
       m_surface = NULL;

@@ -4,6 +4,8 @@
 CMakeFiles/libre-engine.dir/src/Application.cpp.o: ../../../include/system/ComputerDetails.hpp
 CMakeFiles/libre-engine.dir/src/Application.cpp.o: ../../../include/system/OpenGL.hpp
 CMakeFiles/libre-engine.dir/src/Application.cpp.o: ../../../include/Application.hpp
+CMakeFiles/libre-engine.dir/src/Application.cpp.o: ../../../include/BaseState.hpp
+CMakeFiles/libre-engine.dir/src/Application.cpp.o: ../../../include/DefaultState.hpp
 CMakeFiles/libre-engine.dir/src/Application.cpp.o: ../../../include/graphics/Renderer.hpp
 CMakeFiles/libre-engine.dir/src/Application.cpp.o: ../../../include/graphics/Window.hpp
 CMakeFiles/libre-engine.dir/src/Application.cpp.o: ../../../include/graphics/graphics_common.hpp
@@ -16,6 +18,10 @@ CMakeFiles/libre-engine.dir/src/Application.cpp.o: ../../../include/system/Mouse
 CMakeFiles/libre-engine.dir/src/Application.cpp.o: ../../../include/system/OpenGL.hpp
 CMakeFiles/libre-engine.dir/src/Application.cpp.o: ../../../include/system/Utility.hpp
 CMakeFiles/libre-engine.dir/src/Application.cpp.o: ../../../src/Application.cpp
+
+CMakeFiles/libre-engine.dir/src/DefaultState.cpp.o: ../../../include/BaseState.hpp
+CMakeFiles/libre-engine.dir/src/DefaultState.cpp.o: ../../../include/DefaultState.hpp
+CMakeFiles/libre-engine.dir/src/DefaultState.cpp.o: ../../../src/DefaultState.cpp
 
 CMakeFiles/libre-engine.dir/src/asset/Image.cpp.o: ../../../include/asset/Base_Asset.hpp
 CMakeFiles/libre-engine.dir/src/asset/Image.cpp.o: ../../../include/asset/Image.hpp
@@ -47,6 +53,7 @@ CMakeFiles/libre-engine.dir/src/graphics/Renderer.cpp.o: ../../../include/graphi
 CMakeFiles/libre-engine.dir/src/graphics/Renderer.cpp.o: ../../../include/math/vector2.hpp
 CMakeFiles/libre-engine.dir/src/graphics/Renderer.cpp.o: ../../../include/math/vector3.hpp
 CMakeFiles/libre-engine.dir/src/graphics/Renderer.cpp.o: ../../../include/math/vector4.hpp
+CMakeFiles/libre-engine.dir/src/graphics/Renderer.cpp.o: ../../../include/system/Logger.hpp
 CMakeFiles/libre-engine.dir/src/graphics/Renderer.cpp.o: ../../../src/graphics/Renderer.cpp
 
 CMakeFiles/libre-engine.dir/src/graphics/Shader.cpp.o: ../../../include/core/LEVariant.hpp

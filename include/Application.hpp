@@ -6,6 +6,9 @@
 #include "system/Keyboard.hpp"
 
 #include "system/ComputerDetails.hpp"
+
+#include "DefaultState.hpp"
+
 /////////////////////////////////
 ///
 /// Current Notes, I will depreciating the
@@ -23,10 +26,11 @@ namespace libre{
     class Application{
 
     private:
-        Application(const char *t, int width, int height, graphics::RendererType rt);
+
         ~Application();
       static Application *m_instance;
-        bool m_active;
+      BaseState *m_state;
+      bool m_active;
         graphics::Window *m_Window;
         graphics::Renderer *m_Renderer;
         system::Mouse *m_Mouse;
@@ -35,10 +39,25 @@ namespace libre{
 
 
     public:
+        Application(const char *t, int width, int height, graphics::RendererType rt);
+        Application(const char *t, int width, int height, graphics::RendererType rt, BaseState *state);
         bool Run();
         void Stop();
         static Application *Instance();
 
+        graphics::Renderer *Renderer() const;
+        void setRenderer(graphics::Renderer *Renderer);
+        system::Mouse *Mouse() const;
+        void setMouse(system::Mouse *Mouse);
+        system::Keyboard *Keyboard() const;
+        void setKeyboard(system::Keyboard *Keyboard);
+        system::ComputerDetails *HostInfo() const;
+        void setHostInfo(system::ComputerDetails *HostInfo);
+        graphics::Window *Window() const;
+        void setWindow(graphics::Window *Window);
+        BaseState *state() const;
+        BaseState *getState();
+        void setState(BaseState *state);
     };
 
 

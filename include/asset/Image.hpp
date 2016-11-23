@@ -31,6 +31,10 @@ namespace libre{
       void load(SDL_Renderer* renderer);
 
 
+      SDL_Texture *texture() const;
+      void setTexture(SDL_Texture *texture);
+      SDL_Surface *surface() const;
+      void setSurface(SDL_Surface *surface);
     };
 
 

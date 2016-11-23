@@ -6,6 +6,8 @@
 /usr/local/include/libre-engine/core/LEVariant.hpp
 /usr/local/include/libre-engine/core/System.hpp
 /usr/local/include/libre-engine/core/Component.hpp
+/usr/local/include/libre-engine/graphics/oglObject.hpp
+/usr/local/include/libre-engine/graphics/oglObject.h
 /usr/local/include/libre-engine/graphics/Shader.hpp
 /usr/local/include/libre-engine/graphics/ShaderVariable.hpp
 /usr/local/include/libre-engine/graphics/Window.hpp
@@ -66,6 +68,10 @@
 /usr/local/include/libre-engine/physics/aabb.hpp
 /usr/local/include/libre-engine/physics/rectangle.hpp
 /usr/local/include/libre-engine/Application.h
+/usr/local/include/libre-engine/BaseState.hpp
+/usr/local/include/libre-engine/DefaultState.hpp
+/usr/local/include/libre-engine/graphics/oglObject.hpp
+/usr/local/include/libre-engine/graphics/oglObject.h
 /usr/local/include/libre-engine/graphics/Shader.hpp
 /usr/local/include/libre-engine/graphics/ShaderVariable.hpp
 /usr/local/include/libre-engine/graphics/Window.hpp

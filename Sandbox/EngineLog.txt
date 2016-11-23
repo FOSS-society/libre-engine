@@ -1,13 +1,11 @@
-2016-11-15.18:58:33:	Initializing Engin
-2016-11-15.18:58:33:	Renderer Exception Caught
-2016-11-15.18:58:33:	The specified window isn't an OpenGL windo
-2016-11-15.19:06:29:	Initializing Engin
-2016-11-15.19:31:54:	Initializing Engin
-2016-11-15.19:33:08:	Initializing Engin
-2016-11-15.22:21:05:	Initializing Engin
-2016-11-15.22:57:03:	Initializing Application
-2016-11-15.23:12:02:	Initializing Application
-2016-11-15.23:12:37:	Initializing Application
-2016-11-20.14:00:29:	Initializing Application
-2016-11-21.20:03:51:	Initializing Application
-2016-11-21.20:06:00:	Initializing Application /
+2016-11-22.20:10:25:	Initializing Application /
+2016-11-22.20:12:11:	Initializing Application /
+2016-11-22.20:12:11:	Creating 2D SDL_Renderer
+2016-11-22.21:02:12:	Initializing Application /
+2016-11-22.21:02:12:	Creating 2D SDL_Rendere
+2016-11-22.21:05:18:	Initializing Application /
+2016-11-22.21:05:18:	Creating 2D SDL_Rendere
+2016-11-22.22:00:08:	Initializing Application /
+2016-11-22.22:00:09:	Creating 2D SDL_Rendere
+2016-11-22.22:08:48:	Initializing Application /
+2016-11-22.22:08:49:	Creating 2D SDL_Rendere

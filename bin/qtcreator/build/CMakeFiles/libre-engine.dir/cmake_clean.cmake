@@ -24,6 +24,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/libre-engine.dir/src/system/Mouse.cpp.o"
   "CMakeFiles/libre-engine.dir/src/asset/Image.cpp.o"
   "CMakeFiles/libre-engine.dir/src/Application.cpp.o"
+  "CMakeFiles/libre-engine.dir/src/DefaultState.cpp.o"
   "liblibre-engine.pdb"
   "liblibre-engine.a"
 )

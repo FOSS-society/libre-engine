@@ -5,6 +5,8 @@ CMakeFiles/libre-engine.dir/src/Application.cpp.o
  ../../../include/system/ComputerDetails.hpp
  ../../../include/system/OpenGL.hpp
  /home/clim/Desktop/Programming/cpp/libre-engine/include/Application.hpp
+ /home/clim/Desktop/Programming/cpp/libre-engine/include/BaseState.hpp
+ /home/clim/Desktop/Programming/cpp/libre-engine/include/DefaultState.hpp
  /home/clim/Desktop/Programming/cpp/libre-engine/include/graphics/Renderer.hpp
  /home/clim/Desktop/Programming/cpp/libre-engine/include/graphics/Window.hpp
  /home/clim/Desktop/Programming/cpp/libre-engine/include/graphics/graphics_common.hpp
@@ -17,6 +19,10 @@ CMakeFiles/libre-engine.dir/src/Application.cpp.o
  /home/clim/Desktop/Programming/cpp/libre-engine/include/system/OpenGL.hpp
  /home/clim/Desktop/Programming/cpp/libre-engine/include/system/Utility.hpp
  /home/clim/Desktop/Programming/cpp/libre-engine/src/Application.cpp
+CMakeFiles/libre-engine.dir/src/DefaultState.cpp.o
+ /home/clim/Desktop/Programming/cpp/libre-engine/include/BaseState.hpp
+ /home/clim/Desktop/Programming/cpp/libre-engine/include/DefaultState.hpp
+ /home/clim/Desktop/Programming/cpp/libre-engine/src/DefaultState.cpp
 CMakeFiles/libre-engine.dir/src/asset/Image.cpp.o
  /home/clim/Desktop/Programming/cpp/libre-engine/include/asset/Base_Asset.hpp
  /home/clim/Desktop/Programming/cpp/libre-engine/include/asset/Image.hpp
@@ -48,6 +54,7 @@ CMakeFiles/libre-engine.dir/src/graphics/Renderer.cpp.o
  /home/clim/Desktop/Programming/cpp/libre-engine/include/math/vector2.hpp
  /home/clim/Desktop/Programming/cpp/libre-engine/include/math/vector3.hpp
  /home/clim/Desktop/Programming/cpp/libre-engine/include/math/vector4.hpp
+ /home/clim/Desktop/Programming/cpp/libre-engine/include/system/Logger.hpp
  /home/clim/Desktop/Programming/cpp/libre-engine/src/graphics/Renderer.cpp
 CMakeFiles/libre-engine.dir/src/graphics/Shader.cpp.o
  /home/clim/Desktop/Programming/cpp/libre-engine/include/core/LEVariant.hpp

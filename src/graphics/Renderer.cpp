@@ -1,4 +1,5 @@
 #include "../../include/graphics/Renderer.hpp"
+#include "../../include/system/Logger.hpp"
 #include <assert.h>
 namespace libre{
   namespace graphics{
@@ -6,9 +7,20 @@ namespace libre{
     Renderer::Renderer(Window *parent,RendererType type): m_window(parent),m_type(type){
       switch(m_type){
         case RendererType::RT_2D:
-        this->m_context = new RenderingContext(SDL_CreateRenderer(this->m_window->SDLWIN(),-1,SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC));
+          /**
+            Debugging Purposes
+            */
+          system::Logger::LogInstance()->Log("Creating 2D SDL_Renderer");
+
+          this->m_context = new RenderingContext(SDL_CreateRenderer(this->m_window->SDLWIN(),-1,SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC));
         break;
+
         case RendererType::RT_3D:
+          /**
+            Debugging Purposes
+            */
+          system::Logger::LogInstance()->Log("Creating 3D SDL_GL_Context\n");
+
         this->m_context = new RenderingContext((SDL_GLContext*)SDL_GL_CreateContext(this->m_window->SDLWIN()));
         break;
       default:
