@@ -11,7 +11,7 @@ class Application;
 
     class BaseState{
 
-    private:
+    protected:
        Application *m_app;
 
     public:

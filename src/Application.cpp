@@ -10,7 +10,7 @@
 
 namespace libre{
 
-Application * Application::m_instance = nullptr;
+Application * Application::Instance = nullptr;
 
 Application::Application(const char *t, int width, int height,graphics::RendererType rt){
     system::Logger::LogInstance()->Log("Initializing Application /n");
@@ -31,6 +31,7 @@ Application::Application(const char *t, int width, int height,graphics::Renderer
             this->m_Keyboard = new system::Keyboard();
             this->m_HostInfo = new system::ComputerDetails();
             this->m_state = new DefaultState();
+            this->m_state->setApp(this);
 
 
 
@@ -85,7 +86,8 @@ Application::Application(const char *t, int width, int height, graphics::Rendere
             this->m_Keyboard = new system::Keyboard();
             this->m_HostInfo = new system::ComputerDetails();
             this->m_state = state;
-            this->m_state->initialize();
+            this->m_state->setApp(this);
+
 
 
           try{
@@ -119,6 +121,11 @@ Application::Application(const char *t, int width, int height, graphics::Rendere
 
 }
 
+void Application::Initialize()
+{
+    this->m_state->initialize();
+}
+
 Application::~Application(){
     m_state->destroy();
     delete m_state;
@@ -146,12 +153,22 @@ graphics::Window *Application::Window() const
     return m_Window;
 }
 
+libre::graphics::Window *libre::Application::getWindow()
+{
+    return m_Window;
+}
+
 void Application::setWindow(graphics::Window *Window)
 {
     m_Window = Window;
 }
 
 system::ComputerDetails *Application::HostInfo() const
+{
+    return m_HostInfo;
+}
+
+system::ComputerDetails *Application::getHostInfo()
 {
     return m_HostInfo;
 }
@@ -166,6 +183,11 @@ system::Keyboard *Application::Keyboard() const
     return m_Keyboard;
 }
 
+system::Keyboard *Application::getKeyboard()
+{
+    return m_Keyboard;
+}
+
 void Application::setKeyboard(system::Keyboard *Keyboard)
 {
     m_Keyboard = Keyboard;
@@ -176,12 +198,22 @@ system::Mouse *Application::Mouse() const
     return m_Mouse;
 }
 
+system::Mouse *Application::getMouse()
+{
+    return m_Mouse;
+}
+
 void Application::setMouse(system::Mouse *Mouse)
 {
     m_Mouse = Mouse;
 }
 
 graphics::Renderer *Application::Renderer() const
+{
+    return m_Renderer;
+}
+
+graphics::Renderer *Application::getRenderer()
 {
     return m_Renderer;
 }
@@ -261,14 +293,6 @@ void Application::Stop()
     this->m_active = false;
 }
 
-Application *Application::Instance()
-{
-    if(Application::m_instance == nullptr){
-        Application::m_instance = new Application("Libre-Engine Default",640,480,graphics::RendererType::RT_2D);
-    }
-    return Application::m_instance;
-
-}
 
 
 }

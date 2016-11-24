@@ -51,6 +51,7 @@ namespace libre{
 		Vector2<t> operator+(Vector2 right);
 		Vector2<t> operator-(Vector2 right);
 		Vector2<t> operator*(Vector2 right);
+        Vector2<t> operator*(t right);
 		Vector2<t> operator/(Vector2 right);
 
 		bool operator==(Vector2<t> right);
@@ -140,8 +141,14 @@ namespace libre{
 		}
 		template <typename t>
 		Vector2<t> Vector2<t>::operator*(Vector2 right){
-			return this->multiply(right);
-		}
+            return this->multiply(right);
+        }
+        template <typename t>
+        Vector2<t> Vector2<t>::operator*(t right)
+        {
+            this->m_x * right;
+            this->m_y * right;
+        }
 		template <typename t>
 		Vector2<t> Vector2<t>::operator/(Vector2 right){
 			return this->divide(right);

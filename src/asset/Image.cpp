@@ -45,10 +45,12 @@ namespace libre{
           this->m_surface = IMG_Load(this->getFilePath().c_str());
           this->m_texture = SDL_CreateTextureFromSurface(renderer,m_surface);
           this->setLoad(true);
-          }
-        }else{
-            std::cout << "Error, SDL is not initialized!";
-        }
+          }else
+          std::cout << "Error, Object already loaded.";
+       }
+      else
+            std::cout << "Error, SDL is not initia1lized!";
+
       }
 
 

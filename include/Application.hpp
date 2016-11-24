@@ -28,7 +28,7 @@ namespace libre{
     private:
 
         ~Application();
-      static Application *m_instance;
+
       BaseState *m_state;
       bool m_active;
         graphics::Window *m_Window;
@@ -41,19 +41,30 @@ namespace libre{
     public:
         Application(const char *t, int width, int height, graphics::RendererType rt);
         Application(const char *t, int width, int height, graphics::RendererType rt, BaseState *state);
+        void Initialize();
         bool Run();
         void Stop();
-        static Application *Instance();
+        static Application *Instance;
 
         graphics::Renderer *Renderer() const;
+        graphics::Renderer *getRenderer();
+
         void setRenderer(graphics::Renderer *Renderer);
         system::Mouse *Mouse() const;
+        system::Mouse *getMouse();
+
         void setMouse(system::Mouse *Mouse);
         system::Keyboard *Keyboard() const;
+        system::Keyboard *getKeyboard();
+
         void setKeyboard(system::Keyboard *Keyboard);
         system::ComputerDetails *HostInfo() const;
+        system::ComputerDetails *getHostInfo();
+
         void setHostInfo(system::ComputerDetails *HostInfo);
         graphics::Window *Window() const;
+        graphics::Window *getWindow();
+
         void setWindow(graphics::Window *Window);
         BaseState *state() const;
         BaseState *getState();
