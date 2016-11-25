@@ -1,5 +1,5 @@
-#ifndef OGLOBJECT_H
-#define OGLOBJECT_H
+#ifndef OGLOBJECT_HPP
+#define OGLOBJECT_HPP
 
 
 
@@ -23,4 +23,4 @@ namespace libre{
 }
 
 
-#endif // OGLOBJECT_H
+#endif // OGLOBJECT_HPP

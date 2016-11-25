@@ -43,12 +43,14 @@ public:
         std::cout << "WinSize: X: " << winSize.getX() << ", Y: " <<winSize.getY() <<std::endl;
         std::cout <<" RectPosition:X: " << rect.x << ", Y: " << rect.y << std::endl;
         std::cout << "Velocity:X: " << velocity.getX() << ", Y: " << velocity.getY()<< std::endl;
-        if(rect.x+rect.w >= winSize.getX() || rect.y+rect.h >=winSize.getY()){
+        if(rect.x+rect.w >= winSize.getX()){
             velocity.setX(-2);
+        }else if(rect.y+rect.h >=winSize.getY()){
             velocity.setY(-2);
-        }else if(rect.x <=0 || rect.y <=0){
+        }else if(rect.x <=0){
             velocity.setX(2);
-            velocity.setY(2);
+        }else if(rect.y <=0){
+             velocity.setY(2);
         }
 
         rect.x +=velocity.getX();

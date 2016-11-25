@@ -83,3 +83,5 @@
 2016-11-23.22:52:08:	Creating 2D SDL_Rendere
 2016-11-23.22:53:48:	Initializing Application /
 2016-11-23.22:53:49:	Creating 2D SDL_Rendere
+2016-11-24.23:29:11:	Initializing Application /
+2016-11-24.23:29:12:	Creating 2D SDL_Rendere
