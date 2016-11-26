@@ -26,7 +26,16 @@ public:
     bool initialize()
     {
         ball->load(m_app->getRenderer()->getContext()->asSDL);
-        winSize = math::Vector2<int>(480,640);
+        winSize = math::Vector2<int>(640,480);
+
+
+        std::cout <<"=======================================" << std::endl;
+        std::cout <<"Initialization Function:" << std::endl;
+        std::cout <<"winSize"<< std::endl << "X:" << winSize.getX() << "Y:" << winSize.getY() << std::endl;
+        std::cout <<"========================================" << std::endl;
+
+
+
         rect.h = 32;
         rect.w = 32;
         rect.x = pos.getX();
@@ -39,6 +48,11 @@ public:
     }
     bool Update()
     {
+        int tx = static_cast<int>(m_app->getWindow()->Size().getX());
+        int ty = static_cast<int>(m_app->getWindow()->Size().getY());
+
+        winSize.setX(tx);
+        winSize.setY(ty);
 
         std::cout << "WinSize: X: " << winSize.getX() << ", Y: " <<winSize.getY() <<std::endl;
         std::cout <<" RectPosition:X: " << rect.x << ", Y: " << rect.y << std::endl;

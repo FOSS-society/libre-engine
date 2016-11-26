@@ -13,7 +13,7 @@ namespace libre{
 Application * Application::Instance = nullptr;
 
 Application::Application(const char *t, int width, int height,graphics::RendererType rt){
-    system::Logger::LogInstance()->Log("Initializing Application /n");
+    system::LogToConsoleAndFile("Initializing Application/n");
     try{
         if(graphics::s_initializeSDLWithEverything() != 0){
             throw ApplicationException(SDL_GetError());
@@ -21,8 +21,11 @@ Application::Application(const char *t, int width, int height,graphics::Renderer
 
             if(rt == graphics::RendererType::RT_3D){
                 this->m_Window = new graphics::Window(t,width,height, true);
+                system::LogToConsoleAndFile("Initializing SDL_GL_Context /n");
+
             }else{
                 this->m_Window = new graphics::Window(t,width,height,false);
+                 system::LogToConsoleAndFile("Initializing SDL_Renderer /n");
 
             }
 
@@ -41,23 +44,23 @@ Application::Application(const char *t, int width, int height,graphics::Renderer
                     throw ApplicationException(std::string((char *)glewGetErrorString(glew)));
                 }
             }catch(ApplicationException &apex){
-                system::Logger::LogInstance()->Log("Glew Initialization Exception Caught:");
-                system::Logger::LogInstance()->Log(apex.what());
+                system::LogToConsoleAndFile("Glew Initialization Exception Caught:");
+                system::LogToConsoleAndFile(apex.what());
                 std::cout << "Glew Initialization Exception caught: " << apex.what() << std::endl ;
           }
 
         }
     }catch(ApplicationException &appex){
-        system::Logger::LogInstance()->Log("Application Exception Caught:");
-        system::Logger::LogInstance()->Log(appex.what());
+        system::LogToConsoleAndFile("Application Exception Caught:");
+        system::LogToConsoleAndFile(appex.what());
         std::cout << "Application Exception caught: " << appex.what() << std::endl ;
     }catch(graphics::WindowException &winex){
-        system::Logger::LogInstance()->Log("Window Exception Caught:");
-        system::Logger::LogInstance()->Log(winex.what());
+        system::LogToConsoleAndFile("Window Exception Caught:");
+        system::LogToConsoleAndFile(winex.what());
         std::cout << "Window Exception caught: " << winex.what() << std::endl ;
     }catch(graphics::RendererException &rendex){
-        system::Logger::LogInstance()->Log("Renderer Exception Caught:");
-        system::Logger::LogInstance()->Log(rendex.what());
+        system::LogToConsoleAndFile("Renderer Exception Caught:");
+        system::LogToConsoleAndFile(rendex.what());
         std::cout << "Window Exception caught: " << rendex.what() << std::endl ;
     }
 
@@ -68,7 +71,7 @@ Application::Application(const char *t, int width, int height,graphics::Renderer
 
 Application::Application(const char *t, int width, int height, graphics::RendererType rt, BaseState *state)
 {
-    system::Logger::LogInstance()->Log("Initializing Application /n");
+    system::LogToConsoleAndFile("Initializing Application /n");
     try{
         if(graphics::s_initializeSDLWithEverything() != 0){
             throw ApplicationException(SDL_GetError());
@@ -96,24 +99,21 @@ Application::Application(const char *t, int width, int height, graphics::Rendere
                     throw ApplicationException(std::string((char *)glewGetErrorString(glew)));
                 }
             }catch(ApplicationException &apex){
-                system::Logger::LogInstance()->Log("Glew Initialization Exception Caught:");
-                system::Logger::LogInstance()->Log(apex.what());
+                system::LogToConsoleAndFile("Glew Initialization Exception Caught:");
+                system::LogToConsoleAndFile(apex.what());
                 std::cout << "Glew Initialization Exception caught: " << apex.what() << std::endl ;
           }
 
         }
     }catch(ApplicationException &appex){
-        system::Logger::LogInstance()->Log("Application Exception Caught:");
-        system::Logger::LogInstance()->Log(appex.what());
-        std::cout << "Application Exception caught: " << appex.what() << std::endl ;
+        system::LogToConsoleAndFile("Application Exception Caught:");
+        system::LogToConsoleAndFile(appex.what());
     }catch(graphics::WindowException &winex){
-        system::Logger::LogInstance()->Log("Window Exception Caught:");
-        system::Logger::LogInstance()->Log(winex.what());
-        std::cout << "Window Exception caught: " << winex.what() << std::endl ;
+        system::LogToConsoleAndFile("Window Exception Caught:");
+        system::LogToConsoleAndFile(winex.what());
     }catch(graphics::RendererException &rendex){
-        system::Logger::LogInstance()->Log("Renderer Exception Caught:");
-        system::Logger::LogInstance()->Log(rendex.what());
-        std::cout << "Window Exception caught: " << rendex.what() << std::endl ;
+        system::LogToConsoleAndFile("Renderer Exception Caught:");
+        system::LogToConsoleAndFile(rendex.what());
     }
 
 
@@ -275,6 +275,13 @@ bool Application::Run()
                    m_Keyboard->setKeyUp(ev.key.keysym.sym);
 
                break;
+
+            case SDL_WINDOWEVENT_RESIZED:
+                SDL_SetWindowSize(m_Window->SDLWIN(),ev.window.data1,ev.window.data2);
+                m_Window->setSize(ev.window.data1,ev.window.data2);
+                break;
+            default:
+                break;
 
              }
 

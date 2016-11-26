@@ -7,7 +7,20 @@ namespace libre{
 	namespace math{
 
 
+    /**
+     *@brief internalv4
+     * a simplification for opengl usage. can easily call getInternal().i_x or getInternal().i_y
+     */
+    template <typename t>
+    struct internalv4{
+        t i_x;
+        t i_y;
+        t i_z;
+        t i_w;
 
+        internalv4(){}
+        internalv4(t x, t y,t z,t w):i_x(x), i_y(y),i_z(z), i_w(w){}
+    };
     /**
     *@brief Vector4 Class
     *
@@ -33,7 +46,8 @@ namespace libre{
 		public:
         Vector4(){}
 		Vector4(const t& x,const t& y,const t& z,const t&w);
-		Vector4(const Vector4& copy);
+        Vector4(const Vector4& copy);
+        Vector4(const internalv4<t> vec);
 
 		t& getX();
 		t X()const;
@@ -78,8 +92,14 @@ namespace libre{
 						this->m_x = x;
 						this->m_y = y;
 						this->m_z = z;
-						this->m_w = w;
-				}
+                    this->m_w = w;
+                }
+
+                template <typename t>
+                Vector4<t>::Vector4(const internalv4<t> vec):m_x(vec.i_x),m_y(vec.i_y),m_z(vec.i_z),m_w(vec.i_w)
+                {
+
+                }
 				template <typename t>
 				Vector4<t>::Vector4(const Vector4<t>& copy){
 					this->m_x = copy.X();

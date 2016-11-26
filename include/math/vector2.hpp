@@ -8,6 +8,18 @@ namespace libre{
 
 	namespace math{
 
+    /**
+     *@brief internalv2
+     * a simplification for opengl usage. can easily call getInternal().i_x or getInternal().i_y
+     */
+    template <typename t>
+    struct internalv2{
+        t i_x;
+        t i_y;
+
+        internalv2(){}
+        internalv2(t x, t y):i_x(x),i_y(y){}
+    };
 
          /**
          *@brief Vector2 Class
@@ -28,9 +40,11 @@ namespace libre{
 		t m_x;
 		t m_y;
 
+
 		public:
         Vector2(){}
-		Vector2(const t& x,const t& y);
+        Vector2(const t& x,const t& y);
+        Vector2(const internalv2<t> &vec);
 		Vector2(const Vector2& copy);
 
 		t& getX();
@@ -40,6 +54,8 @@ namespace libre{
 
 		void setX(t x);
 		void setY(t y);
+
+        internalv2<t> getInternal(){return internalv2<t>(m_x,m_y);}
 
 		Vector2<t> add(const Vector2<t> &other);
 		Vector2<t> sub(const Vector2<t> &other);
@@ -67,8 +83,15 @@ namespace libre{
 		template <typename t>
 		Vector2<t>::Vector2(const t&x, const t&y){
 				this->m_x = x;
-				this->m_y = y;
-		}
+            this->m_y = y;
+        }
+        template <typename t>
+        Vector2<t>::Vector2(const internalv2<t> &vec)
+        {
+            setX(vec.i_x);
+            setY(vec.i_y);
+
+        }
 		template <typename t>
 		Vector2<t>::Vector2(const Vector2<t>& copy){
 			this->m_x = copy.X();

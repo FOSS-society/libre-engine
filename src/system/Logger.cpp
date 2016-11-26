@@ -53,5 +53,6 @@ Logger& Logger::operator<<(const std::string& sMessage)
     return *this;
 }
 
+
   }
 }

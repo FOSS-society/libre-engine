@@ -8,7 +8,19 @@ namespace libre{
 
 	namespace math{
 
+    /**
+     *@brief internalv3
+     * a simplification for opengl usage. can easily call getInternal().i_x or getInternal().i_y
+     */
+    template <typename t>
+    struct internalv3{
+        t i_x;
+        t i_y;
+        t i_z;
 
+        internalv3(){}
+        internalv3(t x, t y,t z):i_x(x), i_y(y),i_z(z){}
+    };
 
     /**
     *@brief Vector3 Class
@@ -36,6 +48,7 @@ namespace libre{
 		public:
         Vector3(){}
 		Vector3(const t& x,const t& y,const t& z);
+        Vector3(const internalv3<t> &vec);
 		Vector3(const Vector3& copy);
 
 		t& getX();
@@ -44,6 +57,8 @@ namespace libre{
 		t Y()const;
 		t& getZ();
 		t Z()const;
+
+        internalv3<t> getInternal();
 
 		void setX(t x);
 		void setY(t y);
@@ -77,8 +92,13 @@ namespace libre{
 		Vector3<t>::Vector3(const t&x, const t&y, const t&z){
 				this->m_x = x;
 				this->m_y = y;
-				this->m_z = z;
-		}
+            this->m_z = z;
+        }
+        template <typename t>
+        Vector3<t>::Vector3(const internalv3<t> &vec):m_x(vec.i_x),m_y(vec.i_y),m_z(vec.i_z)
+        {
+
+        }
 		template <typename t>
 		Vector3<t>::Vector3(const Vector3<t>& copy){
 			this->m_x = copy.X();
@@ -108,8 +128,14 @@ namespace libre{
 		}
 		template <typename t>
 		t Vector3<t>::Z()const{
-			return this->m_z;
-		}
+            return this->m_z;
+        }
+
+        template <typename t>
+        internalv3<t> Vector3<t>::getInternal()
+        {
+            return internalv3<t>(m_x,m_y,m_z);
+        }
 
 
 		template <typename t>

@@ -44,16 +44,6 @@ DefaultState.hpp
 BaseState.hpp
 /home/clim/Desktop/Programming/cpp/libre-engine/include/BaseState.hpp
 
-/home/clim/Desktop/Programming/cpp/libre-engine/include/asset/Base_Asset.hpp
-iostream
--
-
-/home/clim/Desktop/Programming/cpp/libre-engine/include/asset/Image.hpp
-../graphics/graphics_common.hpp
-/home/clim/Desktop/Programming/cpp/libre-engine/include/graphics/graphics_common.hpp
-Base_Asset.hpp
-/home/clim/Desktop/Programming/cpp/libre-engine/include/asset/Base_Asset.hpp
-
 /home/clim/Desktop/Programming/cpp/libre-engine/include/core/Component.hpp
 iostream
 -
@@ -120,12 +110,6 @@ graphics_common.hpp
 ../graphics/ShaderVariable.hpp
 /home/clim/Desktop/Programming/cpp/libre-engine/include/graphics/ShaderVariable.hpp
 
-/home/clim/Desktop/Programming/cpp/libre-engine/include/graphics/ShaderProgram.hpp
-graphics_common.hpp
-/home/clim/Desktop/Programming/cpp/libre-engine/include/graphics/graphics_common.hpp
-Shader.hpp
-/home/clim/Desktop/Programming/cpp/libre-engine/include/graphics/Shader.hpp
-
 /home/clim/Desktop/Programming/cpp/libre-engine/include/graphics/ShaderVariable.hpp
 graphics_common.hpp
 /home/clim/Desktop/Programming/cpp/libre-engine/include/graphics/graphics_common.hpp
@@ -155,14 +139,6 @@ stdint.h
 /home/clim/Desktop/Programming/cpp/libre-engine/include/math/vector3.hpp
 ../math/vector4.hpp
 /home/clim/Desktop/Programming/cpp/libre-engine/include/math/vector4.hpp
-
-/home/clim/Desktop/Programming/cpp/libre-engine/include/math/SIMDArray.hpp
-emmintrin.h
--
-vector4.hpp
-/home/clim/Desktop/Programming/cpp/libre-engine/include/math/vector4.hpp
-vector2.hpp
-/home/clim/Desktop/Programming/cpp/libre-engine/include/math/vector2.hpp
 
 /home/clim/Desktop/Programming/cpp/libre-engine/include/math/libremath.hpp
 cassert
@@ -223,18 +199,6 @@ BufferElement.hpp
 /home/clim/Desktop/Programming/cpp/libre-engine/include/system/BufferElement.hpp
 ../system/Logger.hpp
 /home/clim/Desktop/Programming/cpp/libre-engine/include/system/Logger.hpp
-
-/home/clim/Desktop/Programming/cpp/libre-engine/include/system/ComputerDetails.hpp
-sys/utsname.h
--
-OpenGL.hpp
-/home/clim/Desktop/Programming/cpp/libre-engine/include/system/OpenGL.hpp
-../math/vector3.hpp
-/home/clim/Desktop/Programming/cpp/libre-engine/include/math/vector3.hpp
-
-/home/clim/Desktop/Programming/cpp/libre-engine/include/system/IndexBuffer.hpp
-GL/glew.h
--
 
 /home/clim/Desktop/Programming/cpp/libre-engine/include/system/Keyboard.hpp
 SDL2/SDL.h
@@ -318,10 +282,6 @@ system/ComputerDetails.hpp
 SDL2/SDL_events.h
 -
 
-/home/clim/Desktop/Programming/cpp/libre-engine/src/asset/Image.cpp
-../../include/asset/Image.hpp
-/home/clim/Desktop/Programming/cpp/libre-engine/include/asset/Image.hpp
-
 /home/clim/Desktop/Programming/cpp/libre-engine/src/core/Engine.cpp
 ../../include/core/Engine.hpp
 /home/clim/Desktop/Programming/cpp/libre-engine/include/core/Engine.hpp
@@ -350,32 +310,6 @@ assert.h
 ../../include/system/Logger.hpp
 /home/clim/Desktop/Programming/cpp/libre-engine/include/system/Logger.hpp
 
-/home/clim/Desktop/Programming/cpp/libre-engine/src/graphics/ShaderProgram.cpp
-../../include/graphics/ShaderProgram.hpp
-/home/clim/Desktop/Programming/cpp/libre-engine/include/graphics/ShaderProgram.hpp
-
-/home/clim/Desktop/Programming/cpp/libre-engine/src/graphics/ShaderVariable.cpp
-../../include/graphics/ShaderVariable.hpp
-/home/clim/Desktop/Programming/cpp/libre-engine/include/graphics/ShaderVariable.hpp
-
-/home/clim/Desktop/Programming/cpp/libre-engine/src/graphics/Window.cpp
-../../include/graphics/Window.hpp
-/home/clim/Desktop/Programming/cpp/libre-engine/include/graphics/Window.hpp
-
-/home/clim/Desktop/Programming/cpp/libre-engine/src/graphics/graphics_common.cpp
-../../include/graphics/graphics_common.hpp
-/home/clim/Desktop/Programming/cpp/libre-engine/include/graphics/graphics_common.hpp
-iostream
--
-
-/home/clim/Desktop/Programming/cpp/libre-engine/src/math/SIMDArray.cpp
-../../include/math/SIMDArray.hpp
-/home/clim/Desktop/Programming/cpp/libre-engine/include/math/SIMDArray.hpp
-
-/home/clim/Desktop/Programming/cpp/libre-engine/src/math/libremath.cpp
-../../include/math/libremath.hpp
-/home/clim/Desktop/Programming/cpp/libre-engine/include/math/libremath.hpp
-
 /home/clim/Desktop/Programming/cpp/libre-engine/src/system/Buffer.cpp
 ../../include/system/Buffer.hpp
 /home/clim/Desktop/Programming/cpp/libre-engine/include/system/Buffer.hpp
@@ -386,37 +320,11 @@ iostream
 ../../include/system/BufferLayout.hpp
 /home/clim/Desktop/Programming/cpp/libre-engine/include/system/BufferLayout.hpp
 
-/home/clim/Desktop/Programming/cpp/libre-engine/src/system/ComputerDetails.cpp
-../../include/system/ComputerDetails.hpp
-/home/clim/Desktop/Programming/cpp/libre-engine/include/system/ComputerDetails.hpp
-../../include/system/Utility.hpp
-/home/clim/Desktop/Programming/cpp/libre-engine/include/system/Utility.hpp
-iostream
--
-
-/home/clim/Desktop/Programming/cpp/libre-engine/src/system/IndexBuffer.cpp
-../../include/system/IndexBuffer.hpp
-/home/clim/Desktop/Programming/cpp/libre-engine/include/system/IndexBuffer.hpp
-../../include/system/OpenGL.hpp
-/home/clim/Desktop/Programming/cpp/libre-engine/include/system/OpenGL.hpp
-
-/home/clim/Desktop/Programming/cpp/libre-engine/src/system/Mouse.cpp
-../../include/system/Mouse.hpp
-/home/clim/Desktop/Programming/cpp/libre-engine/include/system/Mouse.hpp
-
-/home/clim/Desktop/Programming/cpp/libre-engine/src/system/OpenGL.cpp
-../../include/system/OpenGL.hpp
-/home/clim/Desktop/Programming/cpp/libre-engine/include/system/OpenGL.hpp
-iostream
--
-
-/home/clim/Desktop/Programming/cpp/libre-engine/src/system/Utility.cpp
-../../include/system/Utility.hpp
-/home/clim/Desktop/Programming/cpp/libre-engine/include/system/Utility.hpp
-../../include/system/OpenGL.hpp
-/home/clim/Desktop/Programming/cpp/libre-engine/include/system/OpenGL.hpp
-../../include/graphics/graphics_common.hpp
-/home/clim/Desktop/Programming/cpp/libre-engine/include/graphics/graphics_common.hpp
+/home/clim/Desktop/Programming/cpp/libre-engine/src/system/Logger.cpp
+../../include/system/Logger.hpp
+/home/clim/Desktop/Programming/cpp/libre-engine/include/system/Logger.hpp
+../../include/system/Time.hpp
+/home/clim/Desktop/Programming/cpp/libre-engine/include/system/Time.hpp
 
 /home/clim/Desktop/Programming/cpp/libre-engine/src/system/VertexArray.cpp
 ../../include/system/VertexArray.hpp

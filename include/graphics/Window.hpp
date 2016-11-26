@@ -47,6 +47,9 @@ namespace libre{
 
           const char * Title();
           SDL_Window * SDLWIN();
+
+          void setSize(const math::Vector2<unsigned int> s);
+          void setSize(const unsigned int x,const unsigned int y);
           math::Vector2<unsigned int> Size();
 
 

@@ -19,7 +19,7 @@ namespace libre{
         std::cerr << "GLEW Error: " <<  glewGetErrorString(error) << std::endl;
         std::cerr << "File: " << __FILE__ << std::endl << "Line: "  << __LINE__ << std::endl;
       }else{
-        std::cout << "Status: Using GLEW " << glewGetString(GLEW_VERSION);
+        std::cout << "Status: Using GLEW " << glewGetString(GLEW_VERSION) << std::endl;
         s_glewIsInitialized = true;
       }
         return error;

@@ -34,6 +34,10 @@ namespace libre{
       static Logger* LogInstance();
     };
 
+    static void LogToConsoleAndFile( char const * format,...){
+        Logger::LogInstance()->Log(format);
+        std::cout << format << std::endl;
+    }
 
   }
 }

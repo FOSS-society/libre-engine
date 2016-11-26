@@ -67,11 +67,11 @@ namespace libre{
 
         if(OpenGL){
             this->m_window = (SDL_Window*)SDL_CreateWindow(t,SDL_WINDOWPOS_UNDEFINED,
-                                          SDL_WINDOWPOS_UNDEFINED, width,height,SDL_WINDOW_SHOWN | SDL_WINDOW_OPENGL);
+                                          SDL_WINDOWPOS_UNDEFINED, width,height,SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE | SDL_WINDOW_OPENGL);
         }else{
 
         this->m_window = (SDL_Window*)SDL_CreateWindow(t,SDL_WINDOWPOS_UNDEFINED,
-                                      SDL_WINDOWPOS_UNDEFINED, width,height,SDL_WINDOW_SHOWN);
+                                      SDL_WINDOWPOS_UNDEFINED, width,height,SDL_WINDOW_SHOWN| SDL_WINDOW_RESIZABLE );
 }
         if(this->m_window == nullptr){
             throw WindowException(SDL_GetError());
@@ -106,7 +106,18 @@ namespace libre{
       return this->m_title;
     }
     SDL_Window * Window::SDLWIN(){
-      return this->m_window;
+        return this->m_window;
+    }
+
+    void Window::setSize(const math::Vector2<unsigned int> s)
+    {
+        m_size = s;
+    }
+
+    void Window::setSize(const unsigned int x, const unsigned int y)
+    {
+        m_size.setX(x);
+        m_size.setY(y);
     }
     math::Vector2<unsigned int> Window::Size(){
         return this->m_size;
