@@ -1,6 +1,6 @@
 Libre Engine
 
-Design-Doc Revision: 8
+Design-Doc Revision: 9
 Created:9/9/16
 
 Rev History:
@@ -11,6 +11,7 @@ Rev History:
 9/28/16 -6
 9/29/16 -7
 10/30/16 -8
+12/6/16 -9
 
 
 Description: a game engine written for linux that
@@ -87,7 +88,7 @@ Classes:
 [] core::CircleCollider - Class that represents a circle collider
 [] core::SphereCollider - class that represents a sphere collider
 [] core::Behavior - Class that represents a Script as a component
-[ce] core::Engine - Class that represents the whole engine
+DEPRECIATING (see 1): [ce] core::Engine - Class that represents the whole engine
 [] core::StateComponent - Class that represents the state of the program.
 
 
@@ -166,7 +167,7 @@ Future
 [] asset::Model - Class that represents a Model asset
 [] asset::ScriptAsset - Class that represents a script asset
 
-[] program::SinglePlayerApp - Class that represents an application based on the engine
+[c?] libre::SinglePlayerApp - Class that represents an application based on the engine
 	 that is single player, and only relies on the base components of the engine.
 	 This is just a base class, you will have to create a sub-class to initialize
 	 all your user information.
@@ -178,6 +179,11 @@ Future
 [] program::Server - Class that represents a server, a game can be written to run on
 	this server, as a multi-player game
 
+
+##########
+REVISE
+##########
+
 Event Notes:
 	A class Event should be created, which handles the whole event system. SDL2
 will be used to grab input from such devices (keyboard, mouse, touch, etc) that
@@ -188,6 +194,30 @@ component (based on what was done), that controls interaction of the game. I wil
 this similar, but not identical to http://www.sdltutorials.com/sdl-events . The user can
 then create a subclass of the Input component, to handle the events differently then
 the default settings.
+
+#########
+#END REVISE
+#########
+
+
+Vertex Notes:
+
+	Vertex data needs to be dynamic. This is because i dont know what shaders you plan on adding to the engine, therefore, i cant assume the amount of information you plan on sending into OpenGL.  So i plan on, for now, just creating vertex info based on more common shaders. Example:
+	vtdbasic_pos4_col4 will be a vertex with position info as well as color info.
+	
+	List:
+	vtdbasic_pos3 - vec3 position
+	vtdbasic_pos4_col4 - vec4 position, vec4 color
+	vtdbasic_pos4_norm3 - vec4 position, vec3 normal
+	
+
+I dont know, this is just a thought, hence why its in the Design doc and not in the code yet ;)
+
+
+
+comments:
+1: Engine class has been deemed depreciated until further notice, i may plan on using this to
+single-handedly load assets into the Application.
 
 
 

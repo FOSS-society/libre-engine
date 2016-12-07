@@ -134,6 +134,8 @@
       </Unit>
       <Unit filename="/home/clim/Desktop/Programming/cpp/libre-engine/src/core/Engine.cpp">
       </Unit>
+      <Unit filename="/home/clim/Desktop/Programming/cpp/libre-engine/src/graphics/Camera.cpp">
+      </Unit>
       <Unit filename="/home/clim/Desktop/Programming/cpp/libre-engine/src/graphics/Renderer.cpp">
       </Unit>
       <Unit filename="/home/clim/Desktop/Programming/cpp/libre-engine/src/graphics/Shader.cpp">
@@ -197,6 +199,8 @@
       <Unit filename="/home/clim/Desktop/Programming/cpp/libre-engine/include/core/LEVariant.hpp">
       </Unit>
       <Unit filename="/home/clim/Desktop/Programming/cpp/libre-engine/include/core/System.hpp">
+      </Unit>
+      <Unit filename="/home/clim/Desktop/Programming/cpp/libre-engine/include/graphics/Camera.hpp">
       </Unit>
       <Unit filename="/home/clim/Desktop/Programming/cpp/libre-engine/include/graphics/Renderer.hpp">
       </Unit>

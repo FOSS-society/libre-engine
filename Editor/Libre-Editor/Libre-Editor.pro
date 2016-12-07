@@ -11,6 +11,7 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 TARGET = Libre-Editor
 TEMPLATE = app
 
+ CONFIG += c++11
 
 SOURCES += source/main.cpp \
         source/mainwindow.cpp

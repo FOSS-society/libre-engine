@@ -47,6 +47,13 @@ CMakeFiles/libre-engine.dir/src/core/Engine.cpp.o
  /home/clim/Desktop/Programming/cpp/libre-engine/include/system/Mouse.hpp
  /home/clim/Desktop/Programming/cpp/libre-engine/include/system/Time.hpp
  /home/clim/Desktop/Programming/cpp/libre-engine/src/core/Engine.cpp
+CMakeFiles/libre-engine.dir/src/graphics/Camera.cpp.o
+ /home/clim/Desktop/Programming/cpp/libre-engine/include/graphics/Camera.hpp
+ /home/clim/Desktop/Programming/cpp/libre-engine/include/graphics/graphics_common.hpp
+ /home/clim/Desktop/Programming/cpp/libre-engine/include/math/vector2.hpp
+ /home/clim/Desktop/Programming/cpp/libre-engine/include/math/vector3.hpp
+ /home/clim/Desktop/Programming/cpp/libre-engine/include/math/vector4.hpp
+ /home/clim/Desktop/Programming/cpp/libre-engine/src/graphics/Camera.cpp
 CMakeFiles/libre-engine.dir/src/graphics/Renderer.cpp.o
  /home/clim/Desktop/Programming/cpp/libre-engine/include/graphics/Renderer.hpp
  /home/clim/Desktop/Programming/cpp/libre-engine/include/graphics/Window.hpp

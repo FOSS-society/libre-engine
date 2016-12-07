@@ -1,5 +1,6 @@
 #include <libre-engine/Application.hpp>
 #include <libre-engine/asset/Image.hpp>
+#include <libre-engine/system/Logger.hpp>
 
 
 using namespace libre;
@@ -40,6 +41,8 @@ public:
         rect.w = 32;
         rect.x = pos.getX();
         rect.y = pos.getY();
+
+
         return true;
     }
     bool FixedUpdate()
@@ -48,8 +51,9 @@ public:
     }
     bool Update()
     {
-        int tx = static_cast<int>(m_app->getWindow()->Size().getX());
-        int ty = static_cast<int>(m_app->getWindow()->Size().getY());
+        int tx,ty;
+        SDL_GetRendererOutputSize(m_app->getRenderer()->getContext()->asSDL,&tx,&ty);
+
 
         winSize.setX(tx);
         winSize.setY(ty);
@@ -67,12 +71,13 @@ public:
              velocity.setY(2);
         }
 
-        rect.x +=velocity.getX();
-        rect.y +=velocity.getY();
+
+        rect.x += velocity.getX();
+        rect.y += velocity.getY();
 
         if (SDL_RenderCopy(this->getApp()->getRenderer()->getContext()->asSDL,ball->texture(),NULL,&rect) !=0){
         std::cout << "SDL Error: " << SDL_GetError();
-    }
+        }
         //SDL_RenderDrawRect(this->getApp()->Renderer()->getContext()->asSDL,&rect);
         return true;
     }
@@ -103,6 +108,13 @@ int main(int argc, char *argv[]){
     TestState *ts = new TestState();
     Application::Instance = new Application(std::string("Libre-Engine v0.2.0 Test").c_str(),480,640,graphics::RendererType::RT_2D, ts);
     Application::Instance->Initialize();
+
+    system::ComputerDetails details;
+
+    system::Logger::LogInstance()->Log("OpenGL Info:\n");
+    system::Logger::LogInstance()->Log("vendor:%s\n",details.getOpenGLInfo().vendor);
+    system::Logger::LogInstance()->Log("renderer:%s\n",details.getOpenGLInfo().renderer);
+
     while(Application::Instance->Run());
 
     return 0;

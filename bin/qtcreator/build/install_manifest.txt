@@ -8,6 +8,7 @@
 /usr/local/include/libre-engine/graphics/oglObject.hpp
 /usr/local/include/libre-engine/graphics/Shader.hpp
 /usr/local/include/libre-engine/graphics/ShaderVariable.hpp
+/usr/local/include/libre-engine/graphics/Camera.hpp
 /usr/local/include/libre-engine/graphics/Window.hpp
 /usr/local/include/libre-engine/graphics/Renderer.hpp
 /usr/local/include/libre-engine/graphics/graphics_common.hpp
@@ -69,6 +70,7 @@
 /usr/local/include/libre-engine/graphics/oglObject.hpp
 /usr/local/include/libre-engine/graphics/Shader.hpp
 /usr/local/include/libre-engine/graphics/ShaderVariable.hpp
+/usr/local/include/libre-engine/graphics/Camera.hpp
 /usr/local/include/libre-engine/graphics/Window.hpp
 /usr/local/include/libre-engine/graphics/Renderer.hpp
 /usr/local/include/libre-engine/graphics/graphics_common.hpp

@@ -47,6 +47,13 @@ CMakeFiles/libre-engine.dir/src/core/Engine.cpp.o: ../../../include/system/Mouse
 CMakeFiles/libre-engine.dir/src/core/Engine.cpp.o: ../../../include/system/Time.hpp
 CMakeFiles/libre-engine.dir/src/core/Engine.cpp.o: ../../../src/core/Engine.cpp
 
+CMakeFiles/libre-engine.dir/src/graphics/Camera.cpp.o: ../../../include/graphics/Camera.hpp
+CMakeFiles/libre-engine.dir/src/graphics/Camera.cpp.o: ../../../include/graphics/graphics_common.hpp
+CMakeFiles/libre-engine.dir/src/graphics/Camera.cpp.o: ../../../include/math/vector2.hpp
+CMakeFiles/libre-engine.dir/src/graphics/Camera.cpp.o: ../../../include/math/vector3.hpp
+CMakeFiles/libre-engine.dir/src/graphics/Camera.cpp.o: ../../../include/math/vector4.hpp
+CMakeFiles/libre-engine.dir/src/graphics/Camera.cpp.o: ../../../src/graphics/Camera.cpp
+
 CMakeFiles/libre-engine.dir/src/graphics/Renderer.cpp.o: ../../../include/graphics/Renderer.hpp
 CMakeFiles/libre-engine.dir/src/graphics/Renderer.cpp.o: ../../../include/graphics/Window.hpp
 CMakeFiles/libre-engine.dir/src/graphics/Renderer.cpp.o: ../../../include/graphics/graphics_common.hpp

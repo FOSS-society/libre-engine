@@ -1,7 +1,7 @@
 #ifndef OGLOBJECT_HPP
 #define OGLOBJECT_HPP
 
-
+#include "graphics_common.hpp"
 
 namespace libre{
 
@@ -9,7 +9,8 @@ namespace libre{
 
     class oglObject{
 
-    private:
+    protected:
+
 
 
 

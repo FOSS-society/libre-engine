@@ -14,9 +14,9 @@ namespace libre{
 
     struct OpenGLInformation{
         math::Vector2<uint8_t> version;
-        GLubyte * vendor;
-        GLubyte * renderer;
-        GLubyte * shader_version;
+        char * vendor;
+        char * renderer;
+        char * shader_version;
 
         OpenGLInformation();
 

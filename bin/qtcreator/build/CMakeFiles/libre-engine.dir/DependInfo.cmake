@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/clim/Desktop/Programming/cpp/libre-engine/src/DefaultState.cpp" "/home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles/libre-engine.dir/src/DefaultState.cpp.o"
   "/home/clim/Desktop/Programming/cpp/libre-engine/src/asset/Image.cpp" "/home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles/libre-engine.dir/src/asset/Image.cpp.o"
   "/home/clim/Desktop/Programming/cpp/libre-engine/src/core/Engine.cpp" "/home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles/libre-engine.dir/src/core/Engine.cpp.o"
+  "/home/clim/Desktop/Programming/cpp/libre-engine/src/graphics/Camera.cpp" "/home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles/libre-engine.dir/src/graphics/Camera.cpp.o"
   "/home/clim/Desktop/Programming/cpp/libre-engine/src/graphics/Renderer.cpp" "/home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles/libre-engine.dir/src/graphics/Renderer.cpp.o"
   "/home/clim/Desktop/Programming/cpp/libre-engine/src/graphics/Shader.cpp" "/home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles/libre-engine.dir/src/graphics/Shader.cpp.o"
   "/home/clim/Desktop/Programming/cpp/libre-engine/src/graphics/ShaderProgram.cpp" "/home/clim/Desktop/Programming/cpp/libre-engine/bin/qtcreator/build/CMakeFiles/libre-engine.dir/src/graphics/ShaderProgram.cpp.o"

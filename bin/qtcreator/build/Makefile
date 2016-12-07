@@ -252,6 +252,30 @@ src/core/Engine.cpp.s:
 	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/core/Engine.cpp.s
 .PHONY : src/core/Engine.cpp.s
 
+src/graphics/Camera.o: src/graphics/Camera.cpp.o
+.PHONY : src/graphics/Camera.o
+
+# target to build an object file
+src/graphics/Camera.cpp.o:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/graphics/Camera.cpp.o
+.PHONY : src/graphics/Camera.cpp.o
+
+src/graphics/Camera.i: src/graphics/Camera.cpp.i
+.PHONY : src/graphics/Camera.i
+
+# target to preprocess a source file
+src/graphics/Camera.cpp.i:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/graphics/Camera.cpp.i
+.PHONY : src/graphics/Camera.cpp.i
+
+src/graphics/Camera.s: src/graphics/Camera.cpp.s
+.PHONY : src/graphics/Camera.s
+
+# target to generate assembly for a file
+src/graphics/Camera.cpp.s:
+	$(MAKE) -f CMakeFiles/libre-engine.dir/build.make CMakeFiles/libre-engine.dir/src/graphics/Camera.cpp.s
+.PHONY : src/graphics/Camera.cpp.s
+
 src/graphics/Renderer.o: src/graphics/Renderer.cpp.o
 .PHONY : src/graphics/Renderer.o
 
@@ -805,6 +829,9 @@ help:
 	@echo "... src/core/Engine.o"
 	@echo "... src/core/Engine.i"
 	@echo "... src/core/Engine.s"
+	@echo "... src/graphics/Camera.o"
+	@echo "... src/graphics/Camera.i"
+	@echo "... src/graphics/Camera.s"
 	@echo "... src/graphics/Renderer.o"
 	@echo "... src/graphics/Renderer.i"
 	@echo "... src/graphics/Renderer.s"

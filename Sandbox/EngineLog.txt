@@ -1,2 +1,10 @@
-2016-11-26.02:09:14:	Initializing Application /
-2016-11-26.02:09:15:	Creating 2D SDL_Rendere
+2016-12-02.19:09:05:	Initializing Application /
+2016-12-02.19:09:06:	Creating 2D SDL_Rendere
+2016-12-02.19:09:06:	OpenGL Info:
+2016-12-02.19:09:06:	vendor:
+2016-12-02.19:09:06:	renderer:
+2016-12-02.23:29:42:	Initializing Application /
+2016-12-02.23:29:42:	Creating 2D SDL_Rendere
+2016-12-02.23:29:43:	OpenGL Info:
+2016-12-02.23:29:43:	vendor:
+2016-12-02.23:29:43:	renderer:

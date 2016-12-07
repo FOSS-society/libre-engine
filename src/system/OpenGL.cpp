@@ -242,9 +242,9 @@ namespace libre{
             glGetInteger64i_v(name,index,data);
         }
 
-        void getString(GLenum name, const GLubyte *out)
+        void getString(GLenum name, const char *out)
         {
-            out = glGetString(name);
+            out = (char *)glGetString(name);
         }
 
         void ClearColor(GLclampf r, GLclampf g, GLclampf b, GLclampf a)

@@ -100,7 +100,7 @@ Shader::Shader(std::string name, std::string filepath, ShaderType type):
         OpenGL::getProgramParameter(this->m_handle, GL_ACTIVE_UNIFORMS, &uniformCount);
         //create the m_uniform vector
 
-        m_uniforms = new std::vector<ShaderVariable>(uniformCount);
+        m_uniforms = new std::vector<ShaderVariable>((int)uniformCount);
 
         //loop through uniforms in opengl, assign name and type to temp variables
         //and then push back a ShaderVariable

@@ -21,11 +21,11 @@ Application::Application(const char *t, int width, int height,graphics::Renderer
 
             if(rt == graphics::RendererType::RT_3D){
                 this->m_Window = new graphics::Window(t,width,height, true);
-                system::LogToConsoleAndFile("Initializing SDL_GL_Context /n");
+                system::LogToConsoleAndFile("Initializing SDL_GL_Context/n");
 
             }else{
                 this->m_Window = new graphics::Window(t,width,height,false);
-                 system::LogToConsoleAndFile("Initializing SDL_Renderer /n");
+                 system::LogToConsoleAndFile("Initializing SDL_Renderer/n");
 
             }
 
@@ -278,19 +278,20 @@ bool Application::Run()
 
             case SDL_WINDOWEVENT_RESIZED:
                 SDL_SetWindowSize(m_Window->SDLWIN(),ev.window.data1,ev.window.data2);
-                m_Window->setSize(ev.window.data1,ev.window.data2);
+                m_Window->setSize((unsigned int)ev.window.data1,(unsigned int)ev.window.data2);
                 break;
             default:
                 break;
 
              }
 
+
+
+           }
         OpenGL::ClearColor(1,0,0,1);
         OpenGL::ClearFlags(GL_COLOR_BUFFER_BIT);
         this->m_state->Update();
         this->m_Renderer->Update();
-
-           }
        }
     return this->m_active;
 }
