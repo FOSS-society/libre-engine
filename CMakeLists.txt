@@ -11,8 +11,9 @@ file(GLOB PHYSICS "src/physics/*.cpp" "include/physics/*.hpp")
 file(GLOB SCRIPT "src/script/*.cpp" "include/script/*.hpp")
 file(GLOB SYSTEM "src/system/*.cpp" "include/system/*.hpp")
 file(GLOB ASSET "src/asset/*.cpp" "include/asset/*.hpp")
+file(GLOB FF "src/system/fformats/*.cpp" "include/system/fformats/*.hpp")
 file(GLOB OTHER "src/*cpp" "include/*.hpp")
-add_library(libre-engine ${CORE} ${GRAPHICS} ${MATH} ${PHYSICS} ${SCRIPT} ${SYSTEM} ${ASSET} ${OTHER})
+add_library(libre-engine ${CORE} ${GRAPHICS} ${MATH} ${PHYSICS} ${SCRIPT} ${SYSTEM} ${ASSET} ${FF} ${OTHER})
 
 
 install (TARGETS libre-engine DESTINATION lib)

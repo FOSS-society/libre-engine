@@ -14,8 +14,16 @@ TEMPLATE = app
  CONFIG += c++11
 
 SOURCES += source/main.cpp \
-        source/mainwindow.cpp
+        source/mainwindow.cpp \
+    source/shadereditor.cpp \
+    source/scripteditor.cpp
 
-HEADERS  += include/mainwindow.h
 
-FORMS    += ui/mainwindow.ui
+HEADERS  += include/mainwindow.h \
+    include/shadereditor.h \
+    include/scripteditor.h
+
+
+FORMS    += ui/mainwindow.ui \
+    ui/shadereditor.ui \
+    ui/scripteditor.ui
