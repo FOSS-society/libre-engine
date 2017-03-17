@@ -2,10 +2,11 @@
 #include "ui_mainwindow.h"
 #include "../include/shadereditor.h"
 #include "../include/scripteditor.h"
+#include "../include/projectcreategui.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
-    ui(new Ui::MainWindow)
+    ui(new Ui::MainWindow), m_project(nullptr)
 {
     ui->setupUi(this);
 }
@@ -36,3 +37,23 @@ void MainWindow::on_actionScript_Editor_triggered()
     window->setEnabled(true);
     window->show();
 }
+
+void MainWindow::on_actionNew_Project_triggered()
+{
+    ProjectCreateGUI *window = new ProjectCreateGUI();
+    window->setVisible(true);
+    window->setEnabled(true);
+    window->show();
+    window->setMain(this);
+
+}
+UserProject *MainWindow::project() const
+{
+    return m_project;
+}
+
+void MainWindow::setProject(UserProject *project)
+{
+    m_project = project;
+}
+

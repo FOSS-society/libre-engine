@@ -16,7 +16,7 @@ public:
     ~ScriptEditor();
 
 private slots:
-    void on_Exit_clicked();
+    void on_pushButton_5_clicked();
 
 private:
     Ui::ScriptEditor *ui;

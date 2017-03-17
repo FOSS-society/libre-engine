@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>Shader Editor</string>
   </property>
   <widget class="QPushButton" name="New">
    <property name="geometry">
@@ -74,6 +74,9 @@
      <height>491</height>
     </rect>
    </property>
+   <property name="verticalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOn</enum>
+   </property>
    <property name="widgetResizable">
     <bool>true</bool>
    </property>
@@ -82,34 +85,21 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>349</width>
+      <width>336</width>
       <height>489</height>
      </rect>
     </property>
-    <widget class="QPlainTextEdit" name="plainTextEdit">
+    <widget class="QTextEdit" name="textEdit">
      <property name="geometry">
       <rect>
-       <x>3</x>
-       <y>-6</y>
-       <width>351</width>
-       <height>501</height>
+       <x>0</x>
+       <y>0</y>
+       <width>341</width>
+       <height>491</height>
       </rect>
      </property>
     </widget>
    </widget>
-  </widget>
-  <widget class="QScrollBar" name="verticalScrollBar">
-   <property name="geometry">
-    <rect>
-     <x>360</x>
-     <y>10</y>
-     <width>20</width>
-     <height>501</height>
-    </rect>
-   </property>
-   <property name="orientation">
-    <enum>Qt::Vertical</enum>
-   </property>
   </widget>
   <widget class="QGraphicsView" name="graphicsView">
    <property name="geometry">

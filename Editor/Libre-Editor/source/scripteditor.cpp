@@ -13,7 +13,7 @@ ScriptEditor::~ScriptEditor()
     delete ui;
 }
 
-void ScriptEditor::on_Exit_clicked()
+void ScriptEditor::on_pushButton_5_clicked()
 {
-    this->close();
+      this->close();
 }
