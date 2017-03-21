@@ -93,6 +93,30 @@ namespace libre{
      void setTextureParameterfp(GLenum target, GLenum pname, float* param);
      void defineTextureImage(GLenum target, int level, int internalformat, math::Vector2<int> size, int border, GLenum format, GLenum type, void *data);
      void deleteTexture(int amount, unsigned int textures);
+     void activeTexture(GLenum texture);
+
+
+
+     //////////////////////////////
+     //Uniform Functons
+     //////////////////////////////
+
+     void Uniform1f(GLint location, GLfloat v0);
+     void Uniform2f(GLint location, GLfloat v0, GLfloat v1);
+     void Uniform3f(GLint location, GLfloat v0, GLfloat v1,GLfloat v2);
+     void Uniform4f(GLint location, GLfloat v0, GLfloat v1,GLfloat v2,GLfloat v3);
+
+     void Uniform1i(GLint location, GLint v0);
+     void Uniform2i(GLint location, GLint v0, GLint v1);
+     void Uniform3i(GLint location, GLint v0, GLint v1,GLint v2);
+     void Uniform4i(GLint location, GLint v0, GLint v1,GLint v2,GLint v3);
+
+     void Uniform1ui(GLint location, GLuint v0);
+     void Uniform2ui(GLuint location, GLuint v0, GLuint v1);
+     void Uniform3ui(GLint location, GLuint v0, GLuint v1,GLuint v2);
+     void Uniform4ui(GLint location, GLuint v0, GLuint v1,GLuint v2,GLuint v3);
+
+
 
 
 

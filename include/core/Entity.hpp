@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <vector>
+#include <string>
 
 
 
@@ -34,11 +35,14 @@ namespace libre{
       std::string m_name;
       std::vector<Component*> m_ComponentList;
       Entity *m_parent;
+      std::vector<Entity *> m_children;
       int m_id;
       bool m_active;
 
     public:
-      Entity(std::string name, Entity * parent, int id):m_name(name), m_parent(parent), m_id(id){}
+      Entity(std::string name, Entity * parent, int id):m_name(name), m_parent(parent), m_id(id){
+
+      }
       Entity(Entity &&m) = default;
 
 
@@ -112,7 +116,45 @@ namespace libre{
       }
 
 
+      std::vector<Entity *> children() const
+      {
+          return m_children;
+      }
+
+      Entity * child(int index)const
+      {
+          return m_children[index];
+      }
+
+      Entity *child(std::string name)const
+      {
+         unsigned int x = 0;
+         do{
+             if(this->m_children.at(x)->Name().compare(name))
+                 return this->m_children.at(x);
+             else
+                 x++;
+         } while ( x < this->m_children.size());
+
+         return nullptr;
+      }
+
+
+      void setChildren(const std::vector<Entity *> &children)
+      {
+          m_children = children;
+      }
+
+
     };
+
+
+
+
+
+
+
+
   }
 }
 

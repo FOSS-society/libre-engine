@@ -272,6 +272,66 @@ namespace libre{
             glGetActiveUniform(program,index,bufferSize,length,size,type,name);
         }
 
+        void activeTexture(GLenum texture)
+        {
+            glActiveTexture(texture);
+        }
+        void Uniform1f(GLint location, GLfloat v0)
+        {
+            glUniform1f(location,v0);
+        }
+        void Uniform2f(GLint location, GLfloat v0, GLfloat v1)
+        {
+            glUniform2f(location,v0,v1);
+        }
+        void Uniform3f(GLint location, GLfloat v0, GLfloat v1,GLfloat v2)
+        {
+            glUniform3f(location,v0,v1,v2);
+        }
+        void Uniform4f(GLint location, GLfloat v0, GLfloat v1,GLfloat v2,GLfloat v3)
+        {
+            glUniform4f(location,v0,v1,v2,v3);
+        }
+
+
+        void Uniform1i(GLint location, GLint v0)
+        {
+            glUniform1i(location,v0);
+        }
+
+        void Uniform2i(GLint location, GLint v0, GLint v1)
+        {
+            glUniform2i(location,v0,v1);
+        }
+        void Uniform3i(GLint location, GLint v0, GLint v1,GLint v2)
+        {
+            glUniform3i(location,v0,v1,v2);
+        }
+        void Uniform4i(GLint location, GLint v0, GLint v1,GLint v2,GLint v3)
+        {
+            glUniform4i(location,v0,v1,v2,v3);
+        }
+
+        void Uniform1ui(GLint location, GLuint v0)
+        {
+            glUniform1ui(location,v0);
+        }
+
+        void Uniform2ui(GLuint location, GLuint v0, GLuint v1)
+        {
+            glUniform2ui(location,v0,v1);
+        }
+        void Uniform3ui(GLint location, GLuint v0, GLuint v1,GLuint v2)
+        {
+            glUniform3ui(location,v0,v1,v2);
+        }
+        void Uniform4ui(GLint location, GLuint v0, GLuint v1,GLuint v2,GLuint v3)
+        {
+            glUniform4ui(location,v0,v1,v2,v3);
+        }
+
+
+
 
 
 
