@@ -41,7 +41,6 @@ namespace libre{
 
     public:
       Entity(std::string name, Entity * parent, int id):m_name(name), m_parent(parent), m_id(id){
-
       }
       Entity(Entity &&m) = default;
 

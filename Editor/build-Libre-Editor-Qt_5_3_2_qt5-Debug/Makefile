@@ -50,20 +50,24 @@ SOURCES       = ../Libre-Editor/source/main.cpp \
 		../Libre-Editor/source/shadereditor.cpp \
 		../Libre-Editor/source/scripteditor.cpp \
 		../Libre-Editor/source/userproject.cpp \
-		../Libre-Editor/source/projectcreategui.cpp moc_mainwindow.cpp \
+		../Libre-Editor/source/projectcreategui.cpp \
+		../Libre-Editor/source/tilemapeditor.cpp moc_mainwindow.cpp \
 		moc_shadereditor.cpp \
 		moc_scripteditor.cpp \
-		moc_projectcreategui.cpp
+		moc_projectcreategui.cpp \
+		moc_tilemapeditor.cpp
 OBJECTS       = main.o \
 		mainwindow.o \
 		shadereditor.o \
 		scripteditor.o \
 		userproject.o \
 		projectcreategui.o \
+		tilemapeditor.o \
 		moc_mainwindow.o \
 		moc_shadereditor.o \
 		moc_scripteditor.o \
-		moc_projectcreategui.o
+		moc_projectcreategui.o \
+		moc_tilemapeditor.o
 DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/shell-unix.conf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/unix.conf \
@@ -124,7 +128,8 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		../Libre-Editor/source/shadereditor.cpp \
 		../Libre-Editor/source/scripteditor.cpp \
 		../Libre-Editor/source/userproject.cpp \
-		../Libre-Editor/source/projectcreategui.cpp
+		../Libre-Editor/source/projectcreategui.cpp \
+		../Libre-Editor/source/tilemapeditor.cpp
 QMAKE_TARGET  = Libre-Editor
 DESTDIR       = #avoid trailing-slash linebreak
 TARGET        = Libre-Editor
@@ -154,7 +159,7 @@ first: all
 
 all: Makefile $(TARGET)
 
-$(TARGET): ui_mainwindow.h ui_shadereditor.h ui_scripteditor.h ui_projectcreategui.h $(OBJECTS)  
+$(TARGET): ui_mainwindow.h ui_shadereditor.h ui_scripteditor.h ui_projectcreategui.h ui_tilemapeditor.h $(OBJECTS)  
 	$(LINK) $(LFLAGS) -o $(TARGET) $(OBJECTS) $(OBJCOMP) $(LIBS)
 
 Makefile: ../Libre-Editor/Libre-Editor.pro /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64/qmake.conf /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
@@ -283,7 +288,7 @@ qmake_all: FORCE
 
 dist: 
 	@test -d .tmp/Libre-Editor1.0.0 || mkdir -p .tmp/Libre-Editor1.0.0
-	$(COPY_FILE) --parents $(DIST) .tmp/Libre-Editor1.0.0/ && $(COPY_FILE) --parents ../Libre-Editor/include/mainwindow.h ../Libre-Editor/include/shadereditor.h ../Libre-Editor/include/scripteditor.h ../Libre-Editor/include/userproject.h ../Libre-Editor/include/projectcreategui.h .tmp/Libre-Editor1.0.0/ && $(COPY_FILE) --parents ../Libre-Editor/source/main.cpp ../Libre-Editor/source/mainwindow.cpp ../Libre-Editor/source/shadereditor.cpp ../Libre-Editor/source/scripteditor.cpp ../Libre-Editor/source/userproject.cpp ../Libre-Editor/source/projectcreategui.cpp .tmp/Libre-Editor1.0.0/ && $(COPY_FILE) --parents ../Libre-Editor/ui/mainwindow.ui ../Libre-Editor/ui/shadereditor.ui ../Libre-Editor/ui/scripteditor.ui ../Libre-Editor/ui/projectcreategui.ui .tmp/Libre-Editor1.0.0/ && (cd `dirname .tmp/Libre-Editor1.0.0` && $(TAR) Libre-Editor1.0.0.tar Libre-Editor1.0.0 && $(COMPRESS) Libre-Editor1.0.0.tar) && $(MOVE) `dirname .tmp/Libre-Editor1.0.0`/Libre-Editor1.0.0.tar.gz . && $(DEL_FILE) -r .tmp/Libre-Editor1.0.0
+	$(COPY_FILE) --parents $(DIST) .tmp/Libre-Editor1.0.0/ && $(COPY_FILE) --parents ../Libre-Editor/include/mainwindow.h ../Libre-Editor/include/shadereditor.h ../Libre-Editor/include/scripteditor.h ../Libre-Editor/include/userproject.h ../Libre-Editor/include/projectcreategui.h ../Libre-Editor/include/tilemapeditor.hpp .tmp/Libre-Editor1.0.0/ && $(COPY_FILE) --parents ../Libre-Editor/source/main.cpp ../Libre-Editor/source/mainwindow.cpp ../Libre-Editor/source/shadereditor.cpp ../Libre-Editor/source/scripteditor.cpp ../Libre-Editor/source/userproject.cpp ../Libre-Editor/source/projectcreategui.cpp ../Libre-Editor/source/tilemapeditor.cpp .tmp/Libre-Editor1.0.0/ && $(COPY_FILE) --parents ../Libre-Editor/ui/mainwindow.ui ../Libre-Editor/ui/shadereditor.ui ../Libre-Editor/ui/scripteditor.ui ../Libre-Editor/ui/projectcreategui.ui ../Libre-Editor/ui/tilemapeditor.ui .tmp/Libre-Editor1.0.0/ && (cd `dirname .tmp/Libre-Editor1.0.0` && $(TAR) Libre-Editor1.0.0.tar Libre-Editor1.0.0 && $(COMPRESS) Libre-Editor1.0.0.tar) && $(MOVE) `dirname .tmp/Libre-Editor1.0.0`/Libre-Editor1.0.0.tar.gz . && $(DEL_FILE) -r .tmp/Libre-Editor1.0.0
 
 
 clean:compiler_clean 
@@ -306,9 +311,9 @@ check: first
 
 compiler_rcc_make_all:
 compiler_rcc_clean:
-compiler_moc_header_make_all: moc_mainwindow.cpp moc_shadereditor.cpp moc_scripteditor.cpp moc_projectcreategui.cpp
+compiler_moc_header_make_all: moc_mainwindow.cpp moc_shadereditor.cpp moc_scripteditor.cpp moc_projectcreategui.cpp moc_tilemapeditor.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) moc_mainwindow.cpp moc_shadereditor.cpp moc_scripteditor.cpp moc_projectcreategui.cpp
+	-$(DEL_FILE) moc_mainwindow.cpp moc_shadereditor.cpp moc_scripteditor.cpp moc_projectcreategui.cpp moc_tilemapeditor.cpp
 moc_mainwindow.cpp: ../Libre-Editor/include/userproject.h \
 		../Libre-Editor/include/mainwindow.h
 	/usr/lib/x86_64-linux-gnu/qt5/bin/moc $(DEFINES) -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I/home/clim/Desktop/Programming/libre-engine/Editor/Libre-Editor -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/4.9 -I/usr/include/x86_64-linux-gnu/c++/4.9 -I/usr/include/c++/4.9/backward -I/usr/lib/gcc/x86_64-linux-gnu/4.9/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../Libre-Editor/include/mainwindow.h -o moc_mainwindow.cpp
@@ -322,11 +327,14 @@ moc_scripteditor.cpp: ../Libre-Editor/include/scripteditor.h
 moc_projectcreategui.cpp: ../Libre-Editor/include/projectcreategui.h
 	/usr/lib/x86_64-linux-gnu/qt5/bin/moc $(DEFINES) -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I/home/clim/Desktop/Programming/libre-engine/Editor/Libre-Editor -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/4.9 -I/usr/include/x86_64-linux-gnu/c++/4.9 -I/usr/include/c++/4.9/backward -I/usr/lib/gcc/x86_64-linux-gnu/4.9/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../Libre-Editor/include/projectcreategui.h -o moc_projectcreategui.cpp
 
+moc_tilemapeditor.cpp: ../Libre-Editor/include/tilemapeditor.hpp
+	/usr/lib/x86_64-linux-gnu/qt5/bin/moc $(DEFINES) -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I/home/clim/Desktop/Programming/libre-engine/Editor/Libre-Editor -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/4.9 -I/usr/include/x86_64-linux-gnu/c++/4.9 -I/usr/include/c++/4.9/backward -I/usr/lib/gcc/x86_64-linux-gnu/4.9/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../Libre-Editor/include/tilemapeditor.hpp -o moc_tilemapeditor.cpp
+
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
-compiler_uic_make_all: ui_mainwindow.h ui_shadereditor.h ui_scripteditor.h ui_projectcreategui.h
+compiler_uic_make_all: ui_mainwindow.h ui_shadereditor.h ui_scripteditor.h ui_projectcreategui.h ui_tilemapeditor.h
 compiler_uic_clean:
-	-$(DEL_FILE) ui_mainwindow.h ui_shadereditor.h ui_scripteditor.h ui_projectcreategui.h
+	-$(DEL_FILE) ui_mainwindow.h ui_shadereditor.h ui_scripteditor.h ui_projectcreategui.h ui_tilemapeditor.h
 ui_mainwindow.h: ../Libre-Editor/ui/mainwindow.ui
 	/usr/lib/x86_64-linux-gnu/qt5/bin/uic ../Libre-Editor/ui/mainwindow.ui -o ui_mainwindow.h
 
@@ -338,6 +346,9 @@ ui_scripteditor.h: ../Libre-Editor/ui/scripteditor.ui
 
 ui_projectcreategui.h: ../Libre-Editor/ui/projectcreategui.ui
 	/usr/lib/x86_64-linux-gnu/qt5/bin/uic ../Libre-Editor/ui/projectcreategui.ui -o ui_projectcreategui.h
+
+ui_tilemapeditor.h: ../Libre-Editor/ui/tilemapeditor.ui
+	/usr/lib/x86_64-linux-gnu/qt5/bin/uic ../Libre-Editor/ui/tilemapeditor.ui -o ui_tilemapeditor.h
 
 compiler_yacc_decl_make_all:
 compiler_yacc_decl_clean:
@@ -378,6 +389,10 @@ projectcreategui.o: ../Libre-Editor/source/projectcreategui.cpp ../Libre-Editor/
 		../Libre-Editor/include/userproject.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o projectcreategui.o ../Libre-Editor/source/projectcreategui.cpp
 
+tilemapeditor.o: ../Libre-Editor/source/tilemapeditor.cpp ../Libre-Editor/include/tilemapeditor.hpp \
+		ui_tilemapeditor.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tilemapeditor.o ../Libre-Editor/source/tilemapeditor.cpp
+
 moc_mainwindow.o: moc_mainwindow.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_mainwindow.o moc_mainwindow.cpp
 
@@ -389,6 +404,9 @@ moc_scripteditor.o: moc_scripteditor.cpp
 
 moc_projectcreategui.o: moc_projectcreategui.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_projectcreategui.o moc_projectcreategui.cpp
+
+moc_tilemapeditor.o: moc_tilemapeditor.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_tilemapeditor.o moc_tilemapeditor.cpp
 
 ####### Install
 

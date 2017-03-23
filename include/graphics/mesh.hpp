@@ -7,23 +7,22 @@
 #include "graphics_common.hpp"
 #include "graphics/Shader.hpp"
 #include "../system/OpenGL.hpp"
+#include "../system/BufferLayout.hpp"
 
 namespace libre{
 
-    //foward declare
-    class system::BufferLayout;
 
     namespace graphics{
 
     struct i_MeshVertex{
-    std::vector<math::vector3<float>> m_positions;
-    std::vector<math::vector3<float>> m_normals;
-    std::vector<math::vector2<float>> m_texCoords;
+    std::vector<math::Vector3<float>> m_positions;
+    std::vector<math::Vector3<float>> m_normals;
+    std::vector<math::Vector2<float>> m_texCoords;
     };
 
     struct i_MeshTexture {
         GLuint id;
-        string type;
+        std::string type;
     };
 
 

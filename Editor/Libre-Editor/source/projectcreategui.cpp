@@ -46,6 +46,7 @@ void ProjectCreateGUI::on_pushButton_2_clicked()
    const QDir temp;
    temp.mkdir(fullProjectPath);
    temp.mkdir(assetProjectPath);
+   temp.mkdir(QString(assetProjectPath + QString("/Scripts")));
    this->close();
 }
 

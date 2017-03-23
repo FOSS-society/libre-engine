@@ -142,6 +142,16 @@ Shader::Shader(std::string name, std::string filepath, ShaderType type):
 
 }
 
+GLuint Shader::Handle() const
+{
+    return m_handle;
+}
+
+GLuint Shader::getHandle()
+{
+ return m_handle;
+}
+
 ShaderType Shader::getType()
 {
     return m_type;

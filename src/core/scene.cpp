@@ -1,4 +1,4 @@
-#include "include/core/scene.hpp"
+#include "../../include/core/scene.hpp"
 
 namespace libre{
     namespace core{
@@ -6,14 +6,13 @@ namespace libre{
 
             Scene::Scene()
             {
-                m_root = new Entity("root",0);
+                m_root = new Entity(std::string("root"),nullptr,0);
                 m_systems = std::vector<System *>();
             }
 
             Scene::~Scene()
             {
                 delete m_root;
-                delete m_systems;
             }
 
             void Scene::AttachSystem(System *sys)

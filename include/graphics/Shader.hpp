@@ -44,8 +44,12 @@ namespace libre{
       bool m_linked;
       GLuint m_handle;
 
+
     public:
       Shader(std::string name, std::string filepath, ShaderType type);
+
+        GLuint Handle()const;
+        GLuint getHandle();
 
        ShaderType getType();
        ShaderType Type()const;
