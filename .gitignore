@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+
+#Directories 
+bin/
+Editor/build-Libre-Editor-Qt_5_3_2_qt5-Debug/
