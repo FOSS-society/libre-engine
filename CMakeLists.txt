@@ -13,8 +13,10 @@ file(GLOB SYSTEM "src/system/*.cpp" "include/system/*.hpp")
 file(GLOB ASSET "src/asset/*.cpp" "include/asset/*.hpp")
 file(GLOB FF "src/system/fformats/*.cpp" "include/system/fformats/*.hpp")
 file(GLOB OTHER "src/*cpp" "include/*.hpp")
-add_library(libre-engine ${CORE} ${GRAPHICS} ${MATH} ${PHYSICS} ${SCRIPT} ${SYSTEM} ${ASSET} ${FF} ${OTHER})
+file(GLOB SHADERS "shaders/*/*")
+add_library(libre-engine ${CORE} ${GRAPHICS} ${MATH} ${PHYSICS} ${SCRIPT} ${SYSTEM} ${ASSET} ${FF} ${OTHER} ${SHADERS})
 
 
 install (TARGETS libre-engine DESTINATION lib)
+install (DIRECTORY shaders/vertex shaders/fragment shaders/tc shaders/te shaders/compute shaders/geometry DESTINATION etc/libre-engine)
 install (DIRECTORY include/core include/graphics include/math include/physics include/script include/system include/asset include/ DESTINATION include/libre-engine)

@@ -20,9 +20,11 @@ enum class Direction2D{
     private:
         math::Vector3<float> m_position;
         math::Vector3<float> m_rotation;
+        float m_fov;
 
     public:
-        Camera(const math::Vector3<float> pos,const math::Vector3<float> rot);
+        Camera(const math::Vector3<float> pos,const math::Vector3<float> rot,
+               const float fov);
 
 
 
@@ -35,6 +37,8 @@ enum class Direction2D{
         math::Vector3<float> rotation() const;
         math::Vector3<float> getRotation();
         void setRotation(const math::Vector3<float> &rotation);
+        float fov() const;
+        void setFov(float fov);
     };
 
 
