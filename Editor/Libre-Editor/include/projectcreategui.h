@@ -33,8 +33,6 @@ private:
     MainWindow *m_main;
 };
 
-void copyPath(QString src, QString dst);
-bool copyDirectoryFiles(const QString &fromDir, const QString &toDir, bool coverFileIfExist);
 
 
 #endif // PROJECTCREATEGUI_H
