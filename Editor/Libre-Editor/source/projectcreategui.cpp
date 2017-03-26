@@ -115,10 +115,8 @@ bool copyDir(const QString &srcFilePath,
         }
     } else {
         if (!QFile::copy(srcFilePath, tgtFilePath)){
-            qDebug() << "File Didnt copy.. Its probably a fucking liberal";
             return false;
         }else{
-            qDebug() << "copy completed Apparently";
         }
     }
     return true;
