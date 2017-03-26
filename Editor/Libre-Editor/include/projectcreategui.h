@@ -33,6 +33,11 @@ private:
     MainWindow *m_main;
 };
 
+/**
+    Thank you falco!
+ */
 
+bool copyDir(const QString &srcFilePath,
+                            const QString &tgtFilePath);
 
 #endif // PROJECTCREATEGUI_H

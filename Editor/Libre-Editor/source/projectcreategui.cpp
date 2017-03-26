@@ -6,6 +6,7 @@
 #include <QFileDialog>
 #include <QDir>
 #include <QProcess>
+#include <QDebug>
 
 
 ProjectCreateGUI::ProjectCreateGUI(QWidget *parent) :
@@ -49,27 +50,15 @@ void ProjectCreateGUI::on_pushButton_2_clicked()
    temp.mkdir(fullProjectPath);
    temp.mkdir(assetProjectPath);
    temp.mkdir(QString(assetProjectPath + QString("/Scripts")));
-   temp.mkdir(QString(assetProjectPath + QString("/Shaders")));
-   //temp.mkdir(QString(assetProjectPath + QString("/Shaders/vertex")));
-   //temp.mkdir(QString(assetProjectPath + QString("/Shaders/te")));
-   //temp.mkdir(QString(assetProjectPath + QString("/Shaders/tc")));
-   //temp.mkdir(QString(assetProjectPath + QString("/Shaders/fragment")));
-   //temp.mkdir(QString(assetProjectPath + QString("/Shaders/geometry")));
-   //temp.mkdir(QString(assetProjectPath + QString("/Shaders/compute")));
 
    QString defShaderPath = QString("/usr/local/etc/libre-engine");
    QString destShaderPath = QString(assetProjectPath + QString("/Shaders"));
-  // copyDirectoryFiles(defShaderPath, QString(assetProjectPath + QString("/Shaders")),true);
-    QString fullSrcShaderPath = QString(defShaderPath + QString("/."));
-    QString cpcmd = "cp -R";
 
-    QString command = QString("%1 %2 %3").arg(cpcmd,fullSrcShaderPath,destShaderPath);
 
-    QProcess proc;
-    proc.start(command);
-
-    proc.close();
-
+    if(!copyDir(defShaderPath,destShaderPath)){
+        qDebug() << "Copying Failed!!!";
+        QApplication::exit(-1);
+    }
 
    this->close();
 }
@@ -96,8 +85,43 @@ void ProjectCreateGUI::on_pushButton_clicked()
                                                               | QFileDialog::DontResolveSymlinks));
 }
 
+/**
+    Thank you falco!
+ */
 
-
-
+bool copyDir(const QString &srcFilePath,
+                            const QString &tgtFilePath)
+{
+    QFileInfo srcFileInfo(srcFilePath);
+    if (srcFileInfo.isDir()) {
+        // if srcFileInfo.isDir, targetDir is set to tgtFilePath
+        QDir targetDir(tgtFilePath);
+       targetDir.cdUp();
+        if (!targetDir.mkdir(QFileInfo(tgtFilePath).fileName()))
+            return false;
+        QDir sourceDir(srcFilePath);
+        QStringList fileNames = sourceDir.entryList(QDir::Files | QDir::Dirs | QDir::NoDotAndDotDot | QDir::Hidden | QDir::System);
+        if(fileNames.isEmpty()){
+            qDebug() << "Nothing in " << sourceDir.dirName();
+            return true;
+        }
+        Q_FOREACH (const QString &fileName, fileNames) {
+            const QString newSrcFilePath
+                    = srcFilePath + QLatin1Char('/') + fileName;
+            const QString newTgtFilePath
+                    = tgtFilePath + QLatin1Char('/') + fileName;
+            if (!copyDir(newSrcFilePath, newTgtFilePath))
+                return false;
+        }
+    } else {
+        if (!QFile::copy(srcFilePath, tgtFilePath)){
+            qDebug() << "File Didnt copy.. Its probably a fucking liberal";
+            return false;
+        }else{
+            qDebug() << "copy completed Apparently";
+        }
+    }
+    return true;
+}
 
 
