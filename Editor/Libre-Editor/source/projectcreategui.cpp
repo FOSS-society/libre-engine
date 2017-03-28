@@ -5,7 +5,6 @@
 #include <QMessageBox>
 #include <QFileDialog>
 #include <QDir>
-#include <QProcess>
 #include <QDebug>
 
 
@@ -29,20 +28,25 @@ void ProjectCreateGUI::on_pushButton_2_clicked()
         return;
     }
 
+    QString fullProjectPath;
+
    libre::graphics::RendererType tempt;
+   char *types;
 
    switch(ui->comboBox->currentIndex()){
 
    case 0:
        tempt = libre::graphics::RendererType::RT_2D;
+       types = "2D";
         break;
    case 1:
        tempt = libre::graphics::RendererType::RT_3D;
+       types = "3D";
        break;
    }
 
    m_main->setProject(new UserProject(ui->projectName->text(),ui->projectDir->text(),tempt));
-   QString fullProjectPath = ui->projectDir->text();
+   fullProjectPath = ui->projectDir->text();
    fullProjectPath.append("/");
    fullProjectPath.append(ui->projectName->text());
    QString assetProjectPath = fullProjectPath + "/" + QString("Assets");
@@ -51,7 +55,7 @@ void ProjectCreateGUI::on_pushButton_2_clicked()
    temp.mkdir(assetProjectPath);
    temp.mkdir(QString(assetProjectPath + QString("/Scripts")));
 
-   QString defShaderPath = QString("/usr/local/etc/libre-engine");
+   QString defShaderPath = QString("/usr/local/etc/libre-engine/shaders");
    QString destShaderPath = QString(assetProjectPath + QString("/Shaders"));
 
 
@@ -59,7 +63,11 @@ void ProjectCreateGUI::on_pushButton_2_clicked()
         qDebug() << "Copying Failed!!!";
         QApplication::exit(-1);
     }
-
+    QFile meta;
+    meta.setFileName(fullProjectPath.append("/le.meta"));
+    meta.open(QFile::WriteOnly);
+    meta.write(types);
+    meta.close();
    this->close();
 }
 

@@ -18,6 +18,12 @@ public:
 
 
     static UserProject CreateProject();
+    QString directoryPath() const;
+    void setDirectoryPath(const QString &directoryPath);
+    libre::graphics::RendererType RenderingType() const;
+    void setRenderingType(const libre::graphics::RendererType &RenderingType);
+    QString name() const;
+    void setName(const QString &name);
 };
 
 

@@ -18,5 +18,5 @@ add_library(libre-engine ${CORE} ${GRAPHICS} ${MATH} ${PHYSICS} ${SCRIPT} ${SYST
 
 
 install (TARGETS libre-engine DESTINATION lib)
-install (DIRECTORY shaders/vertex shaders/fragment shaders/tc shaders/te shaders/compute shaders/geometry DESTINATION etc/libre-engine)
+install (DIRECTORY shaders/vertex shaders/fragment shaders/tc shaders/te shaders/compute shaders/geometry DESTINATION etc/libre-engine/shaders)
 install (DIRECTORY include/core include/graphics include/math include/physics include/script include/system include/asset include/ DESTINATION include/libre-engine)

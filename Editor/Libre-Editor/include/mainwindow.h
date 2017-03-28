@@ -27,6 +27,8 @@ private slots:
 
     void on_actionNew_Project_triggered();
 
+    void on_actionLoad_Project_triggered();
+
 private:
     Ui::MainWindow *ui;
     UserProject *m_project;
