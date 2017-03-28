@@ -2,6 +2,7 @@
 #define SCRIPTEDITOR_H
 
 #include <QWidget>
+#include "luahighlighter.h"
 
 namespace Ui {
 class ScriptEditor;
@@ -37,6 +38,7 @@ private slots:
 private:
     Ui::ScriptEditor *ui;
     MainWindow *m_main;
+    LuaHighlighter *m_highlighter;
 };
 
 #endif // SCRIPTEDITOR_H

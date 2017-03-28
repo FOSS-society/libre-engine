@@ -16,6 +16,8 @@ ScriptEditor::ScriptEditor(QWidget *parent) :
     ui(new Ui::ScriptEditor),m_main(nullptr)
 {
     ui->setupUi(this);
+    m_highlighter = new LuaHighlighter(ui->tabWidget->currentWidget()->findChild<QScrollArea*>()->findChild<QTextEdit*>()->document());
+
 }
 
 ScriptEditor::~ScriptEditor()
@@ -84,6 +86,9 @@ void ScriptEditor::on_pushButton_2_clicked()
     ui->tabWidget->setCurrentIndex(ui->tabWidget->indexOf(tab));
     scroll->setGeometry(ui->scrollArea_2->geometry());
     textEditor->setGeometry(ui->textEdit->geometry());
+    m_highlighter->setDocument(textEditor->document());
+
+
 
 }
 
@@ -107,7 +112,10 @@ void ScriptEditor::on_listView_doubleClicked(const QModelIndex &index)
     file.setFileName(fullProjectDir+ index.data(Qt::DisplayRole).toString());
     file.open(QFile::ReadWrite);
     QByteArray data = file.readAll();
+    m_highlighter->setDocument(textEditor->document());
     textEditor->setText(data.data());
+    m_highlighter->rehighlight();
+
 
 }
 ;
@@ -130,7 +138,10 @@ void ScriptEditor::on_pushButton_clicked()
     file.setFileName(filePath);
     file.open(QFile::ReadWrite);
     QByteArray data = file.readAll();
+    m_highlighter->setDocument(textEditor->document());
     textEditor->setText(data.data());
+    m_highlighter->rehighlight();
+
 
 
 
@@ -139,7 +150,7 @@ void ScriptEditor::on_pushButton_clicked()
 void ScriptEditor::on_pushButton_3_clicked()
 {
     QString fileName = QFileDialog::getSaveFileName(this, tr("Save File"), "",
-           tr("Text Files (*.txt);;C++ Files (*.cpp *.h)"));
+           tr("Text Files (*.txt);;C++ Files (*.cpp *.h);;Lua Files(*.lua)"));
 
     if (fileName != "") {
           QFile file(fileName);
@@ -151,6 +162,7 @@ void ScriptEditor::on_pushButton_3_clicked()
                     stream << ui->tabWidget->currentWidget()->findChild<QScrollArea*>()->findChild<QTextEdit*>()->toPlainText();
                    stream.flush();
                   file.close();
+                  updateListView();
                }
           }
 
