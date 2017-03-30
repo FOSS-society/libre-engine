@@ -68,6 +68,10 @@ void ProjectCreateGUI::on_pushButton_2_clicked()
     meta.open(QFile::WriteOnly);
     meta.write(types);
     meta.close();
+    QString newTitle = m_main->windowTitle();
+    newTitle.append(QString("   Project:%1").arg(ui->projectName->text()));
+    m_main->setWindowTitle(newTitle);
+
    this->close();
 }
 

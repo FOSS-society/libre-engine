@@ -31,6 +31,7 @@ void MainWindow::on_actionShader_Editor_triggered()
     window->setVisible(true);
     window->setEnabled(true);
     window->show();
+    window->setMain(this);
 
 }
 
@@ -94,7 +95,9 @@ void MainWindow::on_actionLoad_Project_triggered()
         break;
     }
     meta.close();
-
+    QString newTitle = this->windowTitle();
+    newTitle.append(QString("   Project:%1").arg(projectName));
+    this->setWindowTitle(newTitle);
     m_project = new UserProject(projectName,projectDirectory,type);
 
 }

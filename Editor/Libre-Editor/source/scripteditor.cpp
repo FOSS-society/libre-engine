@@ -87,6 +87,7 @@ void ScriptEditor::on_pushButton_2_clicked()
     scroll->setGeometry(ui->scrollArea_2->geometry());
     textEditor->setGeometry(ui->textEdit->geometry());
     m_highlighter->setDocument(textEditor->document());
+    connect(textEditor,SIGNAL(QTextEdit::textChanged()),m_highlighter,SLOT(LuaHighlighter::highlightBlock()));
 
 
 
@@ -115,6 +116,7 @@ void ScriptEditor::on_listView_doubleClicked(const QModelIndex &index)
     m_highlighter->setDocument(textEditor->document());
     textEditor->setText(data.data());
     m_highlighter->rehighlight();
+    connect(textEditor,SIGNAL(QTextEdit::textChanged()),m_highlighter,SLOT(LuaHighlighter::highlightBlock()));
 
 
 }
@@ -141,6 +143,7 @@ void ScriptEditor::on_pushButton_clicked()
     m_highlighter->setDocument(textEditor->document());
     textEditor->setText(data.data());
     m_highlighter->rehighlight();
+    connect(textEditor,SIGNAL(QTextEdit::textChanged()),m_highlighter,SLOT(LuaHighlighter::highlightBlock()));
 
 
 
