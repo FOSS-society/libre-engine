@@ -26,6 +26,9 @@ private slots:
 
     void on_tableWidget_itemDoubleClicked(QTableWidgetItem *item);
 
+    void on_Load_clicked();
+
+
 private:
     Ui::ShaderEditor *ui;
     MainWindow *m_main;

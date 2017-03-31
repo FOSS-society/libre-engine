@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1125</width>
+    <width>1324</width>
     <height>522</height>
    </rect>
   </property>
@@ -114,8 +114,8 @@
   <widget class="QListWidget" name="listWidget">
    <property name="geometry">
     <rect>
-     <x>840</x>
-     <y>20</y>
+     <x>1060</x>
+     <y>10</y>
      <width>261</width>
      <height>451</height>
     </rect>
@@ -125,13 +125,13 @@
    <property name="geometry">
     <rect>
      <x>360</x>
-     <y>250</y>
-     <width>481</width>
+     <y>300</y>
+     <width>691</width>
      <height>151</height>
     </rect>
    </property>
    <attribute name="horizontalHeaderDefaultSectionSize">
-    <number>149</number>
+    <number>258</number>
    </attribute>
    <attribute name="horizontalHeaderMinimumSectionSize">
     <number>20</number>
@@ -140,6 +140,9 @@
     <bool>true</bool>
    </attribute>
    <attribute name="horizontalHeaderStretchLastSection">
+    <bool>false</bool>
+   </attribute>
+   <attribute name="verticalHeaderVisible">
     <bool>true</bool>
    </attribute>
    <attribute name="verticalHeaderDefaultSectionSize">
