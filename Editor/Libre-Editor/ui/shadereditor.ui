@@ -104,10 +104,10 @@
   <widget class="QGraphicsView" name="graphicsView">
    <property name="geometry">
     <rect>
-     <x>390</x>
-     <y>10</y>
-     <width>381</width>
-     <height>241</height>
+     <x>480</x>
+     <y>20</y>
+     <width>431</width>
+     <height>251</height>
     </rect>
    </property>
   </widget>

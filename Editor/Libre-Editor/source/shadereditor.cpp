@@ -2,12 +2,14 @@
 #include "ui_shadereditor.h"
 #include <QFileDialog>
 #include <QDebug>
+#include <QtCore>
 
 ShaderEditor::ShaderEditor(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::ShaderEditor)
 {
     ui->setupUi(this);
+    connect(this->ui->tableWidget->verticalHeader(),SIGNAL(sectionClicked(int)),this,SLOT(onHeaderClicked(int)));
 }
 
 ShaderEditor::~ShaderEditor()
@@ -34,25 +36,14 @@ void ShaderEditor::on_tableWidget_itemDoubleClicked(QTableWidgetItem *item)
     QTableWidgetItem *qtwi; // i use this for the filepath name
     QTableWidgetItem *qtwi2; // i use this for the file name
     QString shaders;
-    QFile file;
-    QByteArray arr;
     switch(item->column()){
     case 0:
-        if(ui->tableWidget->item(tempRow,tempColumn+1)->data(Qt::DisplayRole).isNull()){
-            //Do nothing
-        }else{
-            filepath = ui->tableWidget->item(tempRow,tempColumn+1)->data(Qt::DisplayRole).toString();
-            file.setFileName(filepath);
-            file.open(QFile::ReadOnly);
-            arr = file.readAll();
-            ui->textEdit->setText(arr);
-        }
         break;
     case 1:
         shaders = m_main->project()->directoryPath();
         shaders.append("/");
         shaders.append(m_main->project()->name());
-        shaders.append("/Shaders");
+        shaders.append("/Assets/Shaders");
         filepath = QFileDialog::getOpenFileName(this,QString("Select Shader"),shaders,QString(),0,0);
         templist = filepath.split("/");
         qtwi = new QTableWidgetItem(filepath);
@@ -90,4 +81,14 @@ void ShaderEditor::on_Load_clicked()
       **/
 }
 
+void ShaderEditor::onHeaderClicked(int index)
+{
+    QString filepath = ui->tableWidget->item(index,1)->data(Qt::DisplayRole).toString();
+    QFile file;
+    file.setFileName(filepath);
+    file.open(QFile::ReadOnly);
+    QByteArray data = file.readAll();
+    this->ui->textEdit->setText(data);
+    file.close();
+}
 
