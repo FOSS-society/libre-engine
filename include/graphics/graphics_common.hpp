@@ -21,6 +21,7 @@
 namespace libre{
   namespace graphics{
 
+
   
   //Static Booleans to Initialize systems needing initialization before the engine
     extern bool s_sdlIsInitialized;

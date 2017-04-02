@@ -5,7 +5,6 @@
 
 #include "../graphics/Window.hpp"
 #include "../graphics/Renderer.hpp"
-#include "Entity.hpp"
 #include "System.hpp"
 #include "Component.hpp"
 #include "../system/Time.hpp"

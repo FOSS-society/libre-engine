@@ -4,14 +4,10 @@
 #include <iostream>
 #include <vector>
 #include <string>
-
-
+#include <typeinfo>
 
 namespace libre{
   namespace core{
-
-//foward declare
-  class Component;
 
 
   /**
@@ -29,6 +25,8 @@ namespace libre{
      *
      */
 
+  class Component;
+
     class Entity{
 
     private:
@@ -40,109 +38,59 @@ namespace libre{
       bool m_active;
 
     public:
-      Entity(std::string name, Entity * parent, int id):m_name(name), m_parent(parent), m_id(id){
-      }
+      Entity(std::string name, Entity * parent, int id);
       Entity(Entity &&m) = default;
 
+      template<typename T>
+      T findComponentOfType();
+
+      template<typename T>
+      T findComponentByName(const char * name);
 
 
+      ~Entity();
 
-      ~Entity(){
+      void setName(std::string name);
 
-      }
+      std::string Name()const;
 
-      void setName(std::string name){
-        this->m_name = name;
-      }
+      std::string getName();
 
-      std::string Name()const{
-        return this->m_name;
-      }
+      void setComponentList(std::vector<Component*> list);
+      void setComponentList(std::nullptr_t np);
 
-      std::string getName(){
-        return this->m_name;
-      }
+      void addComponent(Component *c);
 
-      void setComponentList(std::vector<Component*> list){
-        this->m_ComponentList = list;
-      }
-      void setComponentList(std::nullptr_t np){
-        this->m_ComponentList.clear();
-      }
+      std::vector<Component*> componentList()const;
 
-      void addComponent(Component *c){
-        this->m_ComponentList.push_back(c);
-      }
+      std::vector<Component*> getComponentList();
 
-      std::vector<Component*> componentList()const{
-        return this->m_ComponentList;
-      }
+      void setParent(Entity *e);
 
-      std::vector<Component*> getComponentList(){
-        return this->m_ComponentList;
-      }
+        Entity *Parent()const;
 
-      void setParent(Entity *e){
-        this->m_parent = e;
-        }
+        Entity *getParent();
 
-        Entity *Parent()const{
-          return this->m_parent;
-        }
+      void setActive(bool a);
+      bool isActive();
+      bool Active()const;
 
-        Entity *getParent(){
-          return this->m_parent;
-        }
-
-      void setActive(bool a){
-        this->m_active = a;
-      }
-      bool isActive(){
-        return this->m_active;
-      }
-      bool Active()const{
-        return this->m_active;
-      }
-
-      void setID(int id){
-        this->m_id = id;
-      }
-      int getID(){
-        return this->m_id;
-      }
-      int ID(){
-        return this->m_id;
-      }
+      void setID(int id);
+      int getID();
+      int ID();
 
 
-      std::vector<Entity *> children() const
-      {
-          return m_children;
-      }
+      std::vector<Entity *> children() const;
+      std::vector<Entity *> getChildren();
 
-      Entity * child(int index)const
-      {
-          return m_children[index];
-      }
+      Entity * child(int index)const;
 
-      Entity *child(std::string name)const
-      {
-         unsigned int x = 0;
-         do{
-             if(this->m_children.at(x)->Name().compare(name))
-                 return this->m_children.at(x);
-             else
-                 x++;
-         } while ( x < this->m_children.size());
+      Entity *child(std::string name)const;
 
-         return nullptr;
-      }
+      Entity * getChild(int index);
+      Entity *getChild(std::string name);
 
-
-      void setChildren(const std::vector<Entity *> &children)
-      {
-          m_children = children;
-      }
+      void setChildren(const std::vector<Entity *> &children);
 
 
     };
@@ -150,11 +98,9 @@ namespace libre{
 
 
 
-
-
-
-
   }
 }
+
+#include "Entity_impl.hpp"
 
 #endif //Entity.hpp

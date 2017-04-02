@@ -1,16 +1,13 @@
 #ifndef COMPONENT_HPP_
-#define COMPONENT_HPP
+#define COMPONENT_HPP_
 
 #include <iostream>
+
 
 namespace libre{
   namespace core{
 
-
-  //foward declaration
-  class Entity;
-
-
+    class Entity;
   /**
    * @brief The Component class
    *
@@ -35,11 +32,13 @@ namespace libre{
 
   private:
     Entity *m_parent;
-    std::string m_name;
+    char * m_name;
 
   public:
-    Component(Entity * parent,std::string name):m_parent(parent),m_name(name){}
-    ~Component();
+    Component(Entity * parent,char * name):m_parent(parent),m_name(name){
+
+    }
+   virtual ~Component();
 
     void setParent(Entity *parent){
       this->m_parent = parent;
@@ -52,15 +51,15 @@ namespace libre{
       return this->m_parent;
     }
 
-    void setName(std::string name){
-      this->m_name = name;
+    void setName(const char * name){
+      this->m_name = (char *)name;
     }
 
 
-    std::string getName(){
+    const char * getName(){
       return this->m_name;
     }
-    std::string Name()const{
+    const char * Name()const{
       return this->m_name;
     }
 

@@ -36,6 +36,7 @@ namespace libre{
 		public:
             Matrix4(t data);
 			Matrix4(const Matrix4<t>& copy);
+            Matrix4();
 
 
             Matrix4<t> operator=(const Matrix4& copy);
@@ -79,8 +80,15 @@ namespace libre{
 		Matrix4<t>::Matrix4(const Matrix4<t>& copy){
 			for(int i =0; i<16;i++){
                 this->_data[i] = copy.data(i);
-			}
-		}
+            }
+        }
+        template<typename t>
+        Matrix4<t>::Matrix4(){
+            for(int i =0; i<16;i++){
+                this->_data[i] = (t)0;
+            }
+        }
+
 
 		template<typename t>
         Matrix4<t> Matrix4<t>::operator=(const Matrix4<t>& copy){
