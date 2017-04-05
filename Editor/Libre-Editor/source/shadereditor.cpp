@@ -10,6 +10,9 @@ ShaderEditor::ShaderEditor(QWidget *parent) :
 {
     ui->setupUi(this);
     connect(this->ui->tableWidget->verticalHeader(),SIGNAL(sectionClicked(int)),this,SLOT(onHeaderClicked(int)));
+    m_highlighter = new GLSLHighlighter(ui->textEdit->document());
+    m_highlighter->setDocument(ui->textEdit->document());
+    connect(ui->textEdit,SIGNAL(QTextEdit::textChanged()),m_highlighter,SLOT(GLSLHighlighter::highlightBlock()));
 }
 
 ShaderEditor::~ShaderEditor()
@@ -75,6 +78,7 @@ void ShaderEditor::on_Load_clicked()
     file.open(QFile::ReadOnly);
     QByteArray data = file.readAll();
     this->ui->textEdit->setText(data);
+    connect(this->ui->textEdit,SIGNAL(QTextEdit::textChanged()),m_highlighter,SLOT(GLSLHighlighter::highlightBlock()));
     file.close();
     /**
         TODO: Implement GLSL Highlighting
@@ -89,6 +93,8 @@ void ShaderEditor::onHeaderClicked(int index)
     file.open(QFile::ReadOnly);
     QByteArray data = file.readAll();
     this->ui->textEdit->setText(data);
+    connect(this->ui->textEdit,SIGNAL(QTextEdit::textChanged()),m_highlighter,SLOT(GLSLHighlighter::highlightBlock()));
+    m_highlighter->setDocument(ui->textEdit->document());
     file.close();
 }
 

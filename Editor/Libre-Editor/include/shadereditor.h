@@ -4,7 +4,7 @@
 #include <QWidget>
 #include <QTableWidgetItem>
 #include "mainwindow.h"
-
+#include "glslhighlighter.h"
 namespace Ui {
 class ShaderEditor;
 }
@@ -29,9 +29,11 @@ private slots:
     void on_Load_clicked();
     void onHeaderClicked(int index);
 
+
 private:
     Ui::ShaderEditor *ui;
     MainWindow *m_main;
+    GLSLHighlighter *m_highlighter;
 };
 
 #endif // SHADEREDITOR_H

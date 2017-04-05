@@ -20,7 +20,8 @@ SOURCES += source/main.cpp \
     source/userproject.cpp \
     source/projectcreategui.cpp \
     source/tilemapeditor.cpp \
-    source/luahighlighter.cpp
+    source/luahighlighter.cpp \
+    source/glslhighlighter.cpp
 
 
 HEADERS  += include/mainwindow.h \
@@ -29,7 +30,8 @@ HEADERS  += include/mainwindow.h \
     include/userproject.h \
     include/projectcreategui.h \
     include/tilemapeditor.hpp \
-    include/luahighlighter.h
+    include/luahighlighter.h \
+    include/glslhighlighter.h
 
 
 FORMS    += ui/mainwindow.ui \

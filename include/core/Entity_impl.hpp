@@ -20,6 +20,11 @@ namespace libre{
             if (T type = dynamic_cast<T>(m_ComponentList.at(x)))
             {
                 return type;
+            }else{
+                //if its not in the components:
+                for(Entity * e : m_children){
+                    e->findComponentOfType<T>();
+                }
             }
 
         }

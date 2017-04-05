@@ -29,11 +29,12 @@ namespace libre{
                 }
                 break;
             case graphics::RendererType::RT_3D:
-              // for(Entity *i  : getRoot()->getChildren()){
-              //     if(i->findComponentOfType<SpriteComponent>() != nullptr){
-              //         m_list->push_back(i);
-              //      }
-              //  }
+              //Not Yet Implemented
+               //for(Entity *i  : getRoot()->getChildren()){
+               //    if(i->findComponentOfType<MeshComponent>() != nullptr){
+               //        this->getList()->push_back(i);
+               //     }
+               // }
                 break;
             default:
                 throw graphics::RendererException("Unable to determine renderer type");
@@ -44,11 +45,38 @@ namespace libre{
 
         void RenderingSystem::update()
         {
+            switch(m_renderer->Type())
+            {
+            case graphics::RendererType::RT_2D:
+
+                // Grab each Entity which is in view
+                // All must be IN ORDER from camera's Z variable
+
+                //load them into the renderer
+
+                // swap Rendering buffers
+
+                break;
+            case graphics::RendererType::RT_3D:
+                // Grab each Entity which is in view
+
+                //load them into the renderer
+
+               //Deal with post-processing
+
+                //Swap buffers
+
+                break;
+            }
 
         }
 
         void RenderingSystem::destroyed()
         {
+         delete this->m_camera;
+         delete this->m_list;
+         delete this->m_renderer;
+         delete this->m_root;
 
         }
     }
