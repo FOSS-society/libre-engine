@@ -3,6 +3,17 @@
 
 #include <QSyntaxHighlighter>
 
+
+
+///
+/// \brief The GLSLHighlighter class
+///
+/// Contains the object which interacts with
+/// the shader editor's text edit user interface
+/// object. Inside it's constructor, you can edit
+/// the colors of each keyword.
+///
+///
 class GLSLHighlighter : public QSyntaxHighlighter
     {
     Q_OBJECT

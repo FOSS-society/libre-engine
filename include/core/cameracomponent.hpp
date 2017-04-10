@@ -5,7 +5,7 @@
 #include "../graphics/Camera.hpp"
 #include "Component.hpp"
 namespace libre{
-    namespace core{
+namespace core{
 
 
 class CameraComponent : public Component
@@ -20,7 +20,7 @@ public:
     void setCamera(graphics::Camera *camera);
 };
 
-    }
+}
 }
 
 #endif // CAMERACOMPONENT_HPP

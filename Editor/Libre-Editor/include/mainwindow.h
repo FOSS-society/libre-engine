@@ -7,6 +7,13 @@ namespace Ui {
 class MainWindow;
 }
 
+
+///
+/// \brief The MainWindow class
+///
+/// This is the object that represents the main part of the
+/// editor.  It contains a User Project object which will
+/// contain meta-information regarding the project.
 class MainWindow : public QMainWindow
 {
     Q_OBJECT

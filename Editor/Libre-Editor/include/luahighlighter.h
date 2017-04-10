@@ -3,7 +3,15 @@
 
 #include <QSyntaxHighlighter>
 
-
+///
+/// \brief The LuaHighlighter class
+///
+/// Contains the object which interacts with
+/// the script editor's text edit user interface
+/// object. Inside it's constructor, you can edit
+/// the colors of each keyword.
+///
+///
 class LuaHighlighter : public QSyntaxHighlighter
 {
     Q_OBJECT

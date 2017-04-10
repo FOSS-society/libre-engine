@@ -10,6 +10,16 @@ class ProjectCreateGUI;
 //foward declare
 class MainWindow;
 
+
+///
+/// \brief The ProjectCreateGUI class
+///
+/// This is the Class that represents
+/// the GUI for Project Creation.  After
+/// the project is created, a directory is
+/// created as well as a meta-file which
+/// defines renderer types.  More information
+/// will be stored in here.
 class ProjectCreateGUI : public QWidget
 {
     Q_OBJECT
@@ -38,6 +48,6 @@ private:
  */
 
 bool copyDir(const QString &srcFilePath,
-                            const QString &tgtFilePath);
+             const QString &tgtFilePath);
 
 #endif // PROJECTCREATEGUI_H

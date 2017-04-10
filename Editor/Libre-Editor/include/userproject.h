@@ -5,6 +5,14 @@
 #include <QString>
 #include <libre-engine/graphics/Renderer.hpp>
 
+
+///
+/// \brief The UserProject class
+///
+/// The class which describes the project
+/// inside the file-system.  It contains a
+/// the directory path as a string, as well
+/// as a RendererType enum.
 class UserProject
 {
 

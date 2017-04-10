@@ -102,7 +102,7 @@ void ProjectCreateGUI::on_pushButton_clicked()
  */
 
 bool copyDir(const QString &srcFilePath,
-                            const QString &tgtFilePath)
+             const QString &tgtFilePath)
 {
     QFileInfo srcFileInfo(srcFilePath);
     if (srcFileInfo.isDir()) {
