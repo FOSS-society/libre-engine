@@ -1,14 +1,22 @@
+Libre Engine
 
-
-	Libre Engine
-
-Design-Doc Revision: 1
+Design-Doc Revision: 9
 Created:9/9/16
+
+Rev History:
+9/11/16 -2
+9/12/16 -3
+9/17/16 -4
+9/24/16 -5
+9/28/16 -6
+9/29/16 -7
+10/30/16 -8
+12/6/16 -9
 
 
 Description: a game engine written for linux that
 can be used to create a variety of games including
-2D Platforms to 3D Shooters. 
+2D Platforms to 3D Shooters.
 
 
 
@@ -19,6 +27,7 @@ Libraries:
 	#Graphics/Window Management
 	GLEW
 	SDL2
+	SDL2_image
 
 	#InputHandling
 	SDL2
@@ -30,7 +39,14 @@ Libraries:
 	@@Proposed Idea:
 	SDL2_NET
 
+	#Scripting
+	Lua5.2
 
+	#Serialization
+	Cereal : https://github.com/USCiLab/cereal
+
+
+Build-System: Cmake
 
 Architecture: Entity/Component/System
 
@@ -39,8 +55,8 @@ Also: Ability to create Client/Server connections .
 
 	We create base objects that can be interited
 into Components. Then we use Entities to hold a vector
-of Components (called a ComponentList, or ComponentManager). 
-While the game is running Systems will be interacting 
+of Components (called a ComponentList, or ComponentManager).
+While the game is running Systems will be interacting
 with active Entities, and their Components.
 
 
@@ -48,8 +64,165 @@ Systems:
 	Audio
 	Renderer
 	SceneManager
-	Physics	
+	Physics
 	Input
 
 
+Classes:
+[] = not started
+[c] = Completed basic functionality
+[i] = Incomplete functionality
+[e] = Extra functionality is needed
+[E] = Extra functionality is completed
 
+[c] core::LEVariant - Class that can represent any type
+[i] core::Entity - Class that represents an object in the engine
+[i] core::Component - Class that represents data an object contains
+[] core::Sprite - Class that represents a 2D-image as a Component
+[] core::Model - Class that represents a 3D-Object as a Component
+[] core::BGMusic - Class that represents a Sound file that loops in the background
+[] core::Voice - Class that represents an audio clip used for voice-overs
+[] core::SFX - Class that represents a Sound Effect as a component
+[] core::BoxCollider2D - Class that represents a 2 Dimensional Box Collider as a component
+[] core::BoxCollider3D - Class that represents a 3 Dimensional Box Collider as a component
+[] core::CircleCollider - Class that represents a circle collider
+[] core::SphereCollider - class that represents a sphere collider
+[] core::Behavior - Class that represents a Script as a component
+DEPRECIATING (see 1): [ce] core::Engine - Class that represents the whole engine
+[] core::StateComponent - Class that represents the state of the program.
+
+
+
+
+[c] math::Vector2 - Templated Class that represents an X and a Y variable
+[c] math::Vector3 - Templated Class that represents an X , Y and a Z variable
+[c] math::Vector4 - Templated Class that represents an X , Y , Z and a W  variable
+[c] math::Matrix2 - Templated Class that represents an 2 by 2 Matrix
+[c] math::Matrix3 - Templated Class that represents an 3 by 3 Matrix
+[c] math::Matrix4 - Templated Class that represents an 4 by 4 Matrix
+
+[i] physics::aabb - Class that represents an Axis-Aligned Bounding Box
+								AABB2D and AABB3D
+[i] physics::rectangle - Class that represents a rectangle collider (2D)
+[] physics::circle - Class that represents a circle collider (2D)
+[] physics::Box - Class that represents a Box Collider (3D)
+[] physics::Sphere - Class that represents a Sphere Collider (3D)
+[] physics::lineSegment - Class that represents a Line Segment
+[] physics::line - Class that represents a Line that has one point and extends infinitely
+	Note: Use this for raycasting
+
+[c] graphics::Window - Class that represents the Window
+[c] graphics::Renderer - Class that represents a renderer that works on both 2D and 3D
+[] graphics::Image - Class that wraps SDL_image and holds image data
+[i] graphics::Shader - Class that represents a shader file (not to be confused with ShaderProgram)
+[] graphics::ShaderVariable - Class that represents uniforms or attributes in a specific ShaderProgram
+[] graphics::ShaderProgram - Class that represents the program that is outputted by the graphic pipeline
+
+
+[] audio::Sound - Class that represents a Sound File
+[] audio::SoundBuffer - Class that represents a buffer to handle streaming Sound Files
+[] audio::Mixer - Class that can play Sound Files
+[] audio::SoundStream - Class that represents the stream of Sound files
+
+
+[c] script::ScriptEngine - Class that represents the Scripting engine
+			   At the moment it wraps a Lua Interpreter
+[c] script::Script - Class that represents a single script which can be run within
+a ScriptEngine
+
+######
+Future
+######
+[] script::ScriptEngine - Class that acts as a base for a Scripting Interpreter
+[] script::LuaScriptEngine - Class that represents a Lua Interpreter
+[] script::PythonScriptEngine - Class that represents a Python Interpreter
+[] script::RubyScriptEngine - Class that represents a Ruby Interpreter
+
+######
+######
+######
+
+
+[] system::RenderingSystem - Class that represents the Rendering System
+	 note: based on the rendering Context
+[] system::PhysicsSystem - Class that represents the Physics System
+[] system::ScriptingSystem - Class that represents the Scripting engine as a System
+[] system::AudioSystem - Class that represents the Audio System
+[] system::GameplaySystem - Class that represents the system that handles the state of the program
+[i] system::Buffer - Class that represents a buffer for OpenGL
+[ce?] system::OpenGL - Namespace which holds openGL functions for usage
+[c] system::Time - Class which represents time for the Engine
+[ce?] system::VertexArray - Class which represents a VertexArray for OpenGL
+[c] system::Keyboard - Class which represents input from the keyboard
+[c] system::Mouse - Class which represents input from the mouse
+[c] system::Logger - Class which represents a logging system
+[c] system::Task - Class which represents a single thread running a specific class
+
+
+
+
+[c] asset::Base_Asset - Base class for any asset being loaded into the Engine
+[ce] asset::Image - Class that represents an image asset
+[] asset::Audio - Class that represents an Audio asset
+[] asset::Model - Class that represents a Model asset
+[] asset::ScriptAsset - Class that represents a script asset
+
+[c?] libre::SinglePlayerApp - Class that represents an application based on the engine
+	 that is single player, and only relies on the base components of the engine.
+	 This is just a base class, you will have to create a sub-class to initialize
+	 all your user information.
+
+
+[] program::Client - Class that represents a client, which is an application that
+	relies on a connection to a server
+
+[] program::Server - Class that represents a server, a game can be written to run on
+	this server, as a multi-player game
+
+
+##########
+REVISE
+##########
+
+Event Notes:
+	A class Event should be created, which handles the whole event system. SDL2
+will be used to grab input from such devices (keyboard, mouse, touch, etc) that
+will be redirected to its device's class interface.  This will be used at the user-end
+of the engine. The Event system will be placed inside the engine's system's manager
+by default.(It will be at m_SystemList[0]). The user can then create rules in the
+component (based on what was done), that controls interaction of the game. I will write
+this similar, but not identical to http://www.sdltutorials.com/sdl-events . The user can
+then create a subclass of the Input component, to handle the events differently then
+the default settings.
+
+#########
+#END REVISE
+#########
+
+
+Vertex Notes:
+
+	Vertex data needs to be dynamic. This is because i dont know what shaders you plan on adding to the engine, therefore, i cant assume the amount of information you plan on sending into OpenGL.  So i plan on, for now, just creating vertex info based on more common shaders. Example:
+	vtdbasic_pos4_col4 will be a vertex with position info as well as color info.
+	
+	List:
+	vtdbasic_pos3 - vec3 position
+	vtdbasic_pos4_col4 - vec4 position, vec4 color
+	vtdbasic_pos4_norm3 - vec4 position, vec3 normal
+	
+
+I dont know, this is just a thought, hence why its in the Design doc and not in the code yet ;)
+
+
+
+comments:
+1: Engine class has been deemed depreciated until further notice, i may plan on using this to
+single-handedly load assets into the Application.
+
+
+
+Libre-Editor:
+
+Language: C++
+
+Libraries: QT, Libre-Engine

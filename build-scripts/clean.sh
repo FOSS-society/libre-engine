@@ -1,0 +1,15 @@
+cd ../
+rm *.o
+cd include/core
+rm *.gch
+cd ../graphics
+rm *.gch
+cd ../math
+rm *.gch
+cd ../physics
+rm *.gch
+cd ../script
+rm *.gch
+cd ../system
+rm *.gch
+cd ../../

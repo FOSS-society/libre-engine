@@ -1,9 +1,41 @@
 #ifndef Vector3_HPP_
 #define Vector3_HPP_
 
+#include <iostream>
+#include <string>
+
 namespace libre{
 
 	namespace math{
+
+    /**
+     *@brief internalv3
+     * a simplification for opengl usage. can easily call getInternal().i_x or getInternal().i_y
+     */
+    template <typename t>
+    struct internalv3{
+        t i_x;
+        t i_y;
+        t i_z;
+
+        internalv3(){}
+        internalv3(t x, t y,t z):i_x(x), i_y(y),i_z(z){}
+    };
+
+    /**
+    *@brief Vector3 Class
+    *
+    * A generic class to hold a Vector of 3 of the same type of data;
+    *
+    * DataType: x
+    * DataType: y
+    * DataType: z
+    *
+    * Notes : As a rule of Templates, All functionality is written in this header
+    *         Const Compatible
+    *
+    *
+    */
 
 		template <typename t>
 		class Vector3{
@@ -14,7 +46,9 @@ namespace libre{
 		t m_z;
 
 		public:
+        Vector3(){}
 		Vector3(const t& x,const t& y,const t& z);
+        Vector3(const internalv3<t> &vec);
 		Vector3(const Vector3& copy);
 
 		t& getX();
@@ -24,25 +58,29 @@ namespace libre{
 		t& getZ();
 		t Z()const;
 
+        internalv3<t> getInternal();
+
 		void setX(t x);
 		void setY(t y);
 		void setZ(t z);
 
 		Vector3<t> add(const Vector3<t> &other);
 		Vector3<t> sub(const Vector3<t> &other);
-		Vector3<t> multiply(const Vector3<t> &other);
+        Vector3<t> multiply(const Vector3<t> &other);
+        Vector3<t> multiply(const t &scalar);
 		Vector3<t> divide(const Vector3<t> &other);
 
 		Vector3<t> operator=(Vector3 right);
 		Vector3<t> operator+(Vector3 right);
 		Vector3<t> operator-(Vector3 right);
 		Vector3<t> operator*(Vector3 right);
+        Vector3<t> operator*(t right);
 		Vector3<t> operator/(Vector3 right);
 
 		bool operator==(Vector3<t> right);
 		bool operator!=(Vector3<t> right);
 
-
+        t dot(const Vector3<t> vec);
 
 		const char * toString();
 
@@ -54,8 +92,13 @@ namespace libre{
 		Vector3<t>::Vector3(const t&x, const t&y, const t&z){
 				this->m_x = x;
 				this->m_y = y;
-				this->m_z = z;
-		}
+            this->m_z = z;
+        }
+        template <typename t>
+        Vector3<t>::Vector3(const internalv3<t> &vec):m_x(vec.i_x),m_y(vec.i_y),m_z(vec.i_z)
+        {
+
+        }
 		template <typename t>
 		Vector3<t>::Vector3(const Vector3<t>& copy){
 			this->m_x = copy.X();
@@ -85,8 +128,14 @@ namespace libre{
 		}
 		template <typename t>
 		t Vector3<t>::Z()const{
-			return this->m_z;
-		}
+            return this->m_z;
+        }
+
+        template <typename t>
+        internalv3<t> Vector3<t>::getInternal()
+        {
+            return internalv3<t>(m_x,m_y,m_z);
+        }
 
 
 		template <typename t>
@@ -117,8 +166,14 @@ namespace libre{
 		template <typename t>
 		Vector3<t> Vector3<t>::multiply(const Vector3<t> &other){
 			Vector3<t> vec(this->m_x * other.X(), this->m_y * other.Y(),this->m_z * other.Z());
-			return vec;
-		}
+            return vec;
+        }
+        template <typename t>
+        Vector3<t> Vector3<t>::multiply(const t &scalar)
+        {
+            Vector3<t> vec(this->m_x * scalar, this->m_y * scalar,this->m_z * scalar);
+            return vec;
+        }
 		template <typename t>
 		Vector3<t> Vector3<t>::divide(const Vector3<t> &other){
 			Vector3<t> vec(this->m_x / other.X(), this->m_y / other.Y(),this->m_z / other.Z());
@@ -138,9 +193,13 @@ namespace libre{
 			return this->sub(right);
 		}
 		template <typename t>
-		Vector3<t> Vector3<t>::operator*(Vector3 right){
+        Vector3<t> Vector3<t>::operator*(Vector3<t> right){
 			return this->multiply(right);
 		}
+        template <typename t>
+        Vector3<t> Vector3<t>::operator*(t right){
+            return this->multiply(right);
+        }
 		template <typename t>
 		Vector3<t> Vector3<t>::operator/(Vector3 right){
 			return this->divide(right);
@@ -153,15 +212,27 @@ namespace libre{
 		}
 		template <typename t>
 		bool Vector3<t>::operator!=(Vector3<t> right){
-						return (this->m_x != right->X()) || (this->m_y != right->Y())|| (this->m_z != right->Z());
-		}
+            return (this->m_x != right->X()) || (this->m_y != right->Y())|| (this->m_z != right->Z());
+        }
+
+        template <typename t>
+        t Vector3<t>::dot(const Vector3<t> vec)
+        {
+            return this->m_x * vec.X() + this->m_y * vec.Y() + this->m_z * vec.Z();
+        }
 
 
-		template <typename t>
-		const char * Vector3<t>::toString(){
 
-			return "X: " + this->m_x +"\nY: " + this->m_y + "\nZ: " + this->m_z;
-		}
+        template <typename t>
+        const char * Vector3<t>::toString(){
+
+            std::string vec3String("X: " + std::to_string(this->m_x).c_str());
+            vec3String.append(",Y: "+ std::to_string(this->m_y).c_str());
+            vec3String.append(",Z: "+ std::to_string(this->m_z).c_str());
+
+            return vec3String.c_str();
+        }
+
 
 
 

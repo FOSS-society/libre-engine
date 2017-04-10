@@ -1,0 +1,7 @@
+12/6/2016:
+	Create Vertex formats
+	Create a Mesh object based on verticies, texture coords, and other data needed
+	Ability to Render a Mesh onto the Screen when the renderer is RENDERER_3D
+	
+
+		

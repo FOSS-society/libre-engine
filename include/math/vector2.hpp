@@ -1,9 +1,37 @@
 #ifndef VECTOR2_HPP_
 #define VECTOR2_HPP_
 
+#include <iostream>
+#include <string>
+
 namespace libre{
 
 	namespace math{
+
+    /**
+     *@brief internalv2
+     * a simplification for opengl usage. can easily call getInternal().i_x or getInternal().i_y
+     */
+    template <typename t>
+    struct internalv2{
+        t i_x;
+        t i_y;
+
+        internalv2(){}
+        internalv2(t x, t y):i_x(x),i_y(y){}
+    };
+
+         /**
+         *@brief Vector2 Class
+         *
+         * A generic class to hold a Vector of 2 of the same type of data;
+         *
+         * DataType: x
+         * DataType: y
+         *
+         * Notes : As a rule of Templates, All functionality is written in this header
+         *        Const Compatible
+         */
 
 		template <typename t>
 		class Vector2{
@@ -12,8 +40,11 @@ namespace libre{
 		t m_x;
 		t m_y;
 
+
 		public:
-		Vector2(const t& x,const t& y);
+        Vector2(){}
+        Vector2(const t& x,const t& y);
+        Vector2(const internalv2<t> &vec);
 		Vector2(const Vector2& copy);
 
 		t& getX();
@@ -24,15 +55,19 @@ namespace libre{
 		void setX(t x);
 		void setY(t y);
 
+        internalv2<t> getInternal(){return internalv2<t>(m_x,m_y);}
+
 		Vector2<t> add(const Vector2<t> &other);
 		Vector2<t> sub(const Vector2<t> &other);
 		Vector2<t> multiply(const Vector2<t> &other);
+        Vector2<t> multiply(const t &scalar);
 		Vector2<t> divide(const Vector2<t> &other);
 
 		Vector2<t> operator=(Vector2 right);
 		Vector2<t> operator+(Vector2 right);
 		Vector2<t> operator-(Vector2 right);
 		Vector2<t> operator*(Vector2 right);
+        Vector2<t> operator*(t right);
 		Vector2<t> operator/(Vector2 right);
 
 		bool operator==(Vector2<t> right);
@@ -42,15 +77,21 @@ namespace libre{
 
 		const char *toString();
 
-
 		};
 
 
 		template <typename t>
 		Vector2<t>::Vector2(const t&x, const t&y){
 				this->m_x = x;
-				this->m_y = y;
-		}
+            this->m_y = y;
+        }
+        template <typename t>
+        Vector2<t>::Vector2(const internalv2<t> &vec)
+        {
+            setX(vec.i_x);
+            setY(vec.i_y);
+
+        }
 		template <typename t>
 		Vector2<t>::Vector2(const Vector2<t>& copy){
 			this->m_x = copy.X();
@@ -98,6 +139,11 @@ namespace libre{
 			Vector2<t> vec(this->m_x * other.X(), this->m_y * other.Y());
 			return vec;
 		}
+        template <typename t>
+        Vector2<t> Vector2<t>::multiply(const t &scalar){
+            Vector2<t> vec(this->m_x * scalar, this->m_y * scalar);
+            return vec;
+        }
 		template <typename t>
 		Vector2<t> Vector2<t>::divide(const Vector2<t> &other){
 			Vector2<t> vec(this->m_x / other.X(), this->m_y / other.Y());
@@ -118,8 +164,14 @@ namespace libre{
 		}
 		template <typename t>
 		Vector2<t> Vector2<t>::operator*(Vector2 right){
-			return this->multiply(right);
-		}
+            return this->multiply(right);
+        }
+        template <typename t>
+        Vector2<t> Vector2<t>::operator*(t right)
+        {
+            this->m_x * right;
+            this->m_y * right;
+        }
 		template <typename t>
 		Vector2<t> Vector2<t>::operator/(Vector2 right){
 			return this->divide(right);
@@ -139,9 +191,11 @@ namespace libre{
 		template <typename t>
 		const char * Vector2<t>::toString(){
 
-			return "X: " + this->m_x +"\nY: " + this->m_y;
-		}
+            std::string vec2String("X: " + std::to_string(this->m_x));
+            vec2String.append(",Y: "+std::to_string(this->m_y));
 
+            return vec2String.c_str();
+		}
 
 
 

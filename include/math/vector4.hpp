@@ -1,10 +1,39 @@
 #ifndef Vector4_HPP_
 #define Vector4_HPP_
 
+#include <iostream>
 namespace libre{
 
 	namespace math{
 
+
+    /**
+     *@brief internalv4
+     * a simplification for opengl usage. can easily call getInternal().i_x or getInternal().i_y
+     */
+    template <typename t>
+    struct internalv4{
+        t i_x;
+        t i_y;
+        t i_z;
+        t i_w;
+
+        internalv4(){}
+        internalv4(t x, t y,t z,t w):i_x(x), i_y(y),i_z(z), i_w(w){}
+    };
+    /**
+    *@brief Vector4 Class
+    *
+    * A generic class to hold a Vector of 4 of the same type of data;
+    *
+    * DataType: x
+    * DataType: y
+    * DataType: z
+    * DataType: w
+    *
+    * Notes : As a rule of Templates, All functionality is written in this header
+    *         Const Compatible
+    */
 		template <typename t>
 		class Vector4{
 
@@ -15,8 +44,10 @@ namespace libre{
 		t m_w;
 
 		public:
+        Vector4(){}
 		Vector4(const t& x,const t& y,const t& z,const t&w);
-		Vector4(const Vector4& copy);
+        Vector4(const Vector4& copy);
+        Vector4(const internalv4<t> vec);
 
 		t& getX();
 		t X()const;
@@ -35,6 +66,7 @@ namespace libre{
 		Vector4<t> add(const Vector4<t> &other);
 		Vector4<t> sub(const Vector4<t> &other);
 		Vector4<t> multiply(const Vector4<t> &other);
+        Vector4<t> multiply(const t &scalar);
 		Vector4<t> divide(const Vector4<t> &other);
 
 		Vector4<t> operator=(Vector4 right);
@@ -60,8 +92,14 @@ namespace libre{
 						this->m_x = x;
 						this->m_y = y;
 						this->m_z = z;
-						this->m_w = w;
-				}
+                    this->m_w = w;
+                }
+
+                template <typename t>
+                Vector4<t>::Vector4(const internalv4<t> vec):m_x(vec.i_x),m_y(vec.i_y),m_z(vec.i_z),m_w(vec.i_w)
+                {
+
+                }
 				template <typename t>
 				Vector4<t>::Vector4(const Vector4<t>& copy){
 					this->m_x = copy.X();
@@ -137,8 +175,14 @@ namespace libre{
 				template <typename t>
 				Vector4<t> Vector4<t>::multiply(const Vector4<t> &other){
 					Vector4<t> vec(this->m_x * other.X(), this->m_y * other.Y(),this->m_z * other.Z(),this->m_w * other.W());
-					return vec;
-				}
+                    return vec;
+                }
+                template <typename t>
+                Vector4<t> Vector4<t>::multiply(const t &scalar)
+                {
+                    Vector4<t> vec(this->m_x * scalar, this->m_y * scalar,this->m_z * scalar,this->m_w * scalar);
+                    return vec;
+                }
 				template <typename t>
 				Vector4<t> Vector4<t>::divide(const Vector4<t> &other){
 					Vector4<t> vec(this->m_x / other.X(), this->m_y / other.Y(),this->m_z / other.Z(),this->m_w / other.W());
@@ -177,11 +221,15 @@ namespace libre{
 				}
 
 
-				template <typename t>
-				const char * Vector4<t>::toString(){
+                template <typename t>
+                const char * Vector4<t>::toString(){
 
-					return "X: " + this->m_x +"\nY: " + this->m_y + "\nZ: " + this->m_z + "\nW: " +this->m_w;
-				}
+                    std::string vec4String("X: " + this->m_x);
+                    vec4String.append(",Y: "+this->m_y);
+                    vec4String.append(",Z: "+this->m_z);
+                    vec4String.append(",W: "+this->m_w);
+                    return vec4String.c_str();
+                }
 
 
 

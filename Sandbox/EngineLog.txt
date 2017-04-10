@@ -1,0 +1,50 @@
+2016-12-02.19:09:05:	Initializing Application /
+2016-12-02.19:09:06:	Creating 2D SDL_Rendere
+2016-12-02.19:09:06:	OpenGL Info:
+2016-12-02.19:09:06:	vendor:
+2016-12-02.19:09:06:	renderer:
+2016-12-02.23:29:42:	Initializing Application /
+2016-12-02.23:29:42:	Creating 2D SDL_Rendere
+2016-12-02.23:29:43:	OpenGL Info:
+2016-12-02.23:29:43:	vendor:
+2016-12-02.23:29:43:	renderer:
+2017-04-02.20:32:12:	Initializing Application /
+2017-04-02.20:32:12:	Creating 2D SDL_Rendere
+2017-04-02.20:32:12:	OpenGL Info:
+2017-04-02.20:32:12:	vendor:
+2017-04-02.20:32:12:	renderer:
+2017-04-02.20:36:15:	Initializing Application /
+2017-04-02.20:36:15:	Creating 2D SDL_Rendere
+2017-04-02.20:36:15:	OpenGL Info:
+2017-04-02.20:36:15:	vendor:
+2017-04-02.20:36:15:	renderer:
+2017-04-02.20:37:19:	Initializing Application /
+2017-04-02.20:37:19:	Creating 2D SDL_Rendere
+2017-04-02.20:37:19:	OpenGL Info:
+2017-04-02.20:37:19:	vendor:
+2017-04-02.20:37:19:	renderer:
+2017-04-02.20:38:52:	Initializing Application /
+2017-04-02.20:38:52:	Creating 2D SDL_Rendere
+2017-04-02.20:38:52:	OpenGL Info:
+2017-04-02.20:38:52:	vendor:
+2017-04-02.20:38:52:	renderer:
+2017-04-02.20:38:55:	Initializing Application /
+2017-04-02.20:38:55:	Creating 2D SDL_Rendere
+2017-04-02.20:38:55:	OpenGL Info:
+2017-04-02.20:38:55:	vendor:
+2017-04-02.20:38:55:	renderer:
+2017-04-02.20:39:03:	Initializing Application /
+2017-04-02.20:39:03:	Creating 2D SDL_Rendere
+2017-04-02.20:39:03:	OpenGL Info:
+2017-04-02.20:39:03:	vendor:
+2017-04-02.20:39:03:	renderer:
+2017-04-02.20:39:07:	Initializing Application /
+2017-04-02.20:39:07:	Creating 2D SDL_Rendere
+2017-04-02.20:39:07:	OpenGL Info:
+2017-04-02.20:39:07:	vendor:
+2017-04-02.20:39:07:	renderer:
+2017-04-03.20:14:31:	Initializing Application /
+2017-04-03.20:14:32:	Creating 2D SDL_Rendere
+2017-04-03.20:14:32:	OpenGL Info:
+2017-04-03.20:14:32:	vendor:
+2017-04-03.20:14:32:	renderer:

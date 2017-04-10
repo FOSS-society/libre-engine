@@ -1,269 +1,236 @@
 #ifndef LEVARIANT_HPP_
 #define LEVARIANT_HPP_
 
-#include <stdint.h>
+
 #include <iostream>
-
 #include "../math/vector2.hpp"
-#include "../math/vector3.hpp"
-#include "../math/vector4.hpp"
-
 #include "../math/matrix2.hpp"
+#include "../math/vector3.hpp"
 #include "../math/matrix3.hpp"
+#include "../math/vector4.hpp"
 #include "../math/matrix4.hpp"
+#include <lua5.2/lua.hpp>
+
+
+
+
+/**
+ *Variant Notes:
+ * cant use templated classes where the data is a pointer
+ * such as: libre::math::Vector2<int*> or else toString throws a bitchfit
+ * so i am not allowing it.
+ */
 
 
 namespace libre{
-  namespace core{
+    namespace core{
+
+    union VariantData{
+        int asInt;
+        int *asIntPtr;
+        char asChar;
+        char *asCharPtr;
+        short asShort;
+        short *asShortPtr;
+        float asFloat;
+        float *asFloatPtr;
+        double asDouble;
+        double *asDoublePtr;
+        long asLong;
+        long *asLongPtr;
+        math::Vector2<int> asVec2Int;
+        math::Vector2<float> asVec2Float;
+        math::Vector3<float> asVec3Float;
+        math::Vector4<float> asVec4Float;
+        math::Matrix2<float> asMat2Float;
+        math::Matrix3<float> asMat3Float;
+        math::Matrix4<float> asMat4Float;
+
+
+
+        VariantData():asInt(0){} // defaults to int
+        VariantData(const VariantData &copy){
+
+        }
+
+        VariantData(int i):asInt(i){}
+        VariantData(int *ip):asIntPtr(ip){}
+        VariantData(char c):asChar(c){}
+        VariantData(char *cp):asCharPtr(cp){}
+        VariantData(short s):asShort(s){}
+        VariantData(short *sp):asShortPtr(sp){}
+        VariantData(float f):asFloat(f){}
+        VariantData(float *fp):asFloatPtr(fp){}
+        VariantData(double d):asDouble(d){}
+        VariantData(double *dp):asDoublePtr(dp){}
+        VariantData(long l):asLong(l){}
+        VariantData(long *lp):asLongPtr(lp){}
+        VariantData(math::Vector2<int> v2i):asVec2Int(v2i){}
+        VariantData(math::Vector2<float> v2f):asVec2Float(v2f){}
+        VariantData(math::Vector3<float> v3f):asVec3Float(v3f){}
+        VariantData(math::Vector4<float> v4f):asVec4Float(v4f){}
+        VariantData(math::Matrix2<float> m2f):asMat2Float(m2f){}
+        VariantData(math::Matrix3<float> m3f):asMat3Float(m3f){}
+        VariantData(math::Matrix4<float> m4f):asMat4Float(m4f){}
+
+
+        ~VariantData(){}
+        VariantData& operator=(const VariantData &copy){
+            asInt= copy.asInt;
+            asIntPtr = copy.asIntPtr;
+            asChar = copy.asChar;
+            asCharPtr = copy.asCharPtr;
+            asShort = copy.asShort;
+            asShortPtr = copy.asShortPtr;
+            asFloat = copy.asFloat;
+            asFloatPtr = copy.asFloatPtr;
+            asDouble = copy.asDouble;
+            asDoublePtr = copy.asDoublePtr;
+            asLong = copy.asLong;
+            asLongPtr = copy.asLongPtr;
+            asVec2Int = copy.asVec2Int;
+            asVec2Float = copy.asVec2Float;
+            asVec3Float = copy.asVec3Float;
+            asVec4Float = copy.asVec4Float;
+            asMat2Float = copy.asMat2Float;
+            asMat3Float = copy.asMat3Float;
+            asMat4Float = copy.asMat4Float;
+        }
+        };
+
+    enum class DataType{
+        INT,INTPTR,CHAR,CHARPTR,
+        SHORT,SHORTPTR,FLOAT,FLOATPTR,
+        DOUBLE,DOUBLEPTR,LONG,LONGPTR,
+        VEC2INT,VEC2FLOAT,VEC3FLOAT,VEC4FLOAT,
+        MAT2FLOAT,MAT3FLOAT,MAT4FLOAT
+        };
 
     class Variant{
 
+        private:
+        DataType m_type;
+        VariantData m_data;
 
-    private:
-      union m_data{
-        int asInt;
-        int* asIntptr;
-        math::Vector2<int> asVec2Int;
-        math::Vector2<int> *asVec2Intptr;
-        math::Vector2<int*> asVec2IntPtr;
-        math::Vector2<int*> *asVec2IntPtrptr;
-        math::Vector3<int> asVec3Int;
-        math::Vector3<int> *asVec3Intptr;
-        math::Vector3<int*> asVec3IntPtr;
-        math::Vector4<int*> *asVec3IntPtrptr;
-        math::Vector4<int> asVec4Int;
-        math::Vector4<int> *asVec4Intptr;
-        math::Vector4<int*> asVec4IntPtr;
-        math::Vector4<int*> *asVec4Inttrptr;
-        short asShort;
-        math::Vector2<short> asVec2short;
-        math::Vector2<short> *asVec2shortptr;
-        math::Vector2<short*> asVec2shortPtr;
-        math::Vector2<short*> *asVec2shortPtrptr;
-        math::Vector3<short> asVec3short;
-        math::Vector3<short> *asVec3shortptr;
-        math::Vector3<short*> asVec3shortPtr;
-        math::Vector4<short*> *asVec3shortPtrptr;
-        math::Vector4<short> asVec4short;
-        math::Vector4<short> *asVec4shortptr;
-        math::Vector4<short*> asVec4shortPtr;
-        math::Vector4<short*> *asVec4shorttrptr;
-        short* asShortptr;
-        long asLong;
-        math::Vector2<long> asVec2long;
-        math::Vector2<long> *asVec2longptr;
-        math::Vector2<long*> asVec2longPtr;
-        math::Vector2<long*> *asVec2longPtrptr;
-        math::Vector3<long> asVec3long;
-        math::Vector3<long> *asVec3longptr;
-        math::Vector3<long*> asVec3longPtr;
-        math::Vector4<long*> *asVec3longPtrptr;
-        math::Vector4<long> asVec4long;
-        math::Vector4<long> *asVec4longptr;
-        math::Vector4<long*> asVec4longPtr;
-        math::Vector4<long*> *asVec4longtrptr;
-        long* aslongptr;
-        long long asLongLong;
-        math::Vector2<long long> asVec2longlong;
-        math::Vector2<long long> *asVec2longlongptr;
-        math::Vector2<long long*> asVec2longlongPtr;
-        math::Vector2<long long*> *asVec2longlongPtrptr;
-        math::Vector3<long long> asVec3longlong;
-        math::Vector3<long long> *asVec3longlongptr;
-        math::Vector3<long long*> asVec3longlongPtr;
-        math::Vector4<long long*> *asVec3longlongPtrptr;
-        math::Vector4<long long> asVec4longlong;
-        math::Vector4<long long> *asVec4longlongptr;
-        math::Vector4<long long*> asVec4longlongPtr;
-        math::Vector4<long long*> *asVec4longlongtrptr;
-        long long* asLongLongptr;
-        char asChar;
-        math::Vector2<char> asVec2SChar;
-        math::Vector2<char> *asVec2SCharptr;
-        math::Vector2<char*> asVec2SCharPtr;
-        math::Vector2<char*> *asVec2CharPtrptr;
-        math::Vector3<char> asVec3Char;
-        math::Vector3<char> *asVec3Charptr;
-        math::Vector3<char*> asVec3CharPtr;
-        math::Vector3<char*> *asVec3CharPtrptr;
-        math::Vector4<char> asVec4Char;
-        math::Vector4<char> *asVec4Charptr;
-        math::Vector4<char*> asVec4CharPtr;
-        math::Vector4<char*> *asVec4CharPtrptr;
-        char *asCharptr;
-        std::string asString;
-        std::string *asStringptr;
-        math::Vector2<std::string> asVec2String;
-        math::Vector2<std::string> *asVec2Stringptr;
-        math::Vector2<std::string*> asVec2StringPtr;
-        math::Vector2<std::string*> *asVec2StringPtrptr;
-        math::Vector3<std::string> asVec3String;
-        math::Vector3<std::string> *asVec3Stringptr;
-        math::Vector3<std::string*> asVec3StringPtr;
-        math::Vector3<std::string*> *asVec3StringPtrptr;
-        math::Vector4<std::string> asVec4String;
-        math::Vector4<std::string> *asVec4Stringptr;
-        math::Vector4<std::string*> asVec4StringPtr;
-        math::Vector4<std::string*> *asVec4StringPtrptr;
-        int8_t asInt8;
-        int8_t* asInt8ptr;
-        math::Vector2<int8_t> asVec2Int8;
-        math::Vector2<int8_t> *asVec2Int8ptr;
-        math::Vector2<int8_t*> asVec2Int8Ptr;
-        math::Vector2<int8_t*> *asVec2Int8Ptrptr;
-        math::Vector3<int8_t> asVec3Int8;
-        math::Vector3<int8_t> *asVec3Int8ptr;
-        math::Vector3<int8_t*> asVec3Int8Ptr;
-        math::Vector3<int8_t*> *asVec3Int8Ptrptr;
-        math::Vector4<int8_t> asVec4Int8;
-        math::Vector4<int8_t> *asVec4Int8ptr;
-        math::Vector4<int8_t*> asVec4Int8Ptr;
-        math::Vector4<int8_t*> *asVec4Int8Ptrptr;
-        uint8_t asUInt8;
-        uint8_t* asUInt8ptr;
-        math::Vector2<uint8_t> asVec2UInt8;
-        math::Vector2<uint8_t> *asVec2UInt8ptr;
-        math::Vector2<uint8_t*> asVec2UInt8Ptr;
-        math::Vector2<uint8_t*> *asVec2UInt8Ptrptr;
-        math::Vector3<uint8_t> asVec3UInt8;
-        math::Vector3<uint8_t> *asVec3UInt8ptr;
-        math::Vector3<uint8_t*> asVec3UInt8Ptr;
-        math::Vector3<uint8_t*> *asVec3UInt8Ptrptr;
-        math::Vector4<uint8_t> asVec4UInt8;
-        math::Vector4<uint8_t> *asVec4UInt8ptr;
-        math::Vector4<uint8_t*> asVec4UInt8Ptr;
-        math::Vector4<uint8_t*> *asVec4UInt8Ptrptr;
-        int16_t asInt16;
-        int16_t* asInt16ptr;
-        math::Vector2<int16_t> asVec2Int16;
-        math::Vector2<int16_t> *asVec2Int16ptr;
-        math::Vector2<int16_t*> asVec2Int16Ptr;
-        math::Vector2<int16_t*> *asVec2Int16Ptrptr;
-        math::Vector3<int16_t> asVec3Int16;
-        math::Vector3<int16_t> *asVec3Int16ptr;
-        math::Vector3<int16_t*> asVec3Int16Ptr;
-        math::Vector3<int16_t*> *asVec3Int16Ptrptr;
-        math::Vector4<int16_t> asVec4Int16;
-        math::Vector4<int16_t> *asVec4Int16ptr;
-        math::Vector4<int16_t*> asVec4Int16Ptr;
-        math::Vector4<int16_t*> *asVec4Int16Ptrptr;
-        uint16_t asUInt16;
-        uint16_t* asUInt16ptr;
-        math::Vector2<uint16_t> asVec2UInt16;
-        math::Vector2<uint16_t> *asVec2UInt16ptr;
-        math::Vector2<uint16_t*> asVec2UInt16Ptr;
-        math::Vector2<uint16_t*> *asVec2UInt16Ptrptr;
-        math::Vector3<uint16_t> asVec3UInt16;
-        math::Vector3<uint16_t> *asVec3UInt16ptr;
-        math::Vector3<uint16_t*> asVec3UInt16Ptr;
-        math::Vector3<uint16_t*> *asVec3UInt16Ptrptr;
-        math::Vector4<uint16_t> asVec4UInt16;
-        math::Vector4<uint16_t> *asVec4UInt16ptr;
-        math::Vector4<uint16_t*> asVec4UInt16Ptr;
-        math::Vector4<uint16_t*> *asVec4UInt16Ptrptr;
-        int32_t asInt32;
-        int32_t* asInt32ptr;
-        math::Vector2<int32_t> asVec2Int32;
-        math::Vector2<int32_t> *asVec2Int32ptr;
-        math::Vector2<int32_t*> asVec2Int32Ptr;
-        math::Vector2<int32_t*> *asVec2Int32Ptrptr;
-        math::Vector3<int32_t> asVec3Int32;
-        math::Vector3<int32_t> *asVec3Int32ptr;
-        math::Vector3<int32_t*> asVec3Int32Ptr;
-        math::Vector3<int32_t*> *asVec3Int32Ptrptr;
-        math::Vector4<int32_t> asVec4Int32;
-        math::Vector4<int32_t> *asVec4Int32ptr;
-        math::Vector4<int32_t*> asVec4Int32Ptr;
-        math::Vector4<int32_t*> *asVec4Int32Ptrptr;
-        uint32_t asUInt32;
-        uint32_t* asUInt32ptr;
-        math::Vector2<uint32_t> asVec2UInt32;
-        math::Vector2<uint32_t> *asVec2UInt32ptr;
-        math::Vector2<uint32_t*> asVec2UInt32Ptr;
-        math::Vector2<uint32_t*> *asVec2UInt32Ptrptr;
-        math::Vector3<uint32_t> asVec3UInt32;
-        math::Vector3<uint32_t> *asVec3UInt32ptr;
-        math::Vector3<uint32_t*> asVec3UInt32Ptr;
-        math::Vector3<uint32_t*> *asVec3UInt32Ptrptr;
-        math::Vector4<uint32_t> asVec4UInt32;
-        math::Vector4<uint32_t> *asVec4UInt32ptr;
-        math::Vector4<uint32_t*> asVec4UInt32Ptr;
-        math::Vector4<uint32_t*> *asVec4UInt32Ptrptr;
-        int64_t asInt64;
-        int64_t* asInt64ptr;
-        math::Vector2<int64_t> asVec2Int64;
-        math::Vector2<int64_t> *asVec2Int64ptr;
-        math::Vector2<int64_t*> asVec2Int64Ptr;
-        math::Vector2<int64_t*> *asVec2Int64Ptrptr;
-        math::Vector3<int64_t> asVec3Int64;
-        math::Vector3<int64_t> *asVec3Int64ptr;
-        math::Vector3<int64_t*> asVec3Int64Ptr;
-        math::Vector3<int64_t*> *asVec3Int64Ptrptr;
-        math::Vector4<int64_t> asVec4Int64;
-        math::Vector4<int64_t> *asVec4Int64ptr;
-        math::Vector4<int64_t*> asVec4Int64Ptr;
-        math::Vector4<int64_t*> *asVec4Int64Ptrptr;
-        uint64_t asUInt64;
-        uint64_t* asUInt64ptr;
-        math::Vector2<uint64_t> asVec2UInt64;
-        math::Vector2<uint64_t> *asVec2UInt64ptr;
-        math::Vector2<uint64_t*> asVec2UInt64Ptr;
-        math::Vector2<uint64_t*> *asVec2UInt64Ptrptr;
-        math::Vector3<uint64_t> asVec3UInt64;
-        math::Vector3<uint64_t> *asVec3UInt64ptr;
-        math::Vector3<uint64_t*> asVec3UInt64Ptr;
-        math::Vector3<uint64_t*> *asVec3UInt64Ptrptr;
-        math::Vector4<uint64_t> asVec4UInt64;
-        math::Vector4<uint64_t> *asVec4UInt64ptr;
-        math::Vector4<uint64_t*> asVec4UInt64Ptr;
-        math::Vector4<uint64_t*> *asVec4UInt64Ptrptr;
-        void * asVoidPtr;
-      };
+        public:
 
-    public:
-      Variant();
-      Variant(const Variant &copy);
-      Variant(Variant &&move);
+        Variant(DataType type):m_type(type),m_data(VariantData()){ setType(type);}
+        Variant():m_type(DataType::INT),m_data(VariantData()){}
+        Variant(int i):m_type(DataType::INT),m_data(VariantData(i)){}
+        Variant(int *ip):m_type(DataType::INTPTR),m_data(VariantData(ip)){}
+        Variant(short s):m_type(DataType::SHORT),m_data(VariantData(s)){}
+        Variant(short *sp):m_type(DataType::SHORTPTR),m_data(VariantData(sp)){}
+        Variant(char c):m_type(DataType::CHAR),m_data(VariantData(c)){}
+        Variant(char *cp):m_type(DataType::INTPTR),m_data(VariantData(cp)){}
+        Variant(float f):m_type(DataType::FLOAT),m_data(VariantData(f)){}
+        Variant(float *fp):m_type(DataType::FLOATPTR),m_data(VariantData(fp)){}
+        Variant(double d):m_type(DataType::DOUBLE),m_data(VariantData(d)){}
+        Variant(double *dp):m_type(DataType::DOUBLEPTR),m_data(VariantData(dp)){}
+        Variant(long l):m_type(DataType::LONG),m_data(VariantData(l)){}
+        Variant(long *lp):m_type(DataType::LONGPTR),m_data(VariantData(lp)){}
+        Variant(math::Vector2<int> v2i):m_type(DataType::VEC2INT),m_data(VariantData(v2i)){}
+        Variant(math::Vector2<float> v2f):m_type(DataType::VEC2FLOAT),m_data(VariantData(v2f)){}
+        Variant(math::Vector3<float> v3f):m_type(DataType::VEC3FLOAT),m_data(VariantData(v3f)){}
+        Variant(math::Vector4<float> v4f):m_type(DataType::VEC4FLOAT),m_data(VariantData(v4f)){}
+        Variant(math::Matrix2<float> m2f):m_type(DataType::MAT2FLOAT),m_data(VariantData(m2f)){}
+        Variant(math::Matrix3<float> m3f):m_type(DataType::MAT3FLOAT),m_data(VariantData(m3f)){}
+        Variant(math::Matrix4<float> m4f):m_type(DataType::MAT4FLOAT),m_data(VariantData(m4f)){}
 
-      Variant(int i);
-      Variant(int * ip);
-      Variant(short s);
-      Variant(short * sp);
-      Variant(long l);
-      Variant(long * lp);
-      Variant(long long ll);
-      Variant(long long * llp);
-      Variant(char c);
-      Variant(char * p);
-      Variant(std::string s);
-      Variant(std::string *sp);
-      Variant(int8_t i8);
-      Variant(int8_t *i8p);
-      Variant(uint8_t u8);
-      Variant(uint8_t *u8p);
-      Variant(uint16_t u16);
-      Variant(uint16_t *u16p);
-      Variant(uint32_t u32);
-      Variant(uint32_t *u32p);
-      Variant(uint64_t u64);
-      Variant(math::Vector2<int> iv2);
-      Variant(math::Vector3<int> iv3);
-      Variant(math::Vector4<int> iv4);
-      Variant(math::Vector2<short> sv2);
-      Variant(math::Vector3<short> sv3);
-      Variant(math::Vector4<short> sv4);
-      Variant(math::Vector2<long> lv2);
-      Variant(math::Vector3<long> lv3);
-      Variant(math::Vector4<long> lv4);
-      Variant(void *ptr);
+        ~Variant()= default;
 
-      //setData
+        void operator=(const Variant &v){
+            this->m_data = v.Data();
+            this->m_type = v.Type();
+        }
 
-      //getData
+        void setData(VariantData d){
+        this->m_data = d;
+        }
 
-      //Data (const)
+        void setType(DataType t){
+            this->m_type = t;
+        }
 
-    };
+        DataType getType(){return m_type;}
+        VariantData getData(){return m_data;}
+
+        DataType Type()const{return m_type;}
+        VariantData Data()const{return m_data;}
+
+        friend std::ostream& operator<<(std::ostream &os,const Variant &v){
+               switch(v.Type()){
+               case DataType::INT:
+                   os << "Type: Int\nData: " << v.Data().asInt;
+                   break;
+
+               case DataType::INTPTR:
+                   os << "Type: Int Pointer\nData: " << v.Data().asIntPtr;
+                   break;
+
+                case DataType::CHAR:
+                   os << "Type: Char\nData: " << v.Data().asChar;
+                   break;
+
+                case DataType::CHARPTR:
+                   os << "Type: Char Pointer\nData: " << v.Data().asCharPtr;
+                   break;
+
+                 case DataType::SHORT:
+                   os << "Type: Short\nData: " << v.Data().asShort;
+                   break;
+
+               case DataType::SHORTPTR:
+                   os << "Type: Short Pointer\nData: " << v.Data().asShortPtr;
+                   break;
+
+               case DataType::FLOAT:
+                   os << "Type: Float\nData: " << v.Data().asFloat;
+                   break;
+
+               case DataType::FLOATPTR:
+                   os << "Type: Float Pointer\nData: " << v.Data().asFloatPtr;
+                   break;
+
+               case DataType::DOUBLE:
+                   os << "Type: Double\nData: " << v.Data().asDouble;
+                   break;
+
+               case DataType::DOUBLEPTR:
+                   os << "Type: Double Pointer\nData: " << v.Data().asDoublePtr;
+                   break;
+
+               case DataType::LONG:
+                   os << "Type: Long\nData: " << v.Data().asLong;
+                   break;
+
+               case DataType::LONGPTR:
+                   os << "Type: Long Pointer\nData: " << v.Data().asLongPtr;
+                   break;
+
+               case DataType::VEC2INT:
+                   os << "Type: Vector 2 Int\nData: " << v.Data().asVec2Int.toString();
+                   break;
+
+
+               case DataType::VEC2FLOAT:
+                   os << "Type: Vector 2 Float\nData: " << v.Data().asVec2Float.toString();
+                   break;
+
+
+        }
+               os << std::endl;
+               return os;
+        }
+
+
+
+
+
+
+        };
+
+
+
 
 
   }
