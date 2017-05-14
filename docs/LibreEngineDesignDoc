@@ -78,6 +78,13 @@ Classes:
 [c] core::LEVariant - Class that can represent any type
 [i] core::Entity - Class that represents an object in the engine
 [i] core::Component - Class that represents data an object contains
+[c] core::CameraComponent - Class that represents a component of a Camera Object.
+[c] core::TransformComponent - Class that represents a component of a Transform object.
+[c] core::System - Class that represents the Base System used within a scene.
+[ie]core::Scene - Class that represents a Scene object
+
+
+
 [] core::Sprite - Class that represents a 2D-image as a Component
 [] core::Model - Class that represents a 3D-Object as a Component
 [] core::BGMusic - Class that represents a Sound file that loops in the background
@@ -93,13 +100,14 @@ DEPRECIATING (see 1): [ce] core::Engine - Class that represents the whole engine
 
 
 
-
+[c] math::Coordinate2d - 2-Dimensional Coordinate object
 [c] math::Vector2 - Templated Class that represents an X and a Y variable
 [c] math::Vector3 - Templated Class that represents an X , Y and a Z variable
 [c] math::Vector4 - Templated Class that represents an X , Y , Z and a W  variable
 [c] math::Matrix2 - Templated Class that represents an 2 by 2 Matrix
 [c] math::Matrix3 - Templated Class that represents an 3 by 3 Matrix
 [c] math::Matrix4 - Templated Class that represents an 4 by 4 Matrix
+[c] math::SIMDArray - Class that represents a SIMD array
 
 [i] physics::aabb - Class that represents an Axis-Aligned Bounding Box
 								AABB2D and AABB3D
@@ -113,10 +121,14 @@ DEPRECIATING (see 1): [ce] core::Engine - Class that represents the whole engine
 
 [c] graphics::Window - Class that represents the Window
 [c] graphics::Renderer - Class that represents a renderer that works on both 2D and 3D
-[] graphics::Image - Class that wraps SDL_image and holds image data
+[Depreciated see 2.] graphics::Image - Class that wraps SDL_image and holds image data
 [i] graphics::Shader - Class that represents a shader file (not to be confused with ShaderProgram)
-[] graphics::ShaderVariable - Class that represents uniforms or attributes in a specific ShaderProgram
-[] graphics::ShaderProgram - Class that represents the program that is outputted by the graphic pipeline
+[i] graphics::ShaderVariable - Class that represents uniforms or attributes in a specific ShaderProgram
+[i] graphics::ShaderProgram - Class that represents the program that is outputted by the graphic pipeline
+[ie] graphics::Camera - Class that represents the View of the camera
+[c] graphics::Tile - Class that represents a 2D Tile.
+[c] graphics::TileSheet - Class that represents a 2D tilesheet
+[i] graphics::Mesh - Class that represents a mesh object
 
 
 [] audio::Sound - Class that represents a Sound File
@@ -195,6 +207,16 @@ this similar, but not identical to http://www.sdltutorials.com/sdl-events . The 
 then create a subclass of the Input component, to handle the events differently then
 the default settings.
 
+
+
+
+Graphics Rendering:
+    So i have been contemplating on switching the 2D Renderer to a SDL_GL_Context, and just create 2D
+    based objects . The reason being, SDL_Renderer sets up a fixed function pipeline for graphics. I
+    learned this after reading the documentation.  Therefore, i have reason to believe it doesnt use
+    shaders.  I believe this will hurt in the long-run, beings that i wont be able to have dynamic lighting
+    unless its in 3D.
+
 #########
 #END REVISE
 #########
@@ -209,15 +231,28 @@ Vertex Notes:
 	vtdbasic_pos3 - vec3 position
 	vtdbasic_pos4_col4 - vec4 position, vec4 color
 	vtdbasic_pos4_norm3 - vec4 position, vec3 normal
+
+maybe a preprocessor macro?
+   DefineVertex(Name,type1,name1,type2,name2,type3,name3,type4,name4) something like that? or
+
+     DefineStruct(name)
+    DefineStructVariable(type,name)
+    EndDefineStruct()
 	
 
 I dont know, this is just a thought, hence why its in the Design doc and not in the code yet ;)
 
-
+questions:
+-What still needs to be done? Alot, the rendering process, a better variant class to hold lua objects,better physics, maybe a settings for custom settings
+-What next? Maybe restructure the rendering process to allow the 2D and 3D renderers become fully programmable-function pipeline.
+-What might need re-looking into? The variant class at the moment, as well as the rendering class and renderer system
+-Issues/problems? Nothing in the engine at the moment
+-Future goals? Create enough classes to create an editor for a free software alternative to Unity
 
 comments:
 1: Engine class has been deemed depreciated until further notice, i may plan on using this to
 single-handedly load assets into the Application.
+2. graphics::image turned into asset::Image
 
 
 
@@ -226,3 +261,15 @@ Libre-Editor:
 Language: C++
 
 Libraries: QT, Libre-Engine
+
+Classes:
+
+
+    []GLSLHighlighter - Class that allows GLSL Syntax Highlighting
+    []LuaHighlighter - Class that allows Lua Syntax Highlighting
+    []MainWindow -Main Window that displays a Scene
+    []ProjectCreateGUI - The UI that is used for Project creation
+    []ScriptEditor - the UI that is used for Lua script writing
+    []ShaderEditor - the UI that is used for GLSL Shader writing
+    []TileMapEditor - the UI that is used for  2D TileMaps
+    []UserProject - Class that represents the User's Project
