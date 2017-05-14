@@ -64,15 +64,14 @@ namespace libre{
 
   Window::Window(const char * t,const unsigned int width,const unsigned int height,bool OpenGL)
      : m_title(t),m_size(math::Vector2<unsigned int>(width,height)){
+            uint8_t commonFlags = SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE;
 
-        if(OpenGL){
-            this->m_window = (SDL_Window*)SDL_CreateWindow(t,SDL_WINDOWPOS_UNDEFINED,
-                                          SDL_WINDOWPOS_UNDEFINED, width,height,SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE | SDL_WINDOW_OPENGL);
-        }else{
+        if(OpenGL) commonFlags |= SDL_WINDOW_OPENGL;
+
 
         this->m_window = (SDL_Window*)SDL_CreateWindow(t,SDL_WINDOWPOS_UNDEFINED,
-                                      SDL_WINDOWPOS_UNDEFINED, width,height,SDL_WINDOW_SHOWN| SDL_WINDOW_RESIZABLE );
-}
+                                      SDL_WINDOWPOS_UNDEFINED, width,height,commonFlags);
+
         if(this->m_window == nullptr){
             throw WindowException(SDL_GetError());
             }
@@ -81,15 +80,15 @@ namespace libre{
      }
     Window::Window(const char * t,math::Vector2<unsigned int> size,bool OpenGL) : m_title(t), m_size(size){
 
-         if(OpenGL){
+        uint8_t commonFlags = SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE;
+
+    if(OpenGL) commonFlags |= SDL_WINDOW_OPENGL;
+
+
 
       this->m_window = (SDL_Window*)SDL_CreateWindow(t,SDL_WINDOWPOS_UNDEFINED,
-                                    SDL_WINDOWPOS_UNDEFINED, size.X(),size.Y(),SDL_WINDOW_SHOWN | SDL_WINDOW_OPENGL);
-}else{
-             this->m_window = (SDL_Window*)SDL_CreateWindow(t,SDL_WINDOWPOS_UNDEFINED,
-                                           SDL_WINDOWPOS_UNDEFINED, size.X(),size.Y(),SDL_WINDOW_SHOWN);
+                                    SDL_WINDOWPOS_UNDEFINED, size.X(),size.Y(),commonFlags);
 
-         }
         if(this->m_window == nullptr){
             throw WindowException(SDL_GetError());
             }

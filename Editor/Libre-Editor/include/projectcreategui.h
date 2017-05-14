@@ -46,7 +46,6 @@ private:
 /**
     Thank you falco!
  */
-
 bool copyDir(const QString &srcFilePath,
              const QString &tgtFilePath);
 

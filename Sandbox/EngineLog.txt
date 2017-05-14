@@ -48,3 +48,8 @@
 2017-04-03.20:14:32:	OpenGL Info:
 2017-04-03.20:14:32:	vendor:
 2017-04-03.20:14:32:	renderer:
+2017-04-11.20:23:18:	Initializing Application /
+2017-04-11.20:23:18:	Creating 2D SDL_Rendere
+2017-04-11.20:23:18:	OpenGL Info:
+2017-04-11.20:23:18:	vendor:
+2017-04-11.20:23:18:	renderer:

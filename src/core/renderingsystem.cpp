@@ -74,9 +74,9 @@ namespace libre{
         void RenderingSystem::destroyed()
         {
          delete this->m_camera;
-         delete this->m_list;
+         delete this->getList();
          delete this->m_renderer;
-         delete this->m_root;
+         delete this->getRoot();
 
         }
     }

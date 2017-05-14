@@ -12,7 +12,7 @@ ShaderEditor::ShaderEditor(QWidget *parent) :
     connect(this->ui->tableWidget->verticalHeader(),SIGNAL(sectionClicked(int)),this,SLOT(onHeaderClicked(int)));
     m_highlighter = new GLSLHighlighter(ui->textEdit->document());
     m_highlighter->setDocument(ui->textEdit->document());
-    connect(ui->textEdit,SIGNAL(QTextEdit::textChanged()),m_highlighter,SLOT(GLSLHighlighter::highlightBlock()));
+    //connect(ui->textEdit,SIGNAL(QTextEdit::textChanged()),m_highlighter,SLOT(GLSLHighlighter::highlightBlock()));
 }
 
 ShaderEditor::~ShaderEditor()

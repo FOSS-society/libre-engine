@@ -40,6 +40,22 @@ namespace libre{
    int RandomNumber();
 
 
+   template <typename T>
+   int swap(T &first, T &second){
+       const T f = first;
+       const T s = second;
+
+       T *temp = first;
+       first = second;
+       second = temp;
+
+       if(f != second || s != first){
+           return -1;
+       }
+       return 0;
+
+   }
+
 
 
   }

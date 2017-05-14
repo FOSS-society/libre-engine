@@ -20,6 +20,11 @@ class Entity;
        * Im not sure this is the best way to go so research this more
        *
        *
+       * Variables: m_list: This is the list of objects which will be
+       * usable within the system.
+       *
+       * m_root: The whole scenegraph in memory.
+       *
        */
 
 
