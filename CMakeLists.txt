@@ -14,7 +14,8 @@ file(GLOB ASSET "src/asset/*.cpp" "include/asset/*.hpp")
 file(GLOB FF "src/system/fformats/*.cpp" "include/system/fformats/*.hpp")
 file(GLOB OTHER "src/*cpp" "include/*.hpp")
 file(GLOB SHADERS "shaders/*/*")
-add_library(libre-engine ${CORE} ${GRAPHICS} ${MATH} ${PHYSICS} ${SCRIPT} ${SYSTEM} ${ASSET} ${FF} ${OTHER} ${SHADERS})
+file(GLOB DOC "docs/*" "README.md")
+add_library(libre-engine ${CORE} ${GRAPHICS} ${MATH} ${PHYSICS} ${SCRIPT} ${SYSTEM} ${ASSET} ${FF} ${OTHER} ${SHADERS} ${DOC})
 
 
 install (TARGETS libre-engine DESTINATION lib)
