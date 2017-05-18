@@ -242,6 +242,13 @@ maybe a preprocessor macro?
 
 I dont know, this is just a thought, hence why its in the Design doc and not in the code yet ;)
 
+questions:
+-What still needs to be done? Alot, the rendering process, a better variant class to hold lua objects,better physics, maybe a settings for custom settings
+-What next? Maybe restructure the rendering process to allow the 2D and 3D renderers become fully programmable-function pipeline.
+-What might need re-looking into? The variant class at the moment, as well as the rendering class and renderer system
+-Issues/problems? Nothing in the engine at the moment
+-Future goals? Create enough classes to create an editor for a free software alternative to Unity
+
 comments:
 1: Engine class has been deemed depreciated until further notice, i may plan on using this to
 single-handedly load assets into the Application.
