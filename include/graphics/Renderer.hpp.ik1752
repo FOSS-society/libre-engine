@@ -43,7 +43,7 @@ namespace libre{
     Renderer(Window *parent,RendererType type);
     ~Renderer(){
 
-      SDL_GL_DeleteContext(this->m_context);
+      SDL_GL_DeleteContext(this->m_context->asOGL);
 
       delete m_window;
     }
@@ -60,7 +60,7 @@ namespace libre{
     SDL_GLContext *context() const;
     void setContext(SDL_GLContext *context);
   };
-  
+
   }
 }
 #endif //Base Renderer

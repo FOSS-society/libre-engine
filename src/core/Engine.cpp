@@ -40,18 +40,10 @@ namespace libre{
 
         // Update logic
 
-      //Render to screen
-
-        switch(this->m_renderer->getType()){
-            case graphics::RendererType::RT_2D: //treat as SDL
-                SDL_RenderPresent(this->m_renderer->getContext()->asSDL);
-            break;
-            case graphics::RendererType::RT_3D:
-                //treat as OpenGL.... figure out how to do that..
+      //Render to screen.
                 SDL_GL_SwapWindow(this->m_window->SDLWIN());
-            break;
 
-       }
+
 
 
       //update the time
