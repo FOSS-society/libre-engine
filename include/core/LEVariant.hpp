@@ -121,7 +121,7 @@ namespace libre{
         Variant(short s):m_type(DataType::SHORT),m_data(VariantData(s)){}
         Variant(short *sp):m_type(DataType::SHORTPTR),m_data(VariantData(sp)){}
         Variant(char c):m_type(DataType::CHAR),m_data(VariantData(c)){}
-        Variant(char *cp):m_type(DataType::INTPTR),m_data(VariantData(cp)){}
+        Variant(char *cp):m_type(DataType::CHARPTR),m_data(VariantData(cp)){}
         Variant(float f):m_type(DataType::FLOAT),m_data(VariantData(f)){}
         Variant(float *fp):m_type(DataType::FLOATPTR),m_data(VariantData(fp)){}
         Variant(double d):m_type(DataType::DOUBLE),m_data(VariantData(d)){}
